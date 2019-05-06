@@ -1,14 +1,6 @@
 
-# Contributing
+# Announcing ElectionGuard
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
+ElectionGuard will be available starting this summer to election officials and election technology suppliers who can incorporate the technology into voting systems. ElectionGuard will enable end-to-end verification of elections, open results to third-party organizations for secure validation, and allow individual voters to confirm their votes were correctly counted. 
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+We encourage the election technology community to work with us and begin building offerings based on this technology and expect early prototypes using ElectionGuard will be ready for piloting during the 2020 elections in the United States, with significant deployments for subsequent election cycles. Over time we will seek to update and improve the SDK to support additional voting scenarios such as mail-in ballots and ranked choice voting. Microsoft will not charge for using ElectionGuard and will not profit from partnering with election technology suppliers that incorporate it into their products. 
