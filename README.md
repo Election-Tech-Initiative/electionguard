@@ -1,7 +1,7 @@
 
 # Announcing ElectionGuard
 
-ElectionGuard is an open source software development kit (SDK) that will make voting more secure, accessible. Announced on May 6 at the Build developer conference, ElectionGuard will enable end-to-end verification of elections, open results to third-party organizations for secure validation, and allow individual voters to confirm their votes were correctly counted.
+ElectionGuard is an open source software development kit (SDK) that will make voting more secure and accessible. Announced on May 6th at the Build developer conference, ElectionGuard will enable end-to-end verification of elections, open results to third-party organizations for secure validation, and allow individual voters to confirm their votes were correctly counted.
 
 Read more information in [the announcement blog post](https://blogs.microsoft.com/on-the-issues/?p=63211).
 
