@@ -13,24 +13,24 @@ At launch, the ElectionGuard SDK consists of four separate repositories. These r
 ## 1. Specifications, Documentation, and Academic Details
 This library contains the fundamental specifications, documentation, architecture, and mathematical/cryptographic proofs that underpin ElectionGuard. If you're looking to understand the system better, or want to know how to integrate the various components, there is a lot of valuable information contained here.
 
-**Specifications Repo**: [https://github.com/microsoft/ElectionGuard-SDK-Specification]()
+**Specifications Repo**: [https://github.com/microsoft/ElectionGuard-SDK-Specification](https://github.com/microsoft/ElectionGuard-SDK-Specification)
 
 ## 2. Core ElectionGuard API SDK 
 This is the core SDK that performs election functions such as vote encryption, decryption, key generation, and tallying. This code is meant to be run on voting system hardware and to be integrated into existing (or new) voting system software. The ElectionGuard SDK is written in C and is meant to add end-to-end verifiability and encryption into 3rd party comprehensive voting systems. There is also a simplistic, proof-of-concept C application to understand how the API should be called. 
 
-**ElectionGuard C SDK Repo**: [https://github.com/microsoft/ElectionGuard-SDK-C-Implementation]()  
+**ElectionGuard C SDK Repo**: [https://github.com/microsoft/ElectionGuard-SDK-C-Implementation](https://github.com/microsoft/ElectionGuard-SDK-C-Implementation)  
 
 
 ## 3. Verifier (Reference Implementation) 
 The verifier application is used to perform an external, independent verification of an election tally. This repository contains a reference implementation of a verifier built against the ElectionGuard specifications. This is not meant to be the *only* verifier application, but rather an example. This library should be used in tandem with the technical specifications and usage guidelines contained in the [Specifications Repo](https://github.com/microsoft/ElectionGuard-SDK-Specification).
 
-**Verifier Repo**: [https://github.com/microsoft/ElectionGuard-SDK-Reference-Verifier]()
+**Verifier Repo**: [https://github.com/microsoft/ElectionGuard-SDK-Reference-Verifier](https://github.com/microsoft/ElectionGuard-SDK-Reference-Verifier)
 
 
 ## 4. Ballot Marking Device Reference Implementation
 This repository contains a working instance of ballot marking device (BMD). Built by VotingWorks in consultation with the [Center for Civic Design](https://civicdesign.org), this front-end provides an interface for a voter to complete and print a ballot which, in an end-to-end verifiable use case, would be accompanied by a printed tracking ID. This BMD front-end is provided as one, potential implementation.
 
-**Ballot Marking Device Repo**: [https://github.com/microsoft/ElectionGuard-SDK-Ballot-Marking-Device-Reference-Implementation]()
+**Ballot Marking Device Repo**: [https://github.com/microsoft/ElectionGuard-SDK-Ballot-Marking-Device-Reference-Implementation](https://github.com/microsoft/ElectionGuard-SDK-Ballot-Marking-Device-Reference-Implementation)
 
 
 
