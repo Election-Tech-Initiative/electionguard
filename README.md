@@ -1,4 +1,4 @@
-
+![Microsoft Defending Democracy Program: ElectionGuard](electionguard-banner.svg)
 # ElectionGuard SDK
 
 # Intro
