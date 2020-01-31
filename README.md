@@ -50,8 +50,6 @@ A huge thank you to those who helped to contribute to this project so far, inclu
 * Many teams within Microsoft
  
 # Background:
-Announced on May 6 at the Build developer conference, ElectionGuard will enable end-to-end verification of elections, open results to third-party organizations for secure validation, and allow individual voters to confirm their votes were correctly counted.
+Announced on May 6 at the Build developer conference, ElectionGuard will enable end-to-end verification of elections as well as support the publication of results from ballot comparison audits.  Results can be published online or made available to third-party organizations for secure validation, and allow individual voters to confirm their votes were correctly counted.
 
-Read more information in [the announcement blog post](https://blogs.microsoft.com/on-the-issues/?p=63211).
-
-It will be available starting this summer to election officials and election technology suppliers who can incorporate the technology into voting systems. We encourage the election technology community to work with us and begin building offerings based on this technology and expect early prototypes using ElectionGuard will be ready for piloting during the 2020 elections in the United States, with significant deployments for subsequent election cycles. Over time we will seek to update and improve the SDK to support additional voting scenarios such as mail-in ballots and ranked choice voting. 
+Read more in [the announcement blog post](https://blogs.microsoft.com/on-the-issues/?p=63211).
