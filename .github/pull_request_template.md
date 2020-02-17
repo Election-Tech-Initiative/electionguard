@@ -10,7 +10,7 @@ Fixes #___
 *Describe the best way to test or validate your PR.*
 
 ### Checklist
-🚨Please review the [guidelines for contributing](../CONTRIBUTING.md) to this repository.
+🚨Please review the [guidelines for contributing](../blob/master/CONTRIBUTING.md) to this repository.
 
 - [ ] 🤔 **CONSIDER** adding a unit test if your PR resolves an issue.
 - [ ] ✅ **DO** check open PR's to avoid duplicates.
