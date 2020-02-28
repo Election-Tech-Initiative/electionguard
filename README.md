@@ -4,11 +4,11 @@
 
 [![license](https://img.shields.io/github/license/microsoft/electionguard)](License)
 
-ElectionGuard is an open source software development kit (SDK) that makes voting more secure, transparent and accessible. The ElectionGuard SDK leverages [homomorphic encryption](https://en.wikipedia.org/wiki/Homomorphic_encryption) to ensure that votes recorded by electronic systems of any type remain encrypted, secure, and secret. Meanwhile, ElectionGuard also allows verifiable and accurate tallying of ballots by any 3rd party organization without compromising secrecy or security. 
+ElectionGuard is an open source software development kit (SDK) that makes voting more secure, transparent and accessible. The ElectionGuard SDK leverages [homomorphic encryption](https://en.wikipedia.org/wiki/Homomorphic_encryption) to ensure that votes recorded by electronic systems of any type remain encrypted, secure, and secret. Meanwhile, ElectionGuard also allows verifiable and accurate tallying of ballots by any third-party organization without compromising secrecy or security.
 
-Announced on May 6th at the Build developer conference, ElectionGuard will enable end-to-end verification of elections as well as support the publication of results from ballot comparison audits.  Results can be published online or made available to third-party organizations for secure validation, and allow individual voters to confirm their votes were correctly counted. 
- 
-Read more in [the announcement blog post](https://blogs.microsoft.com/on-the-issues/?p=63211). 
+Announced on May 6th, 2019, at the Build developer conference, ElectionGuard will enable end-to-end verification of elections as well as support the publication of results from ballot comparison audits.  Results can be published online or made available to third-party organizations for secure validation, and allow individual voters to confirm their votes were correctly counted.
+
+Read more in [the announcement blog post](https://blogs.microsoft.com/on-the-issues/?p=63211).
 
 ## Open-Source
 This library and all linked ElectionGuard projects, are licensed under the MIT license. There is no fee for using ElectionGuard.
@@ -32,7 +32,7 @@ This library contains the fundamental specifications, documentation, architectur
 [📄 Documentation and Specifications](https://github.com/microsoft/electionguard/wiki)
 
 ## Reference Implementation
-The remainder of the ElectionGuard SDK consists of a reference implementation split over several separate repositories. These repos, although intended to be used together as components of a broader solution, can also stand alone if developers wish to only research or implement one component.
+The remainder of the ElectionGuard SDK consists of a reference implementation split over several separate repositories. These repositories, although intended to be used together as components of a broader solution, can also stand alone if developers wish to only research or implement one component.
 
 ### Admin Device
 This is an application used to administer ElectionGuard election processes, including key generation, trustee provisioning, and post-election tallying, partial decryptions, and zero-knowledge proofs.
@@ -52,7 +52,7 @@ This contains a working instance of ballot marking device (BMD). Built by Voting
 
 
 ### Tracking Site
-An application that demonstrates publication of ElectionGuard election artifacts to a public website to enable verification ID lookup, downloadable zip files of the election result (for third-party verifiers), and election results summaries.
+An application that demonstrates publication of ElectionGuard election artifacts to a public website to enable verification ID lookup, downloadable ZIP files of the election result (for third-party verifiers), and election results summaries.
 
 [📁 Source](https://github.com/microsoft/electionguard-tracking-site) - https://github.com/microsoft/electionguard-tracking-site
 
@@ -62,13 +62,13 @@ The verifier application is used to perform an external, independent verificatio
 [📁 Source](https://github.com/microsoft/electionguard-verifier) - https://github.com/microsoft/electionguard-verifier
 
 ### Web API
-This is an API that interacts with admin encrypter devices to perform ballot encryption, casting, spoiling, and tallying. This makes use of the C# Nuget package.
+This is an API that interacts with admin encrypter devices to perform ballot encryption, casting, spoiling, and tallying. This makes use of the C# NuGet package.
 
 [📁 Source](https://github.com/microsoft/electionguard-web-api) - https://github.com/microsoft/electionguard-web-api
 
 
 ## Security Issues Reporting
-We encourage the developer and security community to conduct research, report issues, and suggest improvements on this code base. However, unlike performance or feature bugs, please do **not** report security vulnerabilities in public Github comments. Each repository has a SECURITY file with instructions on responsibly reporting security vulnerabilities under Microsoft's CVD process.
+We encourage the developer and security community to conduct research, report issues, and suggest improvements on this code base. However, unlike performance or feature bugs, please do **not** report security vulnerabilities in public GitHub  comments. Each repository has a SECURITY file with instructions on responsibly reporting security vulnerabilities under Microsoft's CVD process.
 
  ## Contributing
 Help defend democracy and **[contribute to the project][]**.
@@ -85,4 +85,3 @@ A huge thank you to those who helped to contribute to this project so far, inclu
 * [Oxide Design](https://oxidedesign.com/)
 * [InfernoRed Technology](https://infernored.com/)
 * Many teams within Microsoft
- 
