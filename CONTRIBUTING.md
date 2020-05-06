@@ -4,7 +4,7 @@
 * [Pull Requests](#pull-requests)
 * [Contributor License Agreement](#contributor-license-agreement)
 * [Code of Conduct](#code-of-conduct)
-* [Developer's Certificate of Origin 1.1](#developers-certificate-of-origin)
+* [Developer's Certificate of Origin 1.1](#developers-certificate-of-origin-11)
 
 
 ## Getting Started
