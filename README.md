@@ -20,13 +20,13 @@ This is the core SDK that performs election functions such as vote encryption, d
 [📁 Source](https://github.com/microsoft/electionguard-python) - https://github.com/microsoft/electionguard-python
 
 
-:warning: The below repositories are deprecated. If you wish to do active development using the Electionguard API, please use the Python version. :warning:
+### :warning: The below repositories are deprecated. If you wish to do active development using the Electionguard API, please use the Python version. :warning:
 
-### C
+#### C
 
 [📁 Source](https://github.com/microsoft/electionguard-c) - https://github.com/microsoft/electionguard-c
 
-### C#
+#### C#
 [📁 Source](https://github.com/microsoft/electionguard-dotnet) - https://github.com/microsoft/electionguard-dotnet
 
 [📦 Package - ElectionGuard.SDK](https://www.nuget.org/packages/ElectionGuard.SDK)
