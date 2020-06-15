@@ -16,6 +16,12 @@ This library and all linked ElectionGuard projects, are licensed under the MIT l
 ## Core Component
 This is the core SDK that performs election functions such as vote encryption, decryption, key generation, and tallying. This code is meant to be run on voting system hardware and to be integrated into existing (or new) voting system software. The ElectionGuard SDK is meant to add end-to-end verifiability and encryption into 3rd party comprehensive voting systems. There are provided simplistic, proof-of-concept applications to understand how each implementation of the API should be called. Currently, there are two available implementations.
 
+### Python
+[📁 Source](https://github.com/microsoft/electionguard-python) - https://github.com/microsoft/electionguard-python
+
+
+<%= octicon("alert") %> The below repositories are deprecated. If you wish to do active development using the Electionguard API, please use the Python version.
+
 ### C
 
 [📁 Source](https://github.com/microsoft/electionguard-c) - https://github.com/microsoft/electionguard-c
