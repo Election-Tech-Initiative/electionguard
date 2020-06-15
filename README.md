@@ -85,10 +85,9 @@ Help defend democracy and **[contribute to the project][]**.
 ## Thanks! 🎉
 A huge thank you to those who helped to contribute to this project so far, including:
 * Josh Benaloh (whose [PhD thesis](https://www.microsoft.com/en-us/research/publication/verifiable-secret-ballot-elections/) was the genesis of much of this work)
-* [Galois](https://galois.com/) / [Free & Fair](https://freeandfair.us/)
+* [InfernoRed Technology](https://infernored.com/)
 * [VotingWorks](https://voting.works/)
 * [Center for Civic Design](https://civicdesign.org/)
 * [Oxide Design](https://oxidedesign.com/)
-* [InfernoRed Technology](https://infernored.com/)
 * Many teams within Microsoft
  
