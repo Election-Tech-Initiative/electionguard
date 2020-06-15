@@ -20,7 +20,7 @@ This is the core SDK that performs election functions such as vote encryption, d
 [📁 Source](https://github.com/microsoft/electionguard-python) - https://github.com/microsoft/electionguard-python
 
 
-<%= octicon("alert") %> The below repositories are deprecated. If you wish to do active development using the Electionguard API, please use the Python version.
+:warning: The below repositories are deprecated. If you wish to do active development using the Electionguard API, please use the Python version. :warning:
 
 ### C
 
