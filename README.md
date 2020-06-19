@@ -19,14 +19,19 @@ This is the core SDK that performs election functions such as vote encryption, d
 ### Python
 [📁 Source](https://github.com/microsoft/electionguard-python) - https://github.com/microsoft/electionguard-python
 
+### C ++
 
-### :warning: The below repositories are deprecated. If you wish to do active development using the Electionguard API, please use the Python version. :warning:
+✨ Coming Soon!
 
-#### C
+### Previous Versions 
+
+**⚠️ Note**: The following versions and their dependent repositories are deprecated. For active development, please use [python version](https://github.com/microsoft/electionguard-python).
+
+#### C _(Deprecated)_
 
 [📁 Source](https://github.com/microsoft/electionguard-c) - https://github.com/microsoft/electionguard-c
 
-#### C#
+#### C# _(Deprecated)_
 [📁 Source](https://github.com/microsoft/electionguard-dotnet) - https://github.com/microsoft/electionguard-dotnet
 
 [📦 Package - ElectionGuard.SDK](https://www.nuget.org/packages/ElectionGuard.SDK)
@@ -35,7 +40,17 @@ This is the core SDK that performs election functions such as vote encryption, d
 ## Specifications & Documentation
 This library contains the fundamental specifications, documentation, architecture, and mathematical/cryptographic proofs that underpin ElectionGuard. If you're looking to understand the system better, or want to know how to integrate the various components, there is a lot of valuable information contained here.
 
-[📄 Documentation and Specifications](https://github.com/microsoft/electionguard/wiki)
+### v 1.00
+
+[📄 Documentation](https://github.com/microsoft/electionguard-python#-documentation)
+
+📄 Specification - ✨ Coming Soon
+
+### v 0.85 
+
+**⚠️ Note:** This version is deprecated. A new version is already under construction.
+
+[📄 Documentation and Specification](https://github.com/microsoft/electionguard/wiki)
 
 ## Reference Implementation
 The remainder of the ElectionGuard SDK consists of a reference implementation split over several separate repositories. These repos, although intended to be used together as components of a broader solution, can also stand alone if developers wish to only research or implement one component.
@@ -67,7 +82,9 @@ The verifier application is used to perform an external, independent verificatio
 
 [📁 Source](https://github.com/microsoft/electionguard-verifier) - https://github.com/microsoft/electionguard-verifier
 
-### Web API
+### Web API _(Deprecated)_
+**⚠️ Note:** Dependant on deprecated C# version and is therefore deprecated.
+
 This is an API that interacts with admin encrypter devices to perform ballot encryption, casting, spoiling, and tallying. This makes use of the C# Nuget package.
 
 [📁 Source](https://github.com/microsoft/electionguard-web-api) - https://github.com/microsoft/electionguard-web-api
