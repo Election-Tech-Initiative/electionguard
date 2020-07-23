@@ -18,6 +18,8 @@ This is the core SDK that performs election functions such as vote encryption, d
 
 ### Python
 [📁 Source](https://github.com/microsoft/electionguard-python) - https://github.com/microsoft/electionguard-python
+[📦 Package](https://pypi.org/project/electionguard/)
+[📝 Documentation](https://microsoft.github.io/electionguard-python/)
 
 ### C ++
 
@@ -42,7 +44,7 @@ This library contains the fundamental specifications, documentation, architectur
 
 ### v 1.00
 
-[📄 Documentation](https://github.com/microsoft/electionguard-python#-documentation)
+[📄 Documentation](https://microsoft.github.io/electionguard-python/)
 
 📄 Specification - ✨ Coming Soon
 
@@ -98,6 +100,10 @@ Help defend democracy and **[contribute to the project][]**.
 
 [Code of Conduct]: CODE_OF_CONDUCT.md
 [Contribute to the project]: CONTRIBUTING.md
+
+## Questions
+
+ElectionGuard would love for you to ask questions out in the open using Github Issues. If you really want to email the ElectionGuard team, reach out at electionguard@microsoft.com.
 
 ## Thanks! 🎉
 A huge thank you to those who helped to contribute to this project so far, including:
