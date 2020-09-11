@@ -1,7 +1,7 @@
 from typing import Tuple
-from project import json_parser, number
-from .generator import ParameterGenerator, FilePathGenerator, VoteLimitCounter
-from .interfaces import IBallotVerifier, IContestVerifier, ISelectionVerifier
+import json_parser, number
+from generator import ParameterGenerator, FilePathGenerator, VoteLimitCounter
+from interfaces import IBallotVerifier, IContestVerifier, ISelectionVerifier
 import glob
 
 

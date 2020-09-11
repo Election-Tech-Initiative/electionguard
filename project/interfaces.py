@@ -1,4 +1,4 @@
-from .generator import ParameterGenerator, VoteLimitCounter
+from generator import ParameterGenerator, VoteLimitCounter
 
 
 class IVerifier:

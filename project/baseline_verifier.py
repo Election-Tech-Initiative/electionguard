@@ -1,6 +1,6 @@
-from project import number
-from project.generator import ParameterGenerator
-from project.interfaces import IVerifier
+import number
+from generator import ParameterGenerator
+from interfaces import IVerifier
 
 
 class BaselineVerifier(IVerifier):

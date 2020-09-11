@@ -1,7 +1,7 @@
-from project.interfaces import IVerifier, IContestVerifier, ISelectionVerifier
-from project.generator import ParameterGenerator, FilePathGenerator, SelectionInfoAggregator
-from project import number
-from project.json_parser import read_json_file
+from interfaces import IVerifier, IContestVerifier, ISelectionVerifier
+from generator import ParameterGenerator, FilePathGenerator, SelectionInfoAggregator
+import number
+from json_parser import read_json_file
 
 
 class DecryptionVerifier(IVerifier):

@@ -1,6 +1,6 @@
-from project import json_parser, number
-from project.generator import ParameterGenerator, FilePathGenerator
-from project.interfaces import IVerifier
+import json_parser, number
+from generator import ParameterGenerator, FilePathGenerator
+from interfaces import IVerifier
 
 
 class KeyGenerationVerifier(IVerifier):
