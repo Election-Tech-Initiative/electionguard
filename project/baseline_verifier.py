@@ -2,10 +2,27 @@ import number
 from generator import ParameterGenerator
 from interfaces import IVerifier
 
+"""
+This module is for checking the given baseline parameters, as mentioned in the specification document in green box 1. 
+Baseline parameters include p, q, r, g which are used across the whole election verification process.
+
+Class: 
+    BaselineVerifier 
+"""
+
 
 class BaselineVerifier(IVerifier):
     """
     This class tests that whether the given parameters p, q, r, g equal to expected values. (box 1)
+    Attributes:
+        DICT_KEYS: set
+            a set of names the parameters are stored in the dataset
+        LARGE_PRIME_EXPECTED: int
+            the expected value of large prime, p, in integer
+        SMALL_PRIME_EXPECTED: int
+            the expected value of small prime, q, in integer
+    Methods:
+        verify_all_params()
     """
 
     def __init__(self, param_g: ParameterGenerator):
@@ -33,7 +50,7 @@ class BaselineVerifier(IVerifier):
 
     def verify_all_params(self) -> bool:
         """
-        verify all parameters including p, q, r, g, inverse g
+        verify all parameters including p, q, r, g
         :return: True if all parameters are verified to fit in designated equations or have specific values,
                 False otherwise
         """

@@ -4,11 +4,29 @@ from generator import ParameterGenerator, FilePathGenerator, VoteLimitCounter
 from interfaces import IBallotVerifier, IContestVerifier, ISelectionVerifier
 import glob
 
+"""
+This module is created for the encryption verification, which covers boxes 3, 4, 5 of the specification document. 
+
+The encryption verification needs to be conducted on all the ballots (both cast and spoiled) in the election dataset. 
+For encryption verification on every single ballot, 3 levels of checks are needed, including ballot-level, contest-level,
+and selection-level. The following 4 classes represent this data and verification hierarchy. 
+
+Class:
+    AllBallotsVerifier
+    BallotEncryptionVerifier
+    BallotContestVerifier
+    BallotSelectionVerifier
+"""
+
 
 class AllBallotsVerifier(IBallotVerifier):
     """
-    This class checks ballot encryption correctness on all the ballots, both spoiled and cast.(box 3, 4)
-    Checks tracking hash chain (box 5).
+    This class checks ballot encryption correctness on both spoiled and cast (box 3, 4), and verifies the correctness
+    of tracking hash chain (box 5).
+
+    Method:
+        verify_all_ballots()
+        verify_tracking_hashes()
     """
 
     def __init__(self, param_g: ParameterGenerator, path_g: FilePathGenerator, limit_counter: VoteLimitCounter):
@@ -64,7 +82,7 @@ class AllBallotsVerifier(IBallotVerifier):
     def verify_tracking_hashes(self, hashes_dic: dict) -> bool:
         """
         verifies the tracking hash chain correctness
-        NOTE: didn't check the first and closing hash3
+        NOTE: didn't check the first and closing hashes
         :param hashes_dic: a dictionary of "previous tracking - current tracking " hash code pairs
         :return: True if all the tracking hashes satisfy Bi, Hi = H(Hi-1, D, T, Bi)
         """
@@ -105,10 +123,16 @@ class AllBallotsVerifier(IBallotVerifier):
 
 class BallotEncryptionVerifier(IBallotVerifier):
     """
-    This class checks ballot correctness on a single ballot. Ballot correctness can be represented by:
+    This class checks ballot correctness on a single ballot.
+
+    Ballot correctness can be represented by:
     1. correct encryption (of value 0 or 1) of each selection within each contest (box 3)
     2. selection limits are satisfied for each contest (box 4)
     3. the running hash are correctly computed (box 5)
+
+    Method:
+        verify_all_contests()
+        verify_tracking_hash()
     """
 
     def __init__(self, ballot_dic: dict, param_g: ParameterGenerator, limit_counter: VoteLimitCounter):
@@ -145,8 +169,8 @@ class BallotEncryptionVerifier(IBallotVerifier):
 
     def verify_tracking_hash(self) -> bool:
         """
-        verify all the middle tracking hash
-        :return:
+        verify all the middle (index 1 to n) tracking hash
+        :return: true if all the tracking hashes are correct, false otherwise
         """
         crypto_hash = self.ballot_dic.get('crypto_hash')
         prev_hash, curr_hash = self.get_tracking_hash()
@@ -158,8 +182,8 @@ class BallotEncryptionVerifier(IBallotVerifier):
 
     def get_tracking_hash(self) -> Tuple[str, str]:
         """
-
-        :return:
+        get a pair of previous tracking hash and current tracking hash values
+        :return: (previous tracking hash, current tracking hash) as a tuple
         """
         prev_hash = self.ballot_dic.get('previous_tracking_hash')
         curr_hash = self.ballot_dic.get('tracking_hash')
@@ -167,16 +191,19 @@ class BallotEncryptionVerifier(IBallotVerifier):
 
     def get_timestamp(self) -> str:
         """
-
-        :return:
+        get the timestamp of a ballot which indicates the order and index of a specific ballot among all ballots
+        :return: the timestamp of a ballot in String
         """
         return self.ballot_dic.get('timestamp')
 
 
 class BallotContestVerifier(IContestVerifier):
     """
-    This class is used for checking encryption and selection limit of
-    an individual contest within a ballot
+    This class is used for checking encryption and selection limit of an individual contest within a ballot.
+
+    Method:
+        verify_a_contest()
+
     """
 
     def __init__(self, contest_dic: dict, param_g: ParameterGenerator, limit_counter: VoteLimitCounter):
@@ -245,8 +272,8 @@ class BallotContestVerifier(IContestVerifier):
             limit_error = self.set_error()
 
         # check equations
-        equ1_check = self.__check_equation1(selection_alpha_product)
-        equ2_check = self.__check_equation2(selection_beta_product, vote_limit)
+        equ1_check = self.__check_cp_proof_alpha(selection_alpha_product)
+        equ2_check = self.__check_cp_proof_beta(selection_beta_product, vote_limit)
 
         if not equ1_check or not equ2_check:
             limit_error = self.set_error()
@@ -284,10 +311,12 @@ class BallotContestVerifier(IContestVerifier):
 
         return res
 
-    # TODO: semantic meaning
-    def __check_equation1(self, alpha_product: int) -> bool:
+    def __check_cp_proof_alpha(self, alpha_product: int) -> bool:
         """
-        check if equation g ^ v = a * A ^ c mod p is satisfied
+        check if equation g ^ v = a * A ^ c mod p is satisfied,
+        This function checks the first part of aggregate encryption, A in (A, B), is used together with
+        __check_cp_proof_beta() to form a pair-wise check on a complete encryption value pair (A,B)
+        :param alpha_product: the accumulative product of all the alpha/pad values on all selections within a contest
         :return: True if the equation is satisfied, False if not
         """
         left = pow(self.generator, self.contest_response, self.large_prime)
@@ -300,11 +329,12 @@ class BallotContestVerifier(IContestVerifier):
 
         return res
 
-    # TODO: semantic meaning
-    def __check_equation2(self, beta_product: int, votes_allowed: int) -> bool:
+    def __check_cp_proof_beta(self, beta_product: int, votes_allowed: int) -> bool:
         """
         check if equation g ^ (L * c) * K ^ v = b * B ^ C mod p is satisfied
-        :param beta_product: the product of beta values of all the selections within this contest
+        This function checks the second part of aggregate encryption, B in (A, B), is used together with
+         __check_cp_proof_alpha() to form a pair-wise check on a complete encryption value pair (A,B)
+        :param beta_product: the accumalative product of pad/beta values of all the selections within a contest
         :param votes_allowed: the maximum votes allowed for this contest
         :return: True if the equation is satisfied, False if not
         """
@@ -321,10 +351,10 @@ class BallotContestVerifier(IContestVerifier):
 
     def __match_vote_limit_by_contest(self, contest_name: str, num_of_placeholders: int) -> bool:
         """
-        match the placeholder numbers in each contest with the maximum
+        match the placeholder numbers in each contest with the maximum votes allowed
         :param contest_name: name/id of the contest
         :param num_of_placeholders: number of placeholders appear in this contest
-        :return: True if vote limit and the actual votes are matched, False if not
+        :return: True if vote limit and the placeholder numbers are equaled, False if not
         """
         vote_limit = int(self.vote_limit_dic.get(contest_name))
 
@@ -346,7 +376,18 @@ class BallotContestVerifier(IContestVerifier):
 
 class BallotSelectionVerifier(ISelectionVerifier):
     """
-    This class is responsible for verifying one selection at a time, its main purpose is to confirm selection validity.
+    This class is responsible for verifying one selection at a time.
+
+    Its main purpose is to confirm selection validity. Since it's the deepest level of detail the encryption
+    verification can go, most of the computation of encryption checks happen here.
+
+    Method:
+        get_pad()
+        get_data()
+        is_placeholder_selection()
+        verify_selection_validity()
+        verify_selection_limit()
+
     """
 
     def __init__(self, selection_dic: dict, param_g: ParameterGenerator):
@@ -420,7 +461,7 @@ class BallotSelectionVerifier(ISelectionVerifier):
         if not self.__check_hash_comp(challenge, zero_challenge, one_challenge):
             error = self.set_error()
 
-        # point 5: check chaum-pedersen proofs
+        # point 5: check 2 chaum-pedersen proofs, zero proof and one proof
         if not (self.__check_cp_proof_zero_proof(self.pad, self.data, zero_pad, zero_data,
                                                  zero_challenge, zero_response)
                 and self.__check_cp_proof_one_proof(self.pad, self.data, one_pad, one_data,
@@ -471,8 +512,13 @@ class BallotSelectionVerifier(ISelectionVerifier):
     def __check_cp_proof_zero_proof(self, pad: int, data: int, zero_pad: int, zero_data: int, zero_chal: int,
                                     zero_res: int) -> bool:
         """
-        check if Chaum-Pedersen proof zero proof is satisfied, g ^ v0 = a0 * alpha ^ c0 mod p,
-         K ^ v0 = b0 * beta ^ c0 mod p
+        check if Chaum-Pedersen proof zero proof(given challenge c0, response v0) is satisfied.
+
+        To proof the zero proof, two equations g ^ v0 = a0 * alpha ^ c0 mod p, K ^ v0 = b0 * beta ^ c0 mod p
+        have to be satisfied.
+        In the verification process, the challenge c of a selection is allowed to be broken into two components
+        in any way as long as c = (c0 + c1) mod p, c0 here is the first component broken from c.
+
         :param pad: alpha of a selection
         :param data: beta of a selection
         :param zero_pad: zero_pad of a selection
@@ -497,8 +543,13 @@ class BallotSelectionVerifier(ISelectionVerifier):
     def __check_cp_proof_one_proof(self, pad: int, data: int, one_pad: int, one_data: int, one_chal: int,
                                    one_res: int) -> bool:
         """
-        check if Chaum-Pedersen proof one proof is satisfied, g ^ v1 = a1 * alpha ^ c1 mod p,
-        g ^ c1 * K ^ v1 = b1 * beta ^ c1 mod p
+        check if Chaum-Pedersen proof one proof(given challenge c1, response v1) is satisfied.
+
+        To proof the zero proof, two equations g ^ v1 = a1 * alpha ^ c1 mod p, g ^ c1 * K ^ v1 = b1 * beta ^ c1 mod p
+        have to be satisfied.
+        In the verification process, the challenge c of a selection is allowed to be broken into two components
+        in any way as long as c = (c0 + c1) mod p, c1 here is the second component broken from c.
+
         :param pad: alpha of a selection
         :param data: beta of a selection
         :param one_pad: one_pad of a selection

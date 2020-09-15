@@ -6,12 +6,22 @@ class IVerifier:
     This represents an abstract class of a verifier, all concrete verifier extends from this class,
     defines all the parameters including generator, extended hash, elgamal public key, large prime p,
     and small prime q
+
+    Concrete classes:
+        BaselineVerifier
+        KeyGeneratorVerifier
+        AllBallotsVerifier
+        BallotEncryptionVerifier
+        BallotContestVerifier
+        BallotSelectionVerifier
+        DecryptionVerifier
+        DecryptionContestVerifier
+        DecryptionSelectionVerifier
+        ShareVerifier
     """
+
     def __init__(self, param_g: ParameterGenerator):
-        """
-        initializer
-        :param param_g: a parameter generator memorizing the path to files
-        """
+
         self.param_g = param_g
         self.generator = self.param_g.get_generator()
         self.extended_hash = self.param_g.get_extended_hash()
@@ -37,6 +47,15 @@ class IVerifier:
 
 
 class IBallotVerifier(IVerifier):
+    """
+    Sample ballot verifier abstract class that all ballot-level verifiers extend from,
+    provides an initializer sample
+
+    Concrete class:
+        AllBallotsVerifier
+        BallotEncryptionVerifier
+        DecryptionVerifier
+    """
 
     def __init__(self, param_g: ParameterGenerator, limit_counter: VoteLimitCounter):
         super().__init__(param_g)
@@ -45,8 +64,11 @@ class IBallotVerifier(IVerifier):
 
 class IContestVerifier(IVerifier):
     """
-    Contest verifier as an interface, will be implemented in every contest-level verifier,
-    including BallotContestVerifier and DecryptionContestVerifier
+    Contest verifier abstract class that all  will be implemented in every contest-level verifier.
+
+    Concrete class:
+        BallotContestVerifier
+        DecryptionContestVerifier
     """
     def verify_a_contest(self) -> bool:
         pass
@@ -54,8 +76,11 @@ class IContestVerifier(IVerifier):
 
 class ISelectionVerifier(IVerifier):
     """
-    Selection verifier as an interface, will be implemented in every selection-level verifier,
-    including BallotSelectionVerifier and DecryptionContestVerifier
+    Selection verifier as an interface, will be implemented in every selection-level verifier.
+
+    Concrete class:
+        BallotSelectionVerifier
+        DecryptionSelectionVerifier
     """
     def get_pad(self) -> int:
         pass

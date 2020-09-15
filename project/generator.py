@@ -184,8 +184,7 @@ class ParameterGenerator:
         :return: a list of guardians' public keys
         """
         num_of_guardians = self.get_num_of_guardians()
-        for i in range(num_of_guardians):
-            yield self.get_public_key_of_a_guardian(i)
+        return [self.get_public_key_of_a_guardian(i) for i in range(num_of_guardians)]
 
     def get_description(self) -> dict:
         """
