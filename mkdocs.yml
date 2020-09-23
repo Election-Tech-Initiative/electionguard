@@ -1,0 +1,45 @@
+site_name: ElectionGuard
+# site_description:
+site_author: Microsoft
+# google_analytics:
+# remote_branch: for gh-deploy to GithubPages
+# remote_name: for gh-deploy to Github Pages
+copyright: "© Microsoft 2020"
+docs_dir: "docs"
+repo_url: https://github.com/microsoft/electionguard/
+nav:
+  - About: index.md
+  - Getting Started: 
+    - Overview: Getting_Started.md
+  - Guide:
+    - Overview: guide/Overview.md
+    - SDK: 
+      - Core Component: guide/Core_Component.md
+      - Implementations: guide/Implementations.md
+    - Additional Topics:
+      - Verifiable Election: guide/Verifiable_Election.md
+      - Election Manifest: guide/Election_Manifest.md
+    - Glossary: guide/Glossary.md      
+  - HacktoberFest: HacktoberFest.md
+plugins:
+  - search
+theme:
+  name: material
+  custom_dir: overrides
+  favicon: images/favicon.ico
+  logo: images/electionguard-logo.png
+  font:
+    text: Segoe UI
+  palette:
+    scheme: default
+    primary: teal
+    accent: teal
+  features:
+    - tabs
+    - instant
+markdown_extensions:
+  - admonition
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg

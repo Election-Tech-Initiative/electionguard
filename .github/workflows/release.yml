@@ -1,0 +1,27 @@
+name: Release Build
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  PYTHON_VERSION: 3.8
+
+jobs:
+  publish: 
+    name: Publish Documentation
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Set up Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - name: Change Directory
+        run: cd ${{ github.workspace }}
+      - name: Install MkDocs
+        run: make install
+      - name: Deploy
+        run: make deploy
