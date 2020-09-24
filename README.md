@@ -9,7 +9,7 @@ This library and all linked ElectionGuard projects, are licensed under the MIT l
 
 ## 🎃 HacktoberFest
 
-Here for hacktoberFest? Come check out our [HacktoberFest Page](http://microsoft.github.io/electionguard/HacktoberFest) 
+Here for Hacktoberfest? Come check out our [Hacktoberfest Page](http://microsoft.github.io/electionguard/Hacktoberfest) 
 
 ## 🚀 Getting Started
 
