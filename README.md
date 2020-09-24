@@ -7,7 +7,7 @@ ElectionGuard is an **open source** software development kit (SDK) that makes vo
 ## ❤️ Open-Source
 This library and all linked ElectionGuard projects, are licensed under the MIT license. There is no fee for using ElectionGuard.
 
-## 🎃 HacktoberFest
+## 🎃 Hacktoberfest
 
 Here for Hacktoberfest? Come check out our [Hacktoberfest Page](http://microsoft.github.io/electionguard/Hacktoberfest) 
 
