@@ -1,7 +1,7 @@
 
 ## SDK
 
-The [ElectionGuard software development kit (SDK)](/guide/Core_Component/) contains two major parts. The core component for developing with ElectionGuard and reference implementations that interact with core component or provide a peek into the pieces required for the election process. 
+The [ElectionGuard software development kit (SDK)](Core_Component.md) contains two major parts. The core component for developing with ElectionGuard and reference implementations that interact with core component or provide a peek into the pieces required for the election process. 
 
 ## Specifications
 These documents contains the fundamental specifications, documentation, architecture, and mathematical/cryptographic proofs that underpin ElectionGuard. If you're looking to understand the system better, or want to know how to integrate the various components, there is a lot of valuable information contained here.
@@ -9,7 +9,7 @@ These documents contains the fundamental specifications, documentation, architec
 ### v 1.0.0
 
 !!! important 
-    This version is coming soon. Check out [`electionguard-python`]() for a working example.
+    This version is coming soon. Check out [`electionguard-python`](https://github.com/microsoft/electionguard-python) for a working example.
 
 :fontawesome-regular-file: Specification
 
