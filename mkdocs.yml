@@ -35,11 +35,10 @@ theme:
     primary: teal
     accent: teal
   features:
-    - tabs
-    - instant
+    - navigation.tabs
+    - navigation.instant
 markdown_extensions:
   - admonition
-  - footnotes
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
