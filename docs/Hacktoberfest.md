@@ -1,3 +1,8 @@
+---
+title: ElectionGuard & Hacktoberfest
+description: Help out ElectionGuard during Hacktoberfest
+---
+
 [![Hacktoberfest Banner](images/hacktoberfest-banner.png)](https://hacktoberfest.digitalocean.com/)
 
 [Hacktoberfest](https://hacktoberfest.digitalocean.com/) is an event to encourage participation in the open source community. We're glad to be participating in Hacktoberfest 2020! We love being engaged in the community and we hope you'll join in. Here are some resources to engage with ElectionGuard during Hacktoberfest. Happy hacking!
