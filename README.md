@@ -13,7 +13,7 @@ Here for Hacktoberfest? Come check out our [Hacktoberfest Page](http://microsoft
 
 ## 🚀 Getting Started
 
-ElectionGuard is always improving. To keep up with the latest, check our **[GitHub Pages documentation]()**. For developers looking to get started, we recommend the following repositories.
+ElectionGuard is always improving. To keep up with the latest, check our **[docs on GitHub](https://github.com/microsoft/electionguard/blob/main/docs/index.md)**. For developers looking to get started, we recommend the following repositories.
 
 ### Python
 A core component of electionguard implemented in python which includes ballot encryption, decryption, key generation, and tallying.
