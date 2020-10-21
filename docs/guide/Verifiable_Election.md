@@ -30,7 +30,7 @@ Once the ballot has been encrypted, the encrypting device needs to handle the ve
 
 [![Sample ElectionGuard verification code output by tracking site](https://res.cloudinary.com/electionguard/image/upload/v1596647319/verification-code_k82e8f.jpg)](https://demo.electionguard.vote/track/cook%207HMCG%20notion%209329D%20bandwidth%2099DCF%20mist%207M792%20panpipe%20BF7C9%20corsage%204CMGC%20privilege%2044J47%20daybed%20GBH74)
 
-The verification code format is a mix of human-readable words and alphanumeric codes. The first word is always human-readable to facilitate a search-like discovery experience (to try, go to [our demo tracking site](https://demo.electionguard.com) and begin typing 'coo' to surface the verification code above, or simply click the image to be taken directly).
+The verification code format is a mix of human-readable words and alphanumeric codes. The first word is always human-readable to facilitate a search-like discovery experience (to try, go to [our demo tracking site](https://demo.electionguard.vote) and begin typing 'coo' to surface the verification code above, or simply click the image to be taken directly).
 
 ## Challenging a ballot
 
