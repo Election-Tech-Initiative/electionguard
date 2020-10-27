@@ -29,3 +29,4 @@ We'll get you started with some instructions and election files.
 _When you're finished, create a PR and add your name & verifier to this list_
 
 - `Your Name - [Verifier Name](Repository Link)`
+- Brandon Alexander - [C# Verifier](https://github.com/brandon-irl/ElectionGuard-Verifier-C-)
