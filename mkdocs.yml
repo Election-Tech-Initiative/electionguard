@@ -20,7 +20,6 @@ nav:
       - Verifiable Election: guide/Verifiable_Election.md
       - Election Manifest: guide/Election_Manifest.md
     - Glossary: guide/Glossary.md      
-  - Hacktoberfest: Hacktoberfest.md
 plugins:
   - search
 theme:
