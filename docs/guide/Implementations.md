@@ -35,9 +35,12 @@ An application that demonstrates publication of ElectionGuard election artifacts
 
 [:fontawesome-brands-github: Source](https://github.com/microsoft/electionguard-tracking-site)
 
-### Verifier
-The verifier application is used to perform an external, independent verification of an election tally. This repository contains a reference implementation of a verifier built against the ElectionGuard specifications. This is not meant to be the *only* verifier application, but rather an example. This library should be used in tandem with the technical specifications and usage guidelines contained in the [specifications](https://github.com/microsoft/electionguard/wiki).
+### Verifiers
+A verifier application is used to perform an external, independent verification of an election tally. This repository contains a reference implementation of a verifier built against the ElectionGuard specifications. This is not meant to be the *only* verifier application, but rather an example. This library should be used in tandem with the technical specifications and usage guidelines contained in the [specifications](https://github.com/microsoft/electionguard/wiki).
 
 [:fontawesome-brands-github: Source](https://github.com/microsoft/electionguard-verifier)
 
+#### Community Verifiers
+- [:fontawesome-brands-github: Python Verifier](https://github.com/rainbowhuanguw/ElectionGuard-verifier-python) by Rainbow Huang
+- [:fontawesome-brands-github: C# Verifier](https://github.com/brandon-irl/ElectionGuard-Verifier-C-) by Brandon Alexander
 
