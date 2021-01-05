@@ -13,6 +13,13 @@ _Includes: Ballot Encryption_
 
 :fontawesome-brands-github: Source - ✨ Coming Soon
 
+## Java
+
+_Includes: Complete port of python library_
+
+[:fontawesome-brands-github: Source](https://github.com/JohnLCaron/electionguard-java)
+
+
 ## Archived
 
 !!! danger 
