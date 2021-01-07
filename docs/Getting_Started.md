@@ -14,4 +14,4 @@ These are the latest projects from ElectionGuard. If you're looking to contribut
 
 Pick your language of preference:
 
-[![](images/python-language.png)](guide/Core_Component.md#python)[![](images/c++-language.png)](guide/Core_Component.md#c++) [![](images/c-language.png)](guide/Core_Component.md#c_1) [![](images/c-sharp-language.png)](guide/Core_Component.md#c_2) 
+[![](images/python-language.png)](guide/Core_Component.md#python)[![](images/c++-language.png)](guide/Core_Component.md#c++) [![](images/c-language.png)](guide/Core_Component.md#c_1) [![](images/c-sharp-language.png)](guide/Core_Component.md#c_2) [![](images/java.png)](https://github.com/JohnLCaron/electionguard-java)
