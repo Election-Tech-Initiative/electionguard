@@ -9,7 +9,11 @@ This library and all linked ElectionGuard projects, are licensed under the MIT l
 
 ## 🚀 Getting Started
 
-ElectionGuard is always improving. To keep up with the latest, check our **[GitHub Pages documentation](https://microsoft.github.io/electionguard)**. For developers looking to get started, we recommend the following repositories.
+ElectionGuard is always improving. To keep up with the latest, check our **[GitHub Pages documentation](https://microsoft.github.io/electionguard)**. For those looking to get started, we recommend the following repositories.
+
+### Documentation
+
+This repository is a living document to help everyone interact with ElectionGuard. The [official ElectionGuard site](https://microsoft.github.io/electionguard) is built using the `/docs` folder and [mkdocs](https://www.mkdocs.org/) with [mkdocs-material](https://squidfunk.github.io/mkdocs-material/). Ensure you have the python 3.8 or newer installed and run `make` to install the dependencies and start the site. 
 
 ### Python
 A core component of electionguard implemented in python which includes ballot encryption, decryption, key generation, and tallying.
