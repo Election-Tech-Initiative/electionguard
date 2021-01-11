@@ -13,6 +13,14 @@ _Includes: Ballot Encryption_
 
 :fontawesome-brands-github: Source - ✨ Coming Soon
 
+## Community
+
+### Java
+_Includes: Key Generation, Ballot Encryption, Tallying, Decryption_
+
+[:fontawesome-brands-github: Source](https://github.com/JohnLCaron/electionguard-java)
+
+
 ## Archived
 
 !!! danger 
