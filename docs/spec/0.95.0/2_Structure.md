@@ -1,0 +1,4 @@
+ElectionGuard Structure
+This document describes the four principal components of ElectionGuard.
+1. Baseline Parameters – These are general parameters that are standard in every election. An alternate means for generating parameters is described, but the burden of verifying an election is increased if alternate parameters are used because a verifier would need to verify the proper construction of any alternate parameters.
+2. Key Generation – Prior to each individual election, guardians must generate individual public-private key pairs and exchange shares of private keys to enable completion of an election even if some guardians become unavailable. Although it is preferred to generate new keys for each election, it is permissible to use the same keys for multiple elections so long as the set of guardians remains the same. A complete new set of keys must be generated if even a single guardian is replaced.
