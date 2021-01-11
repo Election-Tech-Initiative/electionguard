@@ -8,7 +8,9 @@ copyright: "© Microsoft 2020"
 docs_dir: "docs"
 repo_url: https://github.com/microsoft/electionguard/
 nav:
-  - About: index.md
+  - About: 
+    - Overview: index.md
+    - Roadmap: Roadmap.md
   - Getting Started: 
     - Overview: Getting_Started.md
   - Guide:
