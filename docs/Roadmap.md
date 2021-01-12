@@ -42,6 +42,12 @@ When we execute on our roadmap, we keep learning and our assessment of some of t
 
 ## 2019-2020
 
+**Overview**
+
+:fontawesome-regular-check-circle: Integrate electionguard into [various election tools](ElectionTools).
+
+:fontawesome-regular-check-circle: Run a verifiable election for [Fulton in Wisconsin](Fulton) utilizing smart cards, QR scanners, a ballot box, an admin device, and a ballot tracking site.
+
 **Specification**
 
 :fontawesome-regular-check-circle: Update the ElectionGuard specification to 0.95.0
@@ -54,11 +60,7 @@ When we execute on our roadmap, we keep learning and our assessment of some of t
 
 :fontawesome-regular-check-circle: Introduce the world to ElectionGuard capabilities with `electionguard-c` as a core implementation meeting specification 0.85.0
 
-**Other**
 
-:fontawesome-regular-check-circle: Integrate electionguard into [various election tools](ElectionTools).
-
-:fontawesome-regular-check-circle: Run a verifiable election for [Fulton in Wisconsin](Fulton) utilizing smart cards, QR scanners, a ballot box, an admin device, and a ballot tracking site.
 
 
 <!-- Links -->
