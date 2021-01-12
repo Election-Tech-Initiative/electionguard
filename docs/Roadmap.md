@@ -1,9 +1,29 @@
 
 # Roadmap
 
-This page outlines specific features and fixes that are scheduled or planned for given releases. We typically look out 6 months and we establish topics we want to work on. We don't start with our roadmap on a blank sheet. We develop it based on our last roadmap, the findings we made over the course of the last year, and of course what we heard from you.
+ElectionGuard is an evolving project. 2020 established several use cases and learnings; 2021 is about rationalizing those learnings into a set of code repos and documentation and participation practices to further establish a community of resources, contributors, and best practices.
 
-When we execute on our roadmap, we keep learning and our assessment of some of the topics listed changes. As a result, we may add or drop topics as we go. As always, we listen to your feedback and adapt our plans if needed.
+This roadmap outlines specific features and fixes that are scheduled or planned for given releases. We typically look out 6 months and we establish topics we want to work on. We don't start with our roadmap on a blank sheet. We develop it based on our last roadmap, the findings we made over the course of the last year, and of course what we heard from you.
+
+When we execute on our roadmap, our assessment of the topics necessary to address in future may change. As such, we may add or drop topics as we go. As always, we listen to your feedback and adapt our plans if needed.
+
+## Strategic Overview
+
+The next several months (the first half of 2021) of ElectionGuard will center around simplifying the repo structure and establishing full functionality of the fundamental ElectionGuard use cases:
+
+* End to end verifiable elections (E2E-V Elections)
+* Publication of audit results (Audits)
+* Election verification using independent third-party verifiers (Verifiers)
+
+Depending on the use case, the components and packages necessary from the SDK may differ and are illustrated below.
+
+It is the intent of the next six months of work to develop:
+
+* a final, fully-developed (including thresholding, hash-chaining, etc.), more hierarchical specification integrated directly into the SDK;
+* a C++ repo that performs encryption exclusively (for embedded encryption applications)
+* a practice for building packages off the C++ repo and services / environment configurations off the Python repo (for E2E-V and audit applications)
+* a consistent, efficient set of data interfaces across the ElectionGuard, C++, and Python repos
+* a more modular approach to documentation and contribution to lessen the learning curve and overhead to participate
 
 **Legend of annotations:**
 
