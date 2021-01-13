@@ -13,6 +13,9 @@ nav:
     - Overview: Getting_Started.md
   - Guide:
     - Overview: guide/Overview.md
+    - Specification:
+      - Overview: spec/0.95.0/1_Overview.md
+      - Structure: spec/0.95.0/2_Structure.md
     - SDK: 
       - Core Component: guide/Core_Component.md
       - Implementations: guide/Implementations.md
