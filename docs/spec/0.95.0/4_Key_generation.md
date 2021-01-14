@@ -56,7 +56,9 @@ In order to prove possession of the coefficient associated with each public comm
 
 This Non-Interactive Zero-Knowledge (NIZK) proof proceeds as follows.
 
-### NIZK Proof by Guardian $T_i$ of its knowledge of secrets $a_{i,j}$ such that $K_{i,j}= g^{a_{i,j}} \bmod p$
+## NIZK Shnorr proof by Guardian of knowledge for each of its coefficients
+
+Formally: NIZK Proof by Guardian $T_i$ of its knowledge of secrets $a_{i,j}$ such that $K_{i,j}= g^{a_{i,j}} \bmod p$
 
 For each $0 \le j \lt k$, Guardian $T_i$ generates random integer values $R_{i,j}$ in $Z_q$ and computes $h_{i,j}=g^{R_{i,j}} \bmod p$. Then, using the hash function SHA-256 (as defined in NIST PUB FIPS 180-4), guardian $T_i$ then performs a single hash computation $c_{i,j} = H(Q, K_{i,j}, h_{i,j} \bmod q$ and publishes the values $K_{i,j},h_{i,j},c_{i,j}$ and $u_{i,j} = (R_{i,j} + c_{i,j}a_{i,j}) \bmod q$.
 

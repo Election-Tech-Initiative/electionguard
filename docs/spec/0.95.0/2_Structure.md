@@ -1,7 +1,9 @@
 # ElectionGuard Structure
 
-In an election, a set of guardians is enlisted to serve as trustees who manage cryptographic
-keys. The members of a canvassing board can serve as guardians. Prior to the commencement of voting or auditing, the guardians work together to form a public encryption key that will be used to encrypt individual ballots.
+## Overview
+
+In an election, a set of guardians is enlisted to serve as trustees who manage cryptographic keys. The members of a canvassing board can serve as guardians. Prior to the commencement of voting or auditing, the guardians work together to form a public encryption key that will be used to encrypt individual ballots.
+
 After the conclusion of voting or auditing, a quorum of guardians is necessary to produce the artifacts required to enable public verification of the tally.
 
 ElectionGuard has four principal components:
@@ -20,15 +22,15 @@ In the remainder of this specification, the following notation will be used:
 * $Z_\eta^*$ is the multiplicative subgroup of $Z_\eta$. When $p$ is a prime, $Z_p^* = \{1,2,3, \dots, p-1\}$.
 * $Z_p^r$ is the set of $r^{th}$-residues in $Z_p^*$. Formally, $Z_p^r = \{ y \in Z_p^*$ for which $\exists x \in Z_p^*$ such that $y=x^r\bmod p \}$. When $p$ is a prime for which $p-1=qr$ with $q$ a prime that is not a divisor of integer $r$, then $Z_r^p$ is an order $q$ cyclic subgroup of $Z_p^*$ and for each $y\in Z_p^*$, $y\in Z_r^p$ if and only if $y^q \bmod p = 1$.
 * $x\equiv_n y$ is the predicate that is true if and only if $x \bmod n = y \bmod n$.
-* The function $H()$ shall be use to designate the SHA-256 hash function (as defined in NIST PUB FIPS 180-4).
+* The function $H()$ shall be use to designate the SHA-256 hash function (as defined in NIST PUB FIPS 180-4[^3]).
 * In general, the variable pairs $(\alpha, \beta)$, $(a, b)$, and $(A,B)$ will be used to denote encryptions. Specifically, $(\alpha,\beta)$ will be used to designate encryptions of votes (*always* an encryption of a zero or one), $(A,B)$ will be used to denote aggregations of encryptions (which may be encryptions of larger values), and $(a,b)$ will be used to denote encryption commitments used to prove properties of other encryptions.
 
 ## Encryption of Votes
 
-Encryption of votes in ElectionGuard is performed using an exponential form of the ElGamal cryptosystem. Primes $p$ and $q$ are publicly fixed such that $q$ is not a divisor of $r=\frac{p-1}{q}$ . A generator $g$ of the order $q$ subgroup $Z_r^p$ is also fixed. (Any $g=x^r\bmod p$ for which $x \in Z_p^*$
-suffices so long as $g\ne 1$). 
+Encryption of votes in ElectionGuard is performed using an exponential form of the ElGamal cryptosystem [^4]. Primes $p$ and $q$ are publicly fixed such that $q$ is not a divisor of $r=\frac{p-1}{q}$ . A generator $g$ of the order $q$ subgroup $Z_r^p$ is also fixed. (Any $g=x^r\bmod p$ for which $x \in Z_p^*$
+suffices so long as $g\ne 1$).
 
-A public-private key pair can be chosen by selecting a random $s \in Z_q$ as a private key and publishing $K = g^s \bmod p$ as a public key.
+A public-private key pair can be chosen by selecting a random $s \in Z_q$ as a private key and publishing $K = g^s \bmod p$ as a public key.[^5]
 
 A message $M \in Z_p^r$ is then encrypted by selecting a random nonce $R \in Z_q$ and forming the pair $(\alpha,\beta) = (g^R \bmod p, g^M \dot K^R \bmod p)$. An encryption $(\alpha,\beta)$ can be decrypted by the holder of the secret $s$ as
 
@@ -40,7 +42,7 @@ The value of $M$ can be computed from $g^M \bmod p$ as long as the message $M$ i
 
 Only two possible messages are encrypted in this way by ElectionGuard:
 
-* an encryption of one is used to indicate that an option is selected, and 
+* an encryption of one is used to indicate that an option is selected, and
 * an encryption of zero is used to indicate that an option is not selected.
 
 ## Homomorphic Properties
@@ -73,3 +75,18 @@ Using a combination of the above techniques, it is possible for ElectionGuard to
 Threshold ElGamal encryption is used for encryption of ballots and other data. This form of encryption makes it very easy to combine individual guardian public keys into a single public key. It also offers a homomorphic property that allows individual encrypted votes to be combined to form encrypted tallies.
 
 The guardians of an election will each generate a public-private key pair. The public keys will then be combined (as described in the following section) into a single election public key which is used to encrypt all selections made by voters in the election.
+
+[^3]: NIST (2015) Secure Hash Standard (SHS). In: FIPS 180-4. https://csrc.nist.gov/publications/detail/fips/180/4/final
+
+[^4]: ElGamal T. (1985) A Public Key Cryptosystem and a Signature Scheme Based on Discrete Logarithms. In:  Blakley G.R., Chaum D. (eds) Advances in Cryptology. CRYPTO 1984. Lecture Notes in Computer Science, vol 196
+https://link.springer.com/content/pdf/10.1007/3-540-39568-7_2.pdf
+
+[^5]: As will be seen below, the actual public key used to encrypt votes will be a combination of separately-generated public keys. So no entity will ever be in possession of a private key that can be used to decrypt votes.
+
+[^6]: The simplest way to compute $M$ from $g^M \bmod p$ is an exhaustive search through possible values of $M$. Alternatively, a table of pairing each possible value of $g^M \bmod p$ can be pre-computed. A final option which can accommodate a larger space of possible values for $M$ is to use Shanks’s *baby-step giant-step method* as described in the 1971 paper “Class Number, a Theory of Factorization and Genera,” Proceedings of Symposium in Pure Mathematics, Vol. 20, American Mathematical Society, Providence, 1971, pp. 415-440.
+
+[^7]: Schnorr C.P. (1990) Efficient Identification and Signatures for Smart Cards. In: Brassard G. (eds) Advances in Cryptology — CRYPTO’ 89 Proceedings. CRYPTO 1989. Lecture Notes in Computer Science, vol 435. Springer, New York, NY. https://link.springer.com/content/pdf/10.1007/0-387-34805-0_22.pdf
+
+[^8]: Chaum D., Pedersen T.P. (1993) Wallet Databases with Observers. In: Brickell E.F. (eds) Advances in
+Cryptology — CRYPTO' 92. Lecture Notes in Computer Science, volume 740. Springer, Berlin, Heidelberg. https://link.springer.com/content/pdf/10.1007/3-540-48071-4_7.pdf
+
