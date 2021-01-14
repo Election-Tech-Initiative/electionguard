@@ -1,5 +1,9 @@
 # ElectionGuard Structure
 
+In an election, a set of guardians is enlisted to serve as trustees who manage cryptographic
+keys. The members of a canvassing board can serve as guardians. Prior to the commencement of voting or auditing, the guardians work together to form a public encryption key that will be used to encrypt individual ballots.
+After the conclusion of voting or auditing, a quorum of guardians is necessary to produce the artifacts required to enable public verification of the tally.
+
 ElectionGuard has four principal components:
 
 1. Baseline Parameters – These are general parameters that are standard in every election. An alternate means for generating parameters is described, but the burden of verifying an election is increased if alternate parameters are used because a verifier would need to verify the proper construction of any alternate parameters.
@@ -18,3 +22,54 @@ In the remainder of this specification, the following notation will be used:
 * $x\equiv_n y$ is the predicate that is true if and only if $x \bmod n = y \bmod n$.
 * The function $H()$ shall be use to designate the SHA-256 hash function (as defined in NIST PUB FIPS 180-4).
 * In general, the variable pairs $(\alpha, \beta)$, $(a, b)$, and $(A,B)$ will be used to denote encryptions. Specifically, $(\alpha,\beta)$ will be used to designate encryptions of votes (*always* an encryption of a zero or one), $(A,B)$ will be used to denote aggregations of encryptions (which may be encryptions of larger values), and $(a,b)$ will be used to denote encryption commitments used to prove properties of other encryptions.
+
+## Encryption of Votes
+
+Encryption of votes in ElectionGuard is performed using an exponential form of the ElGamal cryptosystem. Primes $p$ and $q$ are publicly fixed such that $q$ is not a divisor of $r=\frac{p-1}{q}$ . A generator $g$ of the order $q$ subgroup $Z_r^p$ is also fixed. (Any $g=x^r\bmod p$ for which $x \in Z_p^*$
+suffices so long as $g\ne 1$). 
+
+A public-private key pair can be chosen by selecting a random $s \in Z_q$ as a private key and publishing $K = g^s \bmod p$ as a public key.
+
+A message $M \in Z_p^r$ is then encrypted by selecting a random nonce $R \in Z_q$ and forming the pair $(\alpha,\beta) = (g^R \bmod p, g^M \dot K^R \bmod p)$. An encryption $(\alpha,\beta)$ can be decrypted by the holder of the secret $s$ as
+
+$$
+\frac{\beta}{\alpha^s}\bmod p= \frac{g^M \cdot K^R}{(g^R)^s}\bmod p = \frac{g^M \cdot (g^s)^R}{(g^R)^s} \bmod p = \frac{g^M \cdot g^{Rs}}{g^{Rs}} \bmod p = g^M \bmod p
+$$
+
+The value of $M$ can be computed from $g^M \bmod p$ as long as the message $M$ is limited to a small, known set of options.
+
+Only two possible messages are encrypted in this way by ElectionGuard:
+
+* an encryption of one is used to indicate that an option is selected, and 
+* an encryption of zero is used to indicate that an option is not selected.
+
+## Homomorphic Properties
+
+A fundamental quality of the exponential form of ElGamal described earlier is its additively homomorphic property. If two messages $M_1$ and $M_2$ are respectively encrypted as $(A_1,B_1) = (g^{R_1} \bmod p,g^{M_1}\cdot K^{R_1} \bmod p)$ and
+$(A_2,B_2) = (g^{R_2} \bmod p,g^{M_2}\cdot K^{R_2} \bmod p)$
+then the component-wise product
+$(A,B) = (A_1 A_2 \bmod p, B_1 B_2 \bmod p = (g^{R_1 + R_2} \bmod p, g^{M_1 + M_2} \cdot K^{R_1 + R_2} \bmod p)$ is an encryption of the sum $M_1 + M_2$.
+
+(There is an implicit assumption here that $M_1 + M_2 < q$ which is easily satisfied when $M_1$ and $M_2$ are both small. If $(R_1 + R_2) \ge q, (R_1 + R_2) \bmod q$ may be substituted without changing the equation since $g^q \bmod p =1$.)
+
+This additively homomorphic property is used in two important ways in ElectionGuard. First, all of the encryptions of a single option across ballots can be multiplied to form an encryption of the sum of the individual values. Since the individual values are one on ballots that select that option and zero otherwise, the sum is the tally of votes for that option and the product of the individual encryptions is an encryption of the tally.
+
+The other use is to sum all of the selections made in a single contest on a single ballot. After demonstrating that each option is an encryption of either zero or one, the product of the encryptions indicates the number of options that are encryptions of one, and this can be used to show that no more ones than permitted are among the encrypted options – i.e., that no more options were selected than permitted.
+
+However, as will be described below, it is possible for a holder of a nonce 𝑅 to prove to a third party that a pair (𝛼, 𝛽) is an encryption of 𝑀 without revealing the nonce 𝑅 and without access to the secret 𝑠.
+
+## Non-Interactive Zero-Konwledge (NIZK) Proofs
+
+ElectionGuard provides numerous proofs about encryption keys, encrypted ballots, and election tallies using the following four techniques.
+
+1. A Schnorr proof7 allows the holder of an ElGamal secret key 𝑠 to interactively prove possession of $s$ without revealing $s$.
+2. A Chaum-Pedersen proof8 allows an ElGamal encryption to be interactively proven to decrypt to a particular value without revealing the nonce used for encryption or the secret decryption key $s$. (This proof can be constructed with access to either the nonce used for encryption or the secret decryption key.)
+3. The Cramer-Damgård-Schoenmakers technique9 enables a disjunction to be interactively proven without revealing which disjunct is true.
+4. The Fiat-Shamir heuristic10 allows interactive proofs to be converted into non- interactive proofs.
+Using a combination of the above techniques, it is possible for ElectionGuard to demonstrate that keys are properly chosen, that ballots are properly formed, and that decryptions match claimed values.
+
+## Threshold Encryption
+
+Threshold ElGamal encryption is used for encryption of ballots and other data. This form of encryption makes it very easy to combine individual guardian public keys into a single public key. It also offers a homomorphic property that allows individual encrypted votes to be combined to form encrypted tallies.
+
+The guardians of an election will each generate a public-private key pair. The public keys will then be combined (as described in the following section) into a single election public key which is used to encrypt all selections made by voters in the election.
