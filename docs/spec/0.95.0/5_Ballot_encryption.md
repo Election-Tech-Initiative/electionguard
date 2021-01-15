@@ -374,7 +374,7 @@ $$
 where $D$ consists of the voting device information described above, $T$ is the date and time of ballot encryption, and $B_i$ is an ordered list of the individual encryptions on the ballot – with the ordering as specified by the ballot coding file.  At the conclusion of a voting period (this may be the end of a day in a multi-day election), the hash chain is closed by computing  
 
 $$
-H ̅=H(H_l,"CLOSE\"")
+\bar{H}=H(H_l, \text{“CLOSE"})
 $$
 
 where $H_l$ is the final tracking code produced by that device during that voting period.  The close of the hash chain can be computed either by the voting device or subsequently by election administrators, and it is published as part of the election record.
@@ -395,7 +395,7 @@ is satisfied.
 (C) The closing hash 
 
 $$
-H ̅=H(H_l,"CLOSE\"")
+\bar{H}=H(H_l,\text{“CLOSE"})
 $$ 
 
 is correctly computed from the final tracking code $H_l$
