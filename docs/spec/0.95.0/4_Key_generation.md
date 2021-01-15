@@ -11,7 +11,7 @@ The guardians of an election will each generate a public-private key pair. The p
 
 Ideally, at the conclusion of the election, each guardian will use its private key to form a verifiable partial decryption of each tally. These partial decryptions will then be combined to form full verifiable decryptions of the election tallies.
 
-To accommodate the possibility that one or more of the guardians will not be available at the conclusion of the election to form their partial decryptions, the guardians will cryptographically share15 their private keys amongst each other during key generation in a manner to be detailed in the next section. A pre-determined threshold value $(k)$  out of the $(n)$ guardians will be necessary to produce a full decryption.
+To accommodate the possibility that one or more of the guardians will not be available at the conclusion of the election to form their partial decryptions, the guardians will cryptographically share[^15] their private keys amongst each other during key generation in a manner to be detailed in the next section. A pre-determined threshold value $(k)$  out of the $(n)$ guardians will be necessary to produce a full decryption.
 
 Additionally, each guardian will also generate an auxiliary public-private key pair. These auxiliary keys will be used by the guardians to exchange fragments of their principal vote- encryption keys and for other scenarios in which non-vote data may need to be encrypted.
 
@@ -60,7 +60,7 @@ This Non-Interactive Zero-Knowledge (NIZK) proof proceeds as follows.
 
 Formally: NIZK Proof by Guardian $T_i$ of its knowledge of secrets $a_{i,j}$ such that $K_{i,j}= g^{a_{i,j}} \bmod p$
 
-For each $0 \le j \lt k$, Guardian $T_i$ generates random integer values $R_{i,j}$ in $Z_q$ and computes $h_{i,j}=g^{R_{i,j}} \bmod p$. Then, using the hash function SHA-256 (as defined in NIST PUB FIPS 180-4), guardian $T_i$ then performs a single hash computation $c_{i,j} = H(Q, K_{i,j}, h_{i,j} \bmod q$ and publishes the values $K_{i,j},h_{i,j},c_{i,j}$ and $u_{i,j} = (R_{i,j} + c_{i,j}a_{i,j}) \bmod q$.
+For each $0 \le j \lt k$, Guardian $T_i$ generates random integer values $R_{i,j}$ in $Z_q$ and computes $h_{i,j}=g^{R_{i,j}} \bmod p$. Then, using the hash function SHA-256 (as defined in NIST PUB FIPS 180-4[^16]), guardian $T_i$ then performs a single hash computation $c_{i,j} = H(Q, K_{i,j}, h_{i,j} \bmod q$ and publishes the values $K_{i,j},h_{i,j},c_{i,j}$ and $u_{i,j} = (R_{i,j} + c_{i,j}a_{i,j}) \bmod q$.
 
 !!! important
     An election verifier must confirm (A) and (B) for each guardian $T_i$ and for each $j \in Z_k$:
@@ -88,7 +88,7 @@ $$
 !!! info
     Although this formula includes double exponentiation – raising a given value to the power $\alpha^j$ – in what follows, $\alpha$ and $j$ will always be small values (bounded by $n$). This can also be reduced if desired since the same result will be achieved if the exponents $\alpha^j$ are reduced to $\alpha^j \bmod q$.
 
-To share secret values amongst each other, it is assumed that each guardian $T_i$ has previously shared an auxiliary public encryption function $E_i$ with the group.
+To share secret values amongst each other, it is assumed that each guardian $T_i$ has previously shared an auxiliary public encryption function $E_i$ with the group.[^17]
 Each guardian $T_i$ then publishes the encryption $E_\ell ( R_{i,\ell}, P_i(\ell))$  for every other guardian $T_{\ell}$ – where $R_{i,\ell}$ is a random nonce.
 
 Guardian $T_{\ell}$ can now decrypt each $P_i(\ell)$ encrypted to its public key and verify its validity against the commitments made by $T_i$ to its coefficients $K_{i,0},K_{i,0},\ldots,K_{i,k-1},$ by confirming that the following equation holds
@@ -97,22 +97,30 @@ $$
 g^{P_i(\ell)} \bmod p = \prod_{j=0}^{k-1}(K_{i,j})^{\ell^j} \bmod p
 $$
 
-Guardians then publicly report having confirmed or failed to confirm this computation. If the recipient guardian $T_{\ell}$ reports not receiving a suitable value $P_i(\ell)$, it becomes incumbent on the sending guardian $T_i$ to publish this $P_i(\ell)$, together with the nonce $R_{i,\ell}$ it used to encrypt $P_i(\ell)$ under the public key $E_{\ell}$ of recipient guardian $T_{\ell}$. If guardian $T_i$ fails to produce a suitable $P_i(\ell)$ and nonce $R_{i,\ell}$ that match both the published encryption and the above equation, it should be excluded from the election and the key generation process should be restarted with an
-alternate guardian. If, however, the published $P_i(\ell)$ and $R_{i,\ell}$ satisfy both the published encryption and the equation above, the claim of malfeasance is dismissed and the key generation process continues undeterred.
+Guardians then publicly report having confirmed or failed to confirm this computation. If the recipient guardian $T_{\ell}$ reports not receiving a suitable value $P_i(\ell)$, it becomes incumbent on the sending guardian $T_i$ to publish this $P_i(\ell)$, together with the nonce $R_{i,\ell}$ it used to encrypt $P_i(\ell)$ under the public key $E_{\ell}$ of recipient guardian $T_{\ell}$. If guardian $T_i$ fails to produce a suitable $P_i(\ell)$ and nonce $R_{i,\ell}$ that match both the published encryption and the above equation, it should be excluded from the election and the key generation process should be restarted with an alternate guardian. If, however, the published $P_i(\ell)$ and $R_{i,\ell}$ satisfy both the published encryption and the equation above, the claim of malfeasance is dismissed and the key generation process continues undeterred.[^18]
 
 Once the baseline parameters have been produced and confirmed, all of the public commitments $K_{i,j}$ are hashed together with the base hash $Q$ to form an extended base hash $\bar{Q}$ that will form the basis of subsequent hash computations. The hash function SHA-256 will be used here and for all hash computations for the remainder of this document.
 
 !!! important
     An election verifier must verify the correct computation of the joint election public key (A) and extended base hash (B).
 
-(A)
+(A) Joint election public key
 
 $$
 \bar{Q}=H(Q,K_{1,0},K_{1,1},K_{1,2},\ldots,K_{1,k-1},K_{2,0},K_{2,1},K_{2,2},\ldots,K_{2,k-1},\ldots,K_{n,0},K_{n,1},K_{n,2},\ldots,K_{n,k-1})
 $$
 
-(B)
+(B) Extended base hash
 
 $$
 K = \prod_{i=1}^n K_i \bmod p
 $$
+
+
+[^15]: Shamir A.  How to Share a Secret.  (1979) Communications of the ACM.
+
+[^16]: NIST (2015) Secure Hash Standard (SHS). In: FIPS 180-4. [https://csrc.nist.gov/publications/detail/fips/180/4/final](https://csrc.nist.gov/publications/detail/fips/180/4/final)
+
+[^17]: A “traditional” ElGamal public key is fine for this purpose.  But the baseline ElectionGuard parameters $p$ and $q$ are tuned for homomorphic purposes and are not well-suited for encrypting large values.  The ElectionGuard guardian keys can be used by breaking a message into small pieces (*e.g.* individual bytes) and encrypting a large value as a sequence of small values.  However, traditional public-key encryption methods are more efficient.  Since this key is only used internally, its form is not specified herein.
+
+[^18]: It is also permissible to dismiss any guardian that makes a false claim of malfeasance.  However, this is not required as the sensitive information that is released as a result of the claim could have been released by the claimant in any case. 

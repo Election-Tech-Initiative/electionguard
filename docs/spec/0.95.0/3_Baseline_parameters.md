@@ -21,7 +21,7 @@ The middle 3,584 bits of $p$ are chosen by starting with the first 3,584 bits of
 
 This works out to $p=2^{4096}-2^{3840} - 1 + 2^{256}(\lfloor2^{3584}\gamma\rfloor + \delta)$ where the value of
 $\delta = 495448529856135475846147600290107731951815687842437876083937612367400355133042233301$
-
+[^12]
 The hexadecimal representation of $q$ is as follows:
 
 ``` text
@@ -39,8 +39,15 @@ Finally, the generator $g$ is chosen to be $g=2r \bmod p$ and has the following 
 ``` text
 037DE384 F98F6E03 8D2A3141 825B33D5 D45EC4CC 64CFD15E 750D6798 F5196CF2 A142CDF3 3F6EF853 840EC7D4 EC804794 CFB0CFB6 5363B256 6387B98E E0E3DEF1 B706FA55 D5038FFB 4A62DCBB 93B1DDD8 D3B308DA 86D1C3A5 25EF356F E5BB5931 4E656334 80B396E1 DD4B795F 78DE07D8 6B0E2A05 BE6AF78F D7F736FC BA6C032E 26E050AF 50A03C65 FA7B6C87 F4554CB5 7F3DABCB AD8EB9D8 FDEBEEF5 8570669A CC3EDA17 DBFC47B8 B3C39AA0 8B829B28 872E62B5 D1B13A98 F09D40AC 20C2AB74 A6750E7C 8750B514 1E221C41 F55BBA31 D8E41422 B64D2CBA 7AAA0E9F D8785702 F6932825 BF45DE83 86D24900 742062C1 322B37C5 0AF18215 8090C35D A9355E6C F7F72DA3 9A2284FD FB1918B2 A2A30E69 501FA234 2B728263 DF23F1DB 8355BDE1 EB276FB3 685F3716 72CEB313 FDAB069C C9B11AB6 C59BCE62 BAAD96AA C96B0DBE 0C7E71FC B2255254 5A5D1CED EEE01E4B C0CDBDB7 6B6AD45F 09AF5E71 114A005F 93AD97B8 FE09274E 76C94B20 08926B38 CAEC94C9 5E96D628 F6BC8066 2BA06207 801328B2 C6A60526 BF7CD02D 9661385A C3B1CBDB 50F759D0 E9F61C11 A07BF421 8F299BCB 29005200 76EBD2D9 5A3DEE96 D4809EF3 4ABEB83F DBA8A12C 5CA82757 288A89C9 31CF564F 00E8A317 AE1E1D82 8E61369B A0DDBADB 10C136F8 691101AD 82DC5477 5AB83538 40D99921 97D80A6E 94B38AC4 17CDDF40 B0C73ABF 03E8E0AA
 ```
+
 !!! info
-    Alternative parameter sets are possible. A good source for parameter generation is appendix A of FIPS 186-4 . However, allowing alternate parameters would force election verifiers to recognize and check that parameters are correctly generated. Since these checks would be very different from other checks that are required of a verifier, allowing alternate parameters would add substantial complexity to election verifiers. For this reason, this version of *ElectionGuard* fixes the parameters as above.
+    Alternative parameter sets are possible. A good source for parameter generation is appendix A of FIPS 186-4[^13] . However, allowing alternate parameters would force election verifiers to recognize and check that parameters are correctly generated. Since these checks would be very different from other checks that are required of a verifier, allowing alternate parameters would add substantial complexity to election verifiers. For this reason, this version of *ElectionGuard* fixes the parameters as above.
 
 !!! important
-    An *ElectionGuard* version 1 election verifier may assume that the baseline parameters match the parameters provided above. However, it is recommended that the above parameters be checked against the parameters of each election to accommodate the possibility of different parameters in future versions of *ElectionGuard*.
+    An *ElectionGuard* version 1 election verifier may assume that the baseline parameters match the parameters provided above. However, it is recommended that the above parameters be checked against the parameters of each election to accommodate the possibility of different parameters in future versions of *ElectionGuard*[^14].
+
+[^12]: Discovering this value $\delta$ required a search through roughly 42 million values satisfying the first three of the above properties to find one for which both $p$ and $\frac{(p-1)}{2q}$ are both prime.
+
+[^13]: NIST (2013) Digital Signature Standard (DSS). In: FIPS 186-4. [https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf)
+
+[^14]: If alternative parameters are allowed, election verifiers must confirm that $p$, $q,$ $r$, and $g$ are such that both $p$ and $q$ are prime (this may be done probabilistically using the Miller-Rabin algorithm), that $p-1=qr$ is satisfied, that $q$ is not a divisor of $r$, that $1 \lt g \lt p$, that $g^q  \bmod p=1$, and that generation of the parameters is consistent with the cited standard.

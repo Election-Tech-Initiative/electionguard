@@ -60,14 +60,14 @@ The other use is to sum all of the selections made in a single contest on a sing
 
 However, as will be described below, it is possible for a holder of a nonce 𝑅 to prove to a third party that a pair (𝛼, 𝛽) is an encryption of 𝑀 without revealing the nonce 𝑅 and without access to the secret 𝑠.
 
-## Non-Interactive Zero-Konwledge (NIZK) Proofs
+## Non-Interactive Zero-Knowledge (NIZK) Proofs
 
 ElectionGuard provides numerous proofs about encryption keys, encrypted ballots, and election tallies using the following four techniques.
 
-1. A Schnorr proof7 allows the holder of an ElGamal secret key 𝑠 to interactively prove possession of $s$ without revealing $s$.
-2. A Chaum-Pedersen proof8 allows an ElGamal encryption to be interactively proven to decrypt to a particular value without revealing the nonce used for encryption or the secret decryption key $s$. (This proof can be constructed with access to either the nonce used for encryption or the secret decryption key.)
-3. The Cramer-Damgård-Schoenmakers technique9 enables a disjunction to be interactively proven without revealing which disjunct is true.
-4. The Fiat-Shamir heuristic10 allows interactive proofs to be converted into non- interactive proofs.
+1. A Schnorr proof[^7] allows the holder of an ElGamal secret key 𝑠 to interactively prove possession of $s$ without revealing $s$.
+2. A Chaum-Pedersen proof[^8] allows an ElGamal encryption to be interactively proven to decrypt to a particular value without revealing the nonce used for encryption or the secret decryption key $s$. (This proof can be constructed with access to either the nonce used for encryption or the secret decryption key.)
+3. The Cramer-Damgård-Schoenmakers technique[^9] enables a disjunction to be interactively proven without revealing which disjunct is true.
+4. The Fiat-Shamir heuristic[^10] allows interactive proofs to be converted into non- interactive proofs.
 Using a combination of the above techniques, it is possible for ElectionGuard to demonstrate that keys are properly chosen, that ballots are properly formed, and that decryptions match claimed values.
 
 ## Threshold Encryption
@@ -76,17 +76,26 @@ Threshold ElGamal encryption is used for encryption of ballots and other data. T
 
 The guardians of an election will each generate a public-private key pair. The public keys will then be combined (as described in the following section) into a single election public key which is used to encrypt all selections made by voters in the election.
 
-[^3]: NIST (2015) Secure Hash Standard (SHS). In: FIPS 180-4. https://csrc.nist.gov/publications/detail/fips/180/4/final
+Ideally, at the conclusion of the election, each guardian will use its private key to form a verifiable partial decryption of each tally.  These partial decryptions will then be combined to form full verifiable decryptions of the election tallies.
+
+To accommodate the possibility that one or more of the guardians will not be available at the conclusion of the election to form their partial decryptions, the guardians will cryptographically share  their private keys amongst each other during key generation in a manner to be detailed in the next section.  A pre-determined threshold quorum value $(k)$ out of the $(n)$ guardians will be necessary to produce a full decryption.
+
+[^3]: NIST (2015) Secure Hash Standard (SHS). In: FIPS 180-4. [https://csrc.nist.gov/publications/detail/fips/180/4/final](https://csrc.nist.gov/publications/detail/fips/180/4/final)
 
 [^4]: ElGamal T. (1985) A Public Key Cryptosystem and a Signature Scheme Based on Discrete Logarithms. In:  Blakley G.R., Chaum D. (eds) Advances in Cryptology. CRYPTO 1984. Lecture Notes in Computer Science, vol 196
-https://link.springer.com/content/pdf/10.1007/3-540-39568-7_2.pdf
+[https://link.springer.com/content/pdf/10.1007/3-540-39568-7_2.pdf](https://link.springer.com/content/pdf/10.1007/3-540-39568-7_2.pdf)
 
 [^5]: As will be seen below, the actual public key used to encrypt votes will be a combination of separately-generated public keys. So no entity will ever be in possession of a private key that can be used to decrypt votes.
 
 [^6]: The simplest way to compute $M$ from $g^M \bmod p$ is an exhaustive search through possible values of $M$. Alternatively, a table of pairing each possible value of $g^M \bmod p$ can be pre-computed. A final option which can accommodate a larger space of possible values for $M$ is to use Shanks’s *baby-step giant-step method* as described in the 1971 paper “Class Number, a Theory of Factorization and Genera,” Proceedings of Symposium in Pure Mathematics, Vol. 20, American Mathematical Society, Providence, 1971, pp. 415-440.
 
-[^7]: Schnorr C.P. (1990) Efficient Identification and Signatures for Smart Cards. In: Brassard G. (eds) Advances in Cryptology — CRYPTO’ 89 Proceedings. CRYPTO 1989. Lecture Notes in Computer Science, vol 435. Springer, New York, NY. https://link.springer.com/content/pdf/10.1007/0-387-34805-0_22.pdf
+[^7]: Schnorr C.P. (1990) Efficient Identification and Signatures for Smart Cards. In: Brassard G. (eds) Advances in Cryptology — CRYPTO’ 89 Proceedings. CRYPTO 1989. Lecture Notes in Computer Science, vol 435. Springer, New York, NY. [https://link.springer.com/content/pdf/10.1007/0-387-34805-0_22.pdf](https://link.springer.com/content/pdf/10.1007/0-387-34805-0_22.pdf)
 
 [^8]: Chaum D., Pedersen T.P. (1993) Wallet Databases with Observers. In: Brickell E.F. (eds) Advances in
-Cryptology — CRYPTO' 92. Lecture Notes in Computer Science, volume 740. Springer, Berlin, Heidelberg. https://link.springer.com/content/pdf/10.1007/3-540-48071-4_7.pdf
+Cryptology — CRYPTO' 92. Lecture Notes in Computer Science, volume 740. Springer, Berlin, Heidelberg. [https://link.springer.com/content/pdf/10.1007/3-540-48071-4_7.pdf](https://link.springer.com/content/pdf/10.1007/3-540-48071-4_7.pdf)
 
+[^9]: Fiat A., Shamir A. (1987) How To Prove Yourself: Practical Solutions to Identification and Signature Problems. In: Odlyzko A.M. (eds) Advances in Cryptology — CRYPTO’ 86. CRYPTO 1986. Lecture Notes in Computer Science, vol 263. Springer, Berlin, Heidelberg. [https://link.springer.com/content/pdf/10.1007%2F3-540-47721-7_12.pdf](https://link.springer.com/content/pdf/10.1007%2F3-540-47721-7_12.pdf)
+
+[^10]: Fiat A., Shamir A. (1987) How To Prove Yourself: Practical Solutions to Identification and Signature Problems. In: Odlyzko A.M. (eds) Advances in Cryptology — CRYPTO’ 86. CRYPTO 1986. Lecture Notes in Computer Science, vol 263. Springer, Berlin, Heidelberg. [https://link.springer.com/content/pdf/10.1007%2F3-540-47721-7_12.pdf](https://link.springer.com/content/pdf/10.1007%2F3-540-47721-7_12.pdf)
+
+[^11]: Shamir A.  How to Share a Secret.  (1979) Communications of the ACM
