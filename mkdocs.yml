@@ -28,6 +28,8 @@ nav:
     - 5. Ballot Encryption: spec/0.95.0/5_Ballot_encryption.md          
     - 6. Ballot Aggregation: spec/0.95.0/6_Ballot_aggregation.md     
     - 7. Verifiable Decryption: spec/0.95.0/7_Verifiable_decryption.md     
+    - 8. The Election Record: spec/0.95.0/8_The_election_record.md     
+    - 9. Verifier Construction: spec/0.95.0/9_Verifier_construction.md     
 plugins:
   - search
 theme:
