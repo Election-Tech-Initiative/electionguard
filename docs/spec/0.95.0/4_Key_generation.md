@@ -65,19 +65,19 @@ For each $0 \le j \lt k$, Guardian $T_i$ generates random integer values $R_{i,j
 !!! important
     An election verifier must confirm (A) and (B) for each guardian $T_i$ and for each $j \in Z_k$:
 
-(A) The challenge $c_{i,j}$ is correctly computed as
+    (A) The challenge $c_{i,j}$ is correctly computed as
 
-$$
-c_{i,j} = H(Q,K_{i,j},h_{i,j}) \bmod q
-$$
+    $$
+    c_{i,j} = H(Q,K_{i,j},h_{i,j}) \bmod q
+    $$
 
-(B) The equation
+    (B) The equation
 
-$$
-g_{u_{i,j}} \bmod p = h_{i,j}K_{i,j}^{c_{i,j}} \bmod p
-$$
+    $$
+    g_{u_{i,j}} \bmod p = h_{i,j}K_{i,j}^{c_{i,j}} \bmod p
+    $$
 
-is satisfied.
+    is satisfied.
 
 It is worth noting here that for any fixed constant $\alpha$, the value $g^{P_i(\alpha)} \bmod p$ can be computed entirely from the published commitments as
 
@@ -104,17 +104,17 @@ Once the baseline parameters have been produced and confirmed, all of the public
 !!! important
     An election verifier must verify the correct computation of the joint election public key (A) and extended base hash (B).
 
-(A) Joint election public key
+    (A) Joint election public key
 
-$$
-\bar{Q}=H(Q,K_{1,0},K_{1,1},K_{1,2},\ldots,K_{1,k-1},K_{2,0},K_{2,1},K_{2,2},\ldots,K_{2,k-1},\ldots,K_{n,0},K_{n,1},K_{n,2},\ldots,K_{n,k-1})
-$$
+    $$
+    \bar{Q}=H(Q,K_{1,0},K_{1,1},K_{1,2},\ldots,K_{1,k-1},K_{2,0},K_{2,1},K_{2,2},\ldots,K_{2,k-1},\ldots,K_{n,0},K_{n,1},K_{n,2},\ldots,K_{n,k-1})
+    $$
 
-(B) Extended base hash
+    (B) Extended base hash
 
-$$
-K = \prod_{i=1}^n K_i \bmod p
-$$
+    $$
+    K = \prod_{i=1}^n K_i \bmod p
+    $$
 
 
 [^15]: Shamir A.  How to Share a Secret.  (1979) Communications of the ACM.

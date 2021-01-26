@@ -5,7 +5,7 @@
 To decrypt an aggregate encryption $(A,B)$ (or an individual encryption such as one on a spoiled ballot), each available election guardian $T_i$ uses its secret key $s_i$ to compute its share of the decryption as
 
 $$
-M_i=A^(s_i ) \bmod p
+M_i=A^{s_i} \bmod p
 $$
 
 Each guardian $T_i$ also publishes a Chaum-Pedersen proof of the correctness of $M_i$ as follows.
@@ -33,33 +33,32 @@ $$
 !!! important
     An election verifier must then confirm for each (non-placeholder) option in each contest in the ballot coding file the following for each decrypting guardian $T_i$.
 
+    (A) The given value $v_i$ is in the set $Z_q$.
 
-(A) The given value $v_i$ is in the set $Z_q$.
-
-(B) The given values $a_i$ and $b_i$ are both in the set $Z_q^r$.
+    (B) The given values $a_i$ and $b_i$ are both in the set $Z_q^r$.       
 	
-(C) The challenge value $c_i$ satisfies 
+    (C) The challenge value $c_i$ satisfies 
 
-$$
-c_i=H\left(\bar{Q},(A,B),(a_i,b_i ),M_i \right)
-$$
+    $$
+    c_i=H\left(\bar{Q},(A,B),(a_i,b_i ),M_i \right)
+    $$
 
-(D) The equation 
+    (D) The equation 
 
-$$
-g^(v_i )  mod p=(a_i K_i^{c_i} )  \bmod p
-$$
+    $$
+    g^(v_i )  mod p=(a_i K_i^{c_i} )  \bmod p
+    $$
 
-is satisfied.
+    is satisfied.
 
-(E) The equation 
+    (E) The equation 
 
 
-$$
-A^{v_i} \bmod p=(b_i M_i^{c_i} )  \bmod p
-$$
+    $$
+    A^{v_i} \bmod p=(b_i M_i^{c_i} )  \bmod p
+    $$
 
-is satisfied.
+    is satisfied.
 
 ## Decryption when all guardians are present
 
@@ -124,37 +123,30 @@ $$
 !!! important
     An election verifier must confirm the following for each (non-placeholder) option in each contest in the ballot coding file the following for each missing guardian $T_i$ and for each surrogate guardian $T_l$.
 
-!!! important ""
     (A) The given value $v_{i,l}$ is in the set $Z_q$.
 
-!!! important ""
     (B) The given values $a_{i,l}$ and $b_{i,l}$ are both in the set $Z_q^r$.
 
-!!! important ""
     (C) The challenge value $c_{i,l}$ satisfies 
 
-$$
-c_{i,l}=H\left(\bar{Q},(A,B),(a_{i,l},b_{i,l} ),M_{i,l} \right)
-$$
+    $$
+    c_{i,l}=H\left(\bar{Q},(A,B),(a_{i,l},b_{i,l} ),M_{i,l} \right)
+    $$
 
-!!! important ""
     (D) The equation 
 
-$$
-g^{v_{i,l}}  \bmod p=\left(a_{i,l}\cdot \left(\prod_{j=0}^{k-1} K_{i,j}^{l^j} \right)^{c_{i,l}} \right)  \bmod p
-$$
+    $$
+    g^{v_{i,l}}  \bmod p=\left(a_{i,l}\cdot \left(\prod_{j=0}^{k-1} K_{i,j}^{l^j} \right)^{c_{i,l}} \right)  \bmod p
+    $$
 
-!!! important ""
     is satisfied.
 
-!!! important ""
     (E)	The equation 
 
-$$
-A^{v_{i,l}}  \bmod p=\left(b_{i,l} M_{i,l}^{c_{i,l} } \right) \bmod p 
-$$
+    $$
+    A^{v_{i,l}}  \bmod p=\left(b_{i,l} M_{i,l}^{c_{i,l} } \right) \bmod p 
+    $$
 
-!!! important ""
     is satisfied.
 
 The final step to reconstruct a missing partial decryption $M_i$ is to compute Lagrange coefficients for a set of $k$ available guardians ${T_l \colon l \in U}$ with $|U|=k$ as
@@ -166,17 +158,15 @@ $$
 !!! important
     An election verifier should confirm that for each guardian $T_l$ serving to help compute a missing share of a tally, that its Lagrange coefficient $w_l$ is correctly computed by confirming the folloing equation 
 
-$$
-\left(\prod_{j \in (U-\{\ell \})}j\right)  \bmod q=\left(w_\ell \cdot \left(\prod_{j \in (U-\{\ell \})} \left(j-\ell \right) \right) \right) \bmod q
-$$
+    $$
+    \left(\prod_{j \in (U-\{\ell \})}j\right)  \bmod q=\left(w_\ell \cdot \left(\prod_{j \in (U-\{\ell \})} \left(j-\ell \right) \right) \right) \bmod q
+    $$
 
-
-!!! important ""
     An election verifier should then confirm the correct missing tally share for each (non-placeholder) option in each contest in the ballot coding file for each missing guardian $T_i$ as 
 
-$$
-M_i=\prod_{\ell  \in U}\left(M_{i,\ell }\right)^{w_\ell}  \bmod p
-$$
+    $$
+    M_i=\prod_{\ell  \in U}\left(M_{i,\ell }\right)^{w_\ell}  \bmod p
+    $$
 
 !!! note
     The missing secret $s_i$ could be computed directly via the equation below.  However, it is preferable to not release the missing secret and instead only release the partial decryption that the missing secret would have produced.  This prevents the missing secret $s_i$ from being used for additional decryptions without the cooperation of at least $k$ guardians.
@@ -193,21 +183,18 @@ The final step is to verify the tallies themselves.
 !!! important
     An election verifier should confirm the following equations for each (non-placeholder) option in each contest in the ballot coding file.
 
-!!! important ""
     (A)
 
-$$
-B=\left(M⋅\left(\prod_{i=1}^n M_i \right)\right)  \bmod p
-$$
+    $$
+    B=\left(M⋅\left(\prod_{i=1}^n M_i \right)\right)  \bmod p
+    $$
 
-!!! important ""
     (B)
 
-$$
-M=g^t  \bmod p.
-$$
+    $$
+    M=g^t  \bmod p.
+    $$
 
-!!! important ""
     An election verifier should also confirm that the text labels listed in the election record match the corresponding text labels in the ballot coding file.
 
 ## Decryption of Spoiled Ballots

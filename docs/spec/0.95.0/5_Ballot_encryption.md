@@ -204,55 +204,55 @@ In either of the two above cases, what is published in the election record is th
 !!! important
     An election verifier must confirm the following for each possible selection on a ballot:
 
-(A) The given values $\alpha$, $\beta$, $a_0$, $b_0$, $a_1$, and $b_1$ are all in the set $Z_p^r$.  (A value $x$ is in $Z_p^r$ if and only if $x$ is an integer such that $0 \le x \lt p$ and $x^q  \bmod p=1$ is satisfied.)
+    (A) The given values $\alpha$, $\beta$, $a_0$, $b_0$, $a_1$, and $b_1$ are all in the set $Z_p^r$.  (A value $x$ is in $Z_p^r$ if and only if $x$ is an integer such that $0 \le x \lt p$ and $x^q  \bmod p=1$ is satisfied.)
 
-(B) The challenge $c$ is correctly computed as
+    (B) The challenge $c$ is correctly computed as
 
-$$
-c=H\left(\bar{Q},(\alpha,\beta),(a_0,b_0 ),(a_1,b_1 )\right)
-$$
+    $$
+    c=H\left(\bar{Q},(\alpha,\beta),(a_0,b_0 ),(a_1,b_1 )\right)
+    $$
 
-(C) The given values c_0, c_1, v_0, and v_1 are each in the set Z_q.  (A value $x$ is in $Z_q$ if and only if $x$ is an integer such that $0 \le x \lt q$).
+    (C) The given values c_0, c_1, v_0, and v_1 are each in the set Z_q.  (A value $x$ is in $Z_q$ if and only if $x$ is an integer such that $0 \le x \lt q$).
 
-(D) The equation 
+    (D) The equation 
 
-$$
-c=(c_0+c_1 ) \bmod q
-$$
+    $$
+    c=(c_0+c_1 ) \bmod q
+    $$
 
-is satisfied.
+    is satisfied.
 
-(E) The equation 
+    (E) The equation 
 
-$$
-g^{v_0}  \bmod p=a_0 α^{c_0}  \bmod p
-$$
+    $$
+    g^{v_0}  \bmod p=a_0 α^{c_0}  \bmod p
+    $$
 
-is satisfied.
+    is satisfied.
 
-(F) The equation 
+    (F) The equation 
 
-$$
-g^{v_1} \bmod p=a_1 \alpha^{c_1}  \bmod p 
-$$
+    $$
+    g^{v_1} \bmod p=a_1 \alpha^{c_1}  \bmod p 
+    $$
 
-is satisfied.
+    is satisfied.
 
-(G) The equation 
+    (G) The equation 
 
-$$
-K^{v_0} \bmod p=b_0 \beta^{c_0}  \bmod p
-$$
+    $$
+    K^{v_0} \bmod p=b_0 \beta^{c_0}  \bmod p
+    $$
 
-is satisfied.
+    is satisfied.
 
-(H) The equation
+    (H) The equation
 
-$$
-g^{c_1} K^{v_1}  \bmod p=b_1 \beta^{c_1}  \bmod p
-$$
+    $$
+    g^{c_1} K^{v_1}  \bmod p=b_1 \beta^{c_1}  \bmod p
+    $$
 
-is satisfied.
+    is satisfied.
 
 ## Proof of satisfying the selection limit
 
@@ -313,47 +313,47 @@ Note that all of the above proofs can be performed directly by the entity perfor
 !!! important
     An election verifier must confirm the following for each contest on the ballot:
 
-(A) The number of **placeholder** positions matches the contest’s selection limit $L$
+    (A) The number of **placeholder** positions matches the contest’s selection limit $L$
 
-(B) The contest total $(A,B)$ satisfies
+    (B) The contest total $(A,B)$ satisfies
 
-$$
-A=\prod_i \alpha_i  \bmod p
-$$
+    $$
+    A=\prod_i \alpha_i  \bmod p
+    $$
 
-and
+    and
 
-$$
-B=\prod_i \beta_i  \bmod p
-$$
+    $$
+    B=\prod_i \beta_i  \bmod p
+    $$
 
-where the $(\alpha_i,\beta_i )$ represent all possible selections (including placeholder selections) for the contest.
+    where the $(\alpha_i,\beta_i )$ represent all possible selections (including placeholder selections) for the contest.
 
-(C) The given value $V$ is in $Z_q$.
+    (C) The given value $V$ is in $Z_q$.
 
-(D) The given values $a$ and $b$ are each in $Z_p^r$.
+    (D) The given values $a$ and $b$ are each in $Z_p^r$.
 
-(E) The challenge value $C$ is correctly computed as
+    (E) The challenge value $C$ is correctly computed as
 
-$$
-C=H\left(\bar{Q},(A,B),(a,b)\right)
-$$
+    $$
+    C=H\left(\bar{Q},(A,B),(a,b)\right)
+    $$
 
-(F) The equation
+    (F) The equation
 
-$$
-g^V  \bmod p=(aA^C )  \bmod p
-$$
+    $$
+    g^V  \bmod p=(aA^C )  \bmod p
+    $$
 
-is satisfied.
+    is satisfied.
 
-(G) The equation
+    (G) The equation
 
-$$
-(〖g^{(LC K^V} \bmod p=(bB^C ) \bmod p
-$$
+    $$
+    (g^{LC} K^V) \bmod p=(bB^C ) \bmod p
+    $$
 
-is satisfied.
+    is satisfied.
 
 ## Verification Codes
 
@@ -382,23 +382,23 @@ where $H_l$ is the final tracking code produced by that device during that votin
 !!! important
     An election verifier must confirm that each of the values in the running hash is correctly computed.  Specifically, an election verifier must confirm each of the following.
 
-(A) The equation $H_0=H(\bar{Q})$ is satisfied.
+    (A) The equation $H_0=H(\bar{Q})$ is satisfied.
 
-(B) 	For each ballot 
+    (B) 	For each ballot 
 
-$$
-B_i, H_i=H\left(H_{i-1},D,T,B_i\right)
-$$
+    $$
+    B_i, H_i=H\left(H_{i-1},D,T,B_i\right)
+    $$
 
-is satisfied.
+    is satisfied.
 
-(C) The closing hash 
+    (C) The closing hash 
 
-$$
-\bar{H}=H(H_l,\text{“CLOSE"})
-$$ 
+    $$
+    \bar{H}=H(H_l,\text{“CLOSE"})
+    $$ 
 
-is correctly computed from the final tracking code $H_l$
+    is correctly computed from the final tracking code $H_l$
 
 Once in possession of a tracking code (__*and never before*__), a voter is afforded an option to either cast the associated ballot or spoil it and restart the ballot preparation process.  The precise mechanism for voters to make these selections may vary depending upon the instantiation, but this choice would ordinarily be made immediately after a voter is presented with the tracking code, and the status of the ballot would be undetermined until the decision is made.  It is possible, for instance, for a voter to make the decision directly on the voting device, or a voter may instead be afforded an option to deposit the ballot in a receptacle or to take it to a poll worker to be spoiled.  For vote-by-mail scenarios, a voter can be sent (hashes of) two complete sets of encryptions for each selectable option and can effect a ballot challenge implicitly by choosing which encryptions to return.
 

@@ -98,21 +98,18 @@ is a function call with 4 parameters, where the 3rd parameter is itself an array
 !!! important
     An election verifier must confirm the following for each guardian $T_i$ and for each $j \in Z_k$:
 
-!!! important ""
 	(A) The challenge $c_{i,j}$ is correctly computed as 
 
-$$
-c_{i,j}=H(Q,K_{i,j},h_{i,j} )  \bmod q
-$$
+	$$
+	c_{i,j}=H(Q,K_{i,j},h_{i,j} )  \bmod q
+	$$
 
-!!! important ""
 	(B) The equation 
 
-$$
-g^{u_{i,j} }  \bmod p=h_{i,j} K_{i,j}^{c_{i,j} }  \bmod p 
-$$
+	$$
+	g^{u_{i,j} }  \bmod p=h_{i,j} K_{i,j}^{c_{i,j} }  \bmod p 
+	$$
 
-!!! important ""
     is satisfied.
 
 | Variable | Meaning | Folder | File | Level |
@@ -127,19 +124,17 @@ $$
 !!! important
     An election verifier must verify the correct computation of the joint election public key and extended base hash.
 
-!!! important ""
     (A) Joint election public key
 
-$$
-K=\prod_{i=1}^n K_i  \bmod p
-$$
+	$$
+	K=\prod_{i=1}^n K_i  \bmod p
+	$$
 
-!!! important ""
     (B) Extended base hash
 
-$$
-\bar{Q} = H(Q,K_1,0,K_1,1,K_1,2,\ldots,K_{1,k-1},K_2,0,K_2,1,K_2,2,\ldots,K_{2,k-1},\ldots,K_{n,0},K_{n,1},K_{n,2},\ldots,K_{n,k-1})
-$$
+	$$
+	\bar{Q} = H(Q,K_1,0,K_1,1,K_1,2,\ldots,K_{1,k-1},K_2,0,K_2,1,K_2,2,\ldots,K_{2,k-1},\ldots,K_{n,0},K_{n,1},K_{n,2},\ldots,K_{n,k-1})
+	$$
 
 
 | Variable | Meaning | Folder | File | Level |
@@ -152,67 +147,54 @@ $$
 !!! important
     An election verifier must confirm the following for each possible selection on a ballot:
 
-!!! important ""
-    (I)The given values $\alpha$, $\beta$, $a_0$, $b_0$, $a_1$, and $b_1$ are all in the set $Z_p^r$.  (A value $x$ is in $Z_p^r$ if and only if $x$ is an integer such that $0 \le x \lt p$ and $x^q  \bmod p=1$ is satisfied.)
+    The given values $\alpha$, $\beta$, $a_0$, $b_0$, $a_1$, and $b_1$ are all in the set $Z_p^r$.  (A value $x$ is in $Z_p^r$ if and only if $x$ is an integer such that $0 \le x \lt p$ and $x^q  \bmod p=1$ is satisfied.)
 
-!!! important ""
 	(J) The challenge $c$ is correctly computed as 
 
-$$
-c=H(\bar{Q},(\alpha,\beta),(a_0,b_0 ),(a_1,b_1 ))
-$$
+	$$
+	c=H(\bar{Q},(\alpha,\beta),(a_0,b_0 ),(a_1,b_1 ))
+	$$
 
-!!! important ""
 	(K) The given values $c_0$, $c_1$, $v_0$, and $v_1$ are each in the set $Z_q$.  (A value $x$ is in $Z_q$ if and only if $x$ is an integer such that 0 \le x \lt q.)
 
-!!! important ""
 	(L) The equation 
-    
-$$
-c=(c_0+c_1 )  \bmod q
-$$
+		
+	$$
+	c=(c_0+c_1 )  \bmod q
+	$$
 
-!!! important ""
     is satisfied.
 
-!!! important ""
     (M) The equation 
 
-$$
-g^{v_0}  \bmod p= a_0 \alpha^{c_0}  \bmod p
-$$
+	$$
+	g^{v_0}  \bmod p= a_0 \alpha^{c_0}  \bmod p
+	$$
 
-!!! important ""
     is satisfied.
 
-!!! important ""
 	(N) The equation 
 
-$$
-g^{v_1}  \bmod p=a_1 \alpha^{c_1}  \bmod p
-$$
+	$$
+	g^{v_1}  \bmod p=a_1 \alpha^{c_1}  \bmod p
+	$$
 
-!!! important ""
     is satisfied.
 
-!!! important ""
 	(O) The equation 
 
-$$
-K^{v_0}  \bmod p=b_0 \beta^{c_0}  \bmod p
-$$
+	$$
+	K^{v_0}  \bmod p=b_0 \beta^{c_0}  \bmod p
+	$$
 
-!!! important ""
     is satisfied.
 
-!!! important ""
 	(P) The equation 
 
-$$
-g^{c_1} K^{v_1}  \bmod p=b_1 \beta^{c_1}  \bmod p
-$$
+	$$
+	g^{c_1} K^{v_1}  \bmod p=b_1 \beta^{c_1}  \bmod p
+	$$
 
-!!! important ""
     is satisfied.
 
 | Variable | Meaning | Folder | File | Level |
@@ -231,26 +213,47 @@ $$
 !!! important
     An election verifier must confirm the following for each contest on the ballot:
 
-!!! important ""
 	(H) The number of placeholder positions matches the contest’s selection limit $L$.
 
-!!! important ""
-	(I) The contest total $(A,B)$ satisfies $A=\prod_i \alpha_i  \bmod p$ and $B=\prod_i \beta_i  \bmod p$ where the $(\alpha_i,\beta_i ) represent all possible selections (including placeholder selections) for the contest.
+	(I) The contest total $(A,B)$ satisfies
+	
+	$$
+	A=\prod_i \alpha_i  \bmod p
+	$$ 
+	
+	and 
+	
+	$$
+	B=\prod_i \beta_i  \bmod p
+	$$
+	
+	where the $(\alpha_i,\beta_i )$ represent all possible selections (including placeholder selections) for the contest.
 
-!!! important ""
 	(J) The given value $V$ is in $Z_q$.
 
-!!! important ""
 	(K) The given values a and b are each in $Z_p^r$.
 
-!!! important ""
-	(L) The challenge value $C$ is correctly computed as $C=H(\bar{Q},(A,B),(a,b))$.
+	(L) The challenge value $C$ is correctly computed as 
+	
+	$$
+	C=H(\bar{Q},(A,B),(a,b))
+	$$
 
-!!! important ""
-	(M) The equation $g^V  \bmod p=(aA^C )  \bmod p$ is satisfied.
+	(M) The equation 
+	
+	$$
+	g^V  \bmod p=(aA^C )  \bmod p
+	$$ 
+	
+	is satisfied.
 
-!!! important ""
-	(N) The equation $((g^{LC} K)^V )  \bmod p=(bB^C )  \bmod p$ is satisfied.
+	(N) The equation 
+	
+	$$
+	((g^{LC} K)^V )  \bmod p=(bB^C )  \bmod p
+	$$ 
+	
+	is satisfied.
 
 | Variable | Meaning | Folder | File | Level |
 | -------  | ------- | ------ | ---- | ----- |
@@ -266,14 +269,23 @@ $$
 !!! important
     An election verifier must confirm that each of the values in the running hash is correctly computed.  Specifically, an election verifier must confirm each of the following.
 
-!!! important ""
 	(D) The equation $H_0=H(\bar{Q})$ is satisfied.
 
-!!! important ""
-	(E) For each ballot $B_i, H_i=H(H_{i-1},D,T,B_i)$ is satisfied.
+	(E) For each ballot 
+	
+	$$
+	B_i, H_i=H(H_{i-1},D,T,B_i)
+	$$ 
+	
+	is satisfied.
 
-!!! important ""
-	(F) The closing hash $\bar{H} =H(H_l,\text{“CLOSE"}$ is correctly computed from the final tracking code H_l.
+	(F) The closing hash 
+	
+	$$
+	\bar{H} =H(H_l,\text{“CLOSE"})
+	$$ 
+	
+	is correctly computed from the final tracking code $H_l$.
 
 | Variable | Meaning | Folder | File | Level |
 | -------  | ------- | ------ | ---- | ----- |
@@ -282,7 +294,19 @@ $$
 ## Correctness of Ballot Aggregation
 
 !!! important
-    An election verifier must confirm for each (non-placeholder) option in each contest in the ballot coding file that the aggregate encryption $(A,B)$ satisfies $A=∏_j▒α_j  and B=∏_j▒β_j$ where the $(\alpha_j,\beta_j )$ are the corresponding encryptions on all cast ballots in the election record.
+    An election verifier must confirm for each (non-placeholder) option in each contest in the ballot coding file that the aggregate encryption $(A,B)$ satisfies 
+	
+	$$
+	A=\prod_j\alpha_j
+	$$  
+	
+	and 
+	
+	$$
+	\beta=\prod_j \beta_j
+	$$ 
+	
+	where the $(\alpha_j,\beta_j )$ are the corresponding encryptions on all cast ballots in the election record.
 
 | Variable | Meaning | Folder | File | Level |
 | -------  | ------- | ------ | ---- | ----- |
@@ -294,27 +318,166 @@ $$
 !!! important
     An election verifier must then confirm for each (non-placeholder) option in each contest in the ballot coding file the following for each decrypting trustee $T_i$.
 
-!!! important ""
 	The given value $v_i$ is in the set $Z_q$.
 
-!!! important ""
 	The given values $a_i$ and $b_i$ are both in the set $Z_q^r$.
 
-!!! important ""
-	The challenge value $c_i$ satisfies $c_i=H(\bar{Q},(A,B),(a_i,b_i ),M_i )$.
-
-!!! important "" 
+	The challenge value $c_i$ satisfies 
+	
+	$$
+	c_i=H(\bar{Q},(A,B),(a_i,b_i ),M_i )
+	$$
+ 
 	The equation 
 
-$$
-g^{v_i}  \bmod p=(a_i K_i^{c_i} )  \bmod p
-$$
+	$$
+	g^{v_i}  \bmod p=(a_i K_i^{c_i} )  \bmod p
+	$$
 
-!!! important "" 
     is satisfied.
 
-!!! important "" 
     The equation $A^{v_i}  \bmod p=(b_i M_i^{c_i} )  \bmod p$ is satisfied.
+
+## Correctness of Partial Decryptions
+
+!!! important
+	An election verifier must then confirm for each (non-placeholder) option in each contest in the ballot coding file the following for each decrypting trustee $T_i$.
+
+	(F) The given value $v_i$ is in the set of $Z_q$
+
+	(G) The given values $a_i$ and $b_i$ are both in the set $Z_q^r$.
+
+	(H) The challenge value $c_i$ satisfies 
+	
+	$$
+	c_i=H(Q ̅,(A,B),(a_i,b_i ),M_i )
+	$$
+
+	(I) The equation 
+	
+	$$
+	g^{v_i} \bmod p=(a_i K_i^{c_i} )  \bmod p
+	$$
+	
+	is satisfied.
+
+	(J) The equation 
+	
+	$$
+	A^{v_i}  \bmod p=(b_i M_i^{c_i} )  \bmod p
+	$$ 
+	
+	is satisfied.
+
+| Variable | Meaning | Folder | File | Level |
+| -------  | ------- | ------ | ---- | ----- |
+| $(A,B)$ | encrypted aggregate total of votes in contest	root | tally.json | [prefix] $\rightarrow$ message $\rightarrow$ pad, data |
+| $M_i$ | partial decryption of $(A,B)$ by guardian $T_i$ | root | tally.json | [prefix] $\rightarrow$ shares $\rightarrow$ [Item] $\rightarrow$ share |
+| $(a_i,b_i)$ | commitment by guardian $T_i$ to partial decryption of $(A,B)$ | root | tally.json | [prefix] $\rightarrow$ shares $\rightarrow$ [Item] $\rightarrow$ proof $\rightarrow$ pad, data |
+| $c_i$ | challenge to partial decryption of guardian $T_i$  | root | tally.json | [prefix] $\rightarrow$ shares $\rightarrow$ [Item] $\rightarrow$ proof $\rightarrow$ challenge |
+| $v_i$ | response to challenge of guardian $T_i$ | root	tally.json | [prefix] $\rightarrow$ shares $\rightarrow$ [Item] $\rightarrow$ proof $\rightarrow$ response |
+
+## Correctness of Substitute Data for Missing Guardians
+
+!!! note
+	This is only necessary if some guardians are missing during tallying
+
+!!! important
+	An election verifier must confirm for each (non-placeholder) option in each contest in the ballot coding file the following for each missing trustee $T_i$ and for each surrogate trustee $T_\ell$.
+
+	(A) The given value $v_{i,l}$ is in the set $Z_q$.
+
+	(B) The given values $a_{i,l}$ and $b_{i,l}$ are both in the set $Z_q^r$.
+
+	(C) The challenge value $c_{i,l}$ satisfies 
+	
+	$$
+	c_(i,l)=H(Q ̅,(A,B),(a_(i,l),b_(i,l) ),M_(i,l) )
+	$$
+
+	(D) The equation 
+	
+	$$
+	g^{v_{i,l}}  \bmod p=\left(a_{i,l}\cdot \left(\prod_{j=0}^{k-1} K_{i,j}^{l^j} \right)^{c_{i,l} } \right)  \bmod p
+	$$
+	
+	is satisfied.
+
+	(E) The equation 
+	
+	$$
+	A^{v_{i,\ell}}  \bmod p= \left( b_{i,\ell} M_{i,l}^{c_{i,l}} \right)  \bmod p
+	$$
+	
+	is satisfied.
+
+| Variable | Meaning | Folder | File | Level |
+| -------  | ------- | ------ | ---- | ----- |
+| $(A,B)$ | encrypted aggregate total of votes in contest | root | tally.json | [prefix] $\rightarrow$ message $\rightarrow$ pad, data |
+| $M_(i,\ell)$ | share of guardian $T_\ell$ of missing partial decryption of $(A,B)$ by guardian $T_i$ | root | tally.json | [prefix] $\rightarrow$ shares $\rightarrow$ [Item] $\rightarrow$ substitute_proof $\rightarrow$ [item] $\rightarrow$ share |
+| $(a_{i,l},b_{i,l})$ | commitment by guardian $T_\ell$ to share of partial decryption for missing guardian $T_i$ | root | tally.json | [prefix] $\rightarrow$ shares $\rightarrow$ [Item] $\rightarrow$ substitute_proof $\rightarrow$ [item] $\rightarrow$ pad, data |
+| $c_{i,\ell}$ | challenge to guardian $T_\ell$ share of missing partial decryption of guardian $T_i$ | root | tally.json | [prefix] $\rightarrow$ shares $\rightarrow$ [Item] $\rightarrow$ substitute_proof $\rightarrow$ [item] $\rightarrow$ challenge |
+| $v_{i,l}$ | response to challenge of guardian $T_\ell$ share of partial decryption of guardian $T_i$ | root | tally.json | [prefix] $\rightarrow$ shares $\rightarrow$ [Item] $\rightarrow$ substitute_proof $\rightarrow$ [item] $\rightarrow$ response |
+
+## Correctness of Construction of Replacement Partial Decryptions
+
+!!! note
+	This is only necessary if some guardians are missing during tallying
+
+!!! important
+	An election verifier should confirm that for each trustee $T_\ell$ serving to help compute a missing share of a tally, that its Lagrange coefficient $w_\ell$ is correctly computed by confirming the equation
+
+	$$
+	\left(\prod_{j\in(U-{\ell})}j\right)  \bmod q=\left(w_l⋅\left(\prod_{j\in (U-{l})} (j-\ell) \right)\right)  \bmod q
+	$$
+
+	An election verifier should then confirm the correct missing tally share for each (non-placeholder) option in each contest in the ballot coding file for each missing trustee $T_i$ as
+
+	$$
+	M_i=\prod_{\ell \in U}\left(M_{i,\ell}\right)^{w_\ell}  \bmod p
+	$$
+
+| Variable | Meaning | Folder | File | Level |
+| -------  | ------- | ------ | ---- | ----- |
+| $w_\ell$ | coefficient for use with shares of guardian $T_\ell$ | root | tally.json | [prefix] $\rightarrow$ shares $\rightarrow$ [item] $\rightarrow$ coefficient |
+| $M_{i,\ell}$ | share of guardian $T_\ell$ of missing partial decryption of $(A,B)$ by guardian $T_i$ | root | tally.json | [prefix] $\rightarrow$ shares $\rightarrow$ [Item] $\rightarrow$ substitute_proof $\rightarrow$ [item] $\rightarrow$ share |
+| $M_i$ | partial decryption of $(A,B)$ by guardian $T_i$ | root | tally.json | [prefix] $\rightarrow$ shares $\rightarrow$ [Item] $\rightarrow$ share |
+
+## Validation of Correct Decryption of Tallies
+
+!!! important
+	An election verifier should confirm the following equations for each (non-placeholder) option in each contest in the ballot coding file.
+
+	(C) 
+
+	$$
+	B=\left(M \cdot \left(\prod_{i=1}^n M_i \right)\right)  \bmod p
+	$$
+
+	(D) 	
+	
+	$$
+	M=g^t  \bmod p
+	$$
+
+	An election verifier should also confirm that the text labels listed in the election record match the corresponding text labels in the ballot coding file.
+
+| Variable | Meaning | Folder | File | Level |
+| -------  | ------- | ------ | ---- | ----- |
+| $M_i$ | partial decryption of $(A,B)$ by guardian $T_i$ | root | tally.json | [prefix] $\rightarrow$ shares $\rightarrow$ [Item] $\rightarrow$ share |
+| (M) | full decryption of $(A,B)$ | root | tally.json | [prefix] $\rightarrow$ value |
+| $t$ | tally value | root | tally.json | [prefix] $\rightarrow$ tally |
+
+
+# Validation of Correct Decryption of Spoiled Ballots
+
+!!! important
+	An election verifier should confirm the correct decryption of each spoiled ballot using the same process that was used to confirm the election tallies.
+
+	An election verifier should also confirm that for each decrypted spoiled ballot, the selections listed in text match the corresponding text in the ballot coding file.
+
+
+Validation of Correct Decryption of Spoiled Ballots is a repeat of verification steps 8 through 11 for each spoiled ballot instead of for the aggregate ballot that contains encrypted tallies
 
 
 [^23]: Special thanks to Rainbow Huang (@rainbowhuanguw) for her help in producing this mapping.
