@@ -4,7 +4,7 @@ site_author: Microsoft
 # google_analytics:
 # remote_branch: for gh-deploy to GithubPages
 # remote_name: for gh-deploy to Github Pages
-copyright: "© Microsoft 2020"
+copyright: "© Microsoft 2021"
 docs_dir: "docs"
 repo_url: https://github.com/microsoft/electionguard/
 nav:
@@ -19,7 +19,22 @@ nav:
     - Additional Topics:
       - Verifiable Election: guide/Verifiable_Election.md
       - Election Manifest: guide/Election_Manifest.md
-    - Glossary: guide/Glossary.md      
+    - Glossary: guide/Glossary.md 
+  - Specification:
+    - Overview: spec/Overview.md
+    - v0.95:
+      - Overview: spec/0.95.0/1_Overview.md
+      - Structure: spec/0.95.0/2_Structure.md
+      - Baseline Parameters: spec/0.95.0/3_Baseline_parameters.md     
+      - Key Generation: spec/0.95.0/4_Key_generation.md     
+      - Ballot Encryption: spec/0.95.0/5_Ballot_encryption.md          
+      - Ballot Aggregation: spec/0.95.0/6_Ballot_aggregation.md     
+      - Verifiable Decryption: spec/0.95.0/7_Verifiable_decryption.md     
+      - The Election Record: spec/0.95.0/8_The_election_record.md     
+      - Verifier Construction: spec/0.95.0/9_Verifier_construction.md 
+      - Applicability to E2E Verifiability and RLA: spec/0.95.0/10_Applicability.md
+      - Acknowledgements: spec/0.95.0/11_Acknowledgements.md
+    - v0.85: "https://github.com/microsoft/electionguard/releases/tag/v0.85.0"
 plugins:
   - search
 theme:
@@ -38,7 +53,14 @@ theme:
     - navigation.instant
 markdown_extensions:
   - admonition
+  - footnotes
   - meta
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
