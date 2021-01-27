@@ -20,18 +20,21 @@ nav:
       - Verifiable Election: guide/Verifiable_Election.md
       - Election Manifest: guide/Election_Manifest.md
     - Glossary: guide/Glossary.md 
-  - Specification v0.95:
-    - 1. Overview: spec/0.95.0/1_Overview.md
-    - 2. Structure: spec/0.95.0/2_Structure.md
-    - 3. Baseline Parameters: spec/0.95.0/3_Baseline_parameters.md     
-    - 4. Key Generation: spec/0.95.0/4_Key_generation.md     
-    - 5. Ballot Encryption: spec/0.95.0/5_Ballot_encryption.md          
-    - 6. Ballot Aggregation: spec/0.95.0/6_Ballot_aggregation.md     
-    - 7. Verifiable Decryption: spec/0.95.0/7_Verifiable_decryption.md     
-    - 8. The Election Record: spec/0.95.0/8_The_election_record.md     
-    - 9. Verifier Construction: spec/0.95.0/9_Verifier_construction.md 
-    - 10. Applicability to end-to-end verifiability and risk-limiting audits: spec/0.95.0/10_Applicability.md
-    - 11. Acknowledgements: spec/0.95.0/11_Acknowledgements.md     
+  - Specification:
+    - Overview: spec/Overview.md
+    - v0.95:
+      - Overview: spec/0.95.0/1_Overview.md
+      - Structure: spec/0.95.0/2_Structure.md
+      - Baseline Parameters: spec/0.95.0/3_Baseline_parameters.md     
+      - Key Generation: spec/0.95.0/4_Key_generation.md     
+      - Ballot Encryption: spec/0.95.0/5_Ballot_encryption.md          
+      - Ballot Aggregation: spec/0.95.0/6_Ballot_aggregation.md     
+      - Verifiable Decryption: spec/0.95.0/7_Verifiable_decryption.md     
+      - The Election Record: spec/0.95.0/8_The_election_record.md     
+      - Verifier Construction: spec/0.95.0/9_Verifier_construction.md 
+      - Applicability to E2E Verifiability and RLA: spec/0.95.0/10_Applicability.md
+      - Acknowledgements: spec/0.95.0/11_Acknowledgements.md
+    - v0.85: "https://github.com/microsoft/electionguard/releases/tag/v0.85.0"
 plugins:
   - search
 theme:
