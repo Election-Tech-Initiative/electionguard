@@ -44,4 +44,4 @@ A verifier application is used to perform an external, independent verification 
 - [:fontawesome-brands-github: Python Verifier](https://github.com/rainbowhuanguw/ElectionGuard-verifier-python) by Rainbow Huang
 - [:fontawesome-brands-github: C# Verifier](https://github.com/brandon-irl/ElectionGuard-Verifier-C-) by Brandon Alexander
 - [:fontawesome-brands-github: Java Verifier](https://github.com/JohnLCaron/electionguard-java) by John Caron
-
+- [:fontawesome-brands-github: Python Verifier (electionguard-verify)](https://github.com/nickboucher/electionguard-verify) by Nicholas Boucher
