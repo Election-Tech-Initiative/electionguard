@@ -62,6 +62,9 @@ It is the intent of the next six months of work to develop:
 
 ## 2019-2020
 
+??? done "Run a Verifiable Election"
+    Run a verifiable election for [Fulton in Wisconsin](Fulton) utilizing smart cards, QR scanners, a ballot box, an admin device, and a ballot tracking site.
+
 **Overview**
 
 :fontawesome-regular-check-circle: Integrate electionguard into [various election tools](ElectionTools).
@@ -79,8 +82,6 @@ It is the intent of the next six months of work to develop:
 **C**
 
 :fontawesome-regular-check-circle: Introduce the world to ElectionGuard capabilities with `electionguard-c` as a core implementation meeting specification 0.85.0
-
-
 
 
 <!-- Links -->
