@@ -19,7 +19,7 @@ nav:
     - Additional Topics:
       - Verifiable Election: guide/Verifiable_Election.md
       - Election Manifest: guide/Election_Manifest.md
-    - Glossary: guide/Glossary.md 
+      - Glossary: guide/Glossary.md 
   - Specification:
     - Overview: spec/Overview.md
     - v0.95:

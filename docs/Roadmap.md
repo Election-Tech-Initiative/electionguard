@@ -44,25 +44,19 @@ We thank all our collaborators and contributors for their contributions, of cour
 ??? done "Run a Verifiable Election"
     Run a verifiable election for [Fulton in Wisconsin](Fulton) utilizing smart cards, QR scanners, a ballot box, an admin device, and a ballot tracking site.
 
-**Overview**
 
-:fontawesome-regular-check-circle: Integrate electionguard into [various election tools](ElectionTools).
+??? done "Integrate electionguard into [various election tools](ElectionTools)"
 
-:fontawesome-regular-check-circle: Run a verifiable election for [Fulton in Wisconsin](Fulton) utilizing smart cards, QR scanners, a ballot box, an admin device, and a ballot tracking site.
+??? done "Run a verifiable election for [Fulton in Wisconsin](Fulton) using smart cards, a ballot box, an admin device, and a ballot tracking site"
 
-**Specification**
+??? done "Update the ElectionGuard specification to 0.95.0"
 
-:fontawesome-regular-check-circle: Update the ElectionGuard specification to 0.95.0
-
-**Python**
-
-:fontawesome-regular-check-circle: Release and iterate on `electionguard-python` as a core implementation meeting specification 0.95.0
-
-**C**
-
-:fontawesome-regular-check-circle: Introduce the world to ElectionGuard capabilities with `electionguard-c` as a core implementation meeting specification 0.85.0
+??? done "Release and iterate on `electionguard-python` as a core implementation that meets specification 0.95.0"
 
 ## 2019 Roadmap
+
+??? done "Release `electionguard-c` as a core implementation meeting specification 0.85.0"
+
 
 <!-- Links -->
 [ElectionTools]: https://blogs.microsoft.com/on-the-issues/2020/12/04/electionguard-2020-elections-security-pilot/
