@@ -11,8 +11,6 @@ nav:
   - About: 
     - Overview: index.md
     - Roadmap: Roadmap.md
-  - Getting Started: 
-    - Overview: Getting_Started.md
   - Guide:
     - Overview: guide/Overview.md
     - SDK: 
