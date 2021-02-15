@@ -9,7 +9,7 @@ This library and all linked ElectionGuard projects, are licensed under the MIT l
 
 ## 🚀 Getting Started
 
-ElectionGuard is always improving. To keep up with the latest, check our **[GitHub Pages documentation](https://microsoft.github.io/electionguard)**. For those looking to get started, we recommend the following repositories.
+ElectionGuard is always improving. To keep up with the latest, check our **[official site on GitHub Pages](https://microsoft.github.io/electionguard)** and our [roadmap](https://microsoft.github.io/electionguard/Roadmap). For those looking to get started, we recommend the following repositories.
 
 ### Documentation
 
