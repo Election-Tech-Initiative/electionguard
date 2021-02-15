@@ -3,26 +3,42 @@
 ![Microsoft Defending Democracy Program: ElectionGuard](images/electionguard-banner.svg)
 ## 2021 Roadmap
 
+Our 2021 roadmap takes the learnings from the different applications we deployed in 2020 and rationalizes them into a *practice* we hope to establish with the community in 2021. Our goal is to empower a community of participants and contributors within which Microsoft takes part in and provides architectural and implementation guidance, but is fundamentally driven by the needs of the community in establishing the best ways to implement end-to-end verifiable elections and post-election audits.
+
+We took our first step toward this new vision with the release of the `electionguard-cpp` ballot-encryption repo last week. Combined with the `electionguard-python` repo that implements the full suite of ElectionGuard SDK functionality and the base `electionguard` specification and documentation repo, we have laid the foundation for our future direction. Our goal for the first half of 2021 is to have a full suite of code, tests, workflows, and package deployments more directly associated with the conventions and requirements indicated by the specification. We plan to publish and generate both more comprehensive but also granular examples and use cases to enable easier and more focused contributions by the community as well.
+
+We will also continue to enthusiastically support innovative pilot opportunities exemplifying end-to-end verifiable elections and post-election audits. Join our [monthly calls](https://github.com/microsoft/electionguard/discussions/61), post ideas and issues, and otherwise [let us know](mailto:electionguard@microsoft.com) how ElectionGuard can help improve trust in elections.
+
 ??? todo "1.0 Specification"
     * a final, fully-developed specification integrated directly into the SDK;
     * updates to election manifest and election artifact descriptions and specifications
-    * a more modular approach to documentation and contribution to lessen the learning curve and overhead to participate
+    * a more modular approach to documentation and contribution to lessen the learning curve and overhead necessary to participate and contribute
+    * more prescriptive guidance on verifier construction
 
 
 ??? done "C++ ballot encryption library"
-    * repo that performs encryption exclusively (for embedded encryption applications)"
-    * a final, fully-developed specification integrated directly into the SDK;
+    * repo that performs encryption exclusively (for embedded encryption applications such as precinct scanners)
+    * standalone source that uses a version of HACL* packaged up by [EverCrypt](https://github.com/project-everest/hacl-star#evercrypt) for high assurance (thank you EverCrypt team!)
+    * enables ElectionGuard to eliminate GMP as a dependency 
 
-??? todo "Release an ElectionGuard.Encrypt nuget package from electionguard-cpp as a ballot encrypter for low performance devices"
-     / environment configurations off the Python repo (for E2E-V and audit applications)
+??? todo "Release an ElectionGuard.Encrypt nuget package built from `electionguard-cpp` as a ballot encrypter for low performance devices"
+    * Establish publishing pattern
+    * First target will be [Windows 10 / UWP](https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide)
 
 ??? todo  "A consistent, efficient set of data interfaces across the ElectionGuard, C++, and Python repos"
+    * Data serialization using [Protobuf](https://github.com/protocolbuffers/protobuf) for input/output/data consistency across `electionguard-cpp` and `electionguard-python`
+    * Restructuring ballot and device aggregation to better support audits and scalability in general
+    * Renaming and refactoring all repos for more descriptive and specific naming patterns
 
 ??? todo "Compose community changes into `electionguard-python` release v1.1.16"
 
 ??? todo "Optimization changes for service implementations of `electionguard-python` release v1.2.0 "
 
 ??? todo "Introduce service docker containers in `electionguard-api`"
+
+??? done "Migrate 0.95 specification to Github"
+    * Implement specification in diffable, searchable format in Github
+    * Adopt [mkdocs material template](https://squidfunk.github.io/mkdocs-material/) for documentation and integrate with remaining ElectionGuard guide
 
 ## 2020 In Review
 
@@ -41,21 +57,39 @@ We thank all our collaborators and contributors for their contributions, of cour
 
 ## 2020 Roadmap
 
-??? done "Run a Verifiable Election"
-    Run a verifiable election for [Fulton in Wisconsin](Fulton) utilizing smart cards, QR scanners, a ballot box, an admin device, and a ballot tracking site.
+??? done "Use ElectionGuard in a real-world end-to-end verifiable election"
+    * Run a verifiable election [Fulton, Wisconsin](Fulton) with [VotingWorks](https://voting.works) using smart cards, a ballot box, an admin device, and a ballot tracking site.
+    * Integrate ElectionGuard with the VotingWorks print station and user flow
+    * Build ballot box functionality to capture and seal ballots
+    * Build admin device to enable tallies and key ceremonies
+    * Build tracking site to enable verification code lookup and tally/results download
 
-
-??? done "Integrate electionguard into [various election tools](ElectionTools)"
-
-??? done "Run a verifiable election for [Fulton in Wisconsin](Fulton) using smart cards, a ballot box, an admin device, and a ballot tracking site"
+??? done "Use ElectionGuard in a real-world post-election audit"
+    * Run a post-election election audit with Inyo, California using [VotingWorks Arlo](https://voting.works) using ElectionGuard as a back end
+    * Identify learnings and code refactoring necessary to reflect the different data structures and scalability considerations of audits
 
 ??? done "Update the ElectionGuard specification to 0.95.0"
 
-??? done "Release and iterate on `electionguard-python` as a core implementation that meets specification 0.95.0"
+??? done "Support building ElectionGuard into additional voting systems"
+    * Enable remote, secret-ballot voting for Democratic Caucus of the US House of Representatives
+    * Work with [InfernoRed](https://infernored.com) and [Markup](https://markup.law) to enable House-distributed iPhones to perform ballot encryption and House Democratic leadership to schedule and tally secret-ballot elections for leadership and committee positions
 
+??? done "Release and iterate on `electionguard-python` as a core implementation that meets specification 0.95.0"
+    * Implement a *canonical* library addressing all ElectionGuard SDK functionality:
+      * Key generation
+      * Ballot encryption
+      * Ballot sealing 
+      * Tally generation
+      * Verifier specification
+    * Build library with an eye to *extensibility* rather than performance and local language optimization (i.e., we'll be less *Pythonic* than some might prefer for the base implementation)
+
+
+??? done "Integrate ElectionGuard into a [set of election tools](ElectionTools)"
 ## 2019 Roadmap
 
-??? done "Release `electionguard-c` as a core implementation meeting specification 0.85.0"
+??? done "Initial specification and `electionguard-c` release"
+
+??? done "Demonstrate ElectionGuard Reference Implementation at Aspen Security Conference"
 
 
 <!-- Links -->
