@@ -47,6 +47,9 @@ The election metadata that describes the structure and type of the election, inc
 ### Encryption Device
 The device that is doing the encryption
 
+### End-to-end-verifiable elections
+End-to-end verifiability is a set of security, cryptographic, and voting user experiences that provide voters  the ability to confirm their vote was included in the published election tally, and independent observers and third parties the ability to confirm the tally was correctly computed and not tampered with
+
 ### Election Key Pair
 Pair of keys (public & secret) used to encrypt/decrypt election
 
@@ -89,6 +92,8 @@ A random number used to derive encryptions
 ### Plaintext Ballot 
 The plaintext representation of a voter's selections
 
+### Post-election audit 
+A post-election audit is
 ### Quorum
 The minimum count (_threshold_) of guardians that must be present in order to successfully decrypt the election results.
 
