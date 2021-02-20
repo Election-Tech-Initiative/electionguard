@@ -14,19 +14,7 @@ $$
 (g^R \bmod p, g \cdot K^R \bmod p)
 $$
 
-Note that if multiple encrypted votes 
-
-$$
-\left(g^{R_i} \bmod p, g^{V_i} \cdot K^{R_i} \bmod p\right)
-$$
-
-are formed, their component-wise product 
-
-$$
-\left(g^{\sum_{i}V_i} \cdot K^{\sum_{i}R_i} \bmod p\right)
-$$
-
-serves as an encryption of $\sum_iV_i$ – _**which is the tally of those votes**_.[^19]
+Note that if multiple encrypted votes $\left(g^{R_i} \bmod p, g^{V_i} \cdot K^{R_i} \bmod p\right)$ are formed, their component-wise product $\left(g^{\sum_{i}V_i} \cdot K^{\sum_{i}R_i} \bmod p\right)$ serves as an encryption of $\sum_iV_i$ – _**which is the tally of those votes**_.[^19]
 
 A contest in an election consists of a set of options together with a selection limit that indicates the number of selections that are allowed to be made in that contest. In most elections, most contests have a selection limit of one. However, a larger selection limit (*e.g.*, select up to three) is not uncommon in some elections. Approval voting can be achieved by setting the selection limit to the total number of options in a contest. Ranked choice voting is not supported in this version of *ElectionGuard*, but it may be enabled in a future version.[^20] Also, write-ins are assumed to be explicitly registered or allowed to be lumped into a single "write-ins" category for the purpose of verifiable tallying. Verifiable tallying of free-form write-ins may be best done with a MixNet[^21] design.
 
@@ -377,17 +365,17 @@ $$
 \bar{H}=H(H_l, \text{“CLOSE"})
 $$
 
-where $H_l$ is the final tracking code produced by that device during that voting period.  The close of the hash chain can be computed either by the voting device or subsequently by election administrators, and it is published as part of the election record.
+where $H_l$ is the final verification code produced by that device during that voting period.  The close of the hash chain can be computed either by the voting device or subsequently by election administrators, and it is published as part of the election record.
 
 !!! important
     An election verifier must confirm that each of the values in the running hash is correctly computed.  Specifically, an election verifier must confirm each of the following.
 
-    (A) The equation $H_0=H(\bar{Q})$ is satisfied.
+    (A) The equation $H_0=H(\overline{Q},\text{“OPEN"})$ is satisfied.
 
-    (B) 	For each ballot 
+    (B) 	For each ballot $B_i$,
 
     $$
-    B_i, H_i=H\left(H_{i-1},D,T,B_i\right)
+    H_i=H\left(H_{i-1},D,T,B_i\right)
     $$
 
     is satisfied.

@@ -3,13 +3,13 @@
 The record of an election should be a full accounting of all of the election artifacts.  Specifically, it should contain the following:
 
 * Date and location of an election
-* The ballot coding file
+* The [election manifest](../../Glossary.md#election-manifest) (also see [The Election Manifest](../../guide/Election_Manifest.md) article)
 * The baseline parameters
   * Primes $p$ and $q$ and integer $r$ such that $p=qr+1$ and $r$ is not a multiple of $q$
   * A generator $g$ of the order $q$ multiplicative subgroup $Z_p^*$
   * The number $n$ of election guardians
   * The quorum threshold $k$ of guardians required to complete verification
-* The base hash value $Q$ computed from the above
+* The [base hash value](../../Glossary.md#base-hash-q) $Q$ computed from the above
 * The commitments from each election guardian to each of their polynomial coefficients
 * The proofs from each guardian of possession of each of the associated coefficients
 * The election public key

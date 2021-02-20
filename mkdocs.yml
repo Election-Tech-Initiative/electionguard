@@ -11,6 +11,8 @@ nav:
   - About: 
     - Overview: index.md
     - Roadmap: Roadmap.md
+    - Contributions: guide/Implementations.md
+    - Glossary: Glossary.md  
   - Specification v0.95:
     - Overview: spec/0.95.0/1_Overview.md
     - Structure: spec/0.95.0/2_Structure.md
@@ -23,19 +25,21 @@ nav:
     - Verifier Construction: spec/0.95.0/9_Verifier_construction.md 
     - Applicability to E2E Verifiability and RLA: spec/0.95.0/10_Applicability.md
     - v0.85: "https://github.com/microsoft/electionguard/releases/tag/v0.85.0"
-  - Developer Guide:
-    - Acknowledgements: spec/0.95.0/11_Acknowledgements.md
+  - Developers:
     - Getting Started: guide/Overview.md
     - SDK: 
       - Core Component: guide/Core_Component.md
       - Implementations: guide/Implementations.md
+  - How ElectionGuard Works:
+    - Introduction: guide/Introduction.md  
     - Use Cases and Examples:
-        - Precinct Scan: guid/Precinct_scan.md
+        - Precinct Scan: guide/Precinct_scan.md
+        - Ballot Encryption: guide/Ballot_encryption.md
+        - Verifiable Election: guide/Verifiable_Election.md
         - Election Manifest: guide/Election_manifest.md
   - How ElectionGuard Works:
     - Introduction: guide/Introduction.md 
     - Glossary: guide/Glossary.md   
-        - Verifiable Election: guide/Verifiable_Election.md
 plugins:
   - search
 theme:
