@@ -1,7 +1,7 @@
 
 # Contributions
 
-ElectionGuard, as is true for almost all open-source projects, relies on its community for its success. For example, for end-to-end verifiable elections, integrity is improved by the number of independent verifiers that confirm the results of an election.
+ElectionGuard relies on its community for its success. For example, for end-to-end verifiable elections, integrity is improved by the number of independent verifiers that confirm the results of an election.
 
 ## Community Verifiers
 
