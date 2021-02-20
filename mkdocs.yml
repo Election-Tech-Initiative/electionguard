@@ -11,7 +11,7 @@ nav:
   - About: 
     - Overview: index.md
     - Roadmap: Roadmap.md
-    - Contributions: guide/Implementations.md
+    - Contributions: Contributions.md
     - Glossary: Glossary.md  
   - Specification v0.95:
     - Overview: spec/0.95.0/1_Overview.md
@@ -27,9 +27,7 @@ nav:
     - v0.85: "https://github.com/microsoft/electionguard/releases/tag/v0.85.0"
   - Developers:
     - Getting Started: guide/Overview.md
-    - SDK: 
-      - Core Component: guide/Core_Component.md
-      - Implementations: guide/Implementations.md
+    - SDK: guide/Core_Component.md
   - How ElectionGuard Works:
     - Introduction: guide/Introduction.md  
     - Use Cases and Examples:
