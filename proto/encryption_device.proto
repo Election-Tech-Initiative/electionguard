@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package electionguard;
+
+/* Metadata for encryption device */
+message EncryptionDevice {
+    string uuid = 1; // Unique identifier for device
+    string location = 2; // Arbitary string to designate the location of device
+    uint32 launch_code = 3; // Election initialization value
+    uint64 timestamp = 4; // Incremental counter
+    string session_id = 5; // Used to identify session and protect the timestamp
+}

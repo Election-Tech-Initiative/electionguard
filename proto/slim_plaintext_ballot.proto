@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package electionguard;
+
+message Pair {
+    string key = 1;
+    string value = 2;
+}
+
+/* Plaintext representation of ballot */
+message SlimPlaintextBallot {
+    string ballot_object_id = 1; 
+    string ballot_style_id = 2; 
+    repeated bool selections = 3;
+    repeated bool extra_data = 4;
+    BallotBoxState ballot_box_state = 5;
+
+    /* Enumeration used when marking a ballot as cast or spoiled */
+    enum BallotBoxState {
+        UNKNOWN = 0; // A ballot whose state is unknown to ElectionGuard and will not be included in any election results
+        CAST = 1; // A ballot that has been explicitly cast
+        SPOILED = 2; // A ballot that has been explicitly spoiled
+    }
+}
