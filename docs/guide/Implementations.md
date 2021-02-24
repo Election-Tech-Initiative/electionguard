@@ -8,6 +8,17 @@ A thin stateless API wrapping `electionguard-python` to perform ballot encryptio
 
 [:fontawesome-brands-github: Source](https://github.com/microsoft/electionguard-web-api) | [:fontawesome-brands-docker: Docker](https://hub.docker.com/r/electionguard/electionguard-web-api) | [:fontawesome-regular-file: Documentation](https://microsoft.github.io/electionguard-web-api/)
 
+## Verifiers
+A verifier application is used to perform an external, independent verification of an election tally. This repository contains a reference implementation of a verifier built against the ElectionGuard specifications. This is not meant to be the *only* verifier application, but rather an example. This library should be used in tandem with the technical specifications and usage guidelines contained in the [specifications](https://github.com/microsoft/electionguard/wiki).
+
+[:fontawesome-brands-github: Source](https://github.com/microsoft/electionguard-verifier)
+
+### Community Verifiers
+- [:fontawesome-brands-github: Python Verifier](https://github.com/rainbowhuanguw/ElectionGuard-verifier-python) by Rainbow Huang
+- [:fontawesome-brands-github: C# Verifier](https://github.com/brandon-irl/ElectionGuard-Verifier-C-) by Brandon Alexander
+- [:fontawesome-brands-github: Java Verifier](https://github.com/JohnLCaron/electionguard-java) by John Caron
+- [:fontawesome-brands-github: Python Verifier (electionguard-verify)](https://github.com/nickboucher/electionguard-verify) by Nicholas Boucher
+
 ## Archived
 
 !!! warning 
@@ -34,14 +45,3 @@ Working instance of ballot marking device (BMD). Built by VotingWorks in consult
 An application that demonstrates publication of ElectionGuard election artifacts to a public website to enable verification ID lookup, downloadable zip files of the election result (for third-party verifiers), and election results summaries.
 
 [:fontawesome-brands-github: Source](https://github.com/microsoft/electionguard-tracking-site)
-
-### Verifiers
-A verifier application is used to perform an external, independent verification of an election tally. This repository contains a reference implementation of a verifier built against the ElectionGuard specifications. This is not meant to be the *only* verifier application, but rather an example. This library should be used in tandem with the technical specifications and usage guidelines contained in the [specifications](https://github.com/microsoft/electionguard/wiki).
-
-[:fontawesome-brands-github: Source](https://github.com/microsoft/electionguard-verifier)
-
-#### Community Verifiers
-- [:fontawesome-brands-github: Python Verifier](https://github.com/rainbowhuanguw/ElectionGuard-verifier-python) by Rainbow Huang
-- [:fontawesome-brands-github: C# Verifier](https://github.com/brandon-irl/ElectionGuard-Verifier-C-) by Brandon Alexander
-- [:fontawesome-brands-github: Java Verifier](https://github.com/JohnLCaron/electionguard-java) by John Caron
-- [:fontawesome-brands-github: Python Verifier (electionguard-verify)](https://github.com/nickboucher/electionguard-verify) by Nicholas Boucher
