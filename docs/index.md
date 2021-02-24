@@ -2,10 +2,10 @@
 
 ![Microsoft Defending Democracy Program: ElectionGuard](images/electionguard-banner.svg)
 
-ElectionGuard is an **open source** software development kit (SDK) that makes voting more secure, transparent and accessible. It enables [end-to-end verifiable elections](guide/Glossary.md#end-to-end-verifiable-elections) and [post-election audits](guide/Glossary.md#post-election-audit). 
+ElectionGuard is an **open source** software development kit (SDK) that makes voting more secure, transparent and accessible. It is designed for election system vendors to incorporate [end-to-end verifiability](Glossary/#end-to-end-verifiable-elections) into their systems and any interested organization to perform and publish [post-election audits](Glossary/#post-election-audit) using ElectionGuard as a secure publishing platform.
 
 !!! info "New to ElectionGuard?"
-    Start with [How ElectionGuard Works](). If you're a developer, start with our [Developer Guide](guide/Overview.md).
+    Welcome! Thanks for your interest; we rely on the community to guide our direction. Trying to figure out how to help and learn? If you're a developer, head over to our [Getting started](Getting_Started.md) page. If you're an election administrator or want to learn more about ElectionGuard and its underpinnings, start with [How ElectionGuard Works](guide/Introduction.md). If you want to help and aren't a developer, that's great, too. We need all kinds of help with documentation, outreach, and advocacy. Follow our [discussions](), join our office hours, and check out our roadmap to see where were' heading.
 
 ## Open-Source
 This library and all linked ElectionGuard projects, are licensed under the MIT license. There is no fee for using ElectionGuard.
