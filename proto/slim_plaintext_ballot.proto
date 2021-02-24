@@ -3,7 +3,7 @@ syntax = "proto3";
 package electionguard;
 
 message Pair {
-    string key = 1;
+    uint32 key = 1;
     string value = 2;
 }
 
