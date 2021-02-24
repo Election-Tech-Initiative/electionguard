@@ -20,7 +20,7 @@ Help defend democracy and **[contribute to the project][]**.
 
 [Contribute to the project]: https://github.com/microsoft/electionguard/blob/main/CONTRIBUTING.md
 
-We welcome discussions on our [discussions page](https://github.com/microsoft/electionguard/discussions), feel free to check in and ask your questions regarding the specifications there.
+We welcome discussions on our [discussions page](https://github.com/microsoft/electionguard/discussions), feel free to check in and ask your questions and drop your suggestions regarding the specifications over there.
 
 ## Questions
 
