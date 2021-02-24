@@ -8,6 +8,6 @@ message CiphertextBallotParams {
     string ballot_style_id = 2; 
     uint64 timestamp = 3;
     uint32 ballot_nonce = 4;
-    uint32 previous_verification_code = 5;
-    uint32 verification_code = 6;
+    uint32 previous_tracker_hash = 5;
+    uint32 tracker_hash = 6;
 }

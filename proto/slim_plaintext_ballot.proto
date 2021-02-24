@@ -12,7 +12,7 @@ message SlimPlaintextBallot {
     string ballot_object_id = 1; 
     string ballot_style_id = 2; 
     repeated bool selections = 3;
-    repeated bool extra_data = 4;
+    repeated Pair extra_data = 4;
     BallotBoxState ballot_box_state = 5;
 
     /* Enumeration used when marking a ballot as cast or spoiled */
