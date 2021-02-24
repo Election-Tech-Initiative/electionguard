@@ -8,7 +8,7 @@ It comprises three Github repos:
 * ElectionGuard Python
 * ElectionGuard C++
 
-Whenever possible and as a guiding principle, the evolution of the ElectionGuard SDK will be driven by the use cases and priority of the community and in service of best-practice implementations of real-world, secret-ballot public elections
+Whenever possible and as a guiding principle, the evolution of the ElectionGuard SDK will be driven by the use cases and priorities of the community and in service of best-practice implementations of real-world, secret-ballot public elections
 
 !!! info "Ways to get involved and find out what's actively being worked on"
     If you have questions or ideas, there are multiple ways to get feedback and help:
