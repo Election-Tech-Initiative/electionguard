@@ -33,10 +33,7 @@ nav:
         - Precinct Scan: guide/Precinct_scan.md
         - Ballot Encryption: guide/Ballot_encryption.md
         - Verifiable Election: guide/Verifiable_Election.md
-        - Election Manifest: guide/Election_manifest.md
-  - How ElectionGuard Works:
-    - Introduction: guide/Introduction.md 
-    - Glossary: guide/Glossary.md   
+        - Election Manifest: guide/Election_Manifest.md
 plugins:
   - search
 theme:

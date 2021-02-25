@@ -2,7 +2,7 @@
 
 There are many ways to adopt or contribute to ElectionGuard. It is an open source platform and depends on an active community and ecosystem.
 
-It comprises three Github repos:
+The ElectionGuard SDK comprises three Github repos:
 
 * ElectionGuard Specification
 * ElectionGuard Python
@@ -53,3 +53,5 @@ Any real-world voting use case will need to incorporate the capabilities of the 
 The ElectionGuard C++ library performs ballot encryption. It is designed for devices that handle the user experience of voting. These devices follow the economics and performance of embedded systems: special-purpose devices designed for low cost. We assume Intel Atom class processor-level performance and Raspberry Pi 3 types of operating systems. 
 
 [:fontawesome-brands-github: **Source**](https://github.com/microsoft/electionguard-cpp)
+
+In addition to the C++ library itself, we plan to target different standalone packages
