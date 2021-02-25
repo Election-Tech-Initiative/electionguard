@@ -50,7 +50,7 @@ In the [second half of the year](https://blogs.microsoft.com/on-the-issues/2020/
 
 We also had the opportunity to further collaborate with VotingWorks, this time on post-election audits. Driven principally by Rice University professor Dan Wallach's work with [Arlo](https://voting.works/risk-limiting-audits/), ElectionGuard provided the "back end" for [Inyo County's Risk-limiting Audit of the November 3 election](https://elections.inyocounty.us/post-election-audits/).  
 
-Last and definitely not least, we had our [first independent verifiers developed and published](../docs/Contributions.md).
+Last and definitely not least, we had our [first independent verifiers developed and published](Contributions.md).
 
 We thank all our collaborators and contributors for their contributions, of course, but also how they're informing our future direction.
 
