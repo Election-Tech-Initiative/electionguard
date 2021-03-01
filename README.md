@@ -43,6 +43,8 @@ Help defend democracy and **[contribute to the project][]**.
 [Code of Conduct]: CODE_OF_CONDUCT.md
 [Contribute to the project]: CONTRIBUTING.md
 
+We welcome discussions on our [discussions page](https://github.com/microsoft/electionguard/discussions), feel free to check in and ask your questions and drop your suggestions regarding the specifications over there.
+
 ## ❓ Questions
 
 ElectionGuard would love for you to ask questions out in the open using Github Issues. If you really want to email the ElectionGuard team, reach out at electionguard@microsoft.com.
