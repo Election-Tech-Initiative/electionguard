@@ -12,7 +12,7 @@ nav:
     - Overview: index.md
     - Roadmap: Roadmap.md
   - Guide:
-    - Overview: guide/Overview.md
+    - Getting Started: guide/Getting_Started.md
     - SDK: 
       - Core Component: guide/Core_Component.md
       - Implementations: guide/Implementations.md
