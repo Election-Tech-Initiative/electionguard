@@ -16,9 +16,9 @@ nav:
     - Concepts:
       - Manifest: guide/concepts/Election_Manifest.md
       - Ballot Encryption: guide/concepts/Ballot_Encryption.md
+      - Verifiable Election: guide/concepts/Verifiable_Election.md
     - Use Cases:
       - Precinct Scan: guide/use_cases/Precinct_Scan.md
-      - Verifiable Election: guide/use_cases/Verifiable_Election.md
     - Develop:
       - Getting Started: guide/developer/Getting_Started.md
     - Glossary: guide/Glossary.md

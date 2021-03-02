@@ -38,7 +38,7 @@ The ElectionGuard Python library is the *reference implementation* of the Electi
 
 It is designed to be *portable* over *performant*, *universal* over *Pythonic* (although we do try to adhere to the [Zen of Python](https://www.python.org/dev/peps/pep-0020/)).
 
-Any real-world voting use case will need to incorporate the capabilities of the Python library to run an [end-to-end verifiable election](../use_cases/Verifiable_Election.md) or [post-election audit](../Glossary/#post-election-audit).
+Any real-world voting use case will need to incorporate the capabilities of the Python library to run an [end-to-end verifiable election](../concepts/Verifiable_Election.md) or [post-election audit](../Glossary/#post-election-audit).
 
 [:fontawesome-brands-github: **Source**](https://github.com/microsoft/electionguard-python) | [:fontawesome-brands-python: **Package**](https://pypi.org/project/electionguard/) | [:fontawesome-regular-file: **Documentation**](https://microsoft.github.io/electionguard-python/)
 
