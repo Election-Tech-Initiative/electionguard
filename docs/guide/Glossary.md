@@ -69,7 +69,7 @@ End-to-end verifiability is a set of security, cryptographic, and voting user ex
 Pair of keys (public & secret) used to encrypt/decrypt election
 
 ### election manifest
-An election manifest (see [election manifest](guide/Election_Manifest.md) article) contains election metadata in json format that is parsed into an [Election Description](#election-description----see-election-manifest)
+An election manifest (see [election manifest](concepts/Election_Manifest.md) article) contains election metadata in json format that is parsed into an [Election Description](#election-description----see-election-manifest)
 
 ### election partial key backup
 A point on a secret polynomial and commitments to verify this point for a designated guardian.
@@ -80,7 +80,7 @@ The election polynomial is the mathematical expression that each Guardian define
 ### extended base hash $\overline{Q}$
 
 ### encrypting a ballot
-As [outlined directly in the ElectionGuard Specification](spec/0.95.0/5_Ballot_encryption.md)
+As [outlined directly in the ElectionGuard Specification](../spec/0.95.0/5_Ballot_encryption.md)
 
 ### encrypted tally
 The homomorphically-combined and encrypted representation of all selections made for each option on every contest in the election.

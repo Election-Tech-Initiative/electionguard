@@ -1,6 +1,5 @@
 # ElectionGuard Roadmap
 
-![Microsoft Defending Democracy Program: ElectionGuard](images/electionguard-banner.svg)
 ## 2021 Roadmap
 
 Our 2021 roadmap takes the learnings from the different applications we deployed in 2020 and rationalizes them into a *practice* we hope to establish with the community in 2021. Our goal is to empower a community of participants and contributors within which Microsoft takes part in and provides architectural and implementation guidance, but is fundamentally driven by the needs of the community in establishing the best ways to implement end-to-end verifiable elections and post-election audits.
@@ -50,7 +49,7 @@ In the [second half of the year](https://blogs.microsoft.com/on-the-issues/2020/
 
 We also had the opportunity to further collaborate with VotingWorks, this time on post-election audits. Driven principally by Rice University professor Dan Wallach's work with [Arlo](https://voting.works/risk-limiting-audits/), ElectionGuard provided the "back end" for [Inyo County's Risk-limiting Audit of the November 3 election](https://elections.inyocounty.us/post-election-audits/).  
 
-Last and definitely not least, we had our [first independent verifiers developed and published](Contributions.md).
+Last and definitely not least, we had our [first independent verifiers developed and published](../community/index.md).
 
 We thank all our collaborators and contributors for their contributions, of course, but also how they're informing our future direction.
 

@@ -1,4 +1,6 @@
-# ElectionGuard Specification v0.95
+# ElectionGuard Specification ![Version 0.95.0](https://img.shields.io/badge/Version-v0.95.0-green)
+
+
 
 Josh Benaloh (Microsoft Research)
 

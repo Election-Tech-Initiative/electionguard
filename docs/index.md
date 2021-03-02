@@ -1,11 +1,13 @@
-# Welcome to the ElectionGuard SDK
+# 
 
 ![Microsoft Defending Democracy Program: ElectionGuard](images/electionguard-banner.svg)
+
+## Welcome to the ElectionGuard SDK
 
 ElectionGuard is an **open source** software development kit (SDK) that makes voting more secure, transparent and accessible. It is designed for election system vendors to incorporate [end-to-end verifiability](Glossary/#end-to-end-verifiable-elections) into their systems and any interested organization to perform and publish [post-election audits](Glossary/#post-election-audit) using ElectionGuard as a secure publishing platform.
 
 !!! info "New to ElectionGuard?"
-    Welcome! Thanks for your interest. Trying to figure out how to help and learn? If you're a developer, head over to our [**Getting started**](Getting_Started.md) page. If you're an election administrator or want to learn more about ElectionGuard and its underpinnings, start with [**How ElectionGuard Works**](guide/Introduction.md). If you want to help and aren't a developer, that's great, too. We need all kinds of help with documentation, outreach, and advocacy. Follow our [**discussions**](https://github.com/microsoft/electionguard/discussions), join our [**office hours**](https://github.com/microsoft/electionguard/discussions/61), and check out our [**roadmap**](Roadmap.md) to see where were' heading.
+    Welcome! Thanks for your interest. Trying to figure out how to help and learn? If you're a developer, head over to our [**developer guide**](guide/developer/Getting_Started.md). If you're an election administrator or want to learn more about ElectionGuard and its underpinnings, start with [**our guide**](guide/index.md). If you want to help and aren't a developer, that's great, too. We need all kinds of help with documentation, outreach, and advocacy. Follow our [**discussions**](https://github.com/microsoft/electionguard/discussions), join our [**office hours**](https://github.com/microsoft/electionguard/discussions/61), and check out our [**roadmap**](about/Roadmap.md) to see where were' heading.
 
 ## Open-Source
 This library and all linked ElectionGuard projects, are licensed under the MIT license. There is no fee for using ElectionGuard.
@@ -30,7 +32,7 @@ ElectionGuard would love for you to ask questions out in the open using Github I
 A huge thank you to those who have helped us along the way:
 
 * Josh Benaloh (whose [PhD thesis](https://www.microsoft.com/en-us/research/publication/verifiable-secret-ballot-elections/) was the genesis of much of this work)
-* Our [**contributors**](Contributions.md) and community
+* Our [**contributors**](community/index.md) and community
 * [InfernoRed Technology](https://infernored.com/), who have been part of all our launches
 * [VotingWorks](https://voting.works/) and the audit stylings of [@danwallach](https://github.com/danwallach)
 * [Center for Civic Design](https://civicdesign.org/)

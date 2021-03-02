@@ -9,11 +9,20 @@ docs_dir: "docs"
 repo_url: https://github.com/microsoft/electionguard/
 nav:
   - About: 
-    - Overview: index.md
-    - Roadmap: Roadmap.md
-    - Contributions: Contributions.md
-    - Glossary: Glossary.md  
-  - Specification v0.95:
+    - ElectionGuard: index.md
+    - Roadmap: about/Roadmap.md
+  - Guide: 
+    - Introduction: guide/index.md
+    - Concepts:
+      - Manifest: guide/concepts/Election_Manifest.md
+      - Ballot Encryption: guide/concepts/Ballot_Encryption.md
+    - Use Cases:
+      - Precinct Scan: guide/use_cases/Precinct_Scan.md
+      - Verifiable Election: guide/use_cases/Verifiable_Election.md
+    - Develop:
+      - Getting Started: guide/developer/Getting_Started.md
+    - Glossary: guide/Glossary.md
+  - Specification:
     - Overview: spec/0.95.0/1_Overview.md
     - Structure: spec/0.95.0/2_Structure.md
     - Baseline Parameters: spec/0.95.0/3_Baseline_parameters.md     
@@ -24,16 +33,10 @@ nav:
     - The Election Record: spec/0.95.0/8_The_election_record.md     
     - Verifier Construction: spec/0.95.0/9_Verifier_construction.md 
     - Applicability to E2E Verifiability and RLA: spec/0.95.0/10_Applicability.md
-    - v0.85: "https://github.com/microsoft/electionguard/releases/tag/v0.85.0"
-  - Developers:
-    - Getting Started: Getting_Started.md
-  - How ElectionGuard Works:
-    - Introduction: guide/Introduction.md  
-    - Use Cases and Examples:
-        - Precinct Scan: guide/Precinct_scan.md
-        - Ballot Encryption: guide/Ballot_encryption.md
-        - Verifiable Election: guide/Verifiable_Election.md
-        - Election Manifest: guide/Election_Manifest.md
+    - Acknowledgements: spec/0.95.0/11_Acknowledgements.md
+    - Other Versions: 
+        - v0.85.0: "https://github.com/microsoft/electionguard/releases/tag/v0.85.0"
+  - Community: community/index.md
 plugins:
   - search
 theme:
@@ -46,8 +49,9 @@ theme:
   palette:
     scheme: default
   features:
-    - navigation.tabs
+    - navigation.expand
     - navigation.instant
+    - navigation.tabs
 markdown_extensions:
   - admonition
   - footnotes
