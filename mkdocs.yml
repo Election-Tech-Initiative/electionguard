@@ -1,10 +1,10 @@
 site_name: ElectionGuard
 # site_description:
-# site_author: Microsoft
+# site_author:
 # google_analytics:
 # remote_branch: for gh-deploy to GithubPages
 # remote_name: for gh-deploy to Github Pages
-# copyright: "© Microsoft 2021"
+# copyright:
 docs_dir: "docs"
 repo_url: https://github.com/microsoft/electionguard/
 nav:
