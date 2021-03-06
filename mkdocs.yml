@@ -39,6 +39,7 @@ nav:
   - Community: community/index.md
 plugins:
   - search
+  - mermaid2
 theme:
   name: material
   custom_dir: overrides
@@ -48,6 +49,8 @@ theme:
     text: Segoe UI
   palette:
     scheme: default
+    accent: indigo
+    link: indigo
   features:
     - navigation.expand
     - navigation.instant
@@ -58,7 +61,11 @@ markdown_extensions:
   - meta
   - pymdownx.details
   - pymdownx.tabbed
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg

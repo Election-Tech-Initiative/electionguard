@@ -7,6 +7,7 @@ install:
 	pip install mkdocs
 	mkdocs --version
 	pip install mkdocs-material
+	pip install mkdocs-mermaid2-plugin
 
 lint:
 	mkdocs build --strict
