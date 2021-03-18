@@ -23,7 +23,7 @@ A core component of electionguard implemented in python which includes ballot en
 [📝 Documentation](https://microsoft.github.io/electionguard-python/)
 
 ### C ++
-A core component of electionguard implemented in C++ which includes ballot encryption.
+A subset of the ElectionGuard SDK implemented in C++ to support ballot encryption.
 
 [📁 Source](https://github.com/microsoft/electionguard-cpp)
 
