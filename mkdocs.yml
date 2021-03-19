@@ -23,7 +23,7 @@ nav:
       - Getting Started: guide/develop/Getting_Started.md
     - Glossary: guide/Glossary.md
   - Specification:
-    - Overview: spec/0.95.0/1_Overview.md
+    - Overview: spec/1.0.0/1_Overview.md
     - Structure: spec/0.95.0/2_Structure.md
     - Baseline Parameters: spec/0.95.0/3_Baseline_parameters.md     
     - Key Generation: spec/0.95.0/4_Key_generation.md     
