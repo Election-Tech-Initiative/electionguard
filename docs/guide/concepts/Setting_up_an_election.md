@@ -41,6 +41,9 @@ As such, it is necessary when setting up an election to specify the maximum numb
 
 ### Managing the Key Ceremony
 
-With the election metadata
+After the number of guardians have been established
+
+
 
 ### Publishing the Election Record
+

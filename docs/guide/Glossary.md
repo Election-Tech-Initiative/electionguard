@@ -135,6 +135,10 @@ The *election polynomial* is the mathematical expression that each Guardian defi
 
 ### encrypt
 
+### encrypted ballot metadata
+
+A specific subset of election metadata
+
 ### encrypted tally
 
 The homomorphically-combined and encrypted representation of all selections made for each option on every contest in the election.
@@ -173,6 +177,8 @@ graph LR
 ```
 
 ### guardian (see [election guardian](#election-guardian))
+
+### hardware security module (hsm)
 
 ### hash
 
