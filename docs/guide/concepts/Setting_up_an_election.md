@@ -1,6 +1,6 @@
 # Setting Up an Election
 
-As discussed in detail in the [Precinct Scan](use_cases/Precinct_Scan.md) overview, ElectionGuard typically slots in alongside the hosting vendor system and *its* operation. In the case of ElectionGuard-specific practices such as the key and tally ceremonies, there are additional administration obligations and practices to consider.
+As discussed in detail in the [Precinct Scan](Setting_up_an_election.md) overview, ElectionGuard typically slots in alongside the hosting vendor system and *its* operation. In the case of ElectionGuard-specific practices such as the key and tally ceremonies, there are additional administration obligations and practices to consider.
 
 ## Stages of an ElectionGuard Election
 

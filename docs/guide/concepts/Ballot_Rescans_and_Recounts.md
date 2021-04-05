@@ -23,11 +23,21 @@ When a voter checks whether their ballot was included in the ElectionGuard publi
 
 To maintain the security and integrity of the original election artifacts, rescans and recounts are guardian-based processes. This requirement presents potentially significant additional compute both for the local guardian device / [hardware security module](../Glossary.md#hardware-security-module-hsm) and any cloud-based approach to scale the cross-tally mapping.
 
-Since a rescan or recount can occur on any independent device, the information for mapping must be present on the paper ballot itself. Specifically, in addition to all the contests and candidates, there must be an ID unique to the election printed on the ballot. When scanned by the scanner, that ID is included in the [encrypted ballot metadata](../Glossary.md#encrypted-ballot-metadata) encrypted by the [*auxiliary* guardian RSA key](../Glossary.md#auxiliary-guardian-key) **separate** from the El Gamal encryption[^rs1] used for the ballot contents.
+### Encrypting a Unique Ballot ID
+
+Since a rescan or recount can occur on any independent device, the information for mapping must be present on and derived from the paper ballot itself. Specifically, in addition to all the contests and candidates, there must be an ID unique to the election printed on the ballot. When scanned by the scanner, that ID is included in the [encrypted ballot metadata](../Glossary.md#encrypted-ballot-metadata) encrypted by the [*auxiliary* guardian RSA key](../Glossary.md#auxiliary-guardian-key) **separate** from the El Gamal encryption[^rs1] used for the ballot contents.
 
 !!! alert
     Municipalities that do not allow the printing of unique identifiers on their paper ballots cannot use ElectionGuard for the rescan scenario, since there is no way to perform any mapping across independent tallies
 
+### Diffing an Election
 
+
+
+### Invoking a Rescan or Recount
+
+After the base ElectionGuard verifiable tally has been generated (and, optionally, published) a rescan or recount can be performed.
+
+### Optimizing the Compute
 
 [^rs1]:  Because the primary joint public key is an ElGamal key, it is optimzed for the ones and zeroes that constitute the contents of a ballot, not the generic string values necessary to support arbitrary IDs.
