@@ -23,6 +23,7 @@ nav:
       - Precinct Scan: guide/use_cases/Precinct_Scan.md
     - Develop:
       - Getting Started: guide/develop/Getting_Started.md
+      - Architecture: guide/develop/Architecture.md
     - Glossary: guide/Glossary.md
   - Specification:
     - Overview: spec/1.0.0/1_Overview.md
