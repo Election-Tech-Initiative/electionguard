@@ -1,0 +1,37 @@
+{
+    "object_id": "external-ballot-id-2345",
+    "style_id": "franklin-county-ozark-schools",
+    "contests": [
+        {
+            "object_id": "referendum-pineapple",
+            "ballot_selections": [
+                {
+                    "object_id": "referendum-pineapple-affirmative-selection",
+                    "vote": 1
+                }
+            ]
+        },
+        {
+            "object_id": "congressional-race-01",
+            "ballot_selections": [
+                {
+                    "object_id": "john-hancock-selection",
+                    "vote": 1
+                }
+            ]
+        },
+        {
+            "object_id": "ozark-school-board-race",
+            "ballot_selections": [
+                {
+                    "object_id": "samuel-adams-selection",
+                    "vote": 1
+                },
+                {
+                    "object_id": "thomas-jefferson-selection",
+                    "vote": 1
+                }
+            ]
+        }
+    ]
+}

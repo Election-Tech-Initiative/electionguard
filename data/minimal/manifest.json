@@ -1,0 +1,73 @@
+{
+    "spec_version": "v0.95",
+    "election_scope_id": "franklin-minimal-referendum-manifest",
+    "type": "general",
+    "geopolitical_units": [
+        {
+            "object_id": "franklin-county",
+            "name": "Franklin County",
+            "type": "municipality"
+        }
+    ],
+    "parties": [
+        {
+            "object_id": "N/A"
+        }
+    ],
+    "candidates": [
+        {
+            "object_id": "referendum-pineapple-affirmative"
+        },
+        {
+            "object_id": "referendum-pineapple-negative"
+        }
+    ],
+    "contests": [
+        {
+            "@type": "ReferendumContest",
+            "object_id": "referendum-pineapple",
+            "name": "Referendum for Banning Pineapple on Pizza",
+            "sequence_order": 0,
+            "vote_variation": "one_of_m",
+            "electoral_district_id": "franklin-county",
+            "number_elected": 1,
+            "votes_allowed": 1,
+            "ballot_selections": [
+                {
+                    "object_id": "referendum-pineapple-affirmative-selection",
+                    "sequence_order": 0,
+                    "candidate_id": "referendum-pineapple-affirmative"
+                },
+                {
+                    "object_id": "referendum-pineapple-negative-selection",
+                    "sequence_order": 1,
+                    "candidate_id": "referendum-pineapple-negative"
+                }
+            ]
+
+        }
+    ],
+    "ballot_styles": [
+        {
+            "object_id": "ballot-style-01",
+            "geopolitical_unit_ids": [
+                "franklin-county"
+            ]
+        }
+        
+    ],
+    "name": {
+        "text": [
+            {
+                "language": "en",
+                "value": "Franklin County Minimal General Election March 2020"
+            },
+            {
+                "language": "es",
+                "value": "Elecciones generales mínimas del condado de Franklin marzo de 2020"
+            }
+        ]
+    },
+    "start_date": "2020-03-01T08:00:00-05:00",
+    "end_date": "2020-03-03T19:00:00-05:00"
+}
