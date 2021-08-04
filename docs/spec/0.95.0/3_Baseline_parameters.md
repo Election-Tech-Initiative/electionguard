@@ -4,7 +4,7 @@
 
 Another parameter of an election should be a public ballot coding file. This file should list all the contests in an election, the number of selections allowed for each contest, and the options for each contest together with associations between each option and its representation on a virtual ballot. It is assumed that each contest in the ballot coding file has a unique label and that within each contest, each option also has a unique label. For instance, if Alice, Bob, and Carol are running for governor, and David and Ellen are running for senator, the ballot coding file could enable the vector $\langle0,1,0; 0,1\rangle$ to be recognized as a ballot with votes for Bob as governor and Ellen as senator. The detailed format of a ballot coding file will not be specified in this document. But the contents of this file are hashed together with the prime modulus $(p)$, subgroup order $(q)$, generator $(g)$, number of guardians $(n)$, decryption quorum threshold value $(k)$, date, and jurisdictional information to form a base hash code $(Q)$ which will be incorporated into every subsequent hash computation in the election.
 
-Standard parameters for ElectionGuard begin with the largest 256-bit prime $q = 2256 − 189$. The hexadecimal representation of $q$ is as follows.
+Standard parameters for ElectionGuard begin with the largest 256-bit prime $q = 2^{256} − 189$. The hexadecimal representation of $q$ is as follows.
 
 ``` text
 FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFF43
