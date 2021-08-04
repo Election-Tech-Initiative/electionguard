@@ -25,3 +25,8 @@ jobs:
         run: make install
       - name: Deploy
         run: make deploy
+      - name: Package Sample Data
+        uses: actions/upload-artifact@v2
+        with:
+          name: sample-data
+          path: data/
