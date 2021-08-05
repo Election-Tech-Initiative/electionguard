@@ -1,4 +1,6 @@
-# ElectionGuard Specification ![Version 0.95.0](https://img.shields.io/badge/Version-v1.0.0-yellow)
+# ElectionGuard Specification ![Version 0.95.0](https://img.shields.io/badge/Version-v0.95.0-green)
+
+
 
 Josh Benaloh (Microsoft Research)
 
@@ -11,7 +13,7 @@ This document describes the technical details of the ElectionGuard toolkit which
 An E2E-verifiable election provides artifacts which allow voters to confirm that their votes have been accurately recorded and counted. Specifically, an election is End-to-end (E2E) verifiable if two properties are achieved.
 
 1. Individual voters can verify that their votes have been accurately recorded.
-2. Voters and observers can verify that all the recorded votes have been accurately counted.
+2. Voters and observers can verify that the recorded votes have been accurately counted.
 
 An E2E-verifiable tally can be used as the primary tally in an election or as a verifiable secondary tally alongside traditional methods. ElectionGuard is compatible with in-person voting – either using an electronic ballot-marking device or an optical scanner capable of reading hand-marked or machine-marked ballots, with voting by mail, and even with Internet voting.
 
@@ -53,6 +55,7 @@ In the final step, election guardians independently use their secret keys to dec
 Observers can use this open specification and/or accompanying materials to write election verifiers that can confirm the integrity of each encrypted ballot, the correct aggregation of these ballots, and the accurate decryption of election tallies.
 
 The details of the ElectionGuard Application Programming Interface (API) are included in a separate document. The principal purposes of this document are to specify the functionality of the ElectionGuard toolkit and to provide details necessary for independent parties to write election verifiers that consume the artifacts produced by the toolkit.
+
 
 [^1]: While the format of the election keys is critical to the process and carefully delineated in this document, the auxiliary keys are for internal use only and their format is left up to individual implementations.
 [^2]: The verification code is not necessary for RLA usage.

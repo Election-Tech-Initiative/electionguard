@@ -1,44 +1,61 @@
 site_name: ElectionGuard
 # site_description:
-site_author: Microsoft
+# site_author:
 # google_analytics:
 # remote_branch: for gh-deploy to GithubPages
 # remote_name: for gh-deploy to Github Pages
-copyright: "© Microsoft 2021"
+# copyright:
 docs_dir: "docs"
 repo_url: https://github.com/microsoft/electionguard/
 nav:
-  - About:
-      - Overview: index.md
-      - Roadmap: Roadmap.md
-  - Guide:
-      - Getting Started: guide/Getting_Started.md
-      - SDK:
-          - Core Component: guide/Core_Component.md
-          - Implementations: guide/Implementations.md
-          - Sample Data: guide/Sample_Data.md
-      - Additional Topics:
-          - Verifiable Election: guide/Verifiable_Election.md
-          - Election Manifest: guide/Election_Manifest.md
-          - Precinct Scan Use Case: guide/Precinct_scan.md
-          - Glossary: guide/Glossary.md
+  - Documentation:
+      - Overview:
+          - About: index.md
+          - Roadmap: overview/Roadmap.md
+          - Glossary: overview/Glossary.md
+      - Getting Started: getting_started/index.md
+      - Concepts:
+          - Manifest: concepts/Election_Manifest.md
+          - Ballot Encryption: concepts/Ballot_Encryption.md
+          - Verifiable Election: concepts/Verifiable_Election.md
+          - Setting up an Election: concepts/Setting_up_an_election.md
+          - Rescanning Ballots and Recounts: concepts/Ballot_Rescans_and_Recounts.md
+      - Use Cases:
+          - Precinct Scan: use_cases/Precinct_Scan.md
+      - Develop:
+          - Getting Started: develop/Getting_Started.md
+          - Architecture: develop/Architecture.md
+          - Data: develop/Data.md
   - Specification:
-      - Overview: spec/Overview.md
-      - v0.95:
-          - Overview: spec/0.95.0/1_Overview.md
-          - Structure: spec/0.95.0/2_Structure.md
-          - Baseline Parameters: spec/0.95.0/3_Baseline_parameters.md
-          - Key Generation: spec/0.95.0/4_Key_generation.md
-          - Ballot Encryption: spec/0.95.0/5_Ballot_encryption.md
-          - Ballot Aggregation: spec/0.95.0/6_Ballot_aggregation.md
-          - Verifiable Decryption: spec/0.95.0/7_Verifiable_decryption.md
-          - The Election Record: spec/0.95.0/8_The_election_record.md
-          - Verifier Construction: spec/0.95.0/9_Verifier_construction.md
-          - Applicability to E2E Verifiability and RLA: spec/0.95.0/10_Applicability.md
-          - Acknowledgements: spec/0.95.0/11_Acknowledgements.md
-      - v0.85: "https://github.com/microsoft/electionguard/releases/tag/v0.85.0"
+      - Overview: spec/1.0.0/1_Overview.md
+      - Structure: spec/1.0.0/2_Structure.md
+      - Baseline Parameters: spec/1.0.0/3_Baseline_parameters.md
+      - Key Generation: spec/1.0.0/4_Key_generation.md
+      - Ballot Encryption: spec/1.0.0/5_Ballot_encryption.md
+      - Ballot Aggregation: spec/1.0.0/6_Ballot_aggregation.md
+      - Verifiable Decryption: spec/1.0.0/7_Verifiable_decryption.md
+      - The Election Record: spec/1.0.0/8_The_election_record.md
+      - Verifier Construction: spec/1.0.0/9_Verifier_construction.md
+      - Applicability to E2E Verifiability and RLA: spec/1.0.0/10_Applicability.md
+      - Acknowledgements: spec/1.0.0/11_Acknowledgements.md
+      - Other Versions:
+          - v0.95.0:
+              - Overview: spec/0.95.0/1_Overview.md
+              - Structure: spec/0.95.0/2_Structure.md
+              - Baseline Parameters: spec/0.95.0/3_Baseline_parameters.md
+              - Key Generation: spec/0.95.0/4_Key_generation.md
+              - Ballot Encryption: spec/0.95.0/5_Ballot_encryption.md
+              - Ballot Aggregation: spec/0.95.0/6_Ballot_aggregation.md
+              - Verifiable Decryption: spec/0.95.0/7_Verifiable_decryption.md
+              - The Election Record: spec/0.95.0/8_The_election_record.md
+              - Verifier Construction: spec/0.95.0/9_Verifier_construction.md
+              - Applicability to E2E Verifiability and RLA: spec/0.95.0/10_Applicability.md
+              - Acknowledgements: spec/0.95.0/11_Acknowledgements.md
+          - v0.85.0: "https://github.com/microsoft/electionguard/releases/tag/v0.85.0"
+  - Community: community/index.md
 plugins:
   - search
+  - mermaid2
 theme:
   name: material
   custom_dir: overrides
@@ -48,18 +65,23 @@ theme:
     text: Segoe UI
   palette:
     scheme: default
-    primary: teal
-    accent: teal
+    accent: indigo
+    link: indigo
   features:
-    - navigation.tabs
+    - navigation.expand
     - navigation.instant
+    - navigation.tabs
 markdown_extensions:
   - admonition
   - footnotes
   - meta
   - pymdownx.details
   - pymdownx.tabbed
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -69,3 +91,5 @@ extra_javascript:
   - javascripts/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra_css:
+  - stylesheets/extra.css
