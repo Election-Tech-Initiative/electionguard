@@ -145,7 +145,7 @@ The homomorphically-combined and encrypted representation of all selections made
 
 ### encrypting a ballot
 
-As [outlined in the ElectionGuard Specification](../spec/0.95.0/5_Ballot_encryption.md)
+As outlined in the ElectionGuard Specification
 
 ```mermaid
     graph LR
@@ -254,7 +254,7 @@ A _zero-knowledge proof_ is a method by which one party (the prover) can prove t
 
 A _non-interactive-zero-knowledge proof_ (NIZK) is a zero-knowledge proof that can be performed without interaction or intervention by the prover.
 
-ElectionGuard [uses four different types of NIZK](../spec/0.95.0/2_Structure.md#non-interactive-zero-knowledge-nizk-proofs) to enable ElectionGuard to demonstrate:
+ElectionGuard uses four different types of NIZK to enable ElectionGuard to demonstrate:
 
 - keys are properly chosen
 - ballots are properly formed

@@ -1,3 +1,0 @@
-# Acknowledgements
-
-The author is happy to thank Nicholas Boucher (@NickBoucher), Joey Dodds (@jdodds), Gerald Doussot, Aleks Essex, Rainbow Huang (@rainbowhuanguw), Chris Jeuell, Luke Myers, Dan Shumow, Vanessa Teague (@vteague), Aaron Tomb, Daniel Wagner, Jake Waksbaum, Matt Wilhelm (@AddressXception), and Greg Zaverucha for many helpful comments and suggestions on earlier versions of this specification.
