@@ -9,7 +9,7 @@ By design, the ElectionGuard SDK can be used to enable end-to-end verifiability 
 This document aims to provide a "[vertical slice](https://agileforall.com/vertical-slices-and-scale/)" of the considerations and practices necessary to add end-to-end verifiability to an existing precinct scanner. We necessarily make assumptions about the compute and storage capabilities of the scanner itself, and the modifications necessary to implement [end-to-end verifiability](https://www.electionguard.vote/guide/Verifiable_Election/). In so doing, it illustrates the interlocking system of security and encryption that comprises an e2e-v _system_.
 
 !!! info
-ElectionGuard relies on slight adaptations of existing voting processes to accommodate different aspects of [end-to-end verifiability](https://www.electionguard.vote/guide/Verifiable_Election/).
+    ElectionGuard relies on slight adaptations of existing voting processes to accommodate different aspects of [end-to-end verifiability](https://www.electionguard.vote/guide/Verifiable_Election/).
 
 For example, many voting jurisdictions already have a procedure called _ballot spoiling_ to handle mistakes voters make when they fill out ballots. A voter may inadvertently fill out a contest incorrectly by selecting more candidates than allowed. When the voter then proceeds to scan the ballot, the scanner stops the ballot and alerts the voter of the _overvote_; the voter then has the opportunity, as allowed within the voting regulations and practices of the voting district, to start over with a new ballot; the ballot with the mistake is then _spoiled_ and stored separately to ensure it is not included in the tabulation.
 
