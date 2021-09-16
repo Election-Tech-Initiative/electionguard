@@ -14,9 +14,9 @@ nav:
           - Roadmap: overview/Roadmap.md
           - Glossary: overview/Glossary.md
       - Concepts:
-          - Manifest: concepts/Election_Manifest.md
           - Ballot Encryption: concepts/Ballot_Encryption.md
-          - Verifiable Election: concepts/Verifiable_Election.md
+          - Election Manifest: concepts/Election_Manifest.md
+          - Election Verification: concepts/Verifiable_Election.md
           - Setting up an Election: concepts/Setting_up_an_election.md
           - Rescanning Ballots and Recounts: concepts/Ballot_Rescans_and_Recounts.md
       - Use Cases:

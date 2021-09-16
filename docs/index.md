@@ -2,7 +2,7 @@
 
 ![Microsoft Defending Democracy Program: ElectionGuard](images/electionguard-banner.svg)
 
-## Welcome to the ElectionGuard SDK
+## What is ElectionGuard?
 
 ElectionGuard is an **open source** software development kit (SDK) that makes voting more secure, transparent and accessible. It is designed for election system vendors to incorporate [end-to-end verifiability](Glossary/#end-to-end-verifiable-elections) into their systems and any interested organization to perform and publish [post-election audits](Glossary/#post-election-audit) using ElectionGuard as a secure publishing platform.
 
