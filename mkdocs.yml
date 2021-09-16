@@ -12,6 +12,7 @@ nav:
       - Overview:
           - What is ElectionGuard?: index.md
           - Roadmap: overview/Roadmap.md
+          - Features: overview/Features.md
           - Glossary: overview/Glossary.md
       - Basics:
           - Configure Election: basics/0_Configure_Election.md
