@@ -20,9 +20,7 @@ We encourage the developer and security community to conduct research, report is
 
 ## Contributing
 
-Help defend democracy and **[contribute to the project](community/index.md)**.
-
-[contribute to the project]: https://github.com/microsoft/electionguard/blob/main/CONTRIBUTING.md
+Help defend democracy and **[contribute to the project](contribute/index.md)**.
 
 We welcome discussions on our [discussions page](https://github.com/microsoft/electionguard/discussions), feel free to check in and ask your questions and drop your suggestions regarding the specifications over there.
 

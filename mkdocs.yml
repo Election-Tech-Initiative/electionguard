@@ -13,7 +13,6 @@ nav:
           - About: index.md
           - Roadmap: overview/Roadmap.md
           - Glossary: overview/Glossary.md
-      - Getting Started: getting_started/index.md
       - Concepts:
           - Manifest: concepts/Election_Manifest.md
           - Ballot Encryption: concepts/Ballot_Encryption.md
@@ -33,7 +32,7 @@ nav:
           - v0.95.0: spec/0.95.0/1_Overview.md
           - v1.0.0: spec/1.0.0/1_Overview.md
 
-  - Community: community/index.md
+  - Contribute: contribute/index.md
 plugins:
   - search
   - mermaid2
