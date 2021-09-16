@@ -10,49 +10,37 @@ repo_url: https://github.com/microsoft/electionguard/
 nav:
   - Documentation:
       - Overview:
-          - About: index.md
+          - What is ElectionGuard?: index.md
           - Roadmap: overview/Roadmap.md
+          - Features: overview/Features.md
           - Glossary: overview/Glossary.md
-      - Getting Started: getting_started/index.md
+      - Basics:
+          - Configure Election: basics/0_Configure_Election.md
+          - Key Ceremony: basics/1_Key_Ceremony.md
+          - Encrypt Ballots: basics/2_Encrypt_Ballots.md
+          - Cast and Challenge Ballots: basics/3_Cast_and_Challenge_Ballots.md
+          - Decrypt Tally: basics/4_Decrypt_Tally.md
+          - Publish Results: basics/5_Publish_Results.md
+          - Verify Election: basics/6_Verify_Election.md
       - Concepts:
-          - Manifest: concepts/Election_Manifest.md
           - Ballot Encryption: concepts/Ballot_Encryption.md
-          - Verifiable Election: concepts/Verifiable_Election.md
-          - Setting up an Election: concepts/Setting_up_an_election.md
-          - Rescanning Ballots and Recounts: concepts/Ballot_Rescans_and_Recounts.md
+          - Election Manifest: concepts/Election_Manifest.md
+          - Election Verification: concepts/Election_Verification.md
       - Use Cases:
           - Precinct Scan: use_cases/Precinct_Scan.md
+          - Rescans and Recounts: use_cases/Rescans_and_Recounts.md
       - Develop:
           - Getting Started: develop/Getting_Started.md
-          - Architecture: develop/Architecture.md
-          - Data: develop/Data.md
+          - Repositories: develop/Repositories.md
+          - Data Format: develop/Data_Format.md
   - Specification:
-      - Overview: spec/1.0.0/1_Overview.md
-      - Structure: spec/1.0.0/2_Structure.md
-      - Baseline Parameters: spec/1.0.0/3_Baseline_parameters.md
-      - Key Generation: spec/1.0.0/4_Key_generation.md
-      - Ballot Encryption: spec/1.0.0/5_Ballot_encryption.md
-      - Ballot Aggregation: spec/1.0.0/6_Ballot_aggregation.md
-      - Verifiable Decryption: spec/1.0.0/7_Verifiable_decryption.md
-      - The Election Record: spec/1.0.0/8_The_election_record.md
-      - Verifier Construction: spec/1.0.0/9_Verifier_construction.md
-      - Applicability to E2E Verifiability and RLA: spec/1.0.0/10_Applicability.md
-      - Acknowledgements: spec/1.0.0/11_Acknowledgements.md
+      - Current: spec/0.95.0/1_Overview.md
       - Other Versions:
-          - v0.95.0:
-              - Overview: spec/0.95.0/1_Overview.md
-              - Structure: spec/0.95.0/2_Structure.md
-              - Baseline Parameters: spec/0.95.0/3_Baseline_parameters.md
-              - Key Generation: spec/0.95.0/4_Key_generation.md
-              - Ballot Encryption: spec/0.95.0/5_Ballot_encryption.md
-              - Ballot Aggregation: spec/0.95.0/6_Ballot_aggregation.md
-              - Verifiable Decryption: spec/0.95.0/7_Verifiable_decryption.md
-              - The Election Record: spec/0.95.0/8_The_election_record.md
-              - Verifier Construction: spec/0.95.0/9_Verifier_construction.md
-              - Applicability to E2E Verifiability and RLA: spec/0.95.0/10_Applicability.md
-              - Acknowledgements: spec/0.95.0/11_Acknowledgements.md
-          - v0.85.0: "https://github.com/microsoft/electionguard/releases/tag/v0.85.0"
-  - Community: community/index.md
+          - v0.85.0: spec/0.85.0/1_Overview.md
+          - v0.95.0: spec/0.95.0/1_Overview.md
+          - v1.0.0: spec/1.0.0/1_Overview.md
+
+  - Contribute: contribute/index.md
 plugins:
   - search
   - mermaid2
@@ -81,7 +69,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:mermaid2.fence_mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg

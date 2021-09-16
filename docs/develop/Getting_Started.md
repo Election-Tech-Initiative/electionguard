@@ -2,6 +2,8 @@
 
 If you're looking to develop for ElectionGuard, it might help if you pick something you're familiar with. The following repositories showcase the language to assist you in finding the right place. Each repository contains information on the best way to contribute and how to setup the development environment. Take a look and see what appeals to you.
 
+![Code](../images/undraw/code_1.svg)
+
 ## <div style="display: flex; align-items: center;">ElectionGuard Specification<span style="display: flex; align-items: center; margin-left: 16px"> ![Markdown](../images/markdown-language.png) <span></div>
 
 The ElectionGuard Specification repo addresses the mathematical and conceptual underpinnings of end-to-end verifiability in a manner that comfortably accommodates post-election audits. The specification houses the core data constructs, tests, and datasets that we recommend to ensure portability and data integrity.
@@ -21,12 +23,12 @@ The ElectionGuard Python library is the _reference implementation_ of the Electi
 
 It is designed to be _portable_ over _performant_, _universal_ over _Pythonic_ (although we do try to adhere to the [Zen of Python](https://www.python.org/dev/peps/pep-0020/)).
 
-Any real-world voting use case will need to incorporate the capabilities of the Python library to run an [end-to-end verifiable election](../concepts/Verifiable_Election.md) or [post-election audit](../Glossary/#post-election-audit).
+Any real-world voting use case will need to incorporate the capabilities of the Python library to run an [end-to-end verifiable election](../concepts/Election_Verification.md) or [post-election audit](../Glossary/#post-election-audit).
 
 [:fontawesome-brands-github: Source](https://github.com/microsoft/electionguard-python) | [:fontawesome-brands-python: Package](https://pypi.org/project/electionguard/) | [:fontawesome-regular-file: Documentation](https://microsoft.github.io/electionguard-python/)
 
 !!! info "Community-sourced Java port"
-Check out our [community contributions for a java port](../community/index.md).
+    Check out our [community contributions for a java port](../contribute/index.md).
 
 ## <div style="display: flex; align-items: center;">ElectionGuard C++<span style="display: flex; align-items: center; margin-left: 16px"> ![C++](../images/c++-language.png)![C++](../images/c-language.png)![C#](../images/c-sharp-language.png) <span></div>
 

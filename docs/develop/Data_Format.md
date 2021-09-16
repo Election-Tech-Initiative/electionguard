@@ -4,7 +4,7 @@ To better understand the data formats used by ElectionGuard, sample data is prov
 
 ## Four Sample Elections
 
-We have provided sample data for three different elections:
+We have provided sample data for four different elections:
 
 - **Minimal** - This is the most minimal election manifest file possible, designed to be easy to inspect and quick to develop against for rapid testing. All optional fields have been removed from the election manifest file. The election contains a single Yes/No referendum with a single ballot style in a single geopolitical unit.
 
@@ -13,6 +13,8 @@ We have provided sample data for three different elections:
 - **Full** - This is a more realistic example for a primary election for a municipality. This ballot contains several geopolitical units with multiple ballot styles and contains all optional metadata fields. This sample has multi-language support and multiple submitted ballot samples.
 
 - **Hamilton General** - This is a complete example for a general election for a fictional municipality. This example contains many geopolitical units with multiple ballot styles and demonstrates how political districts overlap. This sample has multi-language support and multiple submitted ballot samples. The Hamilton General example also includes the election [private data](hamilton_election_private) that includes guardian private keys. More information about the Hamilton General Example can be found in the [Election Manifest Documentation](election_manifest_docs).
+
+![Data](../images/undraw/data.svg)
 
 ## Election Manifests
 
