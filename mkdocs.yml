@@ -10,7 +10,7 @@ repo_url: https://github.com/microsoft/electionguard/
 nav:
   - Documentation:
       - Overview:
-          - About: index.md
+          - What is ElectionGuard?: index.md
           - Roadmap: overview/Roadmap.md
           - Glossary: overview/Glossary.md
       - Concepts:
