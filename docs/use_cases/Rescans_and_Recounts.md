@@ -1,7 +1,7 @@
-# Using ElectionGuard with Paper Ballot Rescans and Recounts
+# Rescans and Recounts
 
 !!! warning
-This is a documented but not currently implemented capability. See the [Roadmap](../overview/Roadmap.md) for implementation details and status.
+    This is a documented but not currently implemented capability. See the [Roadmap](../overview/Roadmap.md) for implementation details and status.
 
 ## Overview
 

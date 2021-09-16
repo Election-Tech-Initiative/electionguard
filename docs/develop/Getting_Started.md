@@ -21,12 +21,12 @@ The ElectionGuard Python library is the _reference implementation_ of the Electi
 
 It is designed to be _portable_ over _performant_, _universal_ over _Pythonic_ (although we do try to adhere to the [Zen of Python](https://www.python.org/dev/peps/pep-0020/)).
 
-Any real-world voting use case will need to incorporate the capabilities of the Python library to run an [end-to-end verifiable election](../concepts/Verifiable_Election.md) or [post-election audit](../Glossary/#post-election-audit).
+Any real-world voting use case will need to incorporate the capabilities of the Python library to run an [end-to-end verifiable election](../concepts/Election_Verification.md) or [post-election audit](../Glossary/#post-election-audit).
 
 [:fontawesome-brands-github: Source](https://github.com/microsoft/electionguard-python) | [:fontawesome-brands-python: Package](https://pypi.org/project/electionguard/) | [:fontawesome-regular-file: Documentation](https://microsoft.github.io/electionguard-python/)
 
 !!! info "Community-sourced Java port"
-    Check out our [community contributions for a java port](../community/index.md).
+    Check out our [community contributions for a java port](../contribute/index.md).
 
 ## <div style="display: flex; align-items: center;">ElectionGuard C++<span style="display: flex; align-items: center; margin-left: 16px"> ![C++](../images/c++-language.png)![C++](../images/c-language.png)![C#](../images/c-sharp-language.png) <span></div>
 

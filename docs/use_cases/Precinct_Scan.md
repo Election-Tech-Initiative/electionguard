@@ -1,6 +1,7 @@
-# ElectionGuard Precinct Scan Reference Implementation
+# Precinct Scan
 
-??? alert "This is a work in progress. Comments are welcome on material already provided but assume it's known that sections are currently missing :)"
+!!! warning "Work in Progress"
+    This is a work in progress. Feel free to contribute.
 
 ## Overview
 

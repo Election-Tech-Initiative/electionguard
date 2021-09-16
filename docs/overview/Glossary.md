@@ -163,7 +163,7 @@ The device that is doing the encryption
 
 ### end-to-end-verifiable election
 
-An election is [end-to-end verifiable](../concepts/Verifiable_Election.md)[^f1] if:
+An election is [end-to-end verifiable](../concepts/Election_Verification.md)[^f1] if:
 
 - **_Cast as intended_** -- _voters_ can verify that their own selections have been correctly recorded.
 - **_Counted as cast_** -- _anyone_ can verify that the recorded votes have been correctly tallied.
@@ -282,7 +282,7 @@ The minimum count (_threshold_) of guardians that must be present in order to su
 
 A _spoiled ballot_ is an election term that refers to a ballot that, typically due to a mistake, allows a voter to turn in their ballot and instead submit a replacement ballot as their official [**cast ballot**](#cast-ballot). In this context, _spoiling_ is the process election administrators use to make sure this ballot is not included in the election tally.
 
-Ballot spoiling is used in [_end-to-end verifiability_](../concepts/Verifiable_Election.md) as a means for voters to challenge the voting machine and force it to reveal the contents of spoiled ballots for public scrutiny. Because the ballot will not be used in the official tally, its contents can be revealed. And because the spoil process happens after ballot encryption, the machine cannot modify the encrypted ballot retrospectively without revealing its attempt.
+Ballot spoiling is used in [_end-to-end verifiability_](../concepts/Election_Verification.md) as a means for voters to challenge the voting machine and force it to reveal the contents of spoiled ballots for public scrutiny. Because the ballot will not be used in the official tally, its contents can be revealed. And because the spoil process happens after ballot encryption, the machine cannot modify the encrypted ballot retrospectively without revealing its attempt.
 
 ### submitted ballot
 

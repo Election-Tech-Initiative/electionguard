@@ -20,7 +20,7 @@ A big step toward this new vision occurred with the release of the `electionguar
     * standalone source that uses a version of HACL* packaged up by [EverCrypt](https://github.com/project-everest/hacl-star#evercrypt) for high assurance (thank you EverCrypt team!)
     * enables ElectionGuard to eliminate GMP as a dependency 
 
-??? todo "Release an ElectionGuard.Encrypt nuget package built from `electionguard-cpp` as a ballot encrypter for low performance devices"
+??? done "Release an ElectionGuard.Encryption nuget package built from `electionguard-cpp` as a ballot encrypter for low performance devices"
 
     * Establish publishing pattern
     * First target will be [Windows 10 / UWP](https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide)
@@ -31,16 +31,11 @@ A big step toward this new vision occurred with the release of the `electionguar
     * Restructuring ballot and device aggregation to better support audits and scalability in general
     * Renaming and refactoring all repos for more descriptive and specific naming patterns
 
-??? todo "Compose community changes into `electionguard-python` release v1.1.16"
+??? done "Compose community changes into `electionguard-python` release v1.1.16"
 
-??? todo "Optimization changes for service implementations of `electionguard-python` release v1.2.0 "
+??? todo "Optimization changes for service implementations of `electionguard-python` release v1.4.0 "
 
-??? todo "Introduce service docker containers in `electionguard-api`"
-
-??? done "Migrate 0.95 specification to Github"
-
-    * Implement specification in diffable, searchable format in Github
-    * Adopt [mkdocs material template](https://squidfunk.github.io/mkdocs-material/) for documentation and integrate with remaining ElectionGuard guide
+??? done "Introduce service docker containers in `electionguard-api`"
 
 ## 2020 In Review
 
@@ -52,7 +47,7 @@ In the [second half of the year](https://blogs.microsoft.com/on-the-issues/2020/
 
 In a further collaborate with VotingWorks, Rice University professor Dan Wallach contributed an integration with [Arlo](https://voting.works/risk-limiting-audits/) to enable ElectionGuard to provide the "back end" for [Inyo County's Risk-limiting Audit of the November 3 election](https://elections.inyocounty.us/post-election-audits/).  
 
-Last and definitely not least, the [first independent verifiers were developed and published](../community/index.md).
+Last and definitely not least, the [first independent verifiers were developed and published](../contribute/index.md).
 
 ## 2020 Roadmap
 
