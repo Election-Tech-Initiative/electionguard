@@ -30,7 +30,7 @@ nav:
           - Rescans and Recounts: use_cases/Rescans_and_Recounts.md
       - Develop:
           - Getting Started: develop/Getting_Started.md
-          - Architecture: develop/Architecture.md
+          - Repositories: develop/Repositories.md
           - Data Format: develop/Data_Format.md
   - Specification:
       - Current: spec/0.95.0/1_Overview.md

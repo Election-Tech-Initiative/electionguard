@@ -3,6 +3,8 @@
 
 Whenever possible and as a guiding principle, the evolution of the ElectionGuard SDK will be driven by the use cases and priorities of the community and in service of best-practice implementations of real-world, secret-ballot public elections. Community contributions are highly valued. Help defend democracy and contribute to ElectionGuard. 
 
+![Contribute](../images/undraw/contribute.svg)
+
 ## Where to Start?
 There are many locations to contribute to ElectionGuard. ElectionGuard is an open source platform and depends on an active community and ecosystem.
 
@@ -20,6 +22,7 @@ The SDK is comprised of five repositories:
 2. Post questions or ideas in our [**discussion board**](https://github.com/microsoft/electionguard/discussions)
 3. Join our [**weekly video office hours**](https://github.com/microsoft/electionguard/discussions/78)
 4. Develop on issues in the repos with tags of **`good first issue`** or **`help wanted`**
+5. Add to and improve documentation. Keep it Plain English and include [helpful images](https://undraw.co/illustrations).
 
 ## Contributions
 

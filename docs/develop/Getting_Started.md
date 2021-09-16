@@ -2,6 +2,8 @@
 
 If you're looking to develop for ElectionGuard, it might help if you pick something you're familiar with. The following repositories showcase the language to assist you in finding the right place. Each repository contains information on the best way to contribute and how to setup the development environment. Take a look and see what appeals to you.
 
+![Code](../images/undraw/code_1.svg)
+
 ## <div style="display: flex; align-items: center;">ElectionGuard Specification<span style="display: flex; align-items: center; margin-left: 16px"> ![Markdown](../images/markdown-language.png) <span></div>
 
 The ElectionGuard Specification repo addresses the mathematical and conceptual underpinnings of end-to-end verifiability in a manner that comfortably accommodates post-election audits. The specification houses the core data constructs, tests, and datasets that we recommend to ensure portability and data integrity.

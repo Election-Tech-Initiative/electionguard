@@ -1,5 +1,7 @@
 # ElectionGuard Roadmap
 
+![Roadmap](../images/undraw/roadmap.svg)
+
 ## 2021 Roadmap
 
 The 2021 roadmap takes the learnings from the different applications deployed in 2020 and rationalizes them into a *practice* to establish with the community in 2021. The goal is to grow a community of participants and contributors within which Microsoft takes part in and provides architectural and implementation guidance, but is fundamentally driven by the needs of the community in establishing the best ways to implement end-to-end verifiable elections and post-election audits.
