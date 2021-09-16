@@ -9,7 +9,7 @@ ElectionGuard is an **open source** software development kit (SDK) that makes vo
 !!! info "New to ElectionGuard?"
     Welcome! Thanks for your interest. Trying to figure out how to help and learn? If you're a developer, head over to the [**developer getting started**](develop/Getting_Started.md). If you're an election administrator or want to learn more about ElectionGuard and its underpinnings, start with [**the guide**](basics/0_Configure_Election.md). If you want to help and aren't a developer, all kinds of help with documentation, outreach, and advocacy is welcomed. Follow [**discussions**](https://github.com/microsoft/electionguard/discussions), join the [**office hours**](https://github.com/microsoft/electionguard/discussions/61), and check out the [**roadmap**](overview/Roadmap.md) to see where it's intended to go.
 
-![Voting](../images/undraw/voting.svg)
+![Voting](images/undraw/voting.svg)
 
 ## Open-Source
 
