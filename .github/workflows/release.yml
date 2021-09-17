@@ -30,3 +30,7 @@ jobs:
         with:
           name: sample-data
           path: data/
+      - name: Sync Labels
+        env:
+          GITHUB_ACCESS_TOKEN: ${{ secrets.LABEL_TOKEN }}
+        run: make labels

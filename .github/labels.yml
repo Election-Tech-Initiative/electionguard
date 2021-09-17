@@ -1,0 +1,74 @@
+# Problems - Red
+- name: bug
+  color: "d73a4a"
+  description: Something isn't working
+
+- name: security
+  color: "d73a4a"
+  description: Security update needed
+
+- name: blocked
+  color: "d73a4a"
+  description: Blocked from progress
+
+# Improvements - Blue
+- name: enhancement
+  color: "0366d6"
+  description: New feature or request
+
+- name: documentation
+  color: "0366d6"
+  description: Improvements or additions to documentation
+
+- name: optimization
+  color: "0366d6"
+  description: Optimizations such as performance improvements
+
+- name: dependencies
+  color: "0366d6"
+  description: Pull requests that update a dependency file
+
+# Community - Purple
+- name: good first issue
+  color: "7057ff"
+  description: Good for newcomers
+
+- name: help wanted
+  color: "7057ff"
+  description: Extra attention is needed
+
+# Grooming - Magenta
+- name: question
+  color: "d876e3"
+  description: Further information is requested
+
+- name: triage
+  color: "d876e3"
+  description: Waiting to be triaged
+
+# Warning - Yellow
+- name: code owner only
+  color: "fbca04"
+  description: Only for Code Owner
+
+# Inactive - Grey
+- name: wontfix
+  color: "cfd3d7"
+  description: This will not be worked on
+
+- name: duplicate
+  color: "cfd3d7"
+  description: This issue or pull request already exists
+
+- name: invalid
+  color: "cfd3d7"
+  description: This doesn't seem right
+
+# Hacktoberfest - Orange
+- name: hacktoberfest
+  color: "ff9933"
+  description: Issues for the Hacktoberfest
+
+- name: hacktoberfest-accepted
+  color: "ff9933"
+  description: Pull Request will count towards Hacktoberfest
