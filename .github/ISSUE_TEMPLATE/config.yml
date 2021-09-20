@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/microsoft/electionguard/discussions
+    about: Discuss suggestions and new enhancements here.
+  - name: 🚨 Microsoft Security Response Center
+    url: https://www.microsoft.com/en-us/msrc
+    about: Please report security vulnerabilities here.
+  - name: 🗳 ElectionGuard Info
+    url: https://https://www.electionguard.vote/
+    about: Learn more about ElectionGuard or email the team.
