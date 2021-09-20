@@ -1,0 +1,35 @@
+name: ✨ Enhancement
+description: Suggest an enhancement or an improvement.
+title: "✨ <title>"
+labels: [enhancement, triage]
+body:
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue already exists for the suggestion.
+      options:
+        - label: I have searched the existing issues
+          required: true
+  - type: textarea
+    attributes:
+      label: Suggestion
+      description: Tell us how we could improve ElectionGuard.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Possible Implementation
+      description: Not obligatory, but ideas as to the implementation of the suggestion.
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Anything else?
+      description: |
+        What are you trying to accomplish?
+
+        Links? References? Anything that will give us more context about the suggestion!
+
+        Tip: You can attach images by clicking this area to highlight it and then dragging files in.
+    validations:
+      required: false
