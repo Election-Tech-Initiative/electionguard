@@ -46,8 +46,8 @@ plugins:
   - search
   - mermaid2
   - redirects:
-        redirect_maps:
-            'hacktoberfest.md': 'contribute/index.md'
+      redirect_maps:
+        "hacktoberfest.md": "contribute/index.md"
 theme:
   name: material
   custom_dir: overrides
@@ -80,6 +80,7 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 extra_javascript:
+  - javascripts/analytics.js
   - javascripts/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
