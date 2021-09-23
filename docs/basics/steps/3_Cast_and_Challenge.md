@@ -1,4 +1,4 @@
-# Cast and Challenge Ballots
+# Cast and Challenge
 
 Each ballot that is completed by a voter must be either cast or challenged. A cast ballot is a ballot that the voter accepts as valid and wishes to include in the official election tally. A challenge ballot, also referred to as a spoiled ballot, is a ballot that the voter does not accept as valid and wishes to exclude from the official election tally.
 

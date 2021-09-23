@@ -1,4 +1,4 @@
-# Data
+# Sample Data
 
 To better understand the data formats used by ElectionGuard, sample data is provided here to guide new developers.
 
@@ -18,7 +18,7 @@ We have provided sample data for four different elections:
 
 ## Election Manifests
 
-The [Election Manifest](../concepts/Election_Manifest.md) contains all the details of the election (such as contests, candidates, selections, ballot styles, etc.) and is required at the start of an ElectionGuard election.
+The [Election Manifest](../concepts/Manifest_Building.md) contains all the details of the election (such as contests, candidates, selections, ballot styles, etc.) and is required at the start of an ElectionGuard election.
 
 **Manifest Examples:** [minimal][minimal_election_manifest] | [small][small_election_manifest] | [full][full_election_manifest] | [hamilton][hamilton_election_manifest]
 
