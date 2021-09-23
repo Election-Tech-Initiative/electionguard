@@ -15,4 +15,4 @@ By using multiple guardians to conduct the tally process, no one person controls
 
 As such, it is necessary when setting up an election to specify the maximum number of guardians that can participate, but also the quorum, the minimum number of guardians necessary to perform a tally. The more guardians that are allowed, the higher the quorum can (and should) be set (a high number of guardians with a low quorum creates an opportunity for collusion among guardians). It is advised to set quorums not just above majority levels but as high as can be reasonably expected (e.g. set a quorum of 5 or 6, not 4, for an election with 7 guardians).
 
-![Guardian](../images/undraw/guardian_2.svg)
+![Guardian](../../images/undraw/guardian_2.svg)

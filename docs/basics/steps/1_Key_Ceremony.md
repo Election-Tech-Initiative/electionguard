@@ -20,4 +20,4 @@ Guardians generate a partial key backup for each guardian and share with that de
 
 The final step is to publish the joint election key after all keys and backups have been shared.
 
-![Guardian](../images/undraw/guardian_1.svg)
+![Guardian](../../images/undraw/guardian_1.svg)
