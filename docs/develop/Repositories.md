@@ -2,14 +2,14 @@
 
 The SDK is comprised of five repositories:
 
-- [ElectionGuard Specification](https://github.com/microsoft/electionguard)
-- [ElectionGuard Python](https://github.com/microsoft/electionguard-python)
-- [ElectionGuard C++](https://github.com/microsoft/electionguard-cpp)
-- [ElectionGuard Python API](https://github.com/microsoft/electionguard-api-python)
-- [ElectionGuard React UI](https://github.com/microsoft/electionguard-ui)
+- [ElectionGuard Specification][election-guard-specification]
+- [ElectionGuard Python][election-guard-python-source]
+- [ElectionGuard C++][election-guard-cpp-source-code]
+- [ElectionGuard Python API][election-guard-web-api-source]
+- [ElectionGuard React UI][election-guard-ui-source]
 
 
-![Code](../images/undraw/code_2.svg)
+![Code][code-image]
 
 ## Diagrams
 
@@ -35,3 +35,10 @@ flowchart TD
 
     classDef package fill: teal, stroke: black;
 ```
+
+[election-guard-specification]: https://github.com/microsoft/electionguard "Election Guard Github"
+[election-guard-python-source]: https://github.com/microsoft/electionguard-python "Election Guard Python source code"
+[election-guard-cpp-source-code]: https://github.com/microsoft/electionguard-cpp/ "Election Guard C++ source code"
+[election-guard-web-api-source]: https://github.com/microsoft/electionguard-api-python "Election Guard Web API source code"
+[election-guard-ui-source]: https://github.com/microsoft/electionguard-ui "Election Guard UI source code"
+[code-image]: ../images/undraw/code_2.svg "Image of two people using their laptops"
