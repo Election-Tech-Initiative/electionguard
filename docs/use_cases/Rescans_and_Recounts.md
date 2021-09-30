@@ -1,7 +1,7 @@
 # Rescans and Recounts
 
 !!! warning
-    This is a documented but not currently implemented capability. See the [Roadmap](../overview/Roadmap.md) for implementation details and status.
+    This is a documented but not currently implemented capability. See the [Roadmap][roadmap] for implementation details and status.
 
 ## Overview
 
@@ -12,7 +12,7 @@ For example, if a precinct scanner fails on election day, some municipalities ma
 Similarly, some elections require multiple recounts, including hand tallies, to resolve challenges or recounts triggered by narrow margins of victory. Ballots may be included or excluded from subsequent recounts dependent on the interpretation of the scans or their inclusion or exclusion in the the subsequent tallies.
 
 !!! info
-    Depending on how the ballot is encrypted (such as whether [ballot-chaining](../overview/Glossary.md#ballot-chain) is being used), the verification codes generated in the rescan would not be the same. The "default" implementation of ElectionGuard, which uses the unique ID of the device performing the encryption as part of the encryption itself, would generate a different verification code if the same ballot is scanned on a different device. If ballot-chaining or any time-based component were included in the encryption, even subsequent scans of the same ballot on the same scanner would generate a different verification code.
+    Depending on how the ballot is encrypted (such as whether [ballot-chaining][ballot-chaining] is being used), the verification codes generated in the rescan would not be the same. The "default" implementation of ElectionGuard, which uses the unique ID of the device performing the encryption as part of the encryption itself, would generate a different verification code if the same ballot is scanned on a different device. If ballot-chaining or any time-based component were included in the encryption, even subsequent scans of the same ballot on the same scanner would generate a different verification code.
 
 When a voter checks whether their ballot was included in the ElectionGuard published artifacts, the information should reflect whether the ballot was included (and even more importantly not included) in any subsequent tallies published by the election administration. This must be accomplished without undermining the core integrity and privacy concerns of the verification processes.
 
@@ -21,11 +21,11 @@ When a voter checks whether their ballot was included in the ElectionGuard publi
 
 ## Proposed Approach
 
-To maintain the security and integrity of the original election artifacts, rescans and recounts are guardian-based processes. This requirement presents potentially significant additional compute both for the local guardian device / [hardware security module](../overview/Glossary.md#hardware-security-module-hsm) and any cloud-based approach to scale the cross-tally mapping.
+To maintain the security and integrity of the original election artifacts, rescans and recounts are guardian-based processes. This requirement presents potentially significant additional compute both for the local guardian device / [hardware security module][hardware-security-module] and any cloud-based approach to scale the cross-tally mapping.
 
 ### Encrypting a Unique Ballot ID
 
-Since a rescan or recount can occur on any independent device, the information for mapping must be present on and derived from the paper ballot itself. Specifically, in addition to all the contests and candidates, there must be an ID unique to the election printed on the ballot. When scanned by the scanner, that ID is included in the [encrypted ballot metadata](../overview/Glossary.md#encrypted-ballot-metadata) encrypted by the [_auxiliary_ guardian RSA key](../overview/Glossary.md#auxiliary-guardian-key) **separate** from the El Gamal encryption[^rs1] used for the ballot contents.
+Since a rescan or recount can occur on any independent device, the information for mapping must be present on and derived from the paper ballot itself. Specifically, in addition to all the contests and candidates, there must be an ID unique to the election printed on the ballot. When scanned by the scanner, that ID is included in the [encrypted ballot metadata][encrypted-ballot-metadata] encrypted by the [_auxiliary_ guardian RSA key][auxiliary-guardian-key] **separate** from the El Gamal encryption[^rs1] used for the ballot contents.
 
 !!! alert
     Municipalities that do not allow the printing of unique identifiers on their paper ballots cannot use ElectionGuard for the rescan scenario, since there is no way to perform any mapping across independent tallies
@@ -39,3 +39,11 @@ After the base ElectionGuard verifiable tally has been generated (and, optionall
 ### Optimizing the Compute
 
 [^rs1]: Because the primary joint public key is an ElGamal key, it is optimized for the ones and zeroes that constitute the contents of a ballot, not the generic string values necessary to support arbitrary IDs.
+
+<!-- Links -->
+
+[roadmap]: ../overview/Roadmap.md
+[ballot-chaining]: ../overview/Glossary.md#ballot-chain
+[hardware-security-module]: ../overview/Glossary.md#hardware-security-module-hsm
+[encrypted-ballot-metadata]: ../overview/Glossary.md#encrypted-ballot-metadata
+[auxiliary-guardian-key]: ../overview/Glossary.md#auxiliary-guardian-key
