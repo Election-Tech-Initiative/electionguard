@@ -2,7 +2,7 @@
 
 There are many types of elections. We need a base set of data that shows how these different types of elections are handled in an ElectionGuard end-to-end verifiable election (or ballot comparison audits).
 
-We worked with InfernoRed, VotingWorks, and Dan Wallach of Rice University (thanks folks!) to develop a set of conventions, tests, and sample data (based on a starting dataset sample from the Center for Civic Design) that demonstrate how to encode the information necessary to conduct an election into a format that ElectionGuard can use. The election terms and structure are based whenever possible on the [NIST SP-1500-100 Election Results Common Data Format Specification](https://pages.nist.gov/ElectionResultsReporting/) ([PDF](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-100r2.pdf)) and the [Civics Common Standard Data Specification](https://developers.google.com/elections-data/reference).  The information captured by the NIST standard is codified into an `election manifest` that defines common elements when conducting an election, such as locations, candidates, parties, contests, and ballot styles.
+We worked with InfernoRed, VotingWorks, and Dan Wallach of Rice University (thanks folks!) to develop a set of conventions, tests, and sample data (based on a starting dataset sample from the Center for Civic Design) that demonstrate how to encode the information necessary to conduct an election into a format that ElectionGuard can use. The election terms and structure are based whenever possible on the [NIST SP-1500-100 Election Results Common Data Format Specification][nist-election-reporting] ([PDF][nist-election-results-common-data-format-specification]) and the [Civics Common Standard Data Specification][civis-data-format].  The information captured by the NIST standard is codified into an `election manifest` that defines common elements when conducting an election, such as locations, candidates, parties, contests, and ballot styles.
 
 ElectionGuard uses the data contained in the Election Manifest to associate ballots with specific ballot styles and to verify the accuracy of data at different stages of the election process.  Note that not all of the data contained in the Election Manifest impacts the computations of tallies and zero-knowledge proofs used in the published election data that demonstrates end-to-end verifiability; however it is important to include as much data as possible in order to distinguish one election from another. With a well-defined Election Manifest, improperly formatted ballot encryption requests will fail with error messages at the moment of initial encryption; the enforcement of any logic or behavior to prevent overvoting or other malformed ballot submissions are handled by the encrypting device, not ElectionGuard.
 
@@ -10,7 +10,7 @@ In addition, since json files do not accommodate comments, all notations and exc
 
 ## Election Data Structure
 
-[Elections are characterized into types by NIST](https://developers.google.com/elections-data/reference/election-type) as shown in the table below
+[Elections are characterized into types by NIST][election-types-reference] as shown in the table below:
 
 election type | description
 ------------- | ----------------
@@ -22,7 +22,7 @@ runoff | For an election to decide a prior contest that ended with no candidate 
 special | For an election held out of sequence for special circumstances, for example, to fill a vacated office.
 other | Used when the election type is not listed in this enumeration. If used, include a specific value of the OtherType element.
 
-We present two sample manifests: `general` and `partisan-primary-closed`. The core distinction between the two samples is the role of party: in general elections voters can choose to vote for candidates from any party in a contest, regardless of party affiliation. In partisan primaries voters can only vote in contests germane to their party declaration or affiliation. As such, `special`, `runoff`, and `primary` election types will follow the `general` pattern, and `partisan-primary-open` will follow the `partisan-primary-closed` pattern. Open `primary` elections can follow either pattern as determined by their governing rules and regulations. (As noted above, ElectionGuard expects properly-formed ballots; e.g., it would error and fail to encrypt a ballot in an `open-primary-closed` election if a contest with an incorrect party affiliation were submitted (as indicated by the ).)
+We present two sample manifests: `general` and `partisan-primary-closed`. The core distinction between the two samples is the role of party: in general elections, voters can choose to vote for candidates from any party in a contest, regardless of party affiliation. In partisan primaries, voters can only vote in contests germane to their party declaration or affiliation. As such, `special`, `runoff`, and `primary` election types will follow the `general` pattern, and `partisan-primary-open` will follow the `partisan-primary-closed` pattern. Open `primary` elections can follow either pattern as determined by their governing rules and regulations. (As noted above, ElectionGuard expects properly-formed ballots; e.g., it would error and fail to encrypt a ballot in an `open-primary-closed` election if a contest with an incorrect party affiliation were submitted (as indicated by the ).)
 
 ## Ballot Styles and Geography
 
@@ -32,8 +32,7 @@ In the following examples, we will work through the process of defining differen
 
 ### Geographic and Ballot Style Breakdown
 
-Each election can be thought of as a list of contests that are relevant to a certain group of people in a specific place.
- In order to determine who is supposed to vote on which contests, we first need to define the geographic jurisdictions where the election is taking place.  [The NIST Guidelines](<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-100r2.pdf>) present an excellent discussion of the geographic interplay of different contests. The diagram from page 12 is presented below.
+Each election can be thought of as a list of contests that are relevant to a certain group of people in a specific place. In order to determine who is supposed to vote on which contests, we first need to define the geographic jurisdictions where the election is taking place.  [The NIST Guidelines][nist-election-results-common-data-format-specification] present an excellent discussion of the geographic interplay of different contests. The diagram from page 12 is presented below.
 
 ![ElectionGuard UML Model](https://res.cloudinary.com/electionguard/image/upload/v1586960923/nist-election-model-uml.png)
 
@@ -51,7 +50,7 @@ To help disambiguate, let's explore an example.
 
 Hamilton County includes 3 townships: LaCroix, Arlington, Harris.  The town of LaCroix also has a utility district that comprises its own precinct for special referendums. Arlington has two distinct school districts.  The county is also split into two congressional districts, district 5 and district 7.  Harris township is entirely within Congressional District 5, but both LaCroix and Arlington are split between congressional districts 5 and 7.
 
-![Hamilton County Electoral Map](https://res.cloudinary.com/electionguard/image/upload/v1593617785/hamilton-county-district-map_xxki0z.png)
+![Hamilton County Electoral Map][[nist-election-model-uml]]
 
 #### Building the Geographic Jurisdiction Mapping (Geopolitical Units)
 
@@ -59,7 +58,7 @@ The Election Manifest includes an array of objects called `geopoliticalUnits` (a
 
 - **objectId** - a unique identifier for the gpUnit.  This value is used to map a contest to a specific jurisdiction
 - **name** - the friendly name of the gp Unit
-- **type** - they _type_ of jurisdiction (one of the [Reporting Unit Types](https://developers.google.com/elections-data/reference/reporting-unit-type))
+- **type** - they _type_ of jurisdiction (one of the [Reporting Unit Types][reporting-unit-types-reference])
 - **contact information** - the contact info for the geopolitical unit
 
 Geopolitical units are polygons on a map represented by legal jurisdictions.  In our example Election Manifest for hamilton County, there is one geopolitical unit for each jurisdictional boundary in the image above:
@@ -102,7 +101,7 @@ For instance, a voter that lives in the _Exeter Utility District_ should see con
 
 | Geopolitical Units are overlapping polygons, and ballot styles are the list of polygons relevant to a specific point on the map.
 
-Similar to Geopolitical Units, we define all of the possible ballot styles for an election in our example, even if there are no contests specific to a ballot style.  This is subjective and the behavior may be different for the integrating system:
+Similar to Geopolitical Units, we define all of the possible ballot styles for an election in our example, even if there are no contests specific to a ballot style. This is subjective and the behavior may be different for the integrating system:
 
 - Congressional District 7 Outside Any Township
 - Congressional District 7 LaCroix Township
@@ -147,9 +146,9 @@ When the election Manifest is loaded into ElectionGuard, its validity is checked
 - Each Party has a unique objectId
 - Each Candidate either does not have a party, or is associated with a valid party
 - Each Contest has a unique Sequence Order
-- Each contest is associated with exactly one valid geopolitical unit
-- Each contest has a valid number of selections for the number of seats in the contest
-- Each selection on each contest is associated with a valid Candidate
+- Each Contest is associated with exactly one valid Geopolitical Unit
+- Each Contest has a valid number of Selections for the number of seats in the contest
+- Each Selection on each Contest is associated with a valid Candidate
 
 as long as the election manifest format matches the validation criteria, the election can proceed as an ElectionGuard election.
 
@@ -159,3 +158,10 @@ Q: What if my ballot styles are not associated with geopolitical units?
 A: There are a few ways to handle this.  In most cases, you can simply map the ballot style 1 to 1 to the geopolitical unit.  for instance, if `ballot-style-1` includes `contest-1` then you may create `geopolitical-unit-1` and associate both the ballot style and the contest to that geopolitical unit.
 
 This documentation is under review and subject to change.  Please do not hesitate to open a github issue if you have questions, or find errors or omissions.
+
+[nist-election-reporting]: https://pages.nist.gov/ElectionResultsReporting/ "NIST Election Reporting"
+[nist-election-results-common-data-format-specification]: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-100r2.pdf "NIST Election Results Common Data Format Specification"
+[civis-data-format]: https://developers.google.com/elections-data/reference "Civics Common Standard Data Specification"
+[election-types-reference]: https://developers.google.com/elections-data/reference/election-type "Election Types Civics Common Standard Specification"
+[nist-election-model-uml]: https://res.cloudinary.com/electionguard/image/upload/v1586960923/nist-election-model-uml.png "NIST Election Model UML"
+[reporting-unit-types-reference]: https://developers.google.com/civics-data/reference/reporting-unit-type "Reporting Unit Type Civics Common Standard Specification"
