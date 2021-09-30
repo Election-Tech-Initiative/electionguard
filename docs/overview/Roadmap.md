@@ -43,13 +43,13 @@ A big step toward this new vision occurred with the release of the `electionguar
 
 2020 taught many lessons. 
 
-The first half of the year saw a successful [Fulton, WI Election Pilot][fulton-wi-election-pilot] with [VotingWorks][voting-works] and [InfernoRed][infernored]. Subsequent to the election the [Python](https://github.com/microsoft/electionguard-python) repo was released as a new reference implementation.
+The first half of the year saw a successful [Fulton, WI Election Pilot][fulton-wi-election-pilot] with [VotingWorks][voting-works] and [InfernoRed][infernored]. Subsequent to the election the [Python][election-guard-python-source] repo was released as a new reference implementation.
 
-In the [second half of the year](https://blogs.microsoft.com/on-the-issues/2020/12/04/electionguard-2020-elections-security-pilot/), responding to COVID led to the development of a remote voting app with [InfernoRed][infernored], [Markup][markup], and the US House Democratic Caucus to enable representatives to [vote by secret ballot safely, securely, and remotely for Caucus leadership positions][dems-virtual-leadership-election]. 
+In the [second half of the year][election-guard-security-pilot], responding to COVID led to the development of a remote voting app with [InfernoRed][infernored], [Markup][markup], and the US House Democratic Caucus to enable representatives to [vote by secret ballot safely, securely, and remotely for Caucus leadership positions][dems-virtual-leadership-election]. 
 
 In a further collaborate with VotingWorks, Rice University professor Dan Wallach contributed an integration with [Arlo][arlo] to enable ElectionGuard to provide the "back end" for [Inyo County's Risk-limiting Audit of the November 3 election][inyo-risk-limiting-audit].  
 
-Last and definitely not least, the [first independent verifiers were developed and published][election-guard-index].
+Last and definitely not least, the [first independent verifiers were developed and published][election-guard-contribute].
 
 ## 2020 Roadmap
 
@@ -97,6 +97,8 @@ Last and definitely not least, the [first independent verifiers were developed a
 [roadmap-image]: ../images/undraw/roadmap.svg "Image of a car on a road with mountains"
 [evercrypt]: https://github.com/project-everest/hacl-star#evercrypt "Evercrypt"
 [windows-universal-application-guide]: https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide "Windows Universal APplication platform guide"
+[election-guard-python-source]: https://github.com/microsoft/electionguard-python "Election Guard Python source code"
+[election-guard-security-pilot]: https://blogs.microsoft.com/on-the-issues/2020/12/04/electionguard-2020-elections-security-pilot/ "Election Guard security pilot 2020"
 [protobuf-source]: https://github.com/protocolbuffers/protobuf "Protobuf source code"
 [fulton-wi-election-pilot]: https://www.cnn.com/2020/02/22/tech/microsoft-election-guard-voting-test/index.html "Fulton, Wisconsin election pilot"
 [voting-works]: https://voting.works "Voting works"
@@ -106,4 +108,4 @@ Last and definitely not least, the [first independent verifiers were developed a
 [markup]: https://markup.law
 [dems-virtual-leadership-election]: https://www.dems.gov/newsroom/press-releases/house-democrats-successfully-conclude-first-ever-virtual-leadership-elections "house democrats successfully conclude first-ever virtual leadership elections"
 
-[election-guard-index]: ../contribute/index.md "Election Guard Index"
+[election-guard-contribute]: ../contribute/index.md "Election Guard Contribute"
