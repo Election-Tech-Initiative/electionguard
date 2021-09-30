@@ -50,7 +50,7 @@ To help disambiguate, let's explore an example.
 
 Hamilton County includes 3 townships: LaCroix, Arlington, Harris.  The town of LaCroix also has a utility district that comprises its own precinct for special referendums. Arlington has two distinct school districts.  The county is also split into two congressional districts, district 5 and district 7.  Harris township is entirely within Congressional District 5, but both LaCroix and Arlington are split between congressional districts 5 and 7.
 
-![Hamilton County Electoral Map][[nist-election-model-uml]]
+![Hamilton County Electoral Map][hamilton-county-electoral-map]]
 
 #### Building the Geographic Jurisdiction Mapping (Geopolitical Units)
 
@@ -164,4 +164,5 @@ This documentation is under review and subject to change.  Please do not hesitat
 [civis-data-format]: https://developers.google.com/elections-data/reference "Civics Common Standard Data Specification"
 [election-types-reference]: https://developers.google.com/elections-data/reference/election-type "Election Types Civics Common Standard Specification"
 [nist-election-model-uml]: https://res.cloudinary.com/electionguard/image/upload/v1586960923/nist-election-model-uml.png "NIST Election Model UML"
+[hamilton-county-electoral-map]: https://res.cloudinary.com/electionguard/image/upload/v1593617785/hamilton-county-district-map_xxki0z.png "Hamilton County electoral map"
 [reporting-unit-types-reference]: https://developers.google.com/civics-data/reference/reporting-unit-type "Reporting Unit Type Civics Common Standard Specification"
