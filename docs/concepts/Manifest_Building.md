@@ -34,7 +34,7 @@ In the following examples, we will work through the process of defining differen
 
 Each election can be thought of as a list of contests that are relevant to a certain group of people in a specific place. In order to determine who is supposed to vote on which contests, we first need to define the geographic jurisdictions where the election is taking place.  [The NIST Guidelines][nist-election-results-common-data-format-specification] present an excellent discussion of the geographic interplay of different contests. The diagram from page 12 is presented below.
 
-![ElectionGuard UML Model](https://res.cloudinary.com/electionguard/image/upload/v1586960923/nist-election-model-uml.png)
+![ElectionGuard UML Model][nist-election-model-uml]
 
 As the diagram shows, congressional,  state assembly, school district and other geographic boundaries project onto towns and municipalities in different ways. Elections manage this complexity by creating unique ballot _styles_ that present to voters only the contests that pertain to them. Different jurisdictions use terms such as wards, precincts, and districts to describe the areas of overlap that guide ballot style creation. We will use `precinct` but `ward` and `district` could be used instead.
 
