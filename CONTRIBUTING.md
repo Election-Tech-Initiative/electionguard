@@ -26,6 +26,7 @@ When you submit a pull request, a CLA bot will automatically determine whether y
 
 This project has adopted the [Microsoft Open Source Code of Conduct][microsoft-open-source-code-of-conduct]. For more information see the [Code of Conduct FAQ][microsoft-open-source-code-of-conduct-faq] or contact [opencode@microsoft.com][microsoft-opencode-email-address] with any additional questions or comments.
 
+<!-- Links -->
 [microsoft-open-source-cla]: https://cla.opensource.microsoft.com "Microsoft Open Source CLA"
 [microsoft-open-source-code-of-conduct]: https://opensource.microsoft.com/codeofconduct/ "Microsoft Open Source Code of Conduct"
 [microsoft-open-source-code-of-conduct-faq]: https://opensource.microsoft.com/codeofconduct/faq/ "Microsoft Open Source Code of Conduct FAQ"

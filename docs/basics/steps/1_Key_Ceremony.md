@@ -22,4 +22,5 @@ The final step is to publish the joint election key after all keys and backups h
 
 ![Guardian][guardian-image-1]
 
+<!-- Links -->
 [guardian-image-1]: ../../images/undraw/guardian_1.svg "Image of a shield and a woman"

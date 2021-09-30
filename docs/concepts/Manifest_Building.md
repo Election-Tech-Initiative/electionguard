@@ -159,6 +159,7 @@ A: There are a few ways to handle this.  In most cases, you can simply map the b
 
 This documentation is under review and subject to change.  Please do not hesitate to open a github issue if you have questions, or find errors or omissions.
 
+<!-- Links -->
 [nist-election-reporting]: https://pages.nist.gov/ElectionResultsReporting/ "NIST Election Reporting"
 [nist-election-results-common-data-format-specification]: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-100r2.pdf "NIST Election Results Common Data Format Specification"
 [civis-data-format]: https://developers.google.com/elections-data/reference "Civics Common Standard Data Specification"

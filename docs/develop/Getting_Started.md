@@ -38,6 +38,7 @@ The ElectionGuard C++ library performs ballot encryption. It is designed for dev
 
 [:fontawesome-brands-github: Source][election-guard-cpp-source]
 
+<!-- Links -->
 [code-image]: ../images/undraw/code_1.svg "Two people sitting at a computer"
 [markdown-logo]: ../images/markdown-language.png "Markdown logo"
 [python-logo]: ../images/python-language.png "Python logo"

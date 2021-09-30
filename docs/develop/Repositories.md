@@ -36,6 +36,7 @@ flowchart TD
     classDef package fill: teal, stroke: black;
 ```
 
+<!-- Links -->
 [election-guard-specification]: https://github.com/microsoft/electionguard "Election Guard Github"
 [election-guard-python-source]: https://github.com/microsoft/electionguard-python "Election Guard Python source code"
 [election-guard-cpp-source-code]: https://github.com/microsoft/electionguard-cpp/ "Election Guard C++ source code"

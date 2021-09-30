@@ -62,6 +62,7 @@ Election Artifacts are the files required at the end of the election to verify t
 
 [data-image]: ../images/undraw/data.svg "Image of computer"
 
+<!-- Links -->
 [minimal-election-manifest]: https://github.com/microsoft/electionguard/blob/main/data/minimal/manifest.json
 [minimal-election-ballot]: https://github.com/microsoft/electionguard/blob/main/data/minimal/ballots
 [minimal-election-artifacts]: https://github.com/microsoft/electionguard/blob/main/data/minimal/artifacts

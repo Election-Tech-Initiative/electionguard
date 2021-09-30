@@ -65,6 +65,7 @@ Verification code results of cast ballots will indicate that the ballot was incl
 
 Challenge ballots are also published. Results for verification codes of challenge ballots should indicate that the ballot was ***not*** included in the election tally. Because the ballot is not included in the election tally, the contents can be decrypted and presented as well.
 
+<!-- Links -->
 [nist-cast-vote-records]: https://github.com/usnistgov/CastVoteRecords "NIST Cast Vote Records Github"
 [sample-election-guard-verification-code-image]: https://res.cloudinary.com/electionguard/image/upload/v1596647319/verification-code_k82e8f.jpg
 [election-guard-verification-code-demo]: https://demo.electionguard.vote/track/cook%207HMCG%20notion%209329D%20bandwidth%2099DCF%20mist%207M792%20panpipe%20BF7C9%20corsage%204CMGC%20privilege%2044J47%20daybed%20GBH74 "Election Guard verification demo"

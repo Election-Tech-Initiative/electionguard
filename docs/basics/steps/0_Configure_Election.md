@@ -17,4 +17,5 @@ As such, it is necessary when setting up an election to specify the maximum numb
 
 ![Guardian][guardian-image]
 
+<!-- Links -->
 [guardian-image]: ../../images/undraw/guardian_2.svg "Image of a shield and a man"

@@ -4,4 +4,5 @@ The primary function of ElectionGuard is to encrypt ballots. Ballots are encrypt
 
 ![Encrypt][encrypt-image]
 
+<!-- Links -->
 [encrypt-image]: ../../images/undraw/encrypt.svg "Image of a man with papers and a padlock"

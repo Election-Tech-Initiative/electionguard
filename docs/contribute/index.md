@@ -39,6 +39,7 @@ ElectionGuard relies on its community for its success. For example, for end-to-e
 
 - [:fontawesome-brands-github: Java port of Python Library][java-verifier] by John Caron
 
+<!-- Links -->
 [election-guard-specification]: https://github.com/microsoft/electionguard "Election Guard Github"
 [election-guard-python-source]: https://github.com/microsoft/electionguard-python "Election Guard Python source code"
 [election-guard-cpp-source-code]: https://github.com/microsoft/electionguard-cpp/ "Election Guard C++ source code"
