@@ -12,22 +12,22 @@ We have provided sample data for four different elections:
 
 - **Full** - This is a more realistic example for a primary election for a municipality. This ballot contains several geopolitical units with multiple ballot styles and contains all optional metadata fields. This sample has multi-language support and multiple submitted ballot samples.
 
-- **Hamilton General** - This is a complete example for a general election for a fictional municipality. This example contains many geopolitical units with multiple ballot styles and demonstrates how political districts overlap. This sample has multi-language support and multiple submitted ballot samples. The Hamilton General example also includes the election [private data](hamilton_election_private) that includes guardian private keys. More information about the Hamilton General Example can be found in the [Election Manifest Documentation](election_manifest_docs).
+- **Hamilton General** - This is a complete example for a general election for a fictional municipality. This example contains many geopolitical units with multiple ballot styles and demonstrates how political districts overlap. This sample has multi-language support and multiple submitted ballot samples. The Hamilton General example also includes the election [private data][hamilton-election-private] that includes guardian private keys. More information about the Hamilton General Example can be found in the [Election Manifest Documentation][election-manifest-docs].
 
-![Data](../images/undraw/data.svg)
+![Data][data-image]
 
 ## Election Manifests
 
-The [Election Manifest](../concepts/Manifest_Building.md) contains all the details of the election (such as contests, candidates, selections, ballot styles, etc.) and is required at the start of an ElectionGuard election.
+The [Election Manifest][manifest-building] contains all the details of the election (such as contests, candidates, selections, ballot styles, etc.) and is required at the start of an ElectionGuard election.
 
-**Manifest Examples:** [minimal][minimal_election_manifest] | [small][small_election_manifest] | [full][full_election_manifest] | [hamilton][hamilton_election_manifest]
+**Manifest Examples:** [minimal][minimal-election-manifest] | [small][small-election-manifest] | [full][full-election-manifest] | [hamilton][hamilton-election-manifest]
 
 ## Submitted Ballots
 
 Submitted Ballots are encrypted ballots that have been cast or spoiled.
 Cast ballots will be tallied and spoiled ballots are decrypted.
 
-**Submitted Ballot Examples:** [minimal][minimal_election_ballot] | [small][small_election_ballot] | [full][full_election_ballot] | [hamilton][hamilton_election_ballot]
+**Submitted Ballot Examples:** [minimal][minimal-election-ballot] | [small][small-election-ballot] | [full][full-election-ballot] | [hamilton][hamilton-election-ballot]
 
 ## Artifacts
 
@@ -58,19 +58,23 @@ Election Artifacts are the files required at the end of the election to verify t
 --- 📁 spoiled_ballots
 ```
 
-**Artifacts Examples:** [minimal][minimal_election_artifacts] | [small][small_election_artifacts] | [full][full_election_artifacts] | [hamilton][hamilton_election_artifacts]
+**Artifacts Examples:** [minimal][minimal-election-artifacts] | [small][small-election-artifacts] | [full][full-election-artifacts] | [hamilton][hamilton-election-artifacts]
 
-[minimal_election_manifest]: https://github.com/microsoft/electionguard/blob/main/data/minimal/manifest.json
-[minimal_election_ballot]: https://github.com/microsoft/electionguard/blob/main/data/minimal/ballots
-[minimal_election_artifacts]: https://github.com/microsoft/electionguard/blob/main/data/minimal/artifacts
-[small_election_manifest]: https://github.com/microsoft/electionguard/blob/main/data/small/manifest.json
-[small_election_ballot]: https://github.com/microsoft/electionguard/blob/main/data/small/ballots
-[small_election_artifacts]: https://github.com/microsoft/electionguard/blob/main/data/small/artifacts
-[full_election_manifest]: https://github.com/microsoft/electionguard/blob/main/data/full/manifest.json
-[full_election_ballot]: https://github.com/microsoft/electionguard/blob/main/data/full/ballots
-[full_election_artifacts]: https://github.com/microsoft/electionguard/blob/main/data/full/artifacts
-[hamilton_election_manifest]: https://github.com/microsoft/electionguard/blob/main/data/hamilton-general/manifest.json
-[hamilton_election_ballot]: https://github.com/microsoft/electionguard/blob/main/data/hamilton-general/ballots
-[hamilton_election_artifacts]: https://github.com/microsoft/electionguard/blob/main/data/hamilton-general/artifacts
-[hamilton_election_private]: https://github.com/microsoft/electionguard/blob/main/data/hamilton-general/private
-[election_manifest_docs]: https://www.electionguard.vote/guide/Election_Manifest/#introducing-hamilton-county-oz
+[data-image]: ../images/undraw/data.svg "Image of computer"
+
+[minimal-election-manifest]: https://github.com/microsoft/electionguard/blob/main/data/minimal/manifest.json
+[minimal-election-ballot]: https://github.com/microsoft/electionguard/blob/main/data/minimal/ballots
+[minimal-election-artifacts]: https://github.com/microsoft/electionguard/blob/main/data/minimal/artifacts
+[small-election-manifest]: https://github.com/microsoft/electionguard/blob/main/data/small/manifest.json
+[small-election-ballot]: https://github.com/microsoft/electionguard/blob/main/data/small/ballots
+[small-election-artifacts]: https://github.com/microsoft/electionguard/blob/main/data/small/artifacts
+[full-election-manifest]: https://github.com/microsoft/electionguard/blob/main/data/full/manifest.json
+[full-election-ballot]: https://github.com/microsoft/electionguard/blob/main/data/full/ballots
+[full-election-artifacts]: https://github.com/microsoft/electionguard/blob/main/data/full/artifacts
+[hamilton-election-manifest]: https://github.com/microsoft/electionguard/blob/main/data/hamilton-general/manifest.json
+[hamilton-election-ballot]: https://github.com/microsoft/electionguard/blob/main/data/hamilton-general/ballots
+[hamilton-election-artifacts]: https://github.com/microsoft/electionguard/blob/main/data/hamilton-general/artifacts
+[hamilton-election-private]: https://github.com/microsoft/electionguard/blob/main/data/hamilton-general/private
+[election-manifest-docs]: https://www.electionguard.vote/guide/Election_Manifest/#introducing-hamilton-county-oz
+
+[manifest-building]: ../concepts/Manifest-Building.md
