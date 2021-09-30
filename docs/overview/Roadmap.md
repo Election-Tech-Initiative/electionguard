@@ -1,6 +1,6 @@
 # ElectionGuard Roadmap
 
-![Roadmap](../images/undraw/roadmap.svg)
+![Roadmap][roadmap-image]
 
 ## 2021 Roadmap
 
@@ -19,17 +19,17 @@ A big step toward this new vision occurred with the release of the `electionguar
 ??? done "C++ ballot encryption library"
 
     * repo that performs encryption exclusively (for embedded encryption applications such as precinct scanners)
-    * standalone source that uses a version of HACL* packaged up by [EverCrypt](https://github.com/project-everest/hacl-star#evercrypt) for high assurance (thank you EverCrypt team!)
+    * standalone source that uses a version of HACL* packaged up by [EverCrypt][evercrypt] for high assurance (thank you EverCrypt team!)
     * enables ElectionGuard to eliminate GMP as a dependency 
 
 ??? done "Release an ElectionGuard.Encryption nuget package built from `electionguard-cpp` as a ballot encrypter for low performance devices"
 
     * Establish publishing pattern
-    * First target will be [Windows 10 / UWP](https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide)
+    * First target will be [Windows 10 / UWP][windows-universal-application-guide]
 
 ??? todo  "A consistent, efficient set of data interfaces across the ElectionGuard, C++, and Python repos"
 
-    * Data serialization using [Protobuf](https://github.com/protocolbuffers/protobuf) for input/output/data consistency across `electionguard-cpp` and `electionguard-python`
+    * Data serialization using [Protobuf][protobuf-source] for input/output/data consistency across `electionguard-cpp` and `electionguard-python`
     * Restructuring ballot and device aggregation to better support audits and scalability in general
     * Renaming and refactoring all repos for more descriptive and specific naming patterns
 
@@ -43,19 +43,19 @@ A big step toward this new vision occurred with the release of the `electionguar
 
 2020 taught many lessons. 
 
-The first half of the year saw a successful [Fulton, WI Election Pilot](https://www.cnn.com/2020/02/22/tech/microsoft-election-guard-voting-test/index.html) with [VotingWorks](https://voting.works) and [InfernoRed](https://infernored.com). Subsequent to the election the [Python](https://github.com/microsoft/electionguard-python) repo was released as a new reference implementation.
+The first half of the year saw a successful [Fulton, WI Election Pilot][fulton-wi-election-pilot] with [VotingWorks][voting-works] and [InfernoRed][infernored]. Subsequent to the election the [Python](https://github.com/microsoft/electionguard-python) repo was released as a new reference implementation.
 
-In the [second half of the year](https://blogs.microsoft.com/on-the-issues/2020/12/04/electionguard-2020-elections-security-pilot/), responding to COVID led to the development of a remote voting app with [InfernoRed](https://infernored.com), [Markup](https://markup.law), and the US House Democratic Caucus to enable representatives to [vote by secret ballot safely, securely, and remotely for Caucus leadership positions](https://www.dems.gov/newsroom/press-releases/house-democrats-successfully-conclude-first-ever-virtual-leadership-elections). 
+In the [second half of the year](https://blogs.microsoft.com/on-the-issues/2020/12/04/electionguard-2020-elections-security-pilot/), responding to COVID led to the development of a remote voting app with [InfernoRed][infernored], [Markup][markup], and the US House Democratic Caucus to enable representatives to [vote by secret ballot safely, securely, and remotely for Caucus leadership positions][dems-virtual-leadership-election]. 
 
-In a further collaborate with VotingWorks, Rice University professor Dan Wallach contributed an integration with [Arlo](https://voting.works/risk-limiting-audits/) to enable ElectionGuard to provide the "back end" for [Inyo County's Risk-limiting Audit of the November 3 election](https://elections.inyocounty.us/post-election-audits/).  
+In a further collaborate with VotingWorks, Rice University professor Dan Wallach contributed an integration with [Arlo][arlo] to enable ElectionGuard to provide the "back end" for [Inyo County's Risk-limiting Audit of the November 3 election][inyo-risk-limiting-audit].  
 
-Last and definitely not least, the [first independent verifiers were developed and published](../contribute/index.md).
+Last and definitely not least, the [first independent verifiers were developed and published][election-guard-index].
 
 ## 2020 Roadmap
 
 ??? done "Use ElectionGuard in a real-world end-to-end verifiable election"
 
-    * Run a verifiable election [Fulton, Wisconsin](Fulton) with [VotingWorks](https://voting.works) using smart cards, a ballot box, an admin device, and a ballot tracking site.
+    * Run a verifiable election [Fulton, Wisconsin][Fulton] with [VotingWorks][voting-works] using smart cards, a ballot box, an admin device, and a ballot tracking site.
     * Integrate ElectionGuard with the VotingWorks print station and user flow
     * Build ballot box functionality to capture and seal ballots
     * Build admin device to enable tallies and key ceremonies
@@ -63,7 +63,7 @@ Last and definitely not least, the [first independent verifiers were developed a
 
 ??? done "Use ElectionGuard in a real-world post-election audit"
 
-    * Run a post-election election audit with Inyo, California using [VotingWorks Arlo](https://voting.works) using ElectionGuard as a back end
+    * Run a post-election election audit with Inyo, California using [VotingWorks Arlo][voting-works] using ElectionGuard as a back end
     * Identify learnings and code refactoring necessary to reflect the different data structures and scalability considerations of audits
 
 ??? done "Update the ElectionGuard specification to 0.95.0"
@@ -71,7 +71,7 @@ Last and definitely not least, the [first independent verifiers were developed a
 ??? done "Support building ElectionGuard into additional voting systems"
 
     * Enable remote, secret-ballot voting for Democratic Caucus of the US House of Representatives
-    * Work with [InfernoRed](https://infernored.com) and [Markup](https://markup.law) to enable House-distributed iPhones to perform ballot encryption and House Democratic leadership to schedule and tally secret-ballot elections for leadership and committee positions
+    * Work with [InfernoRed][infernored] and [Markup][markup] to enable House-distributed iPhones to perform ballot encryption and House Democratic leadership to schedule and tally secret-ballot elections for leadership and committee positions
 
 ??? done "Release and iterate on `electionguard-python` as a core implementation that meets specification 0.95.0"
 
@@ -83,7 +83,7 @@ Last and definitely not least, the [first independent verifiers were developed a
       * Verifier specification
     * Build library with an eye to *extensibility* rather than performance and local language optimization (i.e., we'll be less *Pythonic* than some might prefer for the base implementation)
 
-??? done "Integrate ElectionGuard into a [set of election tools](ElectionTools)"
+??? done "Integrate ElectionGuard into a [set of election tools][ElectionTools]"
 
 ## 2019 Roadmap
 
@@ -94,5 +94,16 @@ Last and definitely not least, the [first independent verifiers were developed a
 <!-- Links -->
 [ElectionTools]: https://blogs.microsoft.com/on-the-issues/2020/12/04/electionguard-2020-elections-security-pilot/
 [Fulton]: https://news.microsoft.com/on-the-issues/2020/05/13/microsoft-electionguard-pilot-wisconsin/
+[roadmap-image]: ../images/undraw/roadmap.svg "Image of a car on a road with mountains"
+[evercrypt]: https://github.com/project-everest/hacl-star#evercrypt "Evercrypt"
+[windows-universal-application-guide]: https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide "Windows Universal APplication platform guide"
+[protobuf-source]: https://github.com/protocolbuffers/protobuf "Protobuf source code"
+[fulton-wi-election-pilot]: https://www.cnn.com/2020/02/22/tech/microsoft-election-guard-voting-test/index.html "Fulton, Wisconsin election pilot"
+[voting-works]: https://voting.works "Voting works"
+[arlo]: https://voting.works/risk-limiting-audits/ "Voting Works risk limiting audits"
+[inyo-risk-limiting-audit]: https://elections.inyocounty.us/post-election-audits/ "Inyo's risk limiting post-election audit"
+[infernored]: https://infernored.com "InfernoRed"
+[markup]: https://markup.law
+[dems-virtual-leadership-election]: https://www.dems.gov/newsroom/press-releases/house-democrats-successfully-conclude-first-ever-virtual-leadership-elections "house democrats successfully conclude first-ever virtual leadership elections"
 
-[Python 1.15.0]: https://github.com/microsoft/electionguard-python/releases/tag/1.1.15
+[election-guard-index]: ../contribute/index.md "Election Guard Index"
