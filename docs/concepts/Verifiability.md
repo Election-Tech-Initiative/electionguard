@@ -30,7 +30,7 @@ Once the ballot has been encrypted, the encrypting device needs to handle the ve
 
 [![Sample ElectionGuard verification code output by tracking site][sample-election-guard-verification-code-image]][election-guard-verification-code-demo]
 
-The verification code format is a mix of human-readable words and alphanumeric codes. The first word is always human-readable to facilitate a search-like discovery experience (to try, go to [our demo tracking site](https://demo.electionguard.vote) and begin typing 'coo' to surface the verification code above, or simply click the image to be taken directly).
+The verification code format is a mix of human-readable words and alphanumeric codes. The first word is always human-readable to facilitate a search-like discovery experience (to try, go to [our demo tracking site][election-guard-demo-site] and begin typing 'coo' to surface the verification code above, or simply click the image to be taken directly).
 
 ## Challenging a ballot
 
@@ -74,3 +74,4 @@ Challenge ballots are also published. Results for verification codes of challeng
 [elgamal-encryption]: https://en.wikipedia.org/wiki/ElGamal_encryption "ElGamal encryption"
 [fiat-shamir-heuristic]: https://en.wikipedia.org/wiki/Fiat%E2%80%93Shamir_heuristic "Fiat-Shamir Heuristic"
 [proofs-partial-knowledge-witness-hiding]: https://www.win.tue.nl/~berry/papers/crypto94.pdf "Proofs of Partial Knowledge and Simplified Design of Witness Hiding Protocols"
+[election-guard-demo-site]: https://demo.electionguard.vote "Election Guard demo tracking site"
