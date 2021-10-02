@@ -7,10 +7,10 @@
 
 By design, the ElectionGuard SDK can be used to enable end-to-end verifiability (e2e-v) in a variety of use cases. This article discusses the "default" use case of ElectionGuard: an end-to-end verifiable election that uses precinct scanners where ballots are inserted (and approved) by voters directly [^precinct-scan].
 
-This document aims to provide a "[vertical slice](https://agileforall.com/vertical-slices-and-scale/)" of the considerations and practices necessary to add end-to-end verifiability to an existing precinct scanner. We necessarily make assumptions about the compute and storage capabilities of the scanner itself, and the modifications necessary to implement [end-to-end verifiability](https://www.electionguard.vote/guide/Verifiable_Election/). In so doing, it illustrates the interlocking system of security and encryption that comprises an e2e-v _system_.
+This document aims to provide a "[vertical slice][vertical-slices-and-scale]" of the considerations and practices necessary to add end-to-end verifiability to an existing precinct scanner. We necessarily make assumptions about the compute and storage capabilities of the scanner itself, and the modifications necessary to implement [end-to-end verifiability][verifiable-election]. In so doing, it illustrates the interlocking system of security and encryption that comprises an e2e-v _system_.
 
 !!! info
-    ElectionGuard relies on slight adaptations of existing voting processes to accommodate different aspects of [end-to-end verifiability](https://www.electionguard.vote/guide/Verifiable_Election/).
+    ElectionGuard relies on slight adaptations of existing voting processes to accommodate different aspects of [end-to-end verifiability][verifiable-election].
 
 For example, many voting jurisdictions already have a procedure called _ballot spoiling_ to handle mistakes voters make when they fill out ballots. A voter may inadvertently fill out a contest incorrectly by selecting more candidates than allowed. When the voter then proceeds to scan the ballot, the scanner stops the ballot and alerts the voter of the _overvote_; the voter then has the opportunity, as allowed within the voting regulations and practices of the voting district, to start over with a new ballot; the ballot with the mistake is then _spoiled_ and stored separately to ensure it is not included in the tabulation.
 
@@ -28,7 +28,7 @@ This document illustrates these e2e-v concepts in the context of setting up and 
 
 A typical voter flow for a precinct scan system is illustrated below.
 
-After a voter has acquired their ballot, they fill it out by hand or using a ballot marking device. When they finish they proceed to the scanner and insert the completed ballot. The scanner scans and interprets the ballot and generates a [cast vote record](../overview/Glossary.md#cast-vote-record), an electronic representation of the voter's selections.
+After a voter has acquired their ballot, they fill it out by hand or using a ballot marking device. When they finish they proceed to the scanner and insert the completed ballot. The scanner scans and interprets the ballot and generates a [cast vote record][cast-vote-record], an electronic representation of the voter's selections.
 
 If all contests in a ballot are filled out properly and interpreted as such by the scanner, the ballot is accepted and the voter is free to leave the voting booth.
 
@@ -72,7 +72,7 @@ In modern US elections, voters often vote multiple contests, determined by the t
 
 #### Ballot manifest
 
-Consider a [ballot manifest](https://www.electionguard.vote/guide/Election_Manifest/) the master list of all the contests voters could face in a single election. [ElectionGuard assumes and validates the ballot manifest for a variety of criteria](https://www.electionguard.vote/guide/Election_Manifest/#data-validation). ElectionGuard uses manifests to properly interpret ballots generally, but for records created by precinct scanners the manifest provides the means to _reconstitute_ the encrypted ballots from the dehydrated records created.
+Consider a [ballot manifest][ballot-manifest] the master list of all the contests voters could face in a single election. [ElectionGuard assumes and validates the ballot manifest for a variety of criteria][ballot-manifest-data-validation]. ElectionGuard uses manifests to properly interpret ballots generally, but for records created by precinct scanners the manifest provides the means to _reconstitute_ the encrypted ballots from the dehydrated records created.
 
 Strictly speaking, the ballot manifest isn't necessary for ElectionGuard until the tally process evaluates the encrypted ballots generated during the election, but the precinct scanner needs to encode ballots and votes properly for their downstream construction, and that is dependent on the unique ballot styles presented to voters, which themselves need to follow proper convention as well.
 
@@ -111,8 +111,8 @@ A dehydrated ballot **_must_** provide the following data to be properly _rehydr
 | ballot_finalization_indicator | flag    | Indicates whether ballot is CAST or CHALLENGED                                                                             | applied by scanner based on determination by voter                                                                                                            |
 | ballot_selections             | array   | Set of responses (and, as applicable, non-responses) of voter to ballot style                                              | reflective of non-selections; critical for rehydration and re-establishment of ballot encryption artifacts                                                    |
 | ballot_extra_data             | array   | Additional data applied at contest level to capture non-selection data                                                     | Principally envisioned for capturing ballot selection metadata for write-ins; each entry needs to identify contest and selection as well as extra data string |
-| ballot_nonce                  | ?       | The [nonce](https://csrc.nist.gov/glossary/term/nonce) used as input to the encryption of the ballot selections            | See spec on [Ballot Encryption](https://www.electionguard.vote/spec/0.95.0/5_Ballot_encryption/)                                                              |
-| previous_tracker_hash         | ?       | As discussed in [ballot chaining](#ballot-chaining) the previous_tracker_hash is an input to the current ballot encryption | See spec on [Ballot Encryption](https://www.electionguard.vote/spec/0.95.0/5_Ballot_encryption/)                                                              |
+| ballot_nonce                  | ?       | The [nonce][nist-nonce] used as input to the encryption of the ballot selections            | See spec on [Ballot Encryption][ballot-encryption]                                                              |
+| previous_tracker_hash         | ?       | As discussed in [ballot chaining](#ballot-chaining) the previous_tracker_hash is an input to the current ballot encryption | See spec on [Ballot Encryption][ballot-encryption]                                     |
 | verification_code_hash        | ?       | Hashed version of verification code generated by ballot encryption process                                                 |                                                                                                                                                               |
 
 ### Ballot _Finalization_
@@ -122,4 +122,14 @@ A dehydrated ballot **_must_** provide the following data to be properly _rehydr
 #### Challenge ballots
 
 [^precinct-scan]: As distinct from scanners used solely for central tabulation, which occurs with mail-in voting or any tabulation / aggregation scenario _where voters are not present when the cast vote record is created_
-[^e2e-v]: [ElectionGuard Verifiable Election](https://www.electionguard.vote/guide/Verifiable_Election/) [https://www.electionguard.vote/guide/Verifiable_Election/]
+[^e2e-v]: [ElectionGuard Verifiable Election][verifiable-election] [https://www.electionguard.vote/guide/Verifiable_Election/]
+
+<!-- Links -->
+[vertical-slices-and-scale]: https://agileforall.com/vertical-slices-and-scale/
+[verifiable-election]: https://www.electionguard.vote/guide/Verifiable_Election/
+[ballot-manifest]: https://www.electionguard.vote/guide/Election_Manifest/
+[ballot-manifest-data-validation]: https://www.electionguard.vote/guide/Election_Manifest/#data-validation
+[nist-nonce]: https://csrc.nist.gov/glossary/term/nonce
+[ballot-encryption]: https://www.electionguard.vote/spec/0.95.0/5_Ballot_encryption/
+
+[cast-vote-record]: ../overview/Glossary.md#cast-vote-record

@@ -75,6 +75,7 @@ A huge thank you to those who helped to contribute to this project so far, inclu
 - [Oxide Design][oxide-design]
 - Many teams within Microsoft
 
+<!-- Links -->
 [election-guard-banner]: docs/images/electionguard-banner.svg "Election Guard banner SVG"
 [license-image]: https://img.shields.io/github/license/microsoft/electionguard "Election Guard license image"
 [build-developer-conference]: https://blogs.microsoft.com/on-the-issues/?p=63211 "Protecting democratic elections through secure, verifiable voting"

@@ -1,15 +1,15 @@
 #
 
-![Microsoft Defending Democracy Program: ElectionGuard](images/electionguard-banner.svg)
+![Microsoft Defending Democracy Program: ElectionGuard][election-guard-banner]
 
 ## What is ElectionGuard?
 
-ElectionGuard is an **open source** software development kit (SDK) that makes voting more secure, transparent and accessible. It is designed for election system vendors to incorporate [end-to-end verifiability](Glossary/#end-to-end-verifiable-elections) into their systems and any interested organization to perform and publish [post-election audits](Glossary/#post-election-audit) using ElectionGuard as a secure publishing platform.
+ElectionGuard is an **open source** software development kit (SDK) that makes voting more secure, transparent and accessible. It is designed for election system vendors to incorporate [end-to-end verifiability][glossary-end-to-end-verifiable] into their systems and any interested organization to perform and publish [post-election audits][glossary-post-election-audit] using ElectionGuard as a secure publishing platform.
 
 !!! info "New to ElectionGuard?"
-    Welcome! Thanks for your interest. Trying to figure out how to help and learn? If you're a developer, head over to the [**developer getting started**](develop/Getting_Started.md). If you're an election administrator or want to learn more about ElectionGuard and its underpinnings, start with [**the guide**](basics/steps/0_Configure_Election.md). If you want to help and aren't a developer, all kinds of help with documentation, outreach, and advocacy is welcomed. Follow [**discussions**](https://github.com/microsoft/electionguard/discussions), join the [**office hours**](https://github.com/microsoft/electionguard/discussions/61), and check out the [**roadmap**](overview/Roadmap.md) to see where it's intended to go.
+    Welcome! Thanks for your interest. Trying to figure out how to help and learn? If you're a developer, head over to the [**developer getting started**][develop-getting-started]. If you're an election administrator or want to learn more about ElectionGuard and its underpinnings, start with [**the guide**][configure-an-election]. If you want to help and aren't a developer, all kinds of help with documentation, outreach, and advocacy is welcomed. Follow [**discussions**][election-guard-discussions], join the [**office hours**][weekly-office-hours], and check out the [**roadmap**][roadmap] to see where it's intended to go.
 
-![Voting](images/undraw/voting.svg)
+![Voting][casting-ballot]
 
 ## Open-Source
 
@@ -21,22 +21,42 @@ We encourage the developer and security community to conduct research, report is
 
 ## Contributing
 
-Help defend democracy and **[contribute to the project](contribute/index.md)**.
+Help defend democracy and **[contribute to the project][contribute-index]**.
 
-We welcome discussions on our [discussions page](https://github.com/microsoft/electionguard/discussions), feel free to check in and ask your questions and drop your suggestions regarding the specifications over there.
+We welcome discussions on our [discussions page][election-guard-discussions], feel free to check in and ask your questions and drop your suggestions regarding the specifications over there.
 
 ## Questions
 
-ElectionGuard would love for you to ask questions out in the open using Github Issues. If you really want to email the ElectionGuard team, reach out at [electionguard@microsoft.com](mailto:electionguard@microsoft.com).
+ElectionGuard would love for you to ask questions out in the open using Github Issues. If you really want to email the ElectionGuard team, reach out at [electionguard@microsoft.com][election-guard-email].
 
 ## Thank you
 
 A huge thank you to those who have helped us along the way:
 
-- Josh Benaloh (whose [PhD thesis](https://www.microsoft.com/en-us/research/publication/verifiable-secret-ballot-elections/) was the genesis of much of this work)
-- Our [**contributors**](contribute/index.md) and community
-- [InfernoRed Technology](https://infernored.com/), who have been part of all our launches
-- [VotingWorks](https://voting.works/) and the audit stylings of [@danwallach](https://github.com/danwallach)
-- [Center for Civic Design](https://civicdesign.org/)
-- [Oxide Design](https://oxidedesign.com/)
+- Josh Benaloh (whose [PhD thesis][verifiable-search-ballot-elections-paper] was the genesis of much of this work)
+- Our [**contributors**][contribute-index] and community
+- [InfernoRed Technology][infernored]
+- [VotingWorks][voting-works]
+- [Center for Civic Design][center-for-civic-design]
+- [Oxide Design][oxide-design]
 - Many teams within Microsoft
+
+<!-- Links -->
+[election-guard-banner]: images/electionguard-banner.svg "Election Guard banner"
+[casting-ballot]: images/undraw/voting.svg "Image of people casting ballots"
+
+[election-guard-discussions]: https://github.com/microsoft/electionguard/discussions "Election Guard Discussions page"
+[election-guard-email]: mailto:electionguard@microsoft.com "electionguard@microsoft.com"
+[weekly-office-hours]: https://github.com/microsoft/electionguard/discussions/78
+[verifiable-search-ballot-elections-paper]: https://www.microsoft.com/en-us/research/publication/verifiable-secret-ballot-elections/ "Verifiable Secret-Ballot Elections - Microsoft Research, Josh Benaloh"
+[infernored]: https://infernored.com/ "InfernoRed"
+[voting-works]: https://voting.works/ "Voting works - Elections you can trust"
+[center-for-civic-design]: https://civicdesign.org/ "Center for Civic Design"
+[oxide-design]: https://oxidedesign.com/ "Oxide Design"
+
+[contribute-index]: contribute/index.md "Contributors"
+[glossary-end-to-end-verifiable]: Glossary/#end-to-end-verifiable-elections "End-to-End Verifiable Elections"
+[glossary-post-election-audit]: Glossary/#post-election-audit "Post-election audit"
+[develop-getting-started]: develop/Getting_Started.md "Developer - Getting Started"
+[configure-an-election]: basics/steps/0_Configure_Election.md "Configure an Election"
+[roadmap]: overview/Roadmap.md "Election Guard - Roadmap"

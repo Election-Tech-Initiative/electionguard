@@ -2,15 +2,15 @@
 
 ## Security
 
-Microsoft takes the security of our software products and services seriously, which includes all source code repositories managed through our GitHub organizations, which include [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin), and [many more](https://opensource.microsoft.com/).
+Microsoft takes the security of our software products and services seriously, which includes all source code repositories managed through our GitHub organizations, which include [Microsoft][microsoft-github], [Azure][azure-github], [DotNet][dotnet-github], [AspNet][aspnet-github], [Xamarin][xamarin-github], and [many more][microsoft-open-source].
 
-If you believe you have found a security vulnerability in any Microsoft-owned repository that meets Microsoft's [definition](https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc751383(v=technet.10)) of a security vulnerability, please report it to us as described below.
+If you believe you have found a security vulnerability in any Microsoft-owned repository that meets Microsoft's [definition][microsoft-security-bug] of a security vulnerability, please report it to us as described below.
 
 ## Reporting Security Issues
 
-**Please do not report security vulnerabilities through public GitHub issues.** Instead, please report them to the Microsoft Security Response Center at [secure@microsoft.com](mailto:secure@microsoft.com).  If possible, encrypt your message with our PGP key; please download it from the [Microsoft Security Response Center PGP Key page](https://technet.microsoft.com/en-us/security/dn606155).
+**Please do not report security vulnerabilities through public GitHub issues.** Instead, please report them to the Microsoft Security Response Center at [secure@microsoft.com](secure-microsoft-email).  If possible, encrypt your message with our PGP key; please download it from the [Microsoft Security Response Center PGP Key page][microsoft-pgp-key].
 
-You should receive a response within 24 hours. If for some reason you do not, please follow up via email to ensure we received your original message. Additional information can be found at [microsoft.com/msrc](https://www.microsoft.com/msrc).
+You should receive a response within 24 hours. If for some reason you do not, please follow up via email to ensure we received your original message. Additional information can be found at [microsoft.com/msrc][msrc].
 
 Please include the requested information listed below (as much as you can provide) to help us better understand the nature and scope of the possible issue:
 
@@ -30,6 +30,19 @@ We prefer all communications to be in English.
 
 ## Policy
 
-Microsoft follows the principle of [Coordinated Vulnerability Disclosure](https://www.microsoft.com/en-us/msrc/cvd).
+Microsoft follows the principle of [Coordinated Vulnerability Disclosure][coordinated-vulnerability-disclosure].
+
+<!-- Links -->
+[microsoft-github]: https://github.com/Microsoft
+[azure-github]: https://github.com/Azure
+[dotnet-github]: https://github.com/dotnet
+[aspnet-github]: https://github.com/aspnet
+[xamarin-github]: https://github.com/xamarin
+[microsoft-open-source]: https://opensource.microsoft.com/
+[microsoft-security-bug]: https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc751383(v=technet.10)
+[secure-microsoft-email]: mailto:secure@microsoft.com
+[microsoft-pgp-key]: https://technet.microsoft.com/en-us/security/dn606155
+[msrc]: https://www.microsoft.com/msrc
+[coordinated-vulnerability-disclosure]: https://www.microsoft.com/en-us/msrc/cvd
 
 <!-- END MICROSOFT SECURITY.MD BLOCK -->
