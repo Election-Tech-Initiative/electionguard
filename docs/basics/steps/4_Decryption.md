@@ -2,9 +2,7 @@
 
 At the conclusion of voting, all of the cast ballots are published in their encrypted form in the election record together with the proofs that the ballots are well-formed. Additionally, all of the encryptions of each option are homomorphically-combined to form an encryption of the total number of times that each option was selected. The homomorphically-combined encryptions are decrypted to generate the election tally. Individual cast ballots are not decrypted. Individual spoiled ballots are decrypted and the plaintext values are published along with the encrypted representations and the proofs.
 
-In order to decrypt the homomorphically-combined encryption of each selection, each Guardian participating in the decryption must compute a specific Decryption Share of the decryption.
-
-It is preferable that all guardians be present for decryption, however in the event that guardians cannot be present, Electionguard includes a mechanism to decrypt with the Quorum of Guardians.
+In order to decrypt the homomorphically-combined encryption of each selection, each Guardian participating in the decryption must compute a specific Decryption Share of the decryption. It is preferable that all guardians be present for decryption, however in the event that guardians cannot be present, Electionguard includes a mechanism to decrypt with the Quorum of Guardians.
 
 During the Key Ceremony a Quorum of Guardians is defined that represents the minimum number of guardians that must be present to decrypt the election. If the decryption is to proceed with a Quorum of Guardians greater than or equal to the Quorum count, but less than the total number of guardians, then a subset of the Available Guardians must also each construct a Partial Decryption Share for the missing Missing Guardian, in addition to providing their own Decryption Share.
 
@@ -24,27 +22,3 @@ Missing Guardian A guardian who was configured during the Key Ceremony but who i
 Compensated Decryption Share - a partial decryption share value computed by an available guardian to compensate for a missing guardian so that the missing guardian's share can be generated and the election results can be successfully decrypted.
 Decryption Mediator - A component or actor responsible for composing each guardian's partial decryptions or compensated decryptions into the plaintext tally
 Process
-
-Each Guardian that will participate in the decryption process computes a Decryption Share of the Ciphertext Tally.
-Each Guardian also computes a Chaum-Pedersen proof of correctness of their Decryption Share.
-Decryption when All Guardians are Present
-
-If all guardians are present, the Decryption Shares are combined to generate a tally for each option on every contest
-Decryption when some Guardians are Missing
-
-warning: The functionality described in this segment is still a 🚧 Work In Progress
-
-When one or more of the Guardians are missing, any subset of the Guardians that are present can use the information they have about the other guardian's private keys to reconstruct the partial decryption shares for the missing guardians.
-
-Each Available Guardian computes a Partial Decryption Share for each Missing Guardian
-at least a Quorum count of Partial Decryption Shares are chosen from the values generated in the previous step for a specific Missing guardian
-Each chosen Available Guardian uses its Partial Decryption Share to compute a share of the missing partial decryption.
-the process is re-run until all Missing Guardians are compensated for.
-The Compensated Decryption Shares are combined to reconstruct the missing TallyDecryptionShare
-finally, all of the DecryptionShares are combined to generate a tally for each option on every contest
-Challenged/Spoiled Ballots
-
-If a ballot is not to be included in the vote count, it is considered challenged, or Spoiled. Every ballot spoiled in an election is individually verifiably decrypted in exactly the same way that the aggregate ballot of tallies is decrypted. Since spoiled ballots are not included as part of the vote count, they are included in the Election Record with their plaintext values included along with the encrypted representations.
-
-Spoiling ballots is an important part of the ElectionGuard process as it allows voters to explicitly generate challenge ballots that are verifiable as part of the Election Record.
-
