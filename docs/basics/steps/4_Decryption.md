@@ -14,9 +14,9 @@ During the Key Ceremony a Quorum of Guardians is defined that represents the min
 It is important to note that mathematically not every present guardian has to compute a Partial Decryption Share for every Missing Guardian. Only the Quorum Count of guardians are necessary to construct Partial Decryption Shares in order to compensate for any Missing Guardian.
 
 
-![Encrypt][encrypt-image]
+![Encrypt][encrypt-image2]
 
 <!-- Links -->
-[encrypt-image]: ../../images/undraw/guardian_2.svg "Image of an ElectionGuard guardian"
+[encrypt-image2]: ../../images/undraw/guardian_2.svg "Image of an ElectionGuard guardian"
 
 In this implementation, ElectionGuard takes an approach that utilizes all Available Guardians to compensate for Missing Guardians. When it is determined that guardians are missing, all available guardians each calculate a Partial Decryption Share for the missing guardian and publish the result. A Quorum of Guardians count of available Partial Decryption Shares is randomly selected from the pool of available partial decryption shares for a givenMissing Guardian. If more than one guardian is missing, we randomly choose to ignore the Partial Decryption Share provided by one of the Available Guardians whose partial decryption share was chosen for the previous Missing Guardian, and randomly select again from the pool of available Partial Decryption Shares. This ensures that all available guardians have the opportunity to participate in compensating for Missing Guardians.
