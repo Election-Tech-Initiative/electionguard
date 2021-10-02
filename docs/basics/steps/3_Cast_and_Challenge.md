@@ -4,7 +4,7 @@ Each ballot that is completed by a voter must be either cast or challenged. A ca
 
 ![Encrypt][encrypt-image]
 
+ElectionGuard includes a mechanism to mark a specific ballot as either cast or spoiled. Cast ballots are included in the tally record, while spoiled ballots are not. Spoiled ballots are decrypted into plaintext and published along with the rest of the election record.
+
 <!-- Links -->
 [encrypt-image]: ../../images/undraw/voting.svg ""
-
-ElectionGuard includes a mechanism to mark a specific ballot as either cast or spoiled. Cast ballots are included in the tally record, while spoiled ballots are not. Spoiled ballots are decrypted into plaintext and published along with the rest of the election record.
