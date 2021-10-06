@@ -1,5 +1,8 @@
 # ElectionGuard Specification ![Version 0.95.0][green-badge-0.95.0]
 
+!!! info "Download Specification"
+    Web version is under construction at this time. [Download full specification here][spec-0.95.0].
+
 ## Overview
 
 This document describes the technical details of the _ElectionGuard_ toolkit which can be used in conjunction with many new and existing voting systems to enable both end-to-end (E2E) verifiability and privacy-enhanced risk-limiting audits (RLAs). _ElectionGuard_ is not a complete election system. It instead provides components that are designed to be flexible and to promote innovation by election officials and system developers. When properly used, it can promote voter confidence by empowering voters to independently verify the accuracy of election results.
@@ -26,3 +29,4 @@ This specification can be used by expert reviewers to evaluate the details of th
 <!-- Links -->
 
 [green-badge-0.95.0]: https://img.shields.io/badge/Version-v0.95.0-green
+[spec-0.95.0]: https://github.com/microsoft/electionguard/releases/tag/v0.95.0 "Election Guard Specification"
