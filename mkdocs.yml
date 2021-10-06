@@ -50,6 +50,7 @@ nav:
 
   - Specification:
       - Current: spec/0.95.0/1_Overview.md
+        - Applications: spec/0.95.0/Applications.md
       - Data Format: spec/Data_Format.md
       - Badges: spec/Badges.md
       - Other Versions:
