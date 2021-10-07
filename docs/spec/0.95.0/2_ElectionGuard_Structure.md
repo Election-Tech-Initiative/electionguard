@@ -9,7 +9,7 @@ After the conclusion of voting or auditing, a *quorum* of guardians is necessary
 ## Key Generation
 
 Prior to the start of voting (for an E2E-verifiable election) or auditing (for an RLA), the election guardians participate in a process wherein they generate public keys to be used in the election.
-Each guardian generates an election key – for use in encrypting votes – and an auxiliary key – for use in encrypting other data.<sup id="footnotelink1">[1](#footnote1)</sup> 
+Each guardian generates an election key – for use in encrypting votes – and an auxiliary key – for use in encrypting other data.[^1]
 Additional keys are generated to facilitate sharing of private keys so that the election verifiable data can be produced after voting or auditing is complete – even if not all guardians are available at that time.
 
 The key generation ceremony begins with each guardian publishing its public keys together with proofs of knowledge of the associated private keys. 
@@ -24,7 +24,7 @@ If a challenged guardian fails to produce key shares that verify, that guardian 
 ## Ballot Encryption
 
 In most uses, the election system makes a single call to the *ElectionGuard* API after each voter completes the process of making selections or with each ballot to be encrypted for an RLA.
-*ElectionGuard* will encrypt the selections made by the voter and return a verification code which the system should give to the voter.<sup id="footnotelink2">[2](#footnote2)</sup>
+*ElectionGuard* will encrypt the selections made by the voter and return a verification code which the system should give to the voter.[^2]
 
 This is the only point where an existing election system must interface with *ElectionGuard*. 
 In certain vote-by-mail scenarios and when *ElectionGuard* is used within an RLA, cast-vote records can be provided in batch without any interface between the voting equipment and *ElectionGuard*. 
@@ -44,9 +44,6 @@ Observers can use this open specification and/or accompanying materials to write
 The details of the ElectionGuard Application Programming Interface (API) are included in a separate document.
 The principal purposes of this document are to specify the functionality of the ElectionGuard toolkit and to provide details necessary for independent parties to write election verifiers that consume the artifacts produced by the toolkit.
 
----
+[^1]: While the format of the election keys is critical to the process and carefully delineated in this document, the auxiliary keys are for internal use only and their format is left up to individual implementations. 
 
-<small><b id="footnote1">1</b>. While the format of the election keys is critical to the process and carefully delineated in this document, the auxiliary keys are for internal use only and their format is left up to individual implementations. 
-[↩](#footnotelink1)</small>
-
-<small><b id="footnote2">2</b>. The verification code is not necessary for RLA usage.[↩](#footnotelink2)</small>
+[^2]: The verification code is not necessary for RLA usage.
