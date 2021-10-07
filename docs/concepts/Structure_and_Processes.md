@@ -13,15 +13,13 @@ The ElectionGuard process has three principal components.
 ElectionGuard utilizes Guardians to protect confidentiality of ballots. The Guardians independently generate public-private key pairs from public election parameters.
 
 ```mermaid
-    graph TD
-    A("Guardian <br />T1<br />(K1,S1)")-->B(K1);
-    C("Guardian <br /> T2<br />(K2,S2)")-->D(K2);
-    x(...);
-    E("Guardian <br /> Tn<br />(Kn,Sn)")-->F(Kn);
+    flowchart TD
+    A("Guardian <br />T<sub>1</sub><br />(K<sub>1</sub>,S<sub>1</sub>)")-->B(K<sub>1</sub>);
+    C("Guardian <br /> T<sub>2</sub><br />(K<sub>2</sub>,S<sub>2</sub>)")-->D(K<sub>2</sub>);
+    E("Guardian <br /> T<sub>n</sub><br />(K<sub>n</sub>,S<sub>n</sub>)")-->F(K<sub>n</sub>);
     style B fill:#FFFFFF00,stroke:#FFFFFF00
     style D fill:#FFFFFF00,stroke:#FFFFFF00
     style F fill:#FFFFFF00,stroke:#FFFFFF00
-    style x fill:#FFFFFF00,stroke:#FFFFFF00
 ```
 
 The individual public keys are then combined to form the election public key using simple multiplication.
@@ -34,12 +32,12 @@ At this point in the process, the only way to decrypt data encrypted with the el
 
 ```mermaid
     graph LR
-    A("Guardian <br /> T1<br />(K1,S1)")-->|S 1,2|B("Guardian <br /> T2<br />(K2,S2)");
-    B-->|S 2,1|A;
-    A-->|S 1,n|C("Guardian <br /> Tn<br />(Kn,Sn)");
-    B-->|S 2,n|C;
-    C-->|S n,2|B;
-    C-->|S n,1|A;
+    A("Guardian <br /> T<sub>1</sub><br />(K<sub>1</sub>,S<sub>1</sub>)")-->|S<sub>1,2</sub>|B("Guardian <br /> T<sub>2</sub><br />(K<sub>2</sub>,S<sub>2</sub>)");
+    B-->|S<sub>2,1</sub>|A;
+    A-->|S<sub>1,n</sub>|C("Guardian <br /> T<sub>n</sub><br />(K<sub>n</sub>,S<sub>n</sub>)");
+    B-->|S<sub>2,n</sub>|C;
+    C-->|S<sub>n,2</sub>|B;
+    C-->|S<sub>n,1</sub>|A;
 ```
 
 ## Balot Encryption
@@ -176,11 +174,11 @@ Guardians can each apply their private keys to an encrypted value to perform a p
 
 ```mermaid
     graph TD
-    A("Guardian <br /> T1<br />(K1,S1)")-->B(M1);
-    C("Guardian <br /> T2<br />(K2,S2)")-->D(M2);
+    A("Guardian <br /> T<sub>1</sub><br />(K<sub>1</sub>,S<sub>1</sub>)")-->B(M<sub>1</sub>);
+    C("Guardian <br /> T<sub>2</sub><br />(K<sub>2</sub>,S<sub>2</sub>)")-->D(M<sub>2</sub>);
     A1(C)-->A;
     C1(C)-->C;
-    E("Guardian <br />Tn<br />(Kn,Sn)")-->F(Mn);
+    E("Guardian <br />T<sub>n</sub><br />(K<sub>n</sub>,S<sub>n</sub>)")-->F(M<sub>n</sub>);
     E1(C)-->E;
     style B fill:#FFFFFF00,stroke:#FFFFFF00
     style D fill:#FFFFFF00,stroke:#FFFFFF00
@@ -204,11 +202,11 @@ If one or more Guardians are missing during a decryption, a quorum of any $k$ av
 
 ```mermaid
     graph TD
-    A("Guardian <br /> T i_1<br />S j,i_1")-->B(M j,i_1);
-    C("Guardian <br /> T i_2<br />S j,i_2")-->D(M j,i_2);
+    A("Guardian <br /> T<sub>i<sub>1</sub></sub><br />S<sub>j,i<sub>1</sub></sub>")-->B(M<sub>j,i<sub>1</sub></sub>);
+    C("Guardian <br /> T<sub>i<sub>2</sub></sub><br />S<sub>j,i<sub>2</sub></sub>")-->D(M<sub>j,i<sub>2</sub></sub>);
     A1(C)-->A;
     C1(C)-->C;
-    E("Guardian <br />T i_k<br />S j,i_k")-->F(M j,i_k);
+    E("Guardian <br />T<sub>i<sub>k</sub></sub><br />S<sub>j,i<sub>k</sub></sub>")-->F(M<sub>j,i<sub>k</sub></sub>);
     E1(C)-->E;
     style B fill:#FFFFFF00,stroke:#FFFFFF00
     style D fill:#FFFFFF00,stroke:#FFFFFF00

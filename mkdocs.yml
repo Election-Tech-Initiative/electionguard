@@ -61,7 +61,10 @@ nav:
   - Contribute: contribute/index.md
 plugins:
   - search
-  - mermaid2
+  - mermaid2:
+      arguments:
+        securityLevel: "loose"
+        htmlLabels: true
   - redirects:
       redirect_maps:
         "hacktoberfest.md": "contribute/index.md"
