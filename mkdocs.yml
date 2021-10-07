@@ -26,6 +26,7 @@ nav:
               - Publish Record: basics/steps/5_Publish_Record.md
               - Verification: basics/steps/6_Verification.md
       - Concepts:
+          - Structures and Processes: concepts/Structure_and_Processes.md
           - Election Manifest:
               - Building: concepts/Manifest_Building.md
               - Example: concepts/Manifest_Example.md
