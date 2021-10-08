@@ -5,7 +5,7 @@ The record of an election should be a full accounting of all of the election art
 - Date and location of an election
 - The ballot coding file
 - The baseline parameters
-  - Primes 𝑝 and 𝑞 and integer 𝑟 such that 𝑝+1 and 𝑟 is not a multiple of 𝑞
+  - Primes 𝑝 and 𝑞 and integer 𝑟 such that 𝑝=𝑞𝑟+1 and 𝑟 is *not* a multiple of 𝑞
   - A generator 𝑔 of the order 𝑞 multiplicative subgroup &Zopf;<sup>\*</sup><sub>p</sub>
   - The number 𝑛 of election guardians
   - The quorum threshold 𝑘 of guardians required to complete verification
@@ -22,14 +22,15 @@ The record of an election should be a full accounting of all of the election art
   - The device information for the device that encrypted the ballot
   - The date and time of the ballot encryption
   - The tracker code produced for the ballot
-- The decryption of each spoiled ballot
-  _ The selections made on the ballot
-  _ The cleartext representation of the selections
-  _ Partial decryptions by each guardian of each option
-  _ Proofs of each partial decryption
-  _ Shares of each missing partial decryption (if any)
-  _ Proofs of shares of each missing partial decryption (if any) \* Lagrange coefficients used for replacement of any missing partial decryptions (if
-  any)
+* The decryption of each spoiled ballot
+  * The selections made on the ballot
+  * The cleartext representation of the selections
+  * Partial decryptions by each guardian of each option
+  * Proofs of each partial decryption
+  * Shares of each missing partial decryption (if any)
+  * Proofs of shares of each missing partial decryption (if any)
+  * Lagrange coefficients used for replacement of any missing partial decryptions (if
+any)
 - Tallies of each option in an election
   - The encrypted tally of each option
   - Full decryptions of each encrypted tally
