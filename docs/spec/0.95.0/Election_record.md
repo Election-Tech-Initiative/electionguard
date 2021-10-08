@@ -22,14 +22,14 @@ The record of an election should be a full accounting of all of the election art
   - The device information for the device that encrypted the ballot
   - The date and time of the ballot encryption
   - The tracker code produced for the ballot
-* The decryption of each spoiled ballot
-  * The selections made on the ballot
-  * The cleartext representation of the selections
-  * Partial decryptions by each guardian of each option
-  * Proofs of each partial decryption
-  * Shares of each missing partial decryption (if any)
-  * Proofs of shares of each missing partial decryption (if any)
-  * Lagrange coefficients used for replacement of any missing partial decryptions (if
+- The decryption of each spoiled ballot
+  - The selections made on the ballot
+  - The cleartext representation of the selections
+  - Partial decryptions by each guardian of each option
+  - Proofs of each partial decryption
+  - Shares of each missing partial decryption (if any)
+  - Proofs of shares of each missing partial decryption (if any)
+  - Lagrange coefficients used for replacement of any missing partial decryptions (if
 any)
 - Tallies of each option in an election
   - The encrypted tally of each option
