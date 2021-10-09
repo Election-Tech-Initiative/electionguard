@@ -49,13 +49,16 @@ nav:
           - Repositories: develop/Repositories.md
 
   - Specification:
-      - Current: spec/0.95.0/1_Overview.md
+      - Current:
+        - Overview: spec/0.95.0/1_Overview.md
         - Applications: spec/0.95.0/Applications.md
       - Data Format: spec/Data_Format.md
       - Badges: spec/Badges.md
       - Other Versions:
           - v0.85.0: spec/0.85.0/1_Overview.md
-          - v0.95.0: spec/0.95.0/1_Overview.md
+          - v0.95.0:
+            - Overview: spec/0.95.0/1_Overview.md
+            - Applications: spec/0.95.0/Applications.md
           - v1.0.0: spec/1.0.0/1_Overview.md
 
   - Contribute: contribute/index.md
