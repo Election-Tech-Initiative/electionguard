@@ -21,7 +21,7 @@ When a voter checks whether their ballot was included in the ElectionGuard publi
 
 ## Proposed Approach
 
-To maintain the security and integrity of the original election artifacts, rescans and recounts are guardian-based processes. This requirement presents potentially significant additional compute both for the local guardian device / [hardware security module][hardware-security-module] and any cloud-based approach to scale the cross-tally mapping.
+To maintain the security and integrity of the original election records, rescans and recounts are guardian-based processes. This requirement presents potentially significant additional compute both for the local guardian device / [hardware security module][hardware-security-module] and any cloud-based approach to scale the cross-tally mapping.
 
 ### Encrypting a Unique Ballot ID
 
