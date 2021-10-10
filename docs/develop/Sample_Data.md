@@ -29,9 +29,9 @@ Cast ballots will be tallied and spoiled ballots are decrypted.
 
 **Submitted Ballot Examples:** [minimal][minimal-election-ballot] | [small][small-election-ballot] | [full][full-election-ballot] | [hamilton][hamilton-election-ballot]
 
-## Election Records
+## Election Record
 
-Election Records are the files required at the end of the election to verify the election and are intended to be posted publicly. There should not be any sensitive data (eg: no guardian private keys) in the records. These include the following:
+Election Record are the files required at the end of the election to verify the election and are intended to be posted publicly. There should not be any sensitive data (eg: no guardian private keys) in the record. These include the following:
 
 - Manifest
 - Election Context
