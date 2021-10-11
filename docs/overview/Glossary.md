@@ -8,7 +8,7 @@ This Glossary attempts to address its different audiences with terms and constru
 
 - for election administrators, terms that map to their conception of the voting process and user experience;
 - for developers, efficient constructs and a grammar that conveys the appropriate action to be performed and the proper state of the entity they're working with;
-- for cryptographers and verifier contributors, consistency of usage between the specification and code, and sufficiently clear descriptions of the techniques and terms necessary for proper treatment and interpretation of all election record and processes; and
+- for cryptographers and verifier contributors, consistency of usage between the specification and code, and sufficiently clear descriptions of the techniques and terms necessary for proper treatment and interpretation of the election record and all processes; and
 - for everyone, clear articulation of the meaning and rationale for the different facets of end-to-end verifiability
 
 To illustrate what that means in practice, take one of the fundamental tenets of end-to-end verifiability: **_spoiling_**, **_challenging_**, or **_decrypting_** a ballot. Each of these words can mean the same thing sometimes but not always; it depends on the context of the usage.

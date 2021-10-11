@@ -78,7 +78,7 @@ Strictly speaking, the ballot manifest isn't necessary for ElectionGuard until t
 
 #### Public encryption key
 
-One of the core innovations of ElectionGuard is the use of multiple election guardians to administer the creation of election record. Guardians are intended to be independent, trustworthy individuals. They don't need to have technical skills, but they do need to physically perform tasks collectively with the other guardians at the beginning and end of elections.
+One of the core innovations of ElectionGuard is the use of multiple election guardians to administer the creation of the election record. Guardians are intended to be independent, trustworthy individuals. They don't need to have technical skills, but they do need to physically perform tasks collectively with the other guardians at the beginning and end of elections.
 
 As part of the election setup process, or any time prior, the guardians meet to create the public key that will be used by the precinct scanner to encrypt voter ballots. The
 
