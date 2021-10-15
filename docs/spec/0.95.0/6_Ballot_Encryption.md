@@ -6,18 +6,12 @@ An ElectionGuard ballot is comprised entirely of encryptions of one (indicating 
 * One (selected) is encrypted as $(g^R \bmod p, g ⋅ K^R \bmod p)$.
 
 Note that if multiple encrypted votes $(g^{R_i} \bmod p, g^{V_i} ⋅ K^{R_i} \bmod p)$ are formed, their component-wise product $(g^{\sum_iR_i} \bmod p, g^{\sum_iV_i} ⋅ K^{\sum_iR_i} \bmod p)$ serves as an encryption of $\sum_iV_i –$
-which is the tally of those votes.[^19]
+which is the tally of those votes.[^1]
 
-A contest in an election consists of a set of options together with a selection limit that indicates the number of selections that are allowed to be made in that contest. In most elections, most contests have a selection limit of one. However, a larger selection limit (e.g., select up to three) is not uncommon in some elections. Approval voting can be achieved by setting the selection limit to the total number of options in a contest. Ranked choice voting is not supported in this version of ElectionGuard, but it may be enabled in a future version.[^20]
- Also, write-ins are assumed to be explicitly registered or allowed to be lumped into a single “write-ins” category for the purpose of verifiable tallying. Verifiable tallying of free-form write-ins may be best done with a MixNet[^20] design.
+A contest in an election consists of a set of options together with a selection limit that indicates the number of selections that are allowed to be made in that contest. In most elections, most contests have a selection limit of one. However, a larger selection limit (e.g., select up to three) is not uncommon in some elections. Approval voting can be achieved by setting the selection limit to the total number of options in a contest. Ranked choice voting is not supported in this version of ElectionGuard, but it may be enabled in a future version.[^2]
+ Also, write-ins are assumed to be explicitly registered or allowed to be lumped into a single “write-ins” category for the purpose of verifiable tallying. Verifiable tallying of free-form write-ins may be best done with a MixNet[^3] design.
 
 A legitimate vote in a contest consists of a set of selections with cardinality not exceeding the selection limit of that contest. To accommodate legitimate undervotes, the internal representation of a contest is augmented with “placeholder” options equal in number to the selection limit. Placeholder options are selected as necessary to force the total number of selections made in a contest to be equal to the selection limit. When the selection limit is one, for example, the single placeholder option can be thought of as a “none of the above” option.
-
-[^19]: The initial decryption actually forms the value $g^{\sum_iV_i}\bmod p$. However, since $\sum_iV_i$ is a relatively small value, it can be effectively computed from $g^{\sum_iV_i}\bmod p$ by means of an exhaustive search or similar methods.
-
-[^20]: Benaloh J., Moran. T, Naish L., Ramchen K., and Teague V. Shuffle-Sum: Coercion-Resistant Verifiable Tallying for STV Voting (2009) in Transactions of Information Forensics and Security.
-
-[^21]: Chaum D. Untraceable Electronic Mail, Return Addresses, and Digital Pseudonyms (1981) Communications of the ACM.
 
 With larger selection limits, the number of placeholder options selected corresponds to the number of additional options that a voter could have selected in a contest.
 
@@ -128,11 +122,9 @@ The final step in proving that a ballot is well-formed is demonstrating that the
 
 <u>NIZK Proof that $(\alpha, \beta)$ is an encryption of $L$  (given knowledge of aggregate encryption nonce $R$)</u>
 
-An additional Chaum-Pedersen proof of $(\alpha,\beta)$ being an encryption of $L$ is performed by selecting a random $U$ in $ℤ_q$, publishing $(a,b) = (g^U \bmod p,K^U \bmod p)$, hashing these values together with election’s extended base hash $\bar{Q}$ to form a pseudo-random challenge $C = H(\bar{Q}, (\alpha, \beta), (a, b))$, and responding by publishing $V = (U + CR) \bmod q$.[^22]
+An additional Chaum-Pedersen proof of $(\alpha,\beta)$ being an encryption of $L$ is performed by selecting a random $U$ in $ℤ_q$, publishing $(a,b) = (g^U \bmod p,K^U \bmod p)$, hashing these values together with election’s extended base hash $\bar{Q}$ to form a pseudo-random challenge $C = H(\bar{Q}, (\alpha, \beta), (a, b))$, and responding by publishing $V = (U + CR) \bmod q$.[^4]
 
 Note that all of the above proofs can be performed directly by the entity performing the public key encryption of a ballot without access to the decryption key(s). All that is required is the nonces $R_i$ used for the individual selection encryptions.
-
-[^22]: One could simply release the aggregate nonce $R = \sum_iR_i \bmod q$ to complete this proof. However, since Chaum-Pedersen proofs are being performed elsewhere, it is simpler for a verifier to just repeat the same steps.
 
 !!! important
 
@@ -167,3 +159,11 @@ Upon completion of the encryption of each ballot, a tracking code is prepared fo
     (C) The closing hash $\bar{H} = H(H_ℓ,$"CLOSE"$)$ is correctly computed from the final tracking code $H_ℓ$.
 
 Once in possession of a tracking code (and never before), a voter is afforded an option to either cast the associated ballot or spoil it and restart the ballot preparation process. The precise mechanism for voters to make these selections may vary depending upon the instantiation, but this choice would ordinarily be made immediately after a voter is presented with the tracking code, and the status of the ballot would be undetermined until the decision is made. It is possible, for instance, for a voter to make the decision directly on the voting device, or a voter may instead be afforded an option to deposit the ballot in a receptacle or to take it to a poll worker to be spoiled. For vote-by-mail scenarios, a voter can be sent (hashes of) two complete sets of encryptions for each selectable option and can effect a ballot challenge implicitly by choosing which encryptions to return.
+
+[^1]: The initial decryption actually forms the value $g^{\sum_iV_i}\bmod p$. However, since $\sum_iV_i$ is a relatively small value, it can be effectively computed from $g^{\sum_iV_i}\bmod p$ by means of an exhaustive search or similar methods.
+
+[^2]: Benaloh J., Moran. T, Naish L., Ramchen K., and Teague V. Shuffle-Sum: Coercion-Resistant Verifiable Tallying for STV Voting (2009) in Transactions of Information Forensics and Security.
+
+[^3]: Chaum D. Untraceable Electronic Mail, Return Addresses, and Digital Pseudonyms (1981) Communications of the ACM.
+
+[^4]: One could simply release the aggregate nonce $R = \sum_iR_i \bmod q$ to complete this proof. However, since Chaum-Pedersen proofs are being performed elsewhere, it is simpler for a verifier to just repeat the same steps.
