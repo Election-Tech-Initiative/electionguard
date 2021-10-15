@@ -16,7 +16,7 @@ For example, many voting jurisdictions already have a procedure called _ballot s
 
 ElectionGuard uses this spoil process to enable a voter to test the integrity of the system capturing their vote. Effectively, the voter acts as if they are going to vote, submitting their ballot into the scanner and enabling it to process and interpret the ballot. After the encryption of the ballot has occurred, and the verification code has been generated, the voter can decide NOT to cast this ballot via some kind of option on the summary screen presented by the scanner.
 
-End-to-end verifiability mandates that these _challenged ballots_, unlike _cast ballots_, be published separately from the tally, and in addition that they be decrypted and published in their decrypted state. When voters use their verification code to look up the provenance of these challenged ballots after the election artifacts have been published, they will be able to see both that the ballot they challenged was NOT included in the tally, and also what its contents would have been if it were.
+End-to-end verifiability mandates that these _challenged ballots_, unlike _cast ballots_, be published separately from the tally, and in addition that they be decrypted and published in their decrypted state. When voters use their verification code to look up the provenance of these challenged ballots after the election record have been published, they will be able to see both that the ballot they challenged was NOT included in the tally, and also what its contents would have been if it were.
 
 When the contents of a challenged ballot are revealed to the voter and the selections match, their confidence about the provenance of their cast ballot is ideally bolstered. If the contents do not match their expectation, they should be given the means to flag this situation to election administrators to investigate.
 
@@ -78,7 +78,7 @@ Strictly speaking, the ballot manifest isn't necessary for ElectionGuard until t
 
 #### Public encryption key
 
-One of the core innovations of ElectionGuard is the use of multiple election guardians to administer the creation of election artifacts. Guardians are intended to be independent, trustworthy individuals. They don't need to have technical skills, but they do need to physically perform tasks collectively with the other guardians at the beginning and end of elections.
+One of the core innovations of ElectionGuard is the use of multiple election guardians to administer the creation of the election record. Guardians are intended to be independent, trustworthy individuals. They don't need to have technical skills, but they do need to physically perform tasks collectively with the other guardians at the beginning and end of elections.
 
 As part of the election setup process, or any time prior, the guardians meet to create the public key that will be used by the precinct scanner to encrypt voter ballots. The
 
