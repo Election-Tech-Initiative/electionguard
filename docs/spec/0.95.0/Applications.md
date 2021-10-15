@@ -1,4 +1,4 @@
-# Applications
+# Applications to end-to-end verifiability and risk-limiting audits
 
 The methods described in this specification can be used to enable either end-to-end (E2E) verifiability or enhanced risk-limiting audits (RLAs). In both cases, the ballots are individually encrypted and proofs are provided to allow observers to verify that the set of encrypted ballots is consistent with the announced tallies in an election.
 
