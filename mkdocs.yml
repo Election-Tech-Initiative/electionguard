@@ -26,6 +26,7 @@ nav:
               - Publish Record: basics/steps/5_Publish_Record.md
               - Verification: basics/steps/6_Verification.md
       - Concepts:
+          - Structures and Processes: concepts/Structure_and_Processes.md
           - Election Manifest:
               - Building: concepts/Manifest_Building.md
               - Example: concepts/Manifest_Example.md
@@ -49,18 +50,25 @@ nav:
           - Repositories: develop/Repositories.md
 
   - Specification:
-      - Current: spec/0.95.0/1_Overview.md
+      - Current:
+        - Overview: spec/0.95.0/1_Overview.md
+        - Acknowledgements: spec/0.95.0/Acknowledgements.md
       - Data Format: spec/Data_Format.md
       - Badges: spec/Badges.md
       - Other Versions:
           - v0.85.0: spec/0.85.0/1_Overview.md
-          - v0.95.0: spec/0.95.0/1_Overview.md
+          - v0.95.0:
+            - Overview: spec/0.95.0/1_Overview.md
+            - Acknowledgements: spec/0.95.0/Acknowledgements.md
           - v1.0.0: spec/1.0.0/1_Overview.md
 
   - Contribute: contribute/index.md
 plugins:
   - search
-  - mermaid2
+  - mermaid2:
+      arguments:
+        securityLevel: "loose"
+        htmlLabels: true
   - redirects:
       redirect_maps:
         "hacktoberfest.md": "contribute/index.md"
