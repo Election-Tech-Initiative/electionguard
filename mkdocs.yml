@@ -60,6 +60,7 @@ nav:
           - v0.95.0:
             - Overview: spec/0.95.0/1_Overview.md
             - Acknowledgements: spec/0.95.0/Acknowledgements.md
+            - Ballot Encryption: /spec/0.95.0/6_Ballot_Encryption.md
           - v1.0.0: spec/1.0.0/1_Overview.md
 
   - Contribute: contribute/index.md
