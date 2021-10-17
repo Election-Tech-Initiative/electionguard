@@ -105,4 +105,4 @@ Guardians then publicly report having confirmed or failed to confirm this comput
 !
 An election verifier must verify the correct computation of the joint election public key and extended base hash.
  (A) 𝑄̅ =𝐻(𝑄,𝐾<sub>1,0</sub>,𝐾<sub>1,1</sub>,𝐾<sub>1,2</sub>, … ,𝐾<sub>1,𝑘−1</sub>,𝐾<sub>2,0</sub>,𝐾<sub>2,1</sub>,𝐾<sub>2,2</sub>, … ,𝐾<sub>2,𝑘−1</sub>, … ,𝐾<sub>𝑛,0</sub>,𝐾<sub>𝑛,1</sub>,𝐾<sub>𝑛,2</sub>, … , 𝐾<sub>𝑛,𝑘−1</sub>) 
- (B) 𝐾 = $\pi_{i=1}^{n}K_imod p$ 
+ (B) 𝐾 = $\pi_{i=1}^{n}K_imod p$ \
