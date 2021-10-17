@@ -3,8 +3,8 @@
 
  Before an election, the number of guardians (𝑛) is fixed together with a quorum value (𝑘) that describes the number of guardians necessary to decrypt tallies and produce election verification data. The values 𝑛 and 𝑘 are integers subject to the constraint that 1 ≤ 𝑘 ≤ 𝑛. Canvassing board members can often serve the role of election guardians, and typical values for 𝑛 and 𝑘 could be 5 and 3 – indicating that 3 of 5 canvassing board members must cooperate to produce the artifacts that enable election verification. The reason for not setting the quorum value 𝑘 too low is that it will also be possible for 𝑘 guardians to decrypt individual ballots.
  
-!!! 
-Note that decryption of individual ballots does not directly compromise voter privacy since links between encrypted ballots and the voters who cast them are not retained by the system. However, voters receive verification codes that can be associated with individual encrypted ballots, so any group that has the ability to decrypt individual ballots can also coerce voters by demanding to see their tracking codes.
+
+    Note that decryption of individual ballots does not directly compromise voter privacy since links between encrypted ballots and the voters who cast them are not retained by the system. However, voters receive verification codes that can be associated with individual encrypted ballots, so any group that has the ability to decrypt individual ballots can also coerce voters by demanding to see their tracking codes.
 
 Threshold ElGamal encryption is used for encryption of ballots. This form of encryption makes it very easy to combine individual guardian public keys into a single public key for encrypting votes and ballots. It also offers a homomorphic property that allows individual encrypted votes to be combined to form encrypted tallies. 
 
@@ -25,7 +25,7 @@ The 𝑛 guardians of an election are denoted by 𝑇1, 𝑇2, … , 𝑇𝑛. E
 The joint election public key will be
 
 
-$$K= \Pi_{i=1}^{n} K_i mod  p.$$
+$$ K= \Pi_{i=1}^{n} K_i mod  p.$$
  
 
  To enable robustness and allow for the possibility of missing guardians at the conclusion of an election, the ElectionGuard key generation includes a sharing of private keys between guardians to enable decryption by any 𝑘 guardians. This sharing is verifiable, so that receiving guardians can confirm that the shares they receive are meaningful; and the process allows for decryption without explicitly reconstructing private keys of missing guardians.
@@ -65,20 +65,20 @@ This Non-Interactive Zero-Knowledge (NIZK) proof proceeds as follows.
 
 For each 0 ≤ 𝑗 < 𝑘, Guardian 𝑇<sub>𝑖</sub> generates random integer values 𝑅<sub>𝑖,𝑗</sub> in ℤ<sub>𝑞</sub> and computes ℎ<sub>𝑖,𝑗</sub> = 𝑔 <sup>𝑅<sub>𝑖,𝑗</sub></sup> mod 𝑝. Then, using the hash function SHA-256 (as defined in NIST PUB FIPS 180- 4 <sup>16</sup>), guardian 𝑇<sub>𝑖</sub> then performs a single hash computation 𝑐<sub>𝑖,𝑗</sub> = 𝐻(𝑄,𝐾<sub>𝑖,𝑗</sub> , ℎ<sub>𝑖,𝑗</sub>) mod 𝑞 and publishes the values 𝐾<sub>𝑖,𝑗</sub> , ℎ<sub>𝑖,𝑗</sub> , 𝑐<sub>𝑖,𝑗</sub> , and 𝑢<sub>𝑖,𝑗</sub> = (𝑅<sub>𝑖,𝑗</sub> + 𝑐<sub>𝑖</sub>,𝑗𝑎<sub>𝑖,𝑗</sub>) mod 𝑞.
 
-!!!Note
+!!! 
 
-An election verifier must confirm the following for each guardian 𝑇<sub>𝑖</sub> and for each 𝑗 ∈ ℤ<sub>𝑘</sub>: 
-(A) The challenge 𝑐<sub>𝑖,𝑗</sub> is correctly computed as 𝑐<sub>𝑖,𝑗</sub> = 𝐻(𝑄,𝐾<sub>𝑖,𝑗</sub> , ℎ<sub>𝑖,𝑗</sub>) mod 𝑞. 
-(B) The equation 𝑔 <sup>𝑢<sub>𝑖,𝑗</sub></sup> mod 𝑝 = ℎ<sub>𝑖,𝑗</sub>𝐾<sub>𝑖,𝑗</sub><sup> 𝑐<sub>𝑖,𝑗<sub></sup> mod 𝑝 is satisfied.
+    An election verifier must confirm the following for each guardian $$𝑇_𝑖$ and for each 𝑗 ∈ ℤ<sub>𝑘</sub>: 
+    (A) The challenge 𝑐<sub>𝑖,𝑗</sub> is correctly computed as 𝑐<sub>𝑖,𝑗</sub> = 𝐻(𝑄,𝐾<sub>𝑖,𝑗</sub> , ℎ<sub>𝑖,𝑗</sub>) mod 𝑞. 
+    (B) The equation 𝑔 <sup>𝑢<sub>𝑖,𝑗</sub></sup> mod 𝑝 = ℎ<sub>𝑖,𝑗</sub>𝐾<sub>𝑖,𝑗</sub><sup> 𝑐<sub>𝑖,𝑗<sub></sup> mod 𝑝 is satisfied.
 
-It is worth noting here that for any fixed constant 𝛼, the value 𝑔 <sup>𝑃<sub>𝑖</sub> (𝛼)</sup> mod 𝑝 can be computed entirely from the published commitments as
+    It is worth noting here that for any fixed constant 𝛼, the value 𝑔 <sup>𝑃<sub>𝑖</sub> (𝛼)</sup> mod 𝑝 can be computed entirely from the published commitments as
 
 ---
 <sup><sup>16</sup> NIST (2015) Secure Hash Standard (SHS). In: FIPS 180-4. [https://csrc.nist.gov/publications/detail/fips/180/4/final](https://csrc.nist.gov/publications/detail/fips/180/4/final)</sup>
 
 
  
-𝑔 <sup>𝑃<sub>𝑖</sub> (𝛼)</sup> = 𝑔<sup>$\sum_{j=0}^{k-1}$ </sup>𝑎<sub>𝑖,𝑗</sub>   mod 𝑝 = $\pi_{j=0}^{k-1}$𝑔<sup> 𝑎<sub>𝑖,𝑗<sup>𝛼<sup>j</sup></sup><sub></sup> = 
+𝑔 𝑃<sub>𝑖</sub> (𝛼)</sup> = 𝑔<sup>$\sum_{j=0}^{k-1}$ </sup>𝑎<sub>𝑖,𝑗</sub>   mod 𝑝 = $\pi_{j=0}^{k-1}$𝑔<sup> 𝑎<sub>𝑖,𝑗<sup>𝛼<sup>j</sup></sup><sub></sup> = 
 $\pi_{j=0}^{k-1}$ K<sub>i,j</sub><sup>𝛼<sup>j</sup></sup> $\mod p$
  
 
@@ -86,8 +86,8 @@ $\pi_{j=0}^{k-1}$ K<sub>i,j</sub><sup>𝛼<sup>j</sup></sup> $\mod p$
 
  
 
-!
-Although this formula includes double exponentiation – raising a given value to the power 𝛼<sup> 𝑗</sup> – in what follows, 𝛼 and 𝑗 will always be small values (bounded by 𝑛). This can also be reduced if desired since the same result will be achieved if the exponents 𝛼 <sup>𝑗</sup> are reduced to 𝛼<sup> 𝑗</sup> mod 𝑞.
+
+    Although this formula includes double exponentiation – raising a given value to the power $𝛼^𝑗$ – in what follows, 𝛼 and 𝑗 will always be small values (bounded by 𝑛). This can also be reduced if desired since the same result will be achieved if the exponents 𝛼 <sup>𝑗</sup> are reduced to 𝛼<sup> 𝑗</sup> mod 𝑞.
 
 
 To share secret values amongst each other, it is assumed that each guardian 𝑇<sub>𝑖 </sub>has previously shared an auxiliary public encryption function 𝐸<sub>𝑖</sub> with the group.<sup>17</sup> Each guardian 𝑇<sub>𝑖</sub> then publishes the encryption 𝐸<sub>ℓ</sub> (𝑅<sub>𝑖,ℓ</sub> , 𝑃<sub>𝑖</sub> (ℓ) ) for every other guardian 𝑇<sub>ℓ</sub> – where 𝑅<sub>𝑖,ℓ</sub> is a random nonce. 
@@ -103,13 +103,13 @@ Guardians then publicly report having confirmed or failed to confirm this comput
 ---
 <sup><sup>17</sup> A “traditional” ElGamal public key is fine for this purpose. But the baseline ElectionGuard parameters 𝑝 and 𝑞 are tuned for homomorphic purposes and are not well-suited for encrypting large values. The ElectionGuard guardian keys can be used by breaking a message into small pieces (e.g. individual bytes) and encrypting a large value as a sequence of small values. However, traditional public-key encryption methods are more efficient. Since this key is only used internally, its form is not specified herein. 
 <sup>18</sup> It is also permissible to dismiss any guardian that makes a false claim of malfeasance. However, this is not required as the sensitive information that is released as a result of the claim could have been released by the claimant in any case.</sup>
-<sub>
-</sub>
-!
-An election verifier must verify the correct computation of the joint election public key and extended base hash.
- (A) 𝑄̅ =𝐻(𝑄,𝐾<sub>1,0</sub>,𝐾<sub>1,1</sub>,𝐾<sub>1,2</sub>, … ,𝐾<sub>1,𝑘−1</sub>,𝐾<sub>2,0</sub>,𝐾<sub>2,1</sub>,𝐾<sub>2,2</sub>, … ,𝐾<sub>2,𝑘−1</sub>, … ,𝐾<sub>𝑛,0</sub>,𝐾<sub>𝑛,1</sub>,𝐾<sub>𝑛,2</sub>, … , 𝐾<sub>𝑛,𝑘−1</sub>) 
 
- (B)
- $$ 
-  𝐾 = \pi_{i=1}^{n}K_imod p
- $$
+
+    An election verifier must verify the correct computation of the joint election public key and extended base hash.
+    (A) 𝑄̅ =𝐻(𝑄,𝐾<sub>1,0</sub>,𝐾<sub>1,1</sub>,𝐾<sub>1,2</sub>, … ,𝐾<sub>1,𝑘−1</sub>,𝐾<sub>2,0</sub>,𝐾<sub>2,1</sub>,𝐾<sub>2,2</sub>, … ,𝐾<sub>2,𝑘−1</sub>, … ,𝐾<sub>𝑛,0</sub>,𝐾<sub>𝑛,1</sub>,𝐾<sub>𝑛,2</sub>, … , 𝐾<sub>𝑛,𝑘−1</sub>) 
+    (B)
+    $$ 
+    𝐾 = \pi_{i=1}^{n}K_imod p
+    $$
+
+ 
