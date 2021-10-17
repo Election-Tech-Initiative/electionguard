@@ -17,14 +17,17 @@ The guardians of an election will each generate a public-private key pair. The p
 
 To accommodate the possibility that one or more of the guardians will not be available at the conclusion of the election to form their partial decryptions, the guardians will cryptographically share15 their private keys amongst each other during key generation in a manner to be detailed in the next section. A pre-determined threshold value (𝑘) out of the (𝑛) guardians will be necessary to produce a full decryption. 
 
-Additionally, each guardian will also generate an auxiliary public-private key pair. These auxiliary keys will be used by the guardians to exchange fragments of their principal voteencryption keys and for other scenarios in which non-vote data may need to be encrypted.
+Additionally, each guardian will also generate an auxiliary public-private key pair. These auxiliary keys will be used by the guardians to exchange fragments of their principal vote encryption keys and for other scenarios in which non-vote data may need to be encrypted.
 
 ## *Overview of key generation*
 The 𝑛 guardians of an election are denoted by 𝑇1, 𝑇2, … , 𝑇𝑛. Each guardian 𝑇𝑖 generates an independent ElGamal public-private key pair by generating a random integer secret 𝑠𝑖 ∈ ℤ𝑞 and forming the public key 𝐾𝑖 = 𝑔 𝑠𝑖 mod 𝑝. Each of these public keys will be published in the election record together with a non-interactive zero-knowledge Schnorr proof of knowledge of possession of the associated private key.
 
 The joint election public key will be
 
-$$K= \Pi_{i=1}^{n} K_i mod  p.$$
+
+$$
+K= \Pi_{i=1}^{n} K_i mod  p.
+$$
  
 
  To enable robustness and allow for the possibility of missing guardians at the conclusion of an election, the ElectionGuard key generation includes a sharing of private keys between guardians to enable decryption by any 𝑘 guardians. This sharing is verifiable, so that receiving guardians can confirm that the shares they receive are meaningful; and the process allows for decryption without explicitly reconstructing private keys of missing guardians.
