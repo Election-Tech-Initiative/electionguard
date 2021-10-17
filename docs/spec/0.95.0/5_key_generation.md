@@ -25,9 +25,7 @@ The 𝑛 guardians of an election are denoted by 𝑇1, 𝑇2, … , 𝑇𝑛. E
 The joint election public key will be
 
 
-$
-K= \Pi_{i=1}^{n} K_i mod  p.
-$
+$$K= \Pi_{i=1}^{n} K_i mod  p.$$
  
 
  To enable robustness and allow for the possibility of missing guardians at the conclusion of an election, the ElectionGuard key generation includes a sharing of private keys between guardians to enable decryption by any 𝑘 guardians. This sharing is verifiable, so that receiving guardians can confirm that the shares they receive are meaningful; and the process allows for decryption without explicitly reconstructing private keys of missing guardians.
