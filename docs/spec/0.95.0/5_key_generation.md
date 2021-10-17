@@ -25,9 +25,9 @@ The 𝑛 guardians of an election are denoted by 𝑇1, 𝑇2, … , 𝑇𝑛. E
 The joint election public key will be
 
 
-$$
+$
 K= \Pi_{i=1}^{n} K_i mod  p.
-$$
+$
  
 
  To enable robustness and allow for the possibility of missing guardians at the conclusion of an election, the ElectionGuard key generation includes a sharing of private keys between guardians to enable decryption by any 𝑘 guardians. This sharing is verifiable, so that receiving guardians can confirm that the shares they receive are meaningful; and the process allows for decryption without explicitly reconstructing private keys of missing guardians.
@@ -35,9 +35,9 @@ $$
 Each guardian 𝑇𝑖 generates 𝑘 − 1 random polynomial coefficients 𝑎<sub>𝑖,𝑗</sub> such that 0 < 𝑗 < 𝑘 and 0 ≤ 𝑎<sub>𝑖,𝑗</sub>  < 𝑞 and forms the polynomial
 
 
-$$
+$
 P_i(x) =  \sum_{j=0}^{k-1} a_{ij} x^jmod  q
-$$
+$
  
 
 
