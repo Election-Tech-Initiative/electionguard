@@ -33,7 +33,9 @@ $$
 Each guardian 𝑇𝑖 generates 𝑘 − 1 random polynomial coefficients 𝑎<sub>𝑖,𝑗</sub> such that 0 < 𝑗 < 𝑘 and 0 ≤ 𝑎<sub>𝑖,𝑗</sub>  < 𝑞 and forms the polynomial
 
 
-$P_i(x)$ =  $\sum_{j=0}^{k-1}$ a<sub>ij</sub> $x^j$$mod  q$
+$$
+P_i(x) =  \sum_{j=0}^{k-1} a_{ij} x^jmod  q
+$$
  
 
 
@@ -50,7 +52,9 @@ At the conclusion of the election, individual encrypted ballots will be homomorp
  
 Each guardian 𝑇<sub>𝑖</sub> in an election with a decryption threshold of 𝑘 generates 𝑘 secret polynomial coefficients 𝑎𝑖,𝑗 such that 0 ≤ 𝑗 < 𝑘 and 0 ≤ 𝑎<sub>𝑖,𝑗</sub> < 𝑞 and forms the polynomial
 
-$P_i(x)$ =$\sum_{j=0}^{k-1}$a<sub>ij</sub>$x^j$ $mod q$
+$$
+P_i(x) =\sum_{j=0}^{k-1}a_{ij}x^j mod q
+$$
  
 
 Guardian 𝑇<sub>𝑖</sub> then publishes commitments 𝐾<sub>𝑖,𝑗</sub> = 𝑔 <sup>𝑎<sub>𝑖,𝑗<sub></sup> mod 𝑝 for each of its random polynomial coefficients. The constant term 𝑎<sub>𝑖,0</sub> of this polynomial will serve as the private key for guardian 𝑇<sub>𝑖</sub> , and for convenience we denote 𝑠<sub>𝑖</sub> = 𝑎<sub>𝑖,0</sub>, and its commitment 𝐾<sub>𝑖,0</sub> will serve as the public key for guardian 𝑇<sub>𝑖</sub>  and will also be denoted as 𝐾<sub>𝑖</sub> = 𝐾<sub>𝑖,0</sub>.
@@ -105,4 +109,8 @@ Guardians then publicly report having confirmed or failed to confirm this comput
 !
 An election verifier must verify the correct computation of the joint election public key and extended base hash.
  (A) 𝑄̅ =𝐻(𝑄,𝐾<sub>1,0</sub>,𝐾<sub>1,1</sub>,𝐾<sub>1,2</sub>, … ,𝐾<sub>1,𝑘−1</sub>,𝐾<sub>2,0</sub>,𝐾<sub>2,1</sub>,𝐾<sub>2,2</sub>, … ,𝐾<sub>2,𝑘−1</sub>, … ,𝐾<sub>𝑛,0</sub>,𝐾<sub>𝑛,1</sub>,𝐾<sub>𝑛,2</sub>, … , 𝐾<sub>𝑛,𝑘−1</sub>) 
- (B) 𝐾 = $\pi_{i=1}^{n}K_imod p$ \
+
+ (B)
+ $$ 
+  𝐾 = \pi_{i=1}^{n}K_imod p
+ $$
