@@ -33,9 +33,8 @@ $$K= \Pi_{i=1}^{n} K_i mod  p.$$
 Each guardian 𝑇𝑖 generates 𝑘 − 1 random polynomial coefficients 𝑎<sub>𝑖,𝑗</sub> such that 0 < 𝑗 < 𝑘 and 0 ≤ 𝑎<sub>𝑖,𝑗</sub>  < 𝑞 and forms the polynomial
 
 
-$
-P_i(x) =  \sum_{j=0}^{k-1} a_{ij} x^jmod  q
-$
+
+$$ P_i(x) =  \sum_{j=0}^{k-1} a_{ij} x^jmod  q $$
  
 
 
@@ -52,9 +51,8 @@ At the conclusion of the election, individual encrypted ballots will be homomorp
  
 Each guardian 𝑇<sub>𝑖</sub> in an election with a decryption threshold of 𝑘 generates 𝑘 secret polynomial coefficients 𝑎𝑖,𝑗 such that 0 ≤ 𝑗 < 𝑘 and 0 ≤ 𝑎<sub>𝑖,𝑗</sub> < 𝑞 and forms the polynomial
 
-$$
-P_i(x) =\sum_{j=0}^{k-1}a_{ij}x^j mod q
-$$
+$$P_i(x) =\sum_{j=0}^{k-1}a_{ij}x^j mod q$$
+
  
 
 Guardian 𝑇<sub>𝑖</sub> then publishes commitments 𝐾<sub>𝑖,𝑗</sub> = 𝑔 <sup>𝑎<sub>𝑖,𝑗<sub></sup> mod 𝑝 for each of its random polynomial coefficients. The constant term 𝑎<sub>𝑖,0</sub> of this polynomial will serve as the private key for guardian 𝑇<sub>𝑖</sub> , and for convenience we denote 𝑠<sub>𝑖</sub> = 𝑎<sub>𝑖,0</sub>, and its commitment 𝐾<sub>𝑖,0</sub> will serve as the public key for guardian 𝑇<sub>𝑖</sub>  and will also be denoted as 𝐾<sub>𝑖</sub> = 𝐾<sub>𝑖,0</sub>.
@@ -67,7 +65,8 @@ This Non-Interactive Zero-Knowledge (NIZK) proof proceeds as follows.
 
 For each 0 ≤ 𝑗 < 𝑘, Guardian 𝑇<sub>𝑖</sub> generates random integer values 𝑅<sub>𝑖,𝑗</sub> in ℤ<sub>𝑞</sub> and computes ℎ<sub>𝑖,𝑗</sub> = 𝑔 <sup>𝑅<sub>𝑖,𝑗</sub></sup> mod 𝑝. Then, using the hash function SHA-256 (as defined in NIST PUB FIPS 180- 4 <sup>16</sup>), guardian 𝑇<sub>𝑖</sub> then performs a single hash computation 𝑐<sub>𝑖,𝑗</sub> = 𝐻(𝑄,𝐾<sub>𝑖,𝑗</sub> , ℎ<sub>𝑖,𝑗</sub>) mod 𝑞 and publishes the values 𝐾<sub>𝑖,𝑗</sub> , ℎ<sub>𝑖,𝑗</sub> , 𝑐<sub>𝑖,𝑗</sub> , and 𝑢<sub>𝑖,𝑗</sub> = (𝑅<sub>𝑖,𝑗</sub> + 𝑐<sub>𝑖</sub>,𝑗𝑎<sub>𝑖,𝑗</sub>) mod 𝑞.
 
-!!!
+!!!Note
+
 An election verifier must confirm the following for each guardian 𝑇<sub>𝑖</sub> and for each 𝑗 ∈ ℤ<sub>𝑘</sub>: 
 (A) The challenge 𝑐<sub>𝑖,𝑗</sub> is correctly computed as 𝑐<sub>𝑖,𝑗</sub> = 𝐻(𝑄,𝐾<sub>𝑖,𝑗</sub> , ℎ<sub>𝑖,𝑗</sub>) mod 𝑞. 
 (B) The equation 𝑔 <sup>𝑢<sub>𝑖,𝑗</sub></sup> mod 𝑝 = ℎ<sub>𝑖,𝑗</sub>𝐾<sub>𝑖,𝑗</sub><sup> 𝑐<sub>𝑖,𝑗<sub></sup> mod 𝑝 is satisfied.
