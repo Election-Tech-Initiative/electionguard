@@ -3,8 +3,11 @@
 
  Before an election, the number of guardians (𝑛) is fixed together with a quorum value (𝑘) that describes the number of guardians necessary to decrypt tallies and produce election verification data. The values 𝑛 and 𝑘 are integers subject to the constraint that 1 ≤ 𝑘 ≤ 𝑛. Canvassing board members can often serve the role of election guardians, and typical values for 𝑛 and 𝑘 could be 5 and 3 – indicating that 3 of 5 canvassing board members must cooperate to produce the artifacts that enable election verification. The reason for not setting the quorum value 𝑘 too low is that it will also be possible for 𝑘 guardians to decrypt individual ballots.
  
+!!! note
 
-    Note that decryption of individual ballots does not directly compromise voter privacy since links between encrypted ballots and the voters who cast them are not retained by the system. However, voters receive verification codes that can be associated with individual encrypted ballots, so any group that has the ability to decrypt individual ballots can also coerce voters by demanding to see their tracking codes.
+          Note that decryption of individual ballots does not directly compromise voter privacy since links between encrypted ballots and the voters who cast them are not retained by the system. However, voters receive verification codes that can be associated with individual encrypted ballots, so any group that has the ability to decrypt individual ballots can also coerce voters by demanding to see their tracking codes.
+
+    
 
 Threshold ElGamal encryption is used for encryption of ballots. This form of encryption makes it very easy to combine individual guardian public keys into a single public key for encrypting votes and ballots. It also offers a homomorphic property that allows individual encrypted votes to be combined to form encrypted tallies. 
 
