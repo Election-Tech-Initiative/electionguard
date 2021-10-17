@@ -23,9 +23,8 @@ Additionally, each guardian will also generate an auxiliary public-private key p
 The 𝑛 guardians of an election are denoted by 𝑇1, 𝑇2, … , 𝑇𝑛. Each guardian 𝑇𝑖 generates an independent ElGamal public-private key pair by generating a random integer secret 𝑠𝑖 ∈ ℤ𝑞 and forming the public key 𝐾𝑖 = 𝑔 𝑠𝑖 mod 𝑝. Each of these public keys will be published in the election record together with a non-interactive zero-knowledge Schnorr proof of knowledge of possession of the associated private key.
 
 The joint election public key will be
-$$
-K= \Pi_{i=1}^{n} K_i mod  p.
-$$
+
+$$K= \Pi_{i=1}^{n} K_i mod  p.$$
  
 
  To enable robustness and allow for the possibility of missing guardians at the conclusion of an election, the ElectionGuard key generation includes a sharing of private keys between guardians to enable decryption by any 𝑘 guardians. This sharing is verifiable, so that receiving guardians can confirm that the shares they receive are meaningful; and the process allows for decryption without explicitly reconstructing private keys of missing guardians.
