@@ -1,4 +1,4 @@
-# ElectionGuard Structure
+# ElectionGuard Components
 
 This document describes the four principal components of ElectionGuard.
 
