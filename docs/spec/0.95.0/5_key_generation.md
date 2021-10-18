@@ -5,9 +5,7 @@
  
 !!! note
 
-          Note that decryption of individual ballots does not 
-          
-          directly compromise voter privacy since links between encrypted ballots and the voters who cast them are not retained by the system. However, voters receive verification codes that can be associated with individual encrypted ballots, so any group that has the ability to decrypt individual ballots can also coerce voters by demanding to see their tracking codes.
+        Note that decryption of individual ballots does not directly compromise voter privacy since links between encrypted ballots and the voters who cast them are not retained by the system. However, voters receive verification codes that can be associated with individual encrypted ballots, so any group that has the ability to decrypt individual ballots can also coerce voters by demanding to see their tracking codes.
 
     
 
@@ -70,7 +68,7 @@ This Non-Interactive Zero-Knowledge (NIZK) proof proceeds as follows.
 
 For each 0 ≤ 𝑗 < 𝑘, Guardian 𝑇<sub>𝑖</sub> generates random integer values 𝑅<sub>𝑖,𝑗</sub> in ℤ<sub>𝑞</sub> and computes ℎ<sub>𝑖,𝑗</sub> = 𝑔 <sup>𝑅<sub>𝑖,𝑗</sub></sup> mod 𝑝. Then, using the hash function SHA-256 (as defined in NIST PUB FIPS 180- 4 <sup>16</sup>), guardian 𝑇<sub>𝑖</sub> then performs a single hash computation 𝑐<sub>𝑖,𝑗</sub> = 𝐻(𝑄,𝐾<sub>𝑖,𝑗</sub> , ℎ<sub>𝑖,𝑗</sub>) mod 𝑞 and publishes the values 𝐾<sub>𝑖,𝑗</sub> , ℎ<sub>𝑖,𝑗</sub> , 𝑐<sub>𝑖,𝑗</sub> , and 𝑢<sub>𝑖,𝑗</sub> = (𝑅<sub>𝑖,𝑗</sub> + 𝑐<sub>𝑖</sub>,𝑗𝑎<sub>𝑖,𝑗</sub>) mod 𝑞.
 
-!!! 
+!!! note
 
     An election verifier must confirm the following for each guardian $$𝑇_𝑖$ and for each 𝑗 ∈ ℤ<sub>𝑘</sub>: 
     (A) The challenge 𝑐<sub>𝑖,𝑗</sub> is correctly computed as 𝑐<sub>𝑖,𝑗</sub> = 𝐻(𝑄,𝐾<sub>𝑖,𝑗</sub> , ℎ<sub>𝑖,𝑗</sub>) mod 𝑞. 
@@ -91,6 +89,7 @@ $\pi_{j=0}^{k-1}$ K<sub>i,j</sub><sup>𝛼<sup>j</sup></sup> $\mod p$
 
  
 
+!!! note
 
     Although this formula includes double exponentiation – raising a given value to the power $𝛼^𝑗$ – in what follows, 𝛼 and 𝑗 will always be small values (bounded by 𝑛). This can also be reduced if desired since the same result will be achieved if the exponents 𝛼 <sup>𝑗</sup> are reduced to 𝛼<sup> 𝑗</sup> mod 𝑞.
 
@@ -109,6 +108,7 @@ Guardians then publicly report having confirmed or failed to confirm this comput
 <sup><sup>17</sup> A “traditional” ElGamal public key is fine for this purpose. But the baseline ElectionGuard parameters 𝑝 and 𝑞 are tuned for homomorphic purposes and are not well-suited for encrypting large values. The ElectionGuard guardian keys can be used by breaking a message into small pieces (e.g. individual bytes) and encrypting a large value as a sequence of small values. However, traditional public-key encryption methods are more efficient. Since this key is only used internally, its form is not specified herein. 
 <sup>18</sup> It is also permissible to dismiss any guardian that makes a false claim of malfeasance. However, this is not required as the sensitive information that is released as a result of the claim could have been released by the claimant in any case.</sup>
 
+!!! note
 
     An election verifier must verify the correct computation of the joint election public key and extended base hash.
     (A) 𝑄̅ =𝐻(𝑄,𝐾<sub>1,0</sub>,𝐾<sub>1,1</sub>,𝐾<sub>1,2</sub>, … ,𝐾<sub>1,𝑘−1</sub>,𝐾<sub>2,0</sub>,𝐾<sub>2,1</sub>,𝐾<sub>2,2</sub>, … ,𝐾<sub>2,𝑘−1</sub>, … ,𝐾<sub>𝑛,0</sub>,𝐾<sub>𝑛,1</sub>,𝐾<sub>𝑛,2</sub>, … , 𝐾<sub>𝑛,𝑘−1</sub>) 
