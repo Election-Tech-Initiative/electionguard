@@ -1,5 +1,4 @@
- 
-# *Key Generation*
+ # Key Generation
 
  Before an election, the number of guardians (𝑛) is fixed together with a quorum value (𝑘) that describes the number of guardians necessary to decrypt tallies and produce election verification data. The values 𝑛 and 𝑘 are integers subject to the constraint that 1 ≤ 𝑘 ≤ 𝑛. Canvassing board members can often serve the role of election guardians, and typical values for 𝑛 and 𝑘 could be 5 and 3 – indicating that 3 of 5 canvassing board members must cooperate to produce the artifacts that enable election verification. The reason for not setting the quorum value 𝑘 too low is that it will also be possible for 𝑘 guardians to decrypt individual ballots.
  
