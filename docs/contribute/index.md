@@ -21,7 +21,7 @@ The SDK is comprised of five repositories:
 1. Learn about ElectionGuard and share the information
 2. Post questions or ideas in our [**discussion board**][election-guard-discussions]
 3. Join our [**weekly video office hours**][election-guard-weekly-office-hours]
-4. Develop on issues in the repos with tags of **`good first issue`** or **`help wanted`**
+4. Develop on issues in the repos with tags of **[good first issue][github-good-first-issue]** or **[help wanted][github-help-wanted]**
 5. Add to and improve documentation. Keep it Plain English and include [helpful images][undraw-illustrations].
 
 ## Contributions
@@ -52,3 +52,5 @@ ElectionGuard relies on its community for its success. For example, for end-to-e
 [dot-net-verifier]: https://github.com/brandon-irl/electionguard-dotnet "C# Verifier by Brandon Alexander"
 [java-verifier]: https://github.com/JohnLCaron/electionguard-java "Java Verifier by John Caron"
 [python-electionguard-verify]: https://github.com/nickboucher/electionguard-verify "Python Verifier by Nick Boucher"
+[github-good-first-issue]: https://github.com/microsoft/electionguard/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22 "Good first labeled issues on GitHub"
+[github-help-wanted]: https://github.com/microsoft/electionguard/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22 "Help wanted labeld issues on GitHub"
