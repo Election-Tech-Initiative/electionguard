@@ -26,6 +26,7 @@ nav:
               - Publish Record: basics/steps/5_Publish_Record.md
               - Verification: basics/steps/6_Verification.md
       - Concepts:
+          - Structures and Processes: concepts/Structure_and_Processes.md
           - Election Manifest:
               - Building: concepts/Manifest_Building.md
               - Example: concepts/Manifest_Example.md
@@ -52,6 +53,7 @@ nav:
       - Current: 
         - Overview: spec/0.95.0/1_Overview.md
         - ElectionGuard Structure: spec/0.95.0/2_ElectionGuard_Structure.md
+        - Acknowledgements: spec/0.95.0/Acknowledgements.md
       - Data Format: spec/Data_Format.md
       - Badges: spec/Badges.md
       - Other Versions:
@@ -59,12 +61,16 @@ nav:
           - v0.95.0: 
             - Overview: spec/0.95.0/1_Overview.md
             - ElectionGuard Structure: spec/0.95.0/2_ElectionGuard_Structure.md
+            - Acknowledgements: spec/0.95.0/Acknowledgements.md
           - v1.0.0: spec/1.0.0/1_Overview.md
 
   - Contribute: contribute/index.md
 plugins:
   - search
-  - mermaid2
+  - mermaid2:
+      arguments:
+        securityLevel: "loose"
+        htmlLabels: true
   - redirects:
       redirect_maps:
         "hacktoberfest.md": "contribute/index.md"
