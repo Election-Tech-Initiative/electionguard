@@ -15,8 +15,7 @@ The guardians of an election will each generate a public-private key pair. The p
 
  Ideally, at the conclusion of the election, each guardian will use its private key to form a verifiable partial decryption of each tally. These partial decryptions will then be combined to form full verifiable decryptions of the election tallies.
 
----
-<sup><sup>4</sup> If alternative parameters are allowed, election verifiers must confirm that 𝑝, 𝑞, 𝑟, and 𝑔 are such that both 𝑝 and 𝑞 are prime (this may be done probabilistically using the Miller-Rabin algorithm), that 𝑝 −1 = 𝑞𝑟 is satisfied, that 𝑞 is not a divisor of 𝑟, that 1 < 𝑔 < 𝑝, that 𝑔<sup> 𝑞</sup> mod 𝑝 = 1, and that generation of the parameters is consistent with the cited standard.</sup>
+
 
 To accommodate the possibility that one or more of the guardians will not be available at the conclusion of the election to form their partial decryptions, the guardians will cryptographically share15 their private keys amongst each other during key generation in a manner to be detailed in the next section. A pre-determined threshold value (𝑘) out of the (𝑛) guardians will be necessary to produce a full decryption. 
 
@@ -43,8 +42,8 @@ $$ P_i(x) =  \sum_{j=0}^{k-1} a_{ij} x^jmod  q $$
 
 by setting 𝑎<sub>𝑖,0</sub> equal to its secret value 𝑠<sub>𝑖</sub> . Guardian 𝑇<sub>𝑖</sub> then publishes commitments 𝐾<sub>𝑖,𝑗</sub> = 𝑔 <sup>𝑎<sub>𝑖,𝑗</sub></sup> mod 𝑝 to each of its random polynomial coefficients. As with the primary secret keys, each guardian should provide a Schnorr proof of knowledge of the secret coefficient value 𝑎<sub>𝑖𝑗</sub>, associated with each published commitment 𝐾<sub>𝑖,𝑗</sub> . Since polynomial coefficients will be generated and managed in precisely the same fashion as secret keys, they will be treated together in a single step below.
 
----
-<sup><sup>15</sup> Shamir A. How to Share a Secret. (1979) Communications of the ACM.</sup>
+
+
 
 At the conclusion of the election, individual encrypted ballots will be homomorphically combined into a single encrypted aggregate ballot – consisting of an encryption of the tally for each option offered to voters. Each guardian will use its secret key to generate a partial decryption of each encrypted tally value, and these partial decryptions will be combined into full decryptions. If any election guardians are missing during tallying, any set of 𝑘 guardians who are available can cooperate to reconstruct the missing partial decryption.
 
@@ -76,13 +75,14 @@ For each 0 ≤ 𝑗 < 𝑘, Guardian 𝑇<sub>𝑖</sub> generates random intege
 
     It is worth noting here that for any fixed constant 𝛼, the value 𝑔 <sup>𝑃<sub>𝑖</sub> (𝛼)</sup> mod 𝑝 can be computed entirely from the published commitments as
 
----
-<sup><sup>16</sup> NIST (2015) Secure Hash Standard (SHS). In: FIPS 180-4. [https://csrc.nist.gov/publications/detail/fips/180/4/final](https://csrc.nist.gov/publications/detail/fips/180/4/final)</sup>
+
 
 
  
-𝑔 𝑃<sub>𝑖</sub> (𝛼)</sup> = 𝑔<sup>$\sum_{j=0}^{k-1}$ </sup>𝑎<sub>𝑖,𝑗</sub>   mod 𝑝 = $\pi_{j=0}^{k-1}$𝑔<sup> 𝑎<sub>𝑖,𝑗<sup>𝛼<sup>j</sup></sup><sub></sup> = 
-$\pi_{j=0}^{k-1}$ K<sub>i,j</sub><sup>𝛼<sup>j</sup></sup> $\mod p$
+
+ 𝑔 𝑃_𝑖 (𝛼)</sup> = 𝑔<sup>$\sum_{j=0}^{k-1}$ </sup>𝑎<sub>𝑖,𝑗</sub>   mod 𝑝 = $\pi_{j=0}^{k-1}$𝑔<sup> 𝑎<sub>𝑖,𝑗<sup>𝛼<sup>j</sup></sup><sub></sup> = 
+$\pi_{j=0}^{k-1}$ K<sub>i,j</sub><sup>𝛼<sup>j</sup></sup> $\mod p
+
  
 
 
@@ -91,22 +91,24 @@ $\pi_{j=0}^{k-1}$ K<sub>i,j</sub><sup>𝛼<sup>j</sup></sup> $\mod p$
 
 !!! note
 
-    Although this formula includes double exponentiation – raising a given value to the power $𝛼^𝑗$ – in what follows, 𝛼 and 𝑗 will always be small values (bounded by 𝑛). This can also be reduced if desired since the same result will be achieved if the exponents 𝛼 <sup>𝑗</sup> are reduced to 𝛼<sup> 𝑗</sup> mod 𝑞.
+    Although this formula includes double exponentiation – raising a given value to the power $\alpha^𝑗$ – in what follows, 𝛼 and 𝑗 will always be small values (bounded by 𝑛). This can also be reduced if desired since the same result will be achieved if the exponents 𝛼 <sup>𝑗</sup> are reduced to 𝛼<sup> 𝑗</sup> mod 𝑞.
 
 
 To share secret values amongst each other, it is assumed that each guardian 𝑇<sub>𝑖 </sub>has previously shared an auxiliary public encryption function 𝐸<sub>𝑖</sub> with the group.<sup>17</sup> Each guardian 𝑇<sub>𝑖</sub> then publishes the encryption 𝐸<sub>ℓ</sub> (𝑅<sub>𝑖,ℓ</sub> , 𝑃<sub>𝑖</sub> (ℓ) ) for every other guardian 𝑇<sub>ℓ</sub> – where 𝑅<sub>𝑖,ℓ</sub> is a random nonce. 
 
-Guardian 𝑇<sub>ℓ</sub> can now decrypt each 𝑃<sub>𝑖</sub>(ℓ) encrypted to its public key and verify its validity against the commitments made by 𝑇<sub>𝑖</sub> to its coefficients 𝐾<sub>𝑖,0</sub>,𝐾<sub>𝑖,1</sub>, … ,𝐾<sub>𝑖,𝑘−1</sub> by confirming that the following equation holds:
+Guardian $𝑇_ℓ$ can now decrypt each $𝑃_i(ℓ)$ encrypted to its public key and verify its validity against the commitments made by $𝑇_𝑖$ to its coefficients $𝐾_{𝑖,0},𝐾_{𝑖,1}, … ,𝐾_{𝑖,𝑘−1}$ by confirming that the following equation holds:
 
-𝑔 <sup>𝑃<sub>𝑖</sub> (ℓ)</sup> mod 𝑝 =$\pi_{j=0}^{k-1}$(K<sub>i,j</sub>)<sup>ℓ<sup>j</sup></sup> $\mod p$
+
+$$
+𝑔 ^{𝑃_i (ℓ)} mod 𝑝 =\pi_{j=0}^{k-1} K_{i,j}^{ℓ^j}\mod p
+$$
 
 Guardians then publicly report having confirmed or failed to confirm this computation. If the recipient guardian 𝑇<sub>ℓ</sub> reports not receiving a suitable value 𝑃<sub>𝑖</sub>(ℓ), it becomes incumbent on the sending guardian 𝑇<sub>𝑖</sub> to publish this 𝑃<sub>𝑖</sub>(ℓ) together with the nonce 𝑅<sub>𝑖,ℓ</sub> it used to encrypt 𝑃<sub>𝑖</sub>(ℓ) under the public key 𝐸<sub>ℓ</sub> of recipient guardian 𝑇<sub>ℓ</sub> . If guardian 𝑇<sub>𝑖</sub> fails to produce a suitable 𝑃<sub>𝑖</sub>(ℓ) and nonce 𝑅<sub>𝑖,ℓ</sub> that match both the published encryption and the above equation, it should be excluded from the election and the key generation process should be restarted with an alternate guardian. If, however, the published 𝑃<sub>𝑖</sub> (ℓ) and 𝑅<sub>𝑖,ℓ</sub> satisfy both the published encryption and the equation above, the claim of malfeasance is dismissed and the key generation process continues undeterred.<sup>18</sup>
 
  Once the baseline parameters have been produced and confirmed, all of the public commitments 𝐾<sub>𝑖,𝑗</sub> are hashed together with the base hash 𝑄 to form an extended base hash 𝑄<sup>-</sup> that will form the basis of subsequent hash computations. The hash function SHA-256 will be used here and for all hash computations for the remainder of this document.
 
----
-<sup><sup>17</sup> A “traditional” ElGamal public key is fine for this purpose. But the baseline ElectionGuard parameters 𝑝 and 𝑞 are tuned for homomorphic purposes and are not well-suited for encrypting large values. The ElectionGuard guardian keys can be used by breaking a message into small pieces (e.g. individual bytes) and encrypting a large value as a sequence of small values. However, traditional public-key encryption methods are more efficient. Since this key is only used internally, its form is not specified herein. 
-<sup>18</sup> It is also permissible to dismiss any guardian that makes a false claim of malfeasance. However, this is not required as the sensitive information that is released as a result of the claim could have been released by the claimant in any case.</sup>
+
+
 
 !!! note
 
@@ -117,4 +119,12 @@ Guardians then publicly report having confirmed or failed to confirm this comput
     𝐾 = \pi_{i=1}^{n}K_imod p
     $$
 
- 
+[^14]: If alternative parameters are allowed, election verifiers
+must confirm that 𝑝, 𝑞, 𝑟, and 𝑔 are such that both 𝑝 and 𝑞 are prime (this may be done probabilistically using the Miller-Rabin algorithm), that 𝑝 −1 = 𝑞𝑟 is satisfied, that 𝑞 is not a divisor of 𝑟, that 1 < 𝑔 <  𝑝, that $𝑔^ 𝑞 mod 𝑝 = 1$, and that generation of the parameters is consistent with the cited standard.
+[^15]: Shamir A. How to Share a Secret. (1979) Communications of the ACM.
+[^16]: NIST (2015) Secure Hash Standard (SHS). In: FIPS 180-4. [https://csrc.nist.gov/publications/detail/fips/180/4/final](https://csrc.nist.gov/publications/detail/fips/180/4/final)
+
+[^17]: A “traditional” ElGamal public key is fine for this purpose. But the baseline ElectionGuard parameters 𝑝 and 𝑞 are tuned for homomorphic purposes and are not well-suited for encrypting large values. The ElectionGuard guardian keys can be used by breaking a message into small pieces (e.g. individual bytes) and encrypting a large value as a sequence of small values. However, traditional public-key encryption methods are more efficient. Since this key is only used internally, its form is not specified herein. 
+
+[^18]: It is also permissible to dismiss any guardian that makes a false claim of malfeasance. However, this is not required as the sensitive information that is released as a result of the claim could have been released by the claimant in any case.
+
