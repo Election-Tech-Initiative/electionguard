@@ -1,5 +1,4 @@
- 
-# *Key Generation*
+ # Key Generation
 
  Before an election, the number of guardians (𝑛) is fixed together with a quorum value (𝑘) that describes the number of guardians necessary to decrypt tallies and produce election verification data. The values 𝑛 and 𝑘 are integers subject to the constraint that 1 ≤ 𝑘 ≤ 𝑛. Canvassing board members can often serve the role of election guardians, and typical values for 𝑛 and 𝑘 could be 5 and 3 – indicating that 3 of 5 canvassing board members must cooperate to produce the artifacts that enable election verification. The reason for not setting the quorum value 𝑘 too low is that it will also be possible for 𝑘 guardians to decrypt individual ballots.
  
@@ -119,12 +118,14 @@ Guardians then publicly report having confirmed or failed to confirm this comput
     𝐾 = \pi_{i=1}^{n}K_imod p
     $$
 
+
 [^14]: If alternative parameters are allowed, election verifiers
 must confirm that 𝑝, 𝑞, 𝑟, and 𝑔 are such that both 𝑝 and 𝑞 are prime (this may be done probabilistically using the Miller-Rabin algorithm), that 𝑝 −1 = 𝑞𝑟 is satisfied, that 𝑞 is not a divisor of 𝑟, that 1 < 𝑔 <  𝑝, that $𝑔^ 𝑞 mod 𝑝 = 1$, and that generation of the parameters is consistent with the cited standard.
+
 [^15]: Shamir A. How to Share a Secret. (1979) Communications of the ACM.
+
 [^16]: NIST (2015) Secure Hash Standard (SHS). In: FIPS 180-4. [https://csrc.nist.gov/publications/detail/fips/180/4/final](https://csrc.nist.gov/publications/detail/fips/180/4/final)
 
 [^17]: A “traditional” ElGamal public key is fine for this purpose. But the baseline ElectionGuard parameters 𝑝 and 𝑞 are tuned for homomorphic purposes and are not well-suited for encrypting large values. The ElectionGuard guardian keys can be used by breaking a message into small pieces (e.g. individual bytes) and encrypting a large value as a sequence of small values. However, traditional public-key encryption methods are more efficient. Since this key is only used internally, its form is not specified herein. 
 
 [^18]: It is also permissible to dismiss any guardian that makes a false claim of malfeasance. However, this is not required as the sensitive information that is released as a result of the claim could have been released by the claimant in any case.
-
