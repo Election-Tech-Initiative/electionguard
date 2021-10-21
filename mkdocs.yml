@@ -50,16 +50,18 @@ nav:
           - Repositories: develop/Repositories.md
 
   - Specification:
-      - Current:
+      - Current: 
         - Overview: spec/0.95.0/1_Overview.md
+        - ElectionGuard Structure: spec/0.95.0/2_ElectionGuard_Structure.md
         - Acknowledgements: spec/0.95.0/Acknowledgements.md
         - Components: spec/0.95.0/3_ElectionGuard_Components.md
       - Data Format: spec/Data_Format.md
       - Badges: spec/Badges.md
       - Other Versions:
           - v0.85.0: spec/0.85.0/1_Overview.md
-          - v0.95.0:
+          - v0.95.0: 
             - Overview: spec/0.95.0/1_Overview.md
+            - ElectionGuard Structure: spec/0.95.0/2_ElectionGuard_Structure.md
             - Acknowledgements: spec/0.95.0/Acknowledgements.md
             - Components: spec/0.95.0/3_ElectionGuard_Components.md
           - v1.0.0: spec/1.0.0/1_Overview.md
