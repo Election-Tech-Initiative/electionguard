@@ -52,10 +52,10 @@ nav:
   - Specification:
       - Current: 
         - Overview: spec/0.95.0/1_Overview.md
-        - Key Generation: spec/0.95.0/5_Key_Generation.md
         - ElectionGuard Structure: spec/0.95.0/2_ElectionGuard_Structure.md
-        - Acknowledgements: spec/0.95.0/Acknowledgements.md 
-        
+        - Key Generation: spec/0.95.0/5_Key_Generation.md
+        - Applications: spec/0.95.0/Applications.md
+        - Acknowledgements: spec/0.95.0/Acknowledgements.md
       - Data Format: spec/Data_Format.md
       - Badges: spec/Badges.md
       - Other Versions:
@@ -63,6 +63,8 @@ nav:
           - v0.95.0: 
             - Overview: spec/0.95.0/1_Overview.md
             - ElectionGuard Structure: spec/0.95.0/2_ElectionGuard_Structure.md
+            - Key Generation: spec/0.95.0/5_Key_Generation.md
+            - Applications: spec/0.95.0/Applications.md
             - Acknowledgements: spec/0.95.0/Acknowledgements.md
           - v1.0.0: spec/1.0.0/1_Overview.md
 
