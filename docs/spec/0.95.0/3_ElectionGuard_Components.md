@@ -15,9 +15,9 @@ operation, most of the work of ElectionGuard is the process of creating external
 
 In the remainder of this specification, the following notation will be used.
 
-• $ℤ = {… , −3, −2, −1, 0, 1, 2, 3, … }$ is the set of integers.
+• $ℤ = \{… , −3, −2, −1, 0, 1, 2, 3, … \}$ is the set of integers.
 
-• $ℤ_n = {0, 1, 2, … , n − 1}$ is the additive group of the integers modulo $p$.
+• $ℤ_n = \{0, 1, 2, … , n − 1\}$ is the additive group of the integers modulo $p$.
 
 • $ℤ_n^∗$ is the multiplicative subgroup of $ℤ_n$. When $p$ is a prime, $ℤ_p^* = \{1, 2, 3, … , p − 1\}.$
 
@@ -34,19 +34,15 @@ if and only if $y^q \bmod p = 1$.
 
 Encryption of votes in ElectionGuard is performed using an exponential form of the ElGamal cryptosystem.[^2] Primes $p$ and $q$ are publicly fixed such that $q$ is not a divisor of $r = \frac {p−1} {q}$. A generator $g$ of the order $q$ subgroup $ℤ_p^r$ is also fixed. (Any $g = x^r \bmod p$ for which $x \in ℤ_p^*$ suffices so long as $g \neq 1$.)
 
-A public-private key pair can be chosen by selecting a random $s \in ℤ_q$ as a private key and publishing $K = g^s \bmod p$ as a public key[^3]
+A public-private key pair can be chosen by selecting a random $s \in ℤ_q$ as a private key and publishing $K = g^s \bmod p$ as a public key.[^3]
 
-A message $M \in ℤ_p^r$ is then encrypted by selecting a random nonce $R \in ℤ_q$ and forming the pair $(\alpha, \beta) = (g^R mod p, g^M ⋅ K^R \bmod p)$. An encryption $(\alpha, \beta)$ can be decrypted by the holder of the secret $s$ as
+A message $M \in ℤ_p^r$ is then encrypted by selecting a random nonce $R \in ℤ_q$ and forming the pair $(\alpha, \beta) = (g^R \bmod p,g^M ⋅ K^R \bmod p)$. An encryption $(\alpha, \beta)$ can be decrypted by the holder of the secret $s$ as
 
-$$
-\frac \beta {\alpha^s} \bmod p = \frac {g^M ⋅ K^R} {(g^R)^s}\bmod p = \frac {g^M ⋅ (g^s)^R} {(g^R)^s}\bmod p = \frac {g^M ⋅ g^{Rs}} {g^{Rs}} \bmod p = g^M
-\bmod p.
-$$
+$\frac \beta {\alpha^s} \bmod p =\frac {g^M ⋅ K^R} {(g^R)^s} \bmod p = \frac {g^M ⋅ (g^s)^R} {(g^R)^s} \bmod p = \frac {g^M ⋅ g^{Rs}} {g^{Rs}} \bmod p = g^M \bmod p.$
 
 The value of $M$ can be computed from $g^M \bmod p$ as long as the message $M$ is limited to a small, known set of options.[^4]
 
-Only two possible messages are encrypted in this way by *ElectionGuard*. An encryption of one
-is used to indicate that an option is selected, and an encryption of zero is used to indicate that an option is *not* selected.
+Only two possible messages are encrypted in this way by *ElectionGuard*. An encryption of one is used to indicate that an option is selected, and an encryption of zero is used to indicate that an option is *not* selected.
 
 ## Homomorphic Properties
 
