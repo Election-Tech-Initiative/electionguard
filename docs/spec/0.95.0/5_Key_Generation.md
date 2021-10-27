@@ -120,8 +120,7 @@ Guardians then publicly report having confirmed or failed to confirm this comput
     $$
 
 
-[^1]: If alternative parameters are allowed, election verifiers
-must confirm that 𝑝, 𝑞, 𝑟, and 𝑔 are such that both 𝑝 and 𝑞 are prime (this may be done probabilistically using the Miller-Rabin algorithm), that 𝑝 −1 = 𝑞𝑟 is satisfied, that 𝑞 is not a divisor of 𝑟, that 1 < 𝑔 <  𝑝, that $𝑔^ 𝑞 mod 𝑝 = 1$, and that generation of the parameters is consistent with the cited standard.
+ 
 
 [^1]: Shamir A. How to Share a Secret. (1979) Communications of the ACM.
 
