@@ -14,7 +14,7 @@
 }
 .md-typeset .specification > .admonition-title,
 .md-typeset .specification > summary {
-  background-color: rgba(0,191,165, 0.0);
+  background-color: rgba(49, 116, 107, 0.1);
   border-color: rgb(0,191,165, 0.1);
 }
 .md-typeset .specification > .admonition-title::before,
