@@ -29,7 +29,7 @@ The use of ElGamal encryption enables efficient zero-knowledge proofs of these r
 !!! note
     Note that the decryption of the selection limit could be more efficiently demonstrated by just releasing the sum of the nonces used for each of the individual encryptions. But, again to simplify the construction of election verifiers, a Chaum-Pedersen proof is used here as well.
 
-The “random” nonces used for the ElGamal encryption of the ballot nonces are derived from a single 256-bit master nonce $R_B$ for each ballot. For each contest listed in the ballot coding file, a contest nonce $R_C$ is derived from the master nonce $(R_B)$ and the contest label $(L_C)$ as $R_C = H(L_C,R_B)$ using the hash function SHA-256. For each option listed in the ballot coding file, the nonce used to encrypt that option is derived from the contest nonce $(R_C)$ and the selection label for that option $(L_S)$ as $R = H(L_S, R_C)$
+The “random” nonces used for the ElGamal encryption of the ballot nonces are derived from a single 256-bit master nonce $R_B$ for each ballot. For each contest listed in the ballot coding file, a contest nonce $R_C$ is derived from the master nonce $(R_B)$ and the contest label $(L_C)$ as $R_C = H(L_C,R_B)$ using the hash function SHA-256. For each option listed in the ballot coding file, the nonce used to encrypt that option is derived from the contest nonce $(R_C)$ and the selection label for that option $(L_S)$ as $R = H(L_S, R_C)$.
 
 A user of ElectionGuard may optionally provide an additional public key. If such a key is provided, ElectionGuard uses that key to encrypt each ballot’s master nonce $R_B$ and return this encryption together with the encrypted ballot.
 
@@ -39,16 +39,15 @@ Ballot nonces may be independent across different ballots, and only the nonces u
 
 To prove that an ElGamal encryption pair $(\alpha, \beta)$ is an encryption of zero, the Chaum-Pedersen protocol proceeds as follows.
 
-<u>NIZK Proof that $(\alpha, \beta)$ is an encryption of zero (given knowledge of encryption nonce $R$)</u>
+<u>NIZK Proof that $(\alpha, \beta)$ is an encryption of zero (given knowledge of encryption nonce $R$</u>)
 
-The prover selects a random value $u$ in $ℤ_q$ and commits to the pair $(a, b) =(g^u \bmod p,K^u \bmod p)$. A hash computation is then performed (using the Fiat-Shamir heuristic) to create a pseudo-random challenge value $c = H(\bar{Q}, (\alpha, \beta), (a, b))$, and the prover responds with $v = (u + cR) \bmod p$. A verifier can now confirm the claim by checking that both $g^v\bmod p = a⋅a^c\bmod p$ and
-$K^v \bmod p = b⋅\beta^c \bmod p$ are true.
+The prover selects a random value $u$ in $ℤ_q$ and commits to the pair $(a, b) =(g^u \bmod p,K^u \bmod p)$. A hash computation is then performed (using the Fiat-Shamir heuristic) to create a pseudo-random challenge value $c = H(\bar{Q}, (\alpha, \beta), (a, b))$, and the prover responds with $v = (u + cR) \bmod q$. A verifier can now confirm the claim by checking that both $g^v\bmod p = a⋅\alpha^c\bmod p$ and $K^v \bmod p = b⋅\beta^c \bmod p$ are true.
 
-<u>NIZK Proof that $(\alpha, \beta)$ is an encryption of one (given knowledge of encryption nonce $R$)</u>
+<u>NIZK Proof that $(\alpha, \beta)$ is an encryption of one (given knowledge of encryption nonce $R$</u>)
 
 To prove that $(\alpha, \beta)$ is an encryption of one, $\frac \beta g \bmod p$ is substituted for $\beta$ in the above. The verifier can be relieved of the need to perform a modular division by computing $\beta \bar{g} \bmod p$ rather than $\frac \beta g \bmod p$. As an alternative, the verifier can confirm that $g^c ⋅ K^v \bmod p = b ⋅ \beta^c \bmod p$ instead of $K^{v} \bmod p = b ⋅ (\frac \beta g)^c \bmod p$.
 
-As with many zero-knowledge protocols, if the prover knows a challenge value prior to making its commitment, it can create a false proof. For example, if a challenge $c$ is known to be forthcoming, a prover can generate a random $v$ in $ℤ_q$ and commit to $(a, b) = (\frac {g^v} {a^c}  \bmod p, \frac {K^v} {\beta^c} \bmod p) = (g^{v} \alpha^{q−c} \bmod p, K^v \beta^{q−c} \bmod p)$. This selection will satisfy the required checks for $(\alpha, \beta)$ to appear as an encryption of zero regardless of the values of $(\alpha, \beta)$. Similarly, setting $(a, b) = (\frac {g^v} {a^c}  \bmod p, \frac {K^vg^c} {\beta^c} \bmod p) = (g^{v} \alpha^{q−c} \bmod p, K^v g^c\beta^{q−c} \bmod p)$ will satisfy the required checks for $(\alpha, \beta)$ to appear as an encryption of one regardless of the values of $(\alpha, \beta)$. This quirk is what enables the Cramer-Damgård-Schoenmakers technique to prove a disjunction of two predicates.
+As with many zero-knowledge protocols, if the prover knows a challenge value prior to making its commitment, it can create a false proof. For example, if a challenge $c$ is known to be forthcoming, a prover can generate a random $v$ in $ℤ_q$ and commit to $(a, b) = (\frac {g^v} {a^c}  \bmod p, \frac {K^v} {\beta^c} \bmod p) = (g^{v} \alpha^{q−c} \bmod p, K^v \beta^{q−c} \bmod p)$. This selection will satisfy the required checks for $(\alpha, \beta)$ to appear as an encryption of zero regardless of the values of $(\alpha, \beta)$. Similarly, setting $(a, b) = (\frac {g^v} {\alpha^c}  \bmod p, \frac {K^vg^c} {\beta^c} \bmod p) = (g^{v} \alpha^{q−c} \bmod p, K^v g^c\beta^{q−c} \bmod p)$ will satisfy the required checks for $(\alpha, \beta)$ to appear as an encryption of one regardless of the values of $(\alpha, \beta)$. This quirk is what enables the Cramer-Damgård-Schoenmakers technique to prove a disjunction of two predicates.
 
 <u>Sketch of NIZK Proof that $(\alpha, \beta)$ is an encryption of zero or one</u>
 
@@ -60,7 +59,7 @@ The full protocol proceeds as follows – fully divided into the two cases.
 
 To encrypt an “unselected” option on a ballot, a random nonce $R$ is selected uniformly $ℤ_q$ and an encryption of zero is formed as $(\alpha, \beta) = (g^R \bmod p,K^R \bmod p)$.
 
-<u>NIZK Proof that $(\alpha, \beta)$ is an encryption of zero or one (given knowledge of encryption nonce $R$ for which $(\alpha, \beta)$ is an encryption of zero)</u>
+<u>NIZK Proof that $(\alpha, \beta)$ is an encryption of zero or one (given knowledge of encryption nonce $R$ for which $(\alpha, \beta)$ is an encryption of zero</u>)
 
 To create the proof that $(\alpha, \beta)$ is an encryption of a zero or a one, randomly select $c_1$, $v_1$, and $u_0$ from $ℤ_q$ and form the commitments
 
@@ -71,16 +70,16 @@ $$
 and
 
 $$
-(a_1, b_1) = (\frac {g^{v_1}} {a^{c_1}} \bmod p, \frac {K^{v_1}g^{c_1}} {\beta^{c_1}} \bmod p) = (g^{v_1}\alpha^{q-c_1} \bmod p, K^{v_1}g^{c_1}\beta^{q-c_1}\bmod p).
+(a_1, b_1) = (\frac {g^{v_1}} {\alpha^{c_1}} \bmod p, \frac {K^{v_1}g^{c_1}} {\beta^{c_1}} \bmod p) = (g^{v_1}\alpha^{q-c_1} \bmod p, K^{v_1}g^{c_1}\beta^{q-c_1}\bmod p).
 $$
 
 A challenge value $c$ is formed by hashing the extended base hash $\bar{Q}$ together with $(\alpha, \beta)$, $(a_0, b_0)$, and $(a_1, b_1)$ to form a challenge value $c = H(Q, (\alpha, \beta), (a_0, b_0), (a_1, b_1))$. The proof is completed by forming $c_0 = (c − c_1) \bmod q$ and $v_0 = (u_0 + c_0 ⋅ R) \bmod q$ and answering the challenge by returning $c_0$, $c_1$, $v_0$, and $v_1$.
 
 To encrypt a “selected” option on a ballot, a random nonce $R$ is selected uniformly from $ℤ_q$ and an encryption of one is formed as $(\alpha, \beta) = (g^r \bmod p, g ⋅ K^r\bmod p)$.
 
-<u>NIZK Proof that $(\alpha, \beta)$ is an encryption of zero or one (given knowledge of encryption nonce $R$ for which $(\alpha, \beta)$ is an encryption of one)</u>
+<u>NIZK Proof that $(\alpha, \beta)$ is an encryption of zero or one (given knowledge of encryption nonce $R$ for which $(\alpha, \beta)$ is an encryption of one</u>)
 
-To create the proof that $(\alpha, \beta)$ is an encryption of a zero or a one, randomly select $c_0$, $v_0$, and $u_1$ from $ℤ_q$ and form the commitments 
+To create the proof that $(\alpha, \beta)$ is an encryption of a zero or a one, randomly select $c_0$, $v_0$, and $u_1$ from $ℤ_q$ and form the commitments
 
 $$
 (a_0, b_0) = (\frac{g^{v_0}}{a^{c_0}} \bmod p, \frac{K^{v_0}}{\beta^{c_0}}\bmod p) = (g^{v_0}\alpha^{q-c_0}\bmod p, K^{v_0}\beta^{q-c_0}\bmod p)
@@ -106,7 +105,7 @@ In either of the two above cases, what is published in the election record is th
     
     (C) The given values $c_0$, $c_1$, $v_0$, and $v_1$ are each in the set $ℤ_q$. (A value $x$ is in $ℤ_q$ if and only if $x$ is an integer such that $0 ≤ x < q$.)
     
-    (D) The equation $c = (c_0 + c_1) \bmod p$ is satisfied.
+    (D) The equation $c = (c_0 + c_1) \bmod q$ is satisfied.
     
     (E) The equation $g^{v_0} \bmod p = a_0\alpha^{c_0} \bmod p$ is satisfied.
     
@@ -120,7 +119,7 @@ In either of the two above cases, what is published in the election record is th
 
 The final step in proving that a ballot is well-formed is demonstrating that the selection limits for each contest have not been exceeded. This is accomplished by homomorphically combining all of the $(\alpha_i, \beta_i)$ values for a contest by forming the aggregate contest encryption $(\alpha, \beta) = (\Pi_i\alpha_i \bmod p , \Pi_i\beta_i \bmod p)$ and proving that $(\alpha, \beta)$ is an encryption of the total number of votes allowed for that contest (usually one). The simplest way to complete this proof is to combine all of the random nonces $R_i$ that were used to form each $(\alpha_a,\beta_i) = (g^{R_i} \bmod p, K^{R_i} \bmod p)$ or $(\alpha_i,\beta_i) = (g^{R_i} \bmod p, g ⋅ K^{R_i} \bmod p)$ – depending on whether the value encrypted is zero or one. The aggregate nonce $R = \sum_iR_i \bmod q$ matches the aggregate contest encryption as $(\alpha, \beta) = (\Pi_i\alpha_i \bmod p, \Pi_i\beta_i \bmod p) = (g^R \bmod p,g^LK^R \bmod p)$ - where $L$ is the selection limit for the contest. (Recall that $L$ extra “placeholder” positions will be added to each contest and set to one as necessary to ensure that exactly $L$ selections are made for the contest.)
 
-<u>NIZK Proof that $(\alpha, \beta)$ is an encryption of $L$  (given knowledge of aggregate encryption nonce $R$)</u>
+<u>NIZK Proof that $(\alpha, \beta)$ is an encryption of $L$ (given knowledge of aggregate encryption nonce $R$</u>)
 
 An additional Chaum-Pedersen proof of $(\alpha,\beta)$ being an encryption of $L$ is performed by selecting a random $U$ in $ℤ_q$, publishing $(a,b) = (g^U \bmod p,K^U \bmod p)$, hashing these values together with election’s extended base hash $\bar{Q}$ to form a pseudo-random challenge $C = H(\bar{Q}, (\alpha, \beta), (a, b))$, and responding by publishing $V = (U + CR) \bmod q$.[^4]
 
