@@ -54,6 +54,7 @@ nav:
         - Overview: spec/0.95.0/1_Overview.md
         - ElectionGuard Structure: spec/0.95.0/2_ElectionGuard_Structure.md
         - Ballot Encryption: /spec/0.95.0/6_Ballot_Encryption.md
+        - Applications: spec/0.95.0/Applications.md
         - Acknowledgements: spec/0.95.0/Acknowledgements.md
       - Data Format: spec/Data_Format.md
       - Badges: spec/Badges.md
@@ -63,6 +64,7 @@ nav:
             - Overview: spec/0.95.0/1_Overview.md
             - ElectionGuard Structure: spec/0.95.0/2_ElectionGuard_Structure.md
             - Ballot Encryption: /spec/0.95.0/6_Ballot_Encryption.md
+            - Applications: spec/0.95.0/Applications.md
             - Acknowledgements: spec/0.95.0/Acknowledgements.md
           - v1.0.0: spec/1.0.0/1_Overview.md
 
