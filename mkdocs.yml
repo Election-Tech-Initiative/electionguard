@@ -50,22 +50,26 @@ nav:
           - Repositories: develop/Repositories.md
 
   - Specification:
-      - Current: 
-        - Overview: spec/0.95.0/1_Overview.md
-        - ElectionGuard Structure: spec/0.95.0/2_ElectionGuard_Structure.md
-        - Applications: spec/0.95.0/Applications.md
-        - Acknowledgements: spec/0.95.0/Acknowledgements.md
-        - Components: spec/0.95.0/3_ElectionGuard_Components.md
+      - Current:
+          - Overview: spec/0.95.0/1_Overview.md
+          - ElectionGuard Structure: spec/0.95.0/2_ElectionGuard_Structure.md
+          - Components: spec/0.95.0/3_ElectionGuard_Components.md
+          - Ballot Aggregation: spec/0.95.0/7_Ballot_Aggregation.md
+          - Election Record: spec/0.95.0/9_Election_Record.md
+          - Applications: spec/0.95.0/11_Applications.md
+          - Acknowledgements: spec/0.95.0/12_Acknowledgements.md
       - Data Format: spec/Data_Format.md
       - Badges: spec/Badges.md
       - Other Versions:
           - v0.85.0: spec/0.85.0/1_Overview.md
-          - v0.95.0: 
-            - Overview: spec/0.95.0/1_Overview.md
-            - ElectionGuard Structure: spec/0.95.0/2_ElectionGuard_Structure.md
-            - Applications: spec/0.95.0/Applications.md
-            - Acknowledgements: spec/0.95.0/Acknowledgements.md
-            - Components: spec/0.95.0/3_ElectionGuard_Components.md
+          - v0.95.0:
+              - Overview: spec/0.95.0/1_Overview.md
+              - ElectionGuard Structure: spec/0.95.0/2_ElectionGuard_Structure.md
+              - Components: spec/0.95.0/3_ElectionGuard_Components.md
+              - Ballot Aggregation: spec/0.95.0/7_Ballot_Aggregation.md
+              - Election Record: spec/0.95.0/9_Election_Record.md
+              - Applications: spec/0.95.0/11_Applications.md
+              - Acknowledgements: spec/0.95.0/12_Acknowledgements.md
           - v1.0.0: spec/1.0.0/1_Overview.md
 
   - Contribute: contribute/index.md
@@ -90,7 +94,6 @@ theme:
     accent: indigo
     link: indigo
   features:
-    - navigation.expand
     - navigation.instant
     - navigation.tabs
 markdown_extensions:
