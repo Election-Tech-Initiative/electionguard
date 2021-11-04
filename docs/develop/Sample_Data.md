@@ -16,20 +16,22 @@ We have provided sample data for four different elections:
 
 ![Data][data-image]
 
-## Election Manifests
+## Data ![Version 0.95.0][shield-green-0.95.0]
+
+### Election Manifests
 
 The [Election Manifest][manifest-building] contains all the details of the election (such as contests, candidates, selections, ballot styles, etc.) and is required at the start of an ElectionGuard election.
 
 **Manifest Examples:** [minimal][minimal-election-manifest] | [small][small-election-manifest] | [full][full-election-manifest] | [hamilton][hamilton-election-manifest]
 
-## Submitted Ballots
+### Submitted Ballots
 
 Submitted Ballots are encrypted ballots that have been cast or spoiled.
 Cast ballots will be tallied and spoiled ballots are decrypted.
 
 **Submitted Ballot Examples:** [minimal][minimal-election-ballot] | [small][small-election-ballot] | [full][full-election-ballot] | [hamilton][hamilton-election-ballot]
 
-## Election Record
+### Election Record
 
 The Election Record are the files required at the end of the election to verify the election and are intended to be posted publicly. There should not be any sensitive data (eg: no guardian private keys) in the record. These include the following:
 
@@ -63,19 +65,20 @@ The Election Record are the files required at the end of the election to verify 
 [data-image]: ../images/undraw/data.svg "Image of computer"
 
 <!-- Links -->
-[minimal-election-manifest]: https://github.com/microsoft/electionguard/blob/main/data/minimal/manifest.json
-[minimal-election-ballot]: https://github.com/microsoft/electionguard/blob/main/data/minimal/ballots
-[minimal-election-artifacts]: https://github.com/microsoft/electionguard/blob/main/data/minimal/artifacts
-[small-election-manifest]: https://github.com/microsoft/electionguard/blob/main/data/small/manifest.json
-[small-election-ballot]: https://github.com/microsoft/electionguard/blob/main/data/small/ballots
-[small-election-artifacts]: https://github.com/microsoft/electionguard/blob/main/data/small/artifacts
-[full-election-manifest]: https://github.com/microsoft/electionguard/blob/main/data/full/manifest.json
-[full-election-ballot]: https://github.com/microsoft/electionguard/blob/main/data/full/ballots
-[full-election-artifacts]: https://github.com/microsoft/electionguard/blob/main/data/full/artifacts
-[hamilton-election-manifest]: https://github.com/microsoft/electionguard/blob/main/data/hamilton-general/manifest.json
-[hamilton-election-ballot]: https://github.com/microsoft/electionguard/blob/main/data/hamilton-general/ballots
-[hamilton-election-artifacts]: https://github.com/microsoft/electionguard/blob/main/data/hamilton-general/artifacts
-[hamilton-election-private]: https://github.com/microsoft/electionguard/blob/main/data/hamilton-general/private
+[shield-green-0.95.0]: https://img.shields.io/badge/🗳%20ElectionGuard%20Specification-0.95.0-green
+[minimal-election-manifest]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/sample/minimal/manifest.json
+[minimal-election-ballot]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/sample/minimal/ballots
+[minimal-election-artifacts]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/sample/minimal/artifacts
+[small-election-manifest]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/sample/small/manifest.json
+[small-election-ballot]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/sample/small/ballots
+[small-election-artifacts]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/sample/small/artifacts
+[full-election-manifest]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/sample/full/manifest.json
+[full-election-ballot]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/sample/full/ballots
+[full-election-artifacts]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/sample/full/artifacts
+[hamilton-election-manifest]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/sample/hamilton-general/manifest.json
+[hamilton-election-ballot]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/sample/hamilton-general/ballots
+[hamilton-election-artifacts]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/sample/hamilton-general/artifacts
+[hamilton-election-private]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/sample/hamilton-general/private
 [election-manifest-docs]: https://www.electionguard.vote/guide/Election_Manifest/#introducing-hamilton-county-oz
 
 [manifest-building]: ../concepts/Manifest_Building.md
