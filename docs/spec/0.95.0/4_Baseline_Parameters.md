@@ -17,10 +17,10 @@ The modulus $p$ is then set to be a 4096-bit prime with the following properties
 
 The middle 3584 bits of $p$ are chosen by starting with the first 3584 bits of the Euler–Mascheroni constant ($\gamma$), pre-pending and appending 256 ones, and finding the smallest prime larger than this value that satisfies the above properties.
 
-This works out to $p = 2^{4096} − 2^{3840} − 1 + 2^{256}(⌊2^{3584}\gamma⌋ + \delta)$ where the value of $\delta$ is given by
+This works out to $p = 2^{4096} − 2^{3840} − 1 + 2^{256}(⌊2^{3584}\gamma⌋ + \delta)$ where the value of $\delta$ is given by[^1]
 
 $$
-\delta = 495448529856135475846147600290107731951815687842437876083937612367400355133042233301 .^{12}
+\delta = 495448529856135475846147600290107731951815687842437876083937612367400355133042233301.
 $$
 
 The hexadecimal representation of q is as follows.
@@ -46,20 +46,20 @@ FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF
 The hexadecimal representation of the cofactor $r = \frac{p−1}{q}$ is as follows.
 ```
 1 00000000 00000000 00000000 00000000 00000000 00000000 00000000 000000BC
-93C467E3 7DB0C7A4 D1BE3F81 0152CB56 A1CECC3A F65CC019 0C03DF34 709B8AF6
-A64C0CED CF2D559D A9D97F09 5C3076C6 86037619 148D2C86 C317102A FA214803
-1F04440A C0FF0C9A 417A8921 2512E760 7B2501DA A4D38A2C 1410C483 6149E2BD
-B8C8260E 627C4646 963EFFE9 E16E495D 48BD215C 6D8EC9D1 667657A2 A1C8506F
-2113FFAD 19A6B2BC 7C457604 56719183 309F874B C9ACE570 FFDA877A A2B23A2D
-6F291C15 54CA2EB1 2F12CD00 9B8B8734 A64AD51E B893BD89 1750B851 62241D90
-8F0C9709 879758E7 E8233EAB 3BF2D6AB 53AFA32A A153AD66 82E5A064 8897C9BE
-18A0D50B ECE030C3 432336AD 9163E33F 8E7DAF49 8F14BB28 52AFFA81 4841EB18
-DD5F0E89 516D5577 76285C16 071D2111 94EE1C3F 34642036 AB886E3E C28882CE
-4003DEA3 35B4D935 BAE4B582 35B9FB2B AB713C8F 705A1C7D E4222020 9D6BBCAC
-C4673186 01565272 E4A63E38 E2499754 AE493AC1 A8E83469 EEF35CA2 7C271BC7
-92EEE211 56E617B9 22EA8F71 3C22CF28 2DC5D638 5BB12868 EB781278 FA0AB2A8
-958FCCB5 FFE2E5C3 61FC1744 20122B01 63CA4A46 308C8C46 C91EA745 7C1AD0D6
-9FD4A7F5 29FD4A7F 529FD4A7 F529FD4A 7F529FD4 A7F529FD 4A7F529F D4A7F52A
+  93C467E3 7DB0C7A4 D1BE3F81 0152CB56 A1CECC3A F65CC019 0C03DF34 709B8AF6
+  A64C0CED CF2D559D A9D97F09 5C3076C6 86037619 148D2C86 C317102A FA214803
+  1F04440A C0FF0C9A 417A8921 2512E760 7B2501DA A4D38A2C 1410C483 6149E2BD
+  B8C8260E 627C4646 963EFFE9 E16E495D 48BD215C 6D8EC9D1 667657A2 A1C8506F
+  2113FFAD 19A6B2BC 7C457604 56719183 309F874B C9ACE570 FFDA877A A2B23A2D
+  6F291C15 54CA2EB1 2F12CD00 9B8B8734 A64AD51E B893BD89 1750B851 62241D90
+  8F0C9709 879758E7 E8233EAB 3BF2D6AB 53AFA32A A153AD66 82E5A064 8897C9BE
+  18A0D50B ECE030C3 432336AD 9163E33F 8E7DAF49 8F14BB28 52AFFA81 4841EB18
+  DD5F0E89 516D5577 76285C16 071D2111 94EE1C3F 34642036 AB886E3E C28882CE
+  4003DEA3 35B4D935 BAE4B582 35B9FB2B AB713C8F 705A1C7D E4222020 9D6BBCAC
+  C4673186 01565272 E4A63E38 E2499754 AE493AC1 A8E83469 EEF35CA2 7C271BC7
+  92EEE211 56E617B9 22EA8F71 3C22CF28 2DC5D638 5BB12868 EB781278 FA0AB2A8
+  958FCCB5 FFE2E5C3 61FC1744 20122B01 63CA4A46 308C8C46 C91EA745 7C1AD0D6
+  9FD4A7F5 29FD4A7F 529FD4A7 F529FD4A 7F529FD4 A7F529FD 4A7F529F D4A7F52A
 ```
 
 Finally, the generator $g$ is chosen to be $g = 2^r\bmod p$ and has the following hexadecimal representation.
@@ -81,93 +81,16 @@ EB276FB3 685F3716 72CEB313 FDAB069C C9B11AB6 C59BCE62 BAAD96AA C96B0DBE
 288A89C9 31CF564F 00E8A317 AE1E1D82 8E61369B A0DDBADB 10C136F8 691101AD
 82DC5477 5AB83538 40D99921 97D80A6E 94B38AC4 17CDDF40 B0C73ABF 03E8E0AA
 ```
+!!! note ""
 
-> Alternative parameter sets are possible. A good source for parameter generation is appendix A of FIPS $186-4^{13}$ . However, allowing alternate parameters would force election verifiers to recognize and check that parameters are correctly generated. Since these checks would be very different from other checks that are required of a verifier, allowing alternate parameters would add substantial complexity to election verifiers. For this reason, this version of ElectionGuard fixes the parameters as above.  
+    Alternative parameter sets are possible. A good source for parameter generation is appendix A of FIPS $186-4$ [^2] . However, allowing alternate parameters would force election verifiers to recognize and check that parameters are correctly generated. Since these checks would be very different from other checks that are required of a verifier, allowing alternate parameters would add substantial complexity to election verifiers. For this reason, this version of ElectionGuard fixes the parameters as above.  
 
-> An ElectionGuard version 1 election verifier may assume that the baseline parameters match the parameters provided above. However, it is recommended that the above parameters be checked against the parameters of each election to accommodate the possibility of different parameters in future versions of ElectionGuard.
+!!! note ""
 
-## Key Generation
-Before an election, the number of guardians ($n$) is fixed together with a quorum value ($k$) that describes the number of guardians necessary to decrypt tallies and produce election verification data. The values $n$ and $k$ are integers subject to the constraint that $1 ≤ k ≤ n$. Canvassing board members can often serve the role of election guardians, and typical values for $n$ and $k$ could be 5 and 3 – indicating that 3 of 5 canvassing board members must cooperate to produce the artifacts that enable election verification. The reason for not setting the quorum value $k$ too low is that it will also be possible for $k$ guardians to decrypt individual ballots.  
+    An ElectionGuard version 1 election verifier may assume that the baseline parameters match the parameters provided above. However, it is recommended that the above parameters be checked against the parameters of each election to accommodate the possibility of different parameters in future versions of ElectionGuard. [^3]
 
-> Note that decryption of individual ballots does not directly compromise voter privacy since links between encrypted ballots and the voters who cast them are not retained by the system. However, voters receive verification codes that can be associated with individual encrypted ballots, so any group that has the ability to decrypt individual ballots can also coerce voters by demanding to see their tracking codes.  
+[^1]: Discovering this value $\delta$ required a search through roughly 42 million values satisfying the first three of the above properties to find one for which both $p$ and $\frac{p-1}{2q}$ are both prime.
 
-Threshold ElGamal encryption is used for encryption of ballots. This form of encryption makes it very easy to combine individual guardian public keys into a single public key for encrypting votes and ballots. It also offers a homomorphic property that allows individual encrypted votes to be combined to form encrypted tallies.  
+[^2]: NIST (2013) Digital Signature Standard (DSS). In: FIPS 186-4. [https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf)
 
-The guardians of an election will each generate a public-private key pair. The public keys will then be combined (as described in the following section) into a single election public key which is used to encrypt all selections made by voters in the election.  
-
-Ideally, at the conclusion of the election, each guardian will use its private key to form a verifiable partial decryption of each tally. These partial decryptions will then be combined to form full verifiable decryptions of the election tallies.  
-
-To accommodate the possibility that one or more of the guardians will not be available at the conclusion of the election to form their partial decryptions, the guardians will cryptographically share 15 their private keys amongst each other during key generation in a manner to be detailed in the next section. A pre-determined threshold value ($k$) out of the ($n$) guardians will be necessary to produce a full decryption.  
-
-Additionally, each guardian will also generate an auxiliary public-private key pair. These auxiliary keys will be used by the guardians to exchange fragments of their principal vote-encryption keys and for other scenarios in which non-vote data may need to be encrypted.  
-
-### Overview of key generation
-The $n$ guardians of an election are denoted by $T_1 , T_2 , ... , T_n$ . Each guardian $T_i$ generates an independent ElGamal public-private key pair by generating a random integer secret $s_i \in \mathbb{Z}_q$ and forming the public key $K_i = g^{s_i}\bmod p$. Each of these public keys will be published in the election record together with a non-interactive zero-knowledge Schnorr proof of knowledge of possession of the associated private key.  
-
-The joint election public key will be
-
-$$
-K = \prod_{i=1}^{n} K_i\bmod p
-$$
-
-To enable robustness and allow for the possibility of missing guardians at the conclusion of an election, the ElectionGuard key generation includes a sharing of private keys between guardians to enable decryption by any $k$ guardians. This sharing is verifiable, so that receiving guardians can confirm that the shares they receive are meaningful; and the process allows for decryption without explicitly reconstructing private keys of missing guardians.  
-
-Each guardian $T_i$ generates $k − 1$ random polynomial coefficients $a_{i,j}$ such that $0 < j < k$ and $0 ≤ a i,j < q$ and forms the polynomial
-
-$$
-P_i(x) = \sum_{j=0}^{k-1} a_{i,j}x^j\bmod q
-$$
-
-by setting $a_{i,0}$ equal to its secret value $s_i$ . Guardian $T_i$ then publishes commitments $K_{i,j} = g^{a_{i,j}}\bmod p$ to each of its random polynomial coefficients. As with the primary secret keys, each guardian should provide a Schnorr proof of knowledge of the secret coefficient value $a_{ij}$, associated with each published commitment $K_{i,j}$ . Since polynomial coefficients will be generated and managed in precisely the same fashion as secret keys, they will be treated together in a single step below.  
-
-At the conclusion of the election, individual encrypted ballots will be homomorphically combined into a single encrypted aggregate ballot – consisting of an encryption of the tally for each option offered to voters. Each guardian will use its secret key to generate a partial decryption of each encrypted tally value, and these partial decryptions will be combined into full decryptions. If any election guardians are missing during tallying, any set of $k$ guardians who are available can cooperate to reconstruct the missing partial decryption.  
-
-All spoiled ballots are individually decrypted in precisely the same fashion.
-
-### Details of key generation
-Each guardian $T_i$ in an election with a decryption threshold of $k$ generates $k$ secret polynomial coefficients $a_{i,j}$ such that $0 ≤ j < k$ and $0 ≤ a_{i,j} < q$ and forms the polynomial
-
-$$
-P_i(x) = \sum_{j=0}^{k-1} a_{i, j} x^j \bmod q.
-$$
-
-Guardian $T_i$ then publishes commitments $K_{i,j} = g^{a_{i,j}} \bmod p$ for each of its random polynomial coefficients. The constant term $a_{i,0}$ of this polynomial will serve as the private key for guardian $T_i$ , and for convenience we denote $s_i = a_{i,0}$ , and its commitment $K_{i,0}$ will serve as the public key for guardian $T_i$ and will also be denoted as $K_i = K_{i,0}$ .  
-
-In order to prove possession of the coefficient associated with each public commitment, for each $K_{i,j}$ with $0 ≤ j < k$, guardian $T_i$ generates a Schnorr proof of knowledge for each of its coefficients as follows.  
-
-This Non-Interactive Zero-Knowledge (NIZK) proof proceeds as follows.  
-
-__NIZK Proof by Guardian $T_i$ of its knowledge of secrets $a_{i,j}$ such that $K_{i,j} = g^{a_{i,j}} \bmod p$__
-
-For each $0 ≤ j < k$, Guardian $T_i$ generates random integer values $R_{i,j}$ in $\mathbb{Z}_q$ and computes $h_{i,j} = g^{R_{i,j}} \bmod p$. Then, using the hash function SHA-256 (as defined in NIST PUB FIPS 180- $4^16$ ), guardian $T_i$ then performs a single hash computation $c_{i,j} = H(Q, K_{i,j} , h_{i,j} ) \bmod q$ and publishes the values $K_{i,j} , h_{i,j} , c_{i,j}$ , and $u_{i,j} = \(R_{i,j} + c_{i,j} a_{i,j} ) \bmod q.
-
-> An election verifier must confirm the following for each guardian $T_i$ and for each $j \in \mathbb{Z}_k$ :  
-
-> 1. The challenge $c_{i,j}$ is correctly computed as $c_{i,j} = H(Q, K_{i,j} , h_{i,j} ) \bmod q$.
-> 2. The equation $g^{u_{i,j}} \bmod p = h_{i,j} K_{i,j}^{c_{i,j}} \bmod p$ is satisfied.
-
-It is worth noting here that for any fixed constant $\alpha$, the value $g^{P_i (\alpha)} \bmod p$ can be computed entirely from the published commitments as
-
-$$
-g^{P_i(\alpha)} = g^{\sum_{j=0}^{k-1}a_{i,j}\alpha^{j}}\bmod p = \prod_{j=0}^{k-1}g^{a_{i,j}\alpha^{j}}\bmod p = \prod_{j=0}^{k-1}(g^{a_{i,j}})^{\alpha^j}\bmod p = \prod_{j=0}^{k-1}K_{i, j}^{\alpha^j}\bmod p.
-$$
-
-> Although this formula includes double exponentiation – raising a given value to the power $\alpha^j$ – in what follows, $\alpha$ and $j$ will always be small values (bounded by $n$). This can also be reduced if desired since the same result will be achieved if the exponents $\alpha^j$ are reduced to $\alpha^j \bmod q$.  
-
-To share secret values amongst each other, it is assumed that each guardian $T_i$ has previously shared an auxiliary public encryption function $E_i$ with the group. Each guardian $T_i$ then publishes the encryption $E_{\ell} (R_{i,\ell} , P_i (\ell))$ for every other guardian $T_{\ell}$ – where $R_{i,\ell}$ is a random nonce.  
-
-Guardian $T_\ell$ can now decrypt each $P_i(\ell)$ encrypted to its public key and verify its validity against the commitments made by $T_i$ to its coefficients $K_{i,0} , K_{i,1} , ... , K_{i,k−1}$ by confirming that the following equation holds:
-
-$$
-g^{P_i\ell} \bmod p = \prod_{j=0}^{k-1}(K_{i,j})^{\ell^j} \bmod p.
-$$
-
-Guardians then publicly report having confirmed or failed to confirm this computation. If the recipient guardian $T_\ell$ reports not receiving a suitable value $P_i (\ell)$, it becomes incumbent on the sending guardian $T_i$ to publish this $P_i (\ell)$ together with the nonce $R_{i,\ell}$ it used to encrypt $P_i (\ell)$ under the public key $E_\ell$ of recipient guardian $T_l$ . If guardian $T_i$ fails to produce a suitable $P_i (\ell)$ and nonce $R_{i,l}$ that match both the published encryption and the above equation, it should be excluded from the election and the key generation process should be restarted with an alternate guardian. If, however, the published $P_i (\ell)$ and $R_{i,\ell}$ satisfy both the published encryption and the equation above, the claim of malfeasance is dismissed and the key generation process continues undeterred.  
-
-Once the baseline parameters have been produced and confirmed, all of the public commitments $K_{i,j}$ are hashed together with the base hash $Q$ to form an extended base hash $\overline{Q}$ that will form the basis of subsequent hash computations. The hash function SHA-256 will be used here and for all hash computations for the remainder of this document.  
-
-> An election verifier must verify the correct computation of the joint election public key and extended base hash.
-
->1. $\overline{Q} = H(Q, K_{1,0} , K_{1,1} , K_{1,2} , ... , K_{1,k−1} , K_{2,0} , K_{2,1} , K_{2,2} , ... , K_{2,k−1} , ... , K_{n,0} , K_{n,1} , K_{n,2} , ... , K_{n,k−1} )$
->2. $K = \prod_{i=i}^n K_i \bmod p$.
-
+[^3]: If alternative parameters are allowed, election verifiers must confir that $p, q, r$ and $g$ are such that both $p$ and $q$ are prime (this may be done probabilistically using the Miller-Rabin algorithm), that $p-1 = qr$ is satisfied, that $q$ is not a divisor of $r$, that $1<g<p$, that $g^qq \bmod p = 1$, and that generation of parameters is consistent with the sited standard.
