@@ -30,8 +30,8 @@ jobs:
       - name: Publish Sample Data
         uses: actions/upload-artifact@v2
         with:
-          name: sample-data.zip
-          path: ./sample-data.zip
+          name: sample-data
+          path: sample-data.zip
       - name: Sync Labels
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.LABEL_TOKEN }}
