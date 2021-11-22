@@ -27,3 +27,7 @@ labels:
 	github-label-sync --labels .github/labels.yml microsoft/electionguard-python
 	github-label-sync --labels .github/labels.yml microsoft/electionguard-api-python
 	github-label-sync --labels .github/labels.yml microsoft/electionguard-ui
+
+release-zip-sample-data:
+	@echo 📁 ZIP SAMPLE DATA
+	zip -r sample-data.zip data

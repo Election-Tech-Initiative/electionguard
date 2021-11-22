@@ -25,11 +25,13 @@ jobs:
         run: make install
       - name: Deploy
         run: make deploy
-      - name: Package Sample Data
+      - name: Zip Sample Data
+        run: make release-zip-sample-data
+      - name: Publish Sample Data
         uses: actions/upload-artifact@v2
         with:
           name: sample-data
-          path: data/
+          path: sample-data.zip
       - name: Sync Labels
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.LABEL_TOKEN }}
