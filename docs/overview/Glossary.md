@@ -4,23 +4,23 @@
 
 Software development kits (SDKs) such as ElectionGuard, by their very nature, are intended to stitch together multiple distinct actions or areas into a cohesive whole. By necessity an SDK must "speak" multiple languages so the different actors involved can understand how the SDK fits in their world.
 
-This Glossary attempts to address its different audiences with terms and constructs appropriate to each:
+This glossary is intended to provide terms that are applicable to a variety of audiences:
 
-- for election administrators, terms that map to their conception of the voting process and user experience;
-- for developers, efficient constructs and a grammar that conveys the appropriate action to be performed and the proper state of the entity they're working with;
-- for cryptographers and verifier contributors, consistency of usage between the specification and code, and sufficiently clear descriptions of the techniques and terms necessary for proper treatment and interpretation of the election record and all processes; and
-- for everyone, clear articulation of the meaning and rationale for the different facets of end-to-end verifiability
+- for election administrators it provides higher level terms that map to their conception of the voting process and user experience;
+- for developers it provides entities, constructs, and a detailed grammar that allows them to solve problems quickly;
+- for cryptographers and verifier contributors it provides consistency of usage between the specification and code, and sufficiently clear descriptions of the techniques and terms necessary for proper treatment and interpretation of the election record and all processes; and
+- for everyone, it provides a clear articulation of the meaning and rationale for the different facets of end-to-end verifiability
 
-To illustrate what that means in practice, take one of the fundamental tenets of end-to-end verifiability: **_spoiling_**, **_challenging_**, or **_decrypting_** a ballot. Each of these words can mean the same thing sometimes but not always; it depends on the context of the usage.
+To illustrate what that means in practice, take one of the fundamental tenets of end-to-end verifiability: **_spoiling_**, **_challenging_**, or **_decrypting_** a ballot. Each of these words usually mean the same thing, but not always, depending on the context.
 
-So in this example:
+For instance:
 
 - **_[Spoiling a ballot](#spoiled-ballot)_** is a process **election administrators** use to allow voters who make mistakes filling out a ballot to begin again with a replacement ballot; in this context, the spoil process is a physical process undertaken by poll workers to ensure the ballot with a mistake is not included in any tallies.
-- **_[Challenging a ballot](#challenge-ballot)_** is the process **voters** use to challenge the integrity of the voting system by forcing it to reveal what it _would have_ submitted if the ballot were actually cast; challenged ballots are published in their **unencrypted (original, human-readable) state**
-- **_[Decrypting a ballot](#decrypted-ballot)_** is the process **developers** use to reveal a ballot's unencrypted contents; **[election guardians](#election-guardians)** decrypt challenge ballots as part of the publishing process for [end-to-end-verifiable elections](#end-to-end-verifiable).
+- **_[Challenging a ballot](#challenge-ballot)_** is the process **voters** use to challenge the integrity of the voting system by forcing it to reveal what it _would have_ submitted if the ballot were actually cast. Challenged ballots are published in their **unencrypted (original, human-readable) state**.
+- **_[Decrypting a ballot](#decrypted-ballot)_** is the process **developers** use to reveal a ballot's unencrypted contents. **[Election guardians](#election-guardians)** decrypt challenge ballots as part of the publishing process for [end-to-end-verifiable elections](#end-to-end-verifiable).
 
 !!! Info
-    Whenever possible, we used terms and meanings consistent the [NIST Elections Guide][nist-election-event-logging].
+    Whenever possible, this documentation uses terms and meanings consistent with the [NIST Elections Guide][nist-election-event-logging].
 
 ## Terms
 
@@ -30,11 +30,11 @@ A ballot that is accepted for inclusion in election results and is either: cast 
 
 ### auxiliary key pair
 
-Pair of keys (public & secret) used to encrypt/decrypt information sent between guardians. Auxiliary key pairs are used
+Pair of keys (public & secret) used to encrypt/decrypt information sent between [election guardians](#guardian).
 
 ### available guardian
 
-A guardian that has announced as present for the decryption phase
+A guardian that has announced themselves as present for the decryption phase of an election.
 
 ### ballot box
 
@@ -58,18 +58,18 @@ A ballot which a voter has accepted as valid to be included in the official elec
 
 ### ciphertext ballot
 
-An encrypted representation of a voter's filled-in ballot.
+An encrypted representation of a voter's ballot selections.
 
 ### ciphertext election context
 
-The cryptographic context of an election that is configured during the Key Ceremony
+The cryptographic context of an election that is configured during the [Key Ceremony](#key-ceremony).
 
 ### code (see [verification code](#verification-code))
 
 !!! info
     _Code_ has many meanings. Code can refer to the Python and C++ repos. Code can also mean code the noun ("I'm going to look at the code") and verb ("I'm going to go code") generally. Context matters
 
-_Code_ in the ElectionGuard context refers to the [_verification code_](#verification-code) generated by the ballot encryption process. That is _code_ _in the code libraries themselves_ is the hexadecimal string generated by the ballot encryption process.
+_Code_ in the ElectionGuard context refers to the [_verification code_](#verification-code) (i.e. the hexadecimal string) generated by the ballot encryption process.
 
 ### compact ballot
 
@@ -79,15 +79,13 @@ A partial decryption share value computed by an available guardian to compensate
 
 ### contest
 
-A _contest_ in an [_election_](#election) consists of a set of options together with a selection limit that indicates the number of selections that are allowed to be made in that contest. In most elections, most contests have a selection limit of one. However, a larger selection limit (e.g., select up to three) is not uncommon in some elections. Approval voting can be achieved by setting the selection limit to the total number of options in a contest. Ranked choice voting is not supported in this version of ElectionGuard, but it may be enabled in a future version.2 Also, write-ins are assumed to be explicitly registered or allowed to be lumped into a single "write-ins" category for the purpose of verifiable tallying. Verifiable tallying of free-form write-ins may be best done with a MixNet3 design.
+A _contest_ in an [_election_](#election) consists of a set of options together with a selection limit that indicates the number of selections that are allowed to be made in that contest. In most elections, most contests have a selection limit of one. However, a larger selection limit (e.g., select up to three) is not uncommon in some elections. Approval voting can be achieved by setting the selection limit to the total number of options in a contest. Ranked choice voting is not supported in this version of ElectionGuard, but it may be enabled in a future version. Also, write-ins are assumed to be explicitly registered or allowed to be lumped into a single "write-ins" category for the purpose of verifiable tallying. Verifiable tallying of free-form write-ins may be best done with a MixNet3 design.
 
 A legitimate vote in a contest consists of a set of selections with cardinality not exceeding the selection limit of that contest. To accommodate legitimate undervotes, the internal representation of a contest is augmented with “placeholder” options equal in number to the selection limit. Placeholder options are selected as necessary to force the total number of selections made in a contest to be equal to the selection limit. When the selection limit is one, for example, the single placeholder option can be thought of as a “none of the above” option.
 
 With larger selection limits, the number of placeholder options selected corresponds to the number of additional options that a voter could have selected in a contest.
 
 ### decrypting a ballot
-
-A
 
 ```mermaid
     graph LR
@@ -103,15 +101,15 @@ A
 
 ### decryption mediator
 
-A component or actor responsible for composing each guardian's partial decryptions or compensated decryptions into the plaintext tally
+A component or actor responsible for composing each guardian's partial decryptions or compensated decryptions into the plaintext tally.
 
 ### decryption share
 
-A guardian's partial share of a decryption
+A guardian's partial share of a decryption.
 
 ### description hash (_preferred:_ [base hash](#base-hash-q))
 
-A hash representation of the original [election description](#election-description----see-election-manifest)
+A hash representation of the original [election description](#election-description----see-election-manifest).
 
 ### election
 
@@ -121,7 +119,7 @@ The _election description_ is the election metadata that describes the structure
 
 ### election guardian
 
-One of a number of independent, trustworthy individuals who as part of serving as an _election guardian_ in an [end-to-end verifiable election](#end-to-end-verifiable-election) participate in a [key ceremony](#key-ceremony) to create a [joint public election key](#joint-key) and perform a [tally](#tally)
+One of a number of independent, trustworthy individuals who, while serving as an _election guardian_ in an [end-to-end verifiable election](#end-to-end-verifiable-election), participate in a [key ceremony](#key-ceremony) to create a [joint public election key](#joint-key) and perform a [tally](#tally)
 
 ### election manifest (see [manifest](#manifest))
 
@@ -163,12 +161,14 @@ The device that is doing the encryption
 
 ### end-to-end-verifiable election
 
-An election is [end-to-end verifiable][election-guard-verifiability][^f1] if:
+An election is [end-to-end verifiable][election-guard-verifiability][^f1] if both are true:
 
-- **_Cast as intended_** -- _voters_ can verify that their own selections have been correctly recorded.
+- **_Cast as intended_** -- _voters_ can verify that their own selections have been correctly recorded; and
 - **_Counted as cast_** -- _anyone_ can verify that the recorded votes have been correctly tallied.
 
 ### extended base hash $\overline{Q}$
+
+A cryptographically unique piece of data generated from the [manifest](#manifest) and encrypted with the [joint public key](#joint-key) that is used to uniquely associate an encrypted ballot with a specific election.
 
 ```mermaid
 graph LR
@@ -189,7 +189,7 @@ _Hashing_ is a common practice in computing; ElectionGuard uses hashing in its [
 !!! failure "Deprecated"
     this term is deprecated and replaced with [manifest](#election-manifest)
 
-The subset of the [election description](#election-description----see-election-manifest) required by ElectionGuard and combined with the [joint public key](#joint-key) to create the [extended base hash](#extended-base-hash-overlineq) used at the instantiation of the [encrypted ballot](#encrypting-a-ballot) [ballot chain](#ballot-chain) ballots are correctly associated with an election. This component mutates the state of the Election Description.
+The subset of the [election description](#election-description----see-election-manifest) required by ElectionGuard and combined with the [joint public key](#joint-key) to create the [extended base hash](#extended-base-hash-overlineq) used during instantiation of the [encrypted ballot](#encrypting-a-ballot). [Ballot chain](#ballot-chain) ballots are correctly associated with an election. This component mutates the state of the Election Description.
 
 ### joint public key
 
@@ -221,7 +221,7 @@ A mediator to mediate communication (if needed) of information such as keys betw
 
 ### key pair
 
-A _key pair_ consists of a linked _private key_ and _public key_. Key pairs are used in [public key cryptography][cryptographic-context], in which public keys are distributed to others to [encrypt](#encrypting-a-ballot) messages that only the private key can [decrypt](#decrypt). In ElectionGuard, each [election guardian](#election-guardian) that is part of an election creates a public-private key pair and shares their private key with the other election guardians as part of the [key ceremony](#key-ceremony)
+A _key pair_ consists of a linked _private key_ and _public key_. Key pairs are used in [public key cryptography][cryptographic-context], in which public keys are distributed to others to [encrypt](#encrypting-a-ballot) messages that only the private key can [decrypt](#decrypt). In ElectionGuard, each [election guardian](#election-guardian) that is part of an election creates a public-private key pair and shares their public key with the other election guardians as part of the [key ceremony](#key-ceremony)
 
 ```mermaid
     graph LR
@@ -235,6 +235,9 @@ A _key pair_ consists of a linked _private key_ and _public key_. Key pairs are 
 The _manifest_ is a subset of the [election description](#election-description) that uniquely specifies an election. It is combined with the [joint public key](#joint-key) to create the [extended base hash](#extended-base-hash-overlineq) used to instantiate a voting device to [encrypt ballots](#encrypting-a-ballot)
 
 ### master nonce
+
+!!! failure "Deprecated"
+    this term is deprecated and replaced with [mediator](#mediator)
 
 A mediator to mediate communication (if needed) of information such as keys between the guardians
 
@@ -266,8 +269,6 @@ The plaintext representation of a voter's selections
 
 ### post-election audit
 
-A post-election audit is
-
 ### $Q$ --see [Base hash](#base-hash-q)
 
 The _base hash_ is the _hash_ of the [election manifest](#election-manifest) metadata
@@ -294,6 +295,10 @@ A _submitted ballot_ is an encrypted ballot that has been [cast](#casting-a-ball
     a1 --> |spoiled| a2
 ```
 
+### tally
+
+The grouping of all selections made for each option on every contest in the election.
+
 ### tally ceremony
 
 ### undervote
@@ -306,10 +311,10 @@ An _unknown ballot_ is a [submitted ballot](#submitted-ballot) which has not bee
 
 ### verification code
 
-A unique hash value generated by an Encryption Device to anonymously identify a ballot
+A unique hash value generated by an Encryption Device to anonymously identify a submitted ballot.
 
 [^f1]: See also [End-to-end Verifiability][end-to-end-verifiability]
-[^nizk]: From Wikipedia ([Zero-Knowledge Proof][zero-knowledge-proof]
+[^nizk]: From Wikipedia ([Zero-Knowledge Proof][zero-knowledge-proof])
 
 <!-- Links -->
 [nist-election-event-logging]: https://pages.nist.gov/ElectionEventLogging/index.html "NIST Election Event Logging Common Data Format Specification"
