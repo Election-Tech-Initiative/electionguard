@@ -4,9 +4,9 @@
 
 ## 2021 Roadmap
 
-The 2021 roadmap takes the learnings from the different applications deployed in 2020 and rationalizes them into a *practice* to establish with the community in 2021. The goal is to grow a community of participants and contributors within which Microsoft takes part in and provides architectural and implementation guidance, but is fundamentally driven by the needs of the community in establishing the best ways to implement end-to-end verifiable elections and post-election audits.
+The 2021 roadmap takes lessons learned from the deployment of applications during 2020 and rationalizes them into a *practice* to establish with the community in 2021. The goal is to grow a community of participants and contributors within which Microsoft takes part and provides architectural and implementation guidance, but is fundamentally driven by the needs of the community in establishing the best ways to implement end-to-end verifiable elections and post-election audits.
 
-A big step toward this new vision occurred with the release of the `electionguard-cpp` ballot-encryption repo. The `electionguard-python` repo  implements the full suite of ElectionGuard SDK functionality and the base `electionguard` specification and documentation repo provides the foundation for future development. The goal for the first half of 2021 is to have a full suite of code, tests, workflows, and package deployments more directly associated with the conventions and requirements indicated by the specification. The goal is also to publish and generate more comprehensive and also more granular examples and use cases to enable easier and more focused contributions by the community.
+A big step toward this new vision occurred with the release of the `electionguard-cpp` ballot-encryption repo. The `electionguard-python` repo implements the full suite of ElectionGuard SDK functionality and the base `electionguard` specification and documentation repo provides the foundation for future development. The goal for the first half of 2021 is to have a full suite of code, tests, workflows, and package deployments more directly associated with the conventions and requirements indicated by the specification. The goal is also to publish and generate more comprehensive and also more granular examples and use cases to enable easier and more focused contributions by the community.
 
 ??? todo "1.0 Specification"
 
@@ -41,15 +41,15 @@ A big step toward this new vision occurred with the release of the `electionguar
 
 ## 2020 In Review
 
-2020 taught many lessons. 
+2020 provided many lessons.
 
-The first half of the year saw a successful [Fulton, WI Election Pilot][fulton-wi-election-pilot] with [VotingWorks][voting-works] and [InfernoRed][infernored]. Subsequent to the election the [Python][election-guard-python-source] repo was released as a new reference implementation.
+During the first half of the year ElectionGuard was used successfully as a [Pilot in Fulton, WI][fulton-wi-election-pilot] with the help of [VotingWorks][voting-works] and [InfernoRed][infernored]. Subsequent to the pilot ElectionGuard released the [Python][election-guard-python-source] repo as a new reference implementation.
 
-In the [second half of the year][election-guard-security-pilot], responding to COVID led to the development of a remote voting app with [InfernoRed][infernored], [Markup][markup], and the US House Democratic Caucus to enable representatives to [vote by secret ballot safely, securely, and remotely for Caucus leadership positions][dems-virtual-leadership-election]. 
+In the [second half of the year][election-guard-security-pilot], responding to COVID, led to the development of a remote voting app with [InfernoRed][infernored], [Markup][markup], and the US House Democratic Caucus to enable representatives to [vote by secret ballot safely, securely, and remotely for Caucus leadership positions][dems-virtual-leadership-election]. 
 
 In a further collaborate with VotingWorks, Rice University professor Dan Wallach contributed an integration with [Arlo][arlo] to enable ElectionGuard to provide the "back end" for [Inyo County's Risk-limiting Audit of the November 3 election][inyo-risk-limiting-audit].  
 
-Last and definitely not least, the [first independent verifiers were developed and published][election-guard-contribute].
+Last, and definitely not least, ElectionGuard [developed and published its first independent verifiers][election-guard-contribute].
 
 ## 2020 Roadmap
 
