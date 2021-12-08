@@ -45,8 +45,15 @@ nav:
           - Audit: use_cases/Audit.md
       - Develop:
           - Getting Started: develop/Getting_Started.md
-          - Sample Data: develop/Sample_Data.md
+          - Badges: develop/Badges.md
+          - Approach: develop/Approach.md
+          - Architecture: develop/Architecture.md
           - Repositories: develop/Repositories.md
+          - Applications: develop/Applications.md
+          - Data:
+              - Data Format: develop/Data_Format.md
+              - Election Record: develop/Election_Record.md
+              - Sample Data: develop/Sample_Data.md
 
   - Specification:
       - Current:
@@ -59,8 +66,6 @@ nav:
           - Election Record: spec/0.95.0/9_Election_Record.md
           - Applications: spec/0.95.0/11_Applications.md
           - Acknowledgements: spec/0.95.0/12_Acknowledgements.md
-      - Data Format: spec/Data_Format.md
-      - Badges: spec/Badges.md
       - Other Versions:
           - v0.85.0: spec/0.85.0/1_Overview.md
           - v0.95.0:
