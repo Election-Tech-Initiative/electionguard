@@ -25,8 +25,8 @@ Compact ballots assist with smaller machines and ballot encryption by providing 
 
 ## 🔑 Key Ceremony
 
-The key ceremony is provided as tools to be perform a ceremony between multiple guardians to generate an encryption key. This key can then be used to encrypt the ballots.
+The key ceremony is provided as a toolset to be perform a ceremony between multiple guardians to generate an encryption key. This key can then be used to encrypt the ballots.
 
 ## 🔓 Tally Ceremony
 
-The tally ceremony is provided as tools to perform a ceremony between multiple guardians to decrypt the tally or election results from an election. This includes quorum decryption when guardians from the key ceremony may be missing.
+The tally ceremony is provided as a toolset to perform a ceremony between multiple guardians to decrypt the tally or election results from an election. This includes quorum decryption when guardians from the key ceremony may be missing.

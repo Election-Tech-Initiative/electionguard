@@ -1,6 +1,6 @@
 # Applications
 
-There are many different paths for creating applications that work using ElectionGuard. For many of these paths, there are reference implementations that can be forked or used as examples or used as packages. Many reference implementations include packaging or containerization for easy consumption. Below are some examples of paths a developer could take when developing using ElectionGuard. This is by no means the limit and some of these paths can be combined for different applications and use cases. 
+There are many different paths for creating applications that work using ElectionGuard. For many of these paths, there are reference implementations that can be forked or used as examples or used as packages. Many reference implementations include packaging or containerization for easy consumption. Below are some examples of paths a developer could take when developing using ElectionGuard. This list is by no means complete and some of these paths can be combined for different applications and use cases. 
 
 If you develop an app for ElectionGuard, we suggest you [utilize our badges][badges] to indicate which version of the specification your application targets. 
 
@@ -8,25 +8,25 @@ If you develop an app for ElectionGuard, we suggest you [utilize our badges][bad
 
 ### ElectionGuard Core
 
-An ElectionGuard core is an application that implements the base level [features][features] such as Ballot Encryption by implementing them according to the specification. The internal examples of this are the python and c++ reference implementations. There is a community example of this with the java port don by the community. 
+An ElectionGuard core is an application that implements the base level [features][features] such as Ballot Encryption by implementing them according to the specification. The internal examples of this are the Python and c++ reference implementations. There is a community example of this with the java port done by the community. 
 
 ### Ballot Marking
 
-Ballot marking means marking ballots with a voters selections, for the uninitiated, a voting application. The app would display the contests in the manifest according to voter's ballot style and language and allow the voter to vote. The result would be a plaintext ballot.
+Ballot marking is the process of recording a voter's votes or selections on a ballot. A ballot marking app displays the contests from the manifest according to an individuals voter's ballot style and language. The voter then votes and the selections are recorded on a plaintext ballot. 
 
 ### Ballot Encryption
 
-Encrypting ballots is the base of ElectionGuard. This is a tool that takes a plaintext ballot and encrypts the ballot into an encrypted aka ciphertext ballot. 
+Ballot encryption is the process of converting voter selections into data such that it cannot be read by unauthorized parties. A ballot encryption app provides this fundamental functionality. The app functions as a tool that encrypts a plaintext ballot into a encrypted ballot aka ciphertext ballot. 
 
 Two quick ways to start are by using the ElectionGuard [encryption nuget package][encryption nuget package] or or [python package][python package].
 
 ### Ballot Box
 
-A ballot box simply takes the encrypted ballot of a voter and allows a user to submit the ballot as cast or spoil/challenge the ballot. This takes a ciphertext ballot and turns it into a submitted ballot that is aggregated into a tally.
+A ballot box app takes the encrypted ballot of a voter and allows a user to submit the ballot as cast or spoil/challenge the ballot. A cast submitted ballot is aggregated into the tally. A spoiled submitted ballot is added to the list of spoiled ballots. 
 
 ### Administer Election
 
-Administering an election for ElectionGuard usual requires the following steps. An example of this is available in [electionguard-ui repository][admin app].
+Administering an election for ElectionGuard usually requires the following steps. An example of this is available in [electionguard-ui repository][admin app].
 
 1. Setup Election - An election should be setup with a manifest and selected guardians
 2. Key Ceremony - A key ceremony should be run that results in the encryption key that can be used for the ballots.
@@ -47,8 +47,9 @@ The results of election can be displayed after an election is closed. An example
 
 ### Verify Election
 
-A verifier verifies an election by using the public information about a finished election. At the close of an election using ElectionGuard, an election record should be created and made public. ElectionGuard encourages third parties to create their own verifiers and help verify election records. A very basic example of a verifier can be found within the [electionguard-python repository][verifier], but  verifiers should aim to be as thorough as possible. Verifiers can validate everything from the key ceremony to the decryption since the election is end to end verifiable. To verify an election, the app just needs to consume the files in the election record and produce 
+A verifier app verifies an election is true and accurate by using the publicly published information about a completed election. At the close of an election using ElectionGuard, an election record should be created and made public. ElectionGuard encourages third parties to create their own verifiers and help verify election records. A basic example of a verifier can be found within the [electionguard-python repository][verifier], but  verifiers should aim to be as thorough as possible. After consuming the files in an election record, verifiers can validate everything from the key ceremony to the decryption since the election is end to end verifiable. 
 
+Verifying an election is the process undertaken by a trusted individual (aka a verifier) when they use publicly available information to certify that an election is true and accurate
 
 <!--Links-->
 [badges]: Badges.md

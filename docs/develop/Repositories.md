@@ -12,7 +12,7 @@ If you're looking to develop for ElectionGuard, it might help if you pick someth
 
 ## <div style="display: flex; align-items: center;">ElectionGuard Specification<span style="display: flex; align-items: center; margin-left: 16px"> ![Markdown][markdown-logo] <span></div>
 
-The ElectionGuard Specification repo addresses the mathematical and conceptual underpinnings of end-to-end verifiability in a manner that comfortably accommodates post-election audits. The specification houses the core data constructs, tests, and datasets that we recommend to ensure portability and data integrity.
+The ElectionGuard Specification repository addresses the mathematical and conceptual underpinnings of end-to-end verifiability in a manner that comfortably accommodates post-election audits. The specification houses the core data constructs, tests, and datasets that we recommend to ensure portability and data integrity.
 
 The ElectionGuard site is also built from this repository using mkdocs. This can be a friendly place to start out for new developers trying to get started.
 
@@ -20,7 +20,7 @@ The ElectionGuard site is also built from this repository using mkdocs. This can
 
 ## <div style="display: flex; align-items: center;">ElectionGuard Python<span style="display: flex; align-items: center; margin-left: 16px"> ![Python][python-logo] <span></div>
 
-The ElectionGuard Python library is the _reference implementation_ of the ElectionGuard SDK. It covers the entire suite of functionality and processes necessary to implement an end-to-end verifiable election as part a voting system:
+The ElectionGuard Python library is a _reference implementation_ of the ElectionGuard SDK. It covers the entire suite of functionality and processes necessary to implement an end-to-end verifiable election as part a voting system:
 
 - Key generation ceremony
 - Ballot encryption
@@ -47,13 +47,13 @@ The ElectionGuard C++ library performs ballot encryption. It is designed for dev
 
 ## <div style="display: flex; align-items: center;">ElectionGuard Python API<span style="display: flex; align-items: center; margin-left: 16px"> ![Python][python-logo] <span></div>
 
-This API uses the `electionguard-python` package in a python API utilizing FastAPI. This exposes the full featured python ElectionGuard and allows users to create docker containers of the API. 
+This API uses the `electionguard-python` package in a Python API utilizing FastAPI. This exposes the full featured Python ElectionGuard and allows users to create docker containers of the API. 
 
 [:fontawesome-brands-github: Source][election-guard-api-source]
 
-## <div style="display: flex; align-items: center;">ElectionGuard UI<span style="display: flex; align-items: center; margin-left: 16px;"> ![Typescript][typescript-logo] <span></div>
+## <div style="display: flex; align-items: center;">ElectionGuard UI<span style="display: flex; align-items: center; margin-left: 16px;"> ![TypeScript][typescript-logo] <span></div>
 
-This UI application features several typescript packages as a monorepo to reduce repeated tooling. It contains two web applications. One is an application to administer an election. The other is an application to display the election results. There are two helper packages, one functions as an api client and the other is a component library. 
+This UI application features several TypeScript packages as a monorepo, a version-controlled code repository that holds many projects, to reduce repeated tooling. It contains two web applications. One is an application to administer an election. The other is an application to display the election results. There are two helper packages, one functions as an api client and the other is a component library. 
 
 [:fontawesome-brands-github: Source][election-guard-ui-source]
 

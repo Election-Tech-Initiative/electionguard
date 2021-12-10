@@ -14,11 +14,11 @@ ElectionGuard is always improving. To keep up with the latest, check our **[offi
 
 ### Documentation
 
-This repository is a living document to help everyone interact with ElectionGuard. The [official ElectionGuard site][election-guard-official-page] is built using the `/docs` folder and [mkdocs][mkdocs-official-site] with [mkdocs-material][material-mkdocs]. Ensure you have the python 3.8 or newer installed and run `make` to install the dependencies and start the site.
+This repository is a living document to help everyone interact with ElectionGuard. The [official ElectionGuard site][election-guard-official-page] is built using the `/docs` folder and [mkdocs][mkdocs-official-site] with [mkdocs-material][material-mkdocs]. Ensure you have the Python 3.8 or newer installed and run `make` to install the dependencies and start the site.
 
 ### Python
 
-A core component of ElectionGuard implemented in python which includes ballot encryption, decryption, key generation, and tallying.
+A core component of ElectionGuard implemented in Python which includes ballot encryption, decryption, key generation, and tallying.
 
 [📁 Source][election-guard-python-source] |
 [📦 Package][election-guard-python-package] |
@@ -34,7 +34,7 @@ A subset of the ElectionGuard SDK implemented in C++ to support ballot encryptio
 
 ### Web API
 
-A Web API that wraps the python package to perform ballot encryption, casting, spoiling, and tallying.
+A Web API that wraps the Python package to perform ballot encryption, casting, spoiling, and tallying.
 
 [📁 Source][election-guard-web-api-source] | 
 [🐳 Docker][election-guard-web-api-docker] | 

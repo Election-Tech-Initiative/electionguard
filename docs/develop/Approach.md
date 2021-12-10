@@ -8,13 +8,13 @@ Simplicity is the first and foremost goal of the code. The intent is for others 
 
 ## ✅ Transparency
 
-ElectionGuard is open source first. Our code, our issues and even our CI is designed to be visible to the public. This is to allow others to both be able to trust the code, learn, and hopefully help improve ElectionGuard. 
+ElectionGuard is open source first. Our code, our issues and even our Continuous Integration (CI) is designed to be visible to the public. This is to allow others to both be able to trust the code, learn, and hopefully help improve ElectionGuard. 
 
 GitHub tools have been our primary tool to maintain transparency. Our cards are all GitHub issues. Our continuous integration uses GitHub Workflows to be out in the open. 
 
 ## ✅ Readability
 
-Whether developing or writing for ElectionGuard, the goal is to create easy to read and understand text. We will always be improving in this area, but the goal is to make the system easy to grasp for not only developers, but for the public. This is the primary reason that python was chosen as the primary reference implementation. Understanding the code and the written word is essential for confidence.
+Whether developing or writing for ElectionGuard, the goal is to create easy to read and understand text. We will always be improving in this area, but the goal is to make the system easy to grasp for not only developers, but for the public. This is the primary reason that Python was chosen as the primary reference implementation. Understanding the code and the written word is essential for confidence.
 
 ## ✅ Testability
 

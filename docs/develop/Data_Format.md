@@ -6,7 +6,7 @@ Keep in mind that not all serialized files should be public. The [election recor
 
 ## Schema ![Version 0.95.0][shield-green-0.95.0]
 
-Currently, JSON is used as the primary serialization of the artifacts from an election. These are [JSON schema][json-schema] files that can be used to verify the schema of the setup files like the manifest pre-election and the election record files post-election. This represents the full list of items that can be serialized / deserialized, but not all elections will use every file type. 
+Currently, JSON is used as the primary serialization format of the artifacts from an election. These are [JSON schema][json-schema] files that can be used to verify the schema of the setup files like the manifest pre-election and the election record files post-election. This represents the full list of items that can be serialized / deserialized, but not all elections will use every file type. 
 
 !!! warning "Work in Progress"
     This is a work in progress. Feel free to contribute.

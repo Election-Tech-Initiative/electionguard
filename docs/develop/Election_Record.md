@@ -1,6 +1,6 @@
 ### Election Record
 
-The Election Record are the files required at the end of the election to verify the election and are intended to be posted publicly. There should not be any sensitive data (eg: no guardian private keys) in the record. These include the following:
+The Election Record is the group of files required at the end of the election to verify the election and is intended to be posted publicly. It should not contain any sensitive data (eg: no guardian private keys) in the record. These include the following:
 
 - Encryption Devices Information
 - Guardian Records
