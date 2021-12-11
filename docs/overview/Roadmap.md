@@ -66,7 +66,7 @@ Last, and definitely not least, ElectionGuard [developed and published its first
     * Run a post-election election audit with Inyo, California using [VotingWorks Arlo][voting-works] using ElectionGuard as a back end
     * Identify learnings and code refactoring necessary to reflect the different data structures and scalability considerations of audits
 
-??? done "Update the ElectionGuard specification to 0.95.0"
+??? done "Update the ElectionGuard Specification to 0.95.0"
 
 ??? done "Support building ElectionGuard into additional voting systems"
 

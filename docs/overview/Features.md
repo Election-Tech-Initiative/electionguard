@@ -17,7 +17,7 @@ Ballot confirmation allows voters to confirm their ballots were counted. Encrypt
 
 ## 📝 Challenge Ballots
 
-To allow for challenging the system, a challenge ballot can be submitted for decryption along with the tally. This allows voters to view the plaintext decryption of their submitted spoiled ballot.
+To allow for challenging the system, a spoiled ballot can be submitted for decryption along with the tally. Post election, this allows a voter to both confirm their ballot was not included in the tally and view the plaintext decryption of said ballot.
 
 ## 🤏 Compact Ballots
 

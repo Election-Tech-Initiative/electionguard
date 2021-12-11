@@ -27,7 +27,7 @@ Currently, JSON is used as the primary serialization format of the artifacts fro
 - [Ballot][plaintext_ballot] / `PlaintextBallot` - Plaintext ballot
 - [Compact Ballot][compact_ballot] / `CompactBallot` - Compact ballot
 - [Encrypted Ballot][ciphertext_ballot] / `CiphertextBallot` - Encrypted ballot
-- [Submitted Ballot][submitted_ballot] / `SubmittedBallot` -  Cast or spoiled/challenged ballot
+- [Submitted Ballot][submitted_ballot] / `SubmittedBallot` -  Submitted cast or spoiled ballot
 
 ### Tally
 - [Tally][plaintext_tally] / `PlaintextTally` - Plaintext tally

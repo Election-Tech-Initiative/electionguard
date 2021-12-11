@@ -1,6 +1,6 @@
 # Architecture
 
-There are five repositories in the ElectionGuard SDK.
+There are five official repositories in the **ElectionGuard SDK**.
 
 - [ElectionGuard Specification][election-guard-specification]
 - [ElectionGuard Python][election-guard-python-source]
@@ -8,29 +8,11 @@ There are five repositories in the ElectionGuard SDK.
 - [ElectionGuard Python API][election-guard-web-api-source]
 - [ElectionGuard React UI][election-guard-ui-source]
 
-The specification repository focuses on explaining ElectionGuard as a whole including documentation and the specification itself. The other repositories are all reference implementations. These reference implementations are designed to demonstrate to developers how to implement a system using the ElectionGuard specification. In depth descriptions of the repositories are detailed in the [repositories][repositories] page.
+The **ElectionGuard Specification** repository focuses on explaining ElectionGuard as a whole including documentation and the specification itself. The other repositories are all reference implementations. These reference implementations are designed to demonstrate to developers how to implement a system using the ElectionGuard Specification. In depth descriptions of the repositories are detailed in the [repositories][repositories] page.
 
-With the specification as guidance, the reference repositories take two pathways; one starting with Python and one starting with C++. Each of these creating a stack. This chart shows the relationship of the specification to the reference implementations by repository. This paints the picture of how the repositories are related to each other.  
+## Cores
 
-```mermaid
-flowchart TD
-    spec["electionguard"] -.-> |Python|e-python["electionguard-python"];
-    spec["electionguard"] -.-> |C++|e-cpp["electionguard-cpp"];
-    e-python --> web-api["electionguard-api-python"];
-    web-api --> e-ui["electionguard-ui"];
-```
-
-Using more plain language, the specification is the guide used to create the core repositories. There are two main paths within the core reference implementations of ElectionGuard. At the base, one is written in Python and one is written in C++. These can used together, but have different feature sets.  
-
-```mermaid
-flowchart TD
-    specification -.-> |Python|python["full featured core"];
-    specification -.-> |C++|cpp["encryption core"];
-    python --> api["web-api"];
-    api --> ui["user interface"];
-```
-
-The Python reference implementation is full featured including all elements of the specification to showcase ElectionGuard to its fullest. The C++ reference implementation is designed with a focus on encrypting ballots. Its goal is to allow developers to use the ElectionGuard encryption on encryption devices.
+An **ElectionGuard Core** is a code base that implements fundamental features of the ElectionGuard Specification (such as ballot encryption) to act as a core or central integration. ElectionGuard provides two official reference implementations of Cores: Python and C++. The **Python Core** (`electionguard-python`) is full featured including all elements of the specification to showcase ElectionGuard to its fullest. The **C++ Core** (`electionguard-cpp`) is designed with a focus on encrypting ballots. Its goal is to allow developers to use the ElectionGuard encryption on encryption devices.
 
 | Feature           | `electionguard-python` |  `electionguard-cpp` |
 | ----------------- | :--------------------: | :------------------: |
@@ -41,30 +23,52 @@ The Python reference implementation is full featured including all elements of t
 | Tally Ceremony    | :material-check:       |                      |
 | Tally Decryption  | :material-check:       |                      |
 
+## Paths
 
-## Python Stack
+The specification serves as the guide to implement any ElectionGuard Core. For the official reference implementations, there are two main paths within the reference implementations of ElectionGuard. One path starts with the Python Core (`electionguard-python`) and the other starts with C++ Core (`electionguard-cpp`). These paths can used together, but have different feature sets.
 
-The Python reference implementation is full featured including all elements of the specification to showcase ElectionGuard to its fullest. There is a full stack provided for Python so there are many different approaches and entry points a developer could use when starting here. The following suggested approaches can be used to develop apps like those listed in the [applications][application-paths] list.
+```mermaid
+flowchart TD
+    specification["Specification"] -.-> |Python|python["Full Featured Core"];
+    specification -.-> |C++|cpp["Encryption Core"];
+    python --> api["API"];
+    api --> ui["User Interface"];
+```
 
-### Suggested Approaches
+This chart shows the relationship of the specification to the reference implementations by repository name. This paints the picture of how the repositories are related to each other.  
 
-**Approach 1:** Build a Python app utilizing `electionguard-python` package
+```mermaid
+flowchart TD
+    spec["electionguard"] -.-> |Python|e-python["electionguard-python"];
+    spec["electionguard"] -.-> |C++|e-cpp["electionguard-cpp"];
+    e-python --> web-api["electionguard-api-python"];
+    web-api --> e-ui["electionguard-ui"];
+```
 
-**Approach 2:** Utilize `election-api-python` as API and integrating `electionguard-ui`'s api client into a web app.
 
-**Approach 3:** Utilize `election-api-python` as API with a web app directly consuming api.
+### Python Path
 
-**Approach 4:** Utilize `electionguard-api-python` and fork `electionguard-ui`'s web apps
+The Python path is full featured including all elements of the specification to showcase ElectionGuard to its fullest. There is a full stack provided for Python so there are many different approaches and entry points a developer could use when starting here. The following suggested approaches can be used to develop apps like those listed in the [applications][application-paths] list.
 
-## C++ Stack
+#### Suggested Approaches
 
-For the C++ stack, the included C++ reference implementation and resulting packages are currently designed with a focus on encrypting ballots. Its goal is to allow developers to use ElectionGuard encryption on encryption devices. The following suggested approaches can be used to develop a ballot encryption app or integration as described in the [applications][application-encryption] list.
+- Build a custom Python app with `electionguard-python` package
 
-### Suggested Approaches
+- Build a custom web app and use `electionguard-api-python` as an API
 
-**Approach 1:** Use C++ directly
+- Build a custom web app with `electionguard-ui`'s api client and use `electionguard-api-python` as an API.
 
-**Approach 2:** Use Nuget Package
+- Build a custom web app from fork of `electionguard-ui`'s web apps and use `electionguard-api-python` as an API
+
+### C++ Path
+
+For the C++ path, the included reference implementation of a C++ Core and resulting packages are currently designed with a focus on encrypting ballots. Its goal is to allow developers to use ElectionGuard encryption on encryption devices. The following suggested approaches can be used to develop a ballot encryption app or integration as described in the [applications][application-encryption] list.
+
+#### Suggested Approaches
+
+- Build custom app linking C++ library
+
+- Build custom app and use NuGet Package
 
 
 [repositories]: ../Repositories

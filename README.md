@@ -18,7 +18,7 @@ This repository is a living document to help everyone interact with ElectionGuar
 
 ### Python
 
-A core component of ElectionGuard implemented in Python which includes ballot encryption, decryption, key generation, and tallying.
+An ElectionGuard Core implemented in Python which includes ballot encryption, decryption, key generation, and tallying.
 
 [📁 Source][election-guard-python-source] |
 [📦 Package][election-guard-python-package] |
@@ -26,7 +26,7 @@ A core component of ElectionGuard implemented in Python which includes ballot en
 
 ### C ++
 
-A subset of the ElectionGuard SDK implemented in C++ to support ballot encryption.
+An ElectionGuard Core implemented in C++ to support ballot encryption.
 
 [📁 Source][election-guard-cpp-source-code] |
 [📦 Package][election-guard-cpp-package] |

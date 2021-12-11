@@ -36,7 +36,7 @@ Any real-world voting use case will need to incorporate the capabilities of the 
 [:fontawesome-regular-file: Documentation][election-guard-python-documentation]
 
 !!! info "Community-sourced Java port"
-    Check out our [community contributions for a java port](../contribute/index.md).
+    Check out our [community contributions for a Java port](../contribute/index.md).
 
 ## <div style="display: flex; align-items: center;">ElectionGuard C++<span style="display: flex; align-items: center; margin-left: 16px"> ![C++][cpp-logo]![C][c-logo]![C#][c-sharp-logo] <span></div>
 

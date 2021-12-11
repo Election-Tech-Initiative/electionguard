@@ -72,7 +72,9 @@ A candidate is a choice or option on a [contest](#contest). This can represent a
 
 ### cast ballot
 
-A ballot which a voter has submitted or cast to be included in the official election [tally](#plaintext-tally).
+A ballot which a voter has submitted as cast to be included in the official election [tally](#plaintext-tally).
+
+###### _Other terms:_ cast, casting
 
 ### ciphertext ballot
 
@@ -139,6 +141,18 @@ The election polynomial is the mathematical expression that each [guardian](#gua
 A verifiable record of the public artifacts or files of the election. This includes items like the manifest and the encrypted ballots so an individual or third party can verify the election end-to-end.
 
 ###### _Other terms:_ record, election artifacts _(deprecated)_
+
+### ElectionGuard Core
+
+A programming code base that implements fundamental features of the ElectionGuard Specification (such as ballot encryption) to act as a core or central integration.
+
+### ElectionGuard Specification
+
+The specification indicating how ElectionGuard creates end-to-end verifiable elections. See [Specification].
+
+### ElectionGuard SDK
+
+The entire set of repositories associated with ElectionGuard. See [Repositories].
 
 ### encryption device
 
@@ -266,9 +280,9 @@ A risk-limiting audit is a [post-election audit](#post-election-audit) that prov
 
 ### selection
 
-A selection is the selected candidate(s) or option(s) in a contest on a voter's ballot.
+A selection or vote is the selected candidate(s) or option(s) in a contest on a voter's ballot.
 
-###### _Other terms:_ ballot selection, candidate selection
+###### _Other terms:_ ballot selection, candidate selection, vote
 
 ### selection limit
 
@@ -276,11 +290,11 @@ The limit of selections that indicates the number of selections that are allowed
 
 ### spoiled ballot
 
-A spoiled ballot is an election term that refers to a ballot that allows a voter to turn in their ballot where their ballot will not be included in the election tally. The voter must submit a replacement ballot as their official [cast ballot](#cast-ballot).
+**Spoiling** allows a voter to turn in their ballot without their ballot being included in the election tally. A **spoiled ballot** is a ballot the voter has submitted as _spoiled_. The voter must submit a replacement ballot as their official [cast ballot](#cast-ballot).
 
 In ElectionGuard, ballot spoiling is used as a means for voters to challenge the voting machine and force it to reveal the contents of spoiled ballots for public scrutiny. In this way, a spoiled ballot challenges the system and the term **challenge ballot** is used. The ballot is spoiled after encryption where the machine cannot modify the ballot. Since the ballot will not be used in the official tally, the content of the ballot can be revealed at the same time as the tally allowing a voter to verify the encryption and decryption process.
 
-###### _Other terms:_ challenge ballot
+###### _Other terms:_ spoil, spoiling, challenge ballot
 
 ### submitted ballot
 
@@ -327,6 +341,8 @@ A zero-knowledge proof is a method by which one party (the prover) can prove to 
 [^2]: [Zero-Knowledge Proof from Wikipedia][zero-knowledge-proof]
 
 <!-- Links -->
+[Specification]: ../../spec/0.95.0/1_Overview
+[Repositories]: ../../develop/Repositories
 [nist-data-format]: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-100r2.pdf "NIST Election Results Common Data Format Specification"
 [civics-data-format]: https://developers.google.com/elections-data/reference "Civics Common Standard Data Specification"
 [cryptographic-context]: https://en.wikipedia.org/wiki/Cryptographic_hash_function "Cryptographic hash function"
