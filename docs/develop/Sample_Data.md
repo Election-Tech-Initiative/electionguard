@@ -1,6 +1,6 @@
 # Sample Data
 
-To better understand the data formats used by ElectionGuard, sample data is provided here to guide new developers.
+To better understand the data formats used by ElectionGuard, sample data is provided here to guide new developers. 
 
 ## Four Sample Elections
 
@@ -33,32 +33,7 @@ Cast ballots will be tallied and spoiled ballots are decrypted.
 
 ### Election Record
 
-The Election Record are the files required at the end of the election to verify the election and are intended to be posted publicly. There should not be any sensitive data (eg: no guardian private keys) in the record. These include the following:
-
-- Manifest
-- Election Context
-- Election Constants
-- Encrypted Tally
-- Decrypted Tally
-- Guardian Records
-- Encryption Device Information
-- Encrypted Ballots
-- Decrypted Spoiled Ballots
-
-**Example Folder Structure:**
-
-```
-📂 artifacts
---- 📄 manifest.json
---- 📄 context.json
---- 📄 constants.json
---- 📄 encrypted_tally.json
---- 📄 tally.json
---- 📁 guardians
---- 📁 devices
---- 📁 encrypted_ballots
---- 📁 spoiled_ballots
-```
+The Election Record are the files required at the end of the election to verify the election and are intended to be posted publicly. There should not be any sensitive data (eg: no guardian private keys) in the record. 
 
 **Artifacts Examples:** [minimal][minimal-election-artifacts] | [small][small-election-artifacts] | [full][full-election-artifacts] | [hamilton][hamilton-election-artifacts]
 

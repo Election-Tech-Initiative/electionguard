@@ -2,7 +2,7 @@
 
 At the conclusion of voting, all of the cast ballots are published in their encrypted form in the election record together with the proofs that the ballots are well-formed. Additionally, all of the encryptions of each option are homomorphically-combined to form an encryption of the total number of times that each option was selected. The homomorphically-combined encryptions are decrypted to generate the election tally. Individual cast ballots are not decrypted. Individual spoiled ballots are decrypted and the plaintext values are published along with the encrypted representations and the proofs.
 
-In order to decrypt the homomorphically-combined encryption of each selection, each Guardian participating in the decryption must compute a specific Decryption Share of the decryption. It is preferable that all guardians be present for decryption, however in the event that guardians cannot be present, Electionguard includes a mechanism to decrypt with the Quorum of Guardians.
+In order to decrypt the homomorphically-combined encryption of each selection, each Guardian participating in the decryption must compute a specific Decryption Share of the decryption. It is preferable that all guardians be present for decryption, however in the event that guardians cannot be present, ElectionGuard includes a mechanism to decrypt with the Quorum of Guardians.
 
 ![Encrypt][encrypt-image]
 
