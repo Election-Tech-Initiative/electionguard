@@ -1,0 +1,26 @@
+{
+  "object_id": "ballot-85c8f918-73fc-11ec-9daf-acde48001122",
+  "style_id": "ballot-style-01",
+  "contests": [
+    {
+      "object_id": "referendum-pineapple",
+      "sequence_order": 0,
+      "ballot_selections": [
+        {
+          "object_id": "referendum-pineapple-affirmative-selection",
+          "sequence_order": 0,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "referendum-pineapple-negative-selection",
+          "sequence_order": 1,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ]
+    }
+  ]
+}

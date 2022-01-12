@@ -1,0 +1,192 @@
+{
+  "object_id": "ballot-ddf57b38-73f3-11ec-aaed-acde48001122",
+  "style_id": "congress-district-5-hamilton-county",
+  "contests": [
+    {
+      "object_id": "president-vice-president-contest",
+      "sequence_order": 0,
+      "ballot_selections": [
+        {
+          "object_id": "barchi-hallaren-selection",
+          "sequence_order": 0,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "cramer-vuocolo-selection",
+          "sequence_order": 1,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "hildebrand-garritty-selection",
+          "sequence_order": 4,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "patterson-lariviere-selection",
+          "sequence_order": 5,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ]
+    },
+    {
+      "object_id": "ozark-governor",
+      "sequence_order": 1,
+      "ballot_selections": [
+        {
+          "object_id": "franz-selection",
+          "sequence_order": 0,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "harris-selection",
+          "sequence_order": 1,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "bargmann-selection",
+          "sequence_order": 2,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "abcock-selection",
+          "sequence_order": 3,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "walace-selection",
+          "sequence_order": 6,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "greher-selection",
+          "sequence_order": 12,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "mitchell-selection",
+          "sequence_order": 14,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "lee-selection",
+          "sequence_order": 15,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "ash-selection",
+          "sequence_order": 16,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "teller-selection",
+          "sequence_order": 20,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "murphy-selection",
+          "sequence_order": 22,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "newman-selection",
+          "sequence_order": 23,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "chandler-selection",
+          "sequence_order": 26,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "write-in-selection-governor",
+          "sequence_order": 27,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ]
+    },
+    {
+      "object_id": "congress-district-5-contest",
+      "sequence_order": 2,
+      "ballot_selections": [
+        {
+          "object_id": "soliz-selection",
+          "sequence_order": 0,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "keller-selection",
+          "sequence_order": 1,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "rangel-selection",
+          "sequence_order": 2,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "argent-selection",
+          "sequence_order": 3,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "witherspoon-smithson-selection",
+          "sequence_order": 4,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "write-in-selection-us-congress-district-5",
+          "sequence_order": 5,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ]
+    }
+  ]
+}
