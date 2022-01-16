@@ -63,6 +63,7 @@ nav:
           - Baseline Parameters: spec/0.95.0/4_Baseline_Parameters.md
           - Ballot Encryption: spec/0.95.0/6_Ballot_Encryption.md
           - Ballot Aggregation: spec/0.95.0/7_Ballot_Aggregation.md
+          - Verifiable Decryption: spec/0.95.0/8_Verifiable_Decryption.md
           - Election Record: spec/0.95.0/9_Election_Record.md
           - Applications: spec/0.95.0/11_Applications.md
           - Acknowledgements: spec/0.95.0/12_Acknowledgements.md
@@ -75,6 +76,7 @@ nav:
               - Baseline Parameters: spec/0.95.0/4_Baseline_Parameters.md
               - Ballot Encryption: spec/0.95.0/6_Ballot_Encryption.md
               - Ballot Aggregation: spec/0.95.0/7_Ballot_Aggregation.md
+              - Verifiable Decryption: spec/0.95.0/8_Verifiable_Decryption.md
               - Election Record: spec/0.95.0/9_Election_Record.md
               - Applications: spec/0.95.0/11_Applications.md
               - Acknowledgements: spec/0.95.0/12_Acknowledgements.md
