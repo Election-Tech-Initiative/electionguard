@@ -16,7 +16,7 @@ The ElectionGuard Specification repository addresses the mathematical and concep
 
 The ElectionGuard site is also built from this repository using mkdocs. This can be a friendly place to start out for new developers trying to get started.
 
-[:fontawesome-brands-github: ElectionGuard Specification][election-guard-spec-overview]
+[:fontawesome-regular-file: Specification][election-guard-spec-overview] | [:fontawesome-brands-github: Source][election-guard-specification]
 
 ## <div style="display: flex; align-items: center;">ElectionGuard Python<span style="display: flex; align-items: center; margin-left: 16px"> ![Python][python-logo] <span></div>
 
@@ -72,7 +72,7 @@ This UI application features several TypeScript packages as a monorepo, a versio
 [election-guard-python-documentation]: https://microsoft.github.io/electionguard-python/ "Election Guard Python documentation"
 [election-guard-cpp-source]: https://github.com/microsoft/electionguard-cpp "Election Guard C++ source code"
 
-[election-guard-spec-overview]: ../spec/0.95.0/1_Overview.md "Election Guard Specification Overview"
+[election-guard-spec-overview]: ../../spec "ElectionGuard Specification"
 [election-guard-verifiability]: ../concepts/Verifiability.md "Election Guard Verifiability"
 [election-guard-post-election-audit]: ../Glossary/#post-election-audit "Election Guard Post-Election Audit"
 
