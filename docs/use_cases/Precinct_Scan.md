@@ -130,6 +130,6 @@ A dehydrated ballot **_must_** provide the following data to be properly _rehydr
 [ballot-manifest]: https://www.electionguard.vote/guide/Election_Manifest/
 [ballot-manifest-data-validation]: https://www.electionguard.vote/guide/Election_Manifest/#data-validation
 [nist-nonce]: https://csrc.nist.gov/glossary/term/nonce
-[ballot-encryption]: https://www.electionguard.vote/spec/0.95.0/5_Ballot_encryption/
+[ballot-encryption]: ../../spec/web/6_Ballot_Encryption/
 
 [cast-vote-record]: ../overview/Glossary.md#cast-vote-record

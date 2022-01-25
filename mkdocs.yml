@@ -56,29 +56,17 @@ nav:
               - Sample Data: develop/Sample_Data.md
 
   - Specification:
-      - Current:
-          - Overview: spec/0.95.0/1_Overview.md
-          - Structure: spec/0.95.0/2_ElectionGuard_Structure.md
-          - Components: spec/0.95.0/3_ElectionGuard_Components.md
-          - Baseline Parameters: spec/0.95.0/4_Baseline_Parameters.md
-          - Ballot Encryption: spec/0.95.0/6_Ballot_Encryption.md
-          - Ballot Aggregation: spec/0.95.0/7_Ballot_Aggregation.md
-          - Election Record: spec/0.95.0/9_Election_Record.md
-          - Applications: spec/0.95.0/11_Applications.md
-          - Acknowledgements: spec/0.95.0/12_Acknowledgements.md
-      - Other Versions:
-          - v0.85.0: spec/0.85.0/1_Overview.md
-          - v0.95.0:
-              - Overview: spec/0.95.0/1_Overview.md
-              - Structure: spec/0.95.0/2_ElectionGuard_Structure.md
-              - Components: spec/0.95.0/3_ElectionGuard_Components.md
-              - Baseline Parameters: spec/0.95.0/4_Baseline_Parameters.md
-              - Ballot Encryption: spec/0.95.0/6_Ballot_Encryption.md
-              - Ballot Aggregation: spec/0.95.0/7_Ballot_Aggregation.md
-              - Election Record: spec/0.95.0/9_Election_Record.md
-              - Applications: spec/0.95.0/11_Applications.md
-              - Acknowledgements: spec/0.95.0/12_Acknowledgements.md
-          - v1.0.0: spec/1.0.0/1_Overview.md
+      - Official: spec/index.md
+      - Web:
+          - Overview: spec/web/1_Overview.md
+          - Structure: spec/web/2_ElectionGuard_Structure.md
+          - Components: spec/web/3_ElectionGuard_Components.md
+          - Baseline Parameters: spec/web/4_Baseline_Parameters.md
+          - Ballot Encryption: spec/web/6_Ballot_Encryption.md
+          - Ballot Aggregation: spec/web/7_Ballot_Aggregation.md
+          - Election Record: spec/web/9_Election_Record.md
+          - Applications: spec/web/11_Applications.md
+          - Acknowledgements: spec/web/12_Acknowledgements.md
 
   - Contribute: contribute/index.md
 plugins:
