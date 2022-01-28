@@ -1,4 +1,4 @@
-# ElectionGuard Web Specification ![Version 0.95][green-badge-0.95]
+# ElectionGuard Web Specification [![Version 0.95][badge-0.95]][spec-0.95]
 
 !!! warning "Incomplete"
     The web version is being constructed by the open source community for the convenience of web viewing. However, it is incomplete at this time and should not be used for reference purposes. If you need a complete reference, refer to the [official specifications].
