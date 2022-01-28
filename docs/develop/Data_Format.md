@@ -4,7 +4,7 @@ ElectionGuard expects data to be formatted in a particular way. The expectation 
 
 Keep in mind that not all serialized files should be public. The [election record][election-record] includes the list of all data formats that should be public. [Sample data][sample-data] for the election is also available for developers. This will include both what is in the Election Record, but also some private data only available for testing. 
 
-## Schema ![Version 0.95.0][shield-green-0.95.0]
+## Schema ![Version 0.95][shield-green-0.95]
 
 Currently, JSON is used as the primary serialization format of the artifacts from an election. These are [JSON schema][json-schema] files that can be used to verify the schema of the setup files like the manifest pre-election and the election record files post-election. This represents the full list of items that can be serialized / deserialized, but not all elections will use every file type. 
 
@@ -35,7 +35,7 @@ Currently, JSON is used as the primary serialization format of the artifacts fro
 
 
 <!-- Links -->
-[shield-green-0.95.0]: https://img.shields.io/badge/🗳%20ElectionGuard%20Specification-0.95.0-green
+[shield-green-0.95]: https://img.shields.io/badge/🗳%20ElectionGuard%20Specification-v0.95-green
 [json-schema]: https://json-schema.org/specification.html "Json Schema Specification"
 
 [election-record]: ../Election_Record

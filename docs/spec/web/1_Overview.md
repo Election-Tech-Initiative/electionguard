@@ -1,4 +1,4 @@
-# ElectionGuard Web Specification ![Version 0.95.0][green-badge-0.95.0]
+# ElectionGuard Web Specification [![Version 0.95][badge-0.95]][spec-0.95]
 
 !!! warning "Incomplete"
     The web version is being constructed by the open source community for the convenience of web viewing. However, it is incomplete at this time and should not be used for reference purposes. If you need a complete reference, refer to the [official specifications].
@@ -28,6 +28,6 @@ This specification can be used by expert reviewers to evaluate the details of th
 
 <!-- Links -->
 
-[green-badge-0.95.0]: https://img.shields.io/badge/Version-v0.95.0-green
-[spec-0.95.0]: https://github.com/microsoft/electionguard/releases/download/v0.95.0/ElectionGuard_Specification_v0_95_0.pdf "Election Guard Specification 0.95.0"
+[badge-0.95]: https://img.shields.io/badge/🗳%20ElectionGuard%20Specification-v0.95-green
+[spec-0.95]: https://github.com/microsoft/electionguard/releases/download/v0.95.0/EG_spec_v0_95.pdf "Election Guard Specification 0.95"
 [official specifications]: ../../
