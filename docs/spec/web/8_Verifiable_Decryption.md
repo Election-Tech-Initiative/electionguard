@@ -77,7 +77,7 @@ $$
 The final step to reconstruct a missing partial decryption $M_i$ is to compute Lagrange coefficients for a set of $k$ available guardians $\{ T_\ell:\ell \in U \}$ with $|U| = k$ as
 
 $$
-w_l = \frac{(\prod_{j \in (U - \{\ell\})}j)}{(\prod_{j \in (U - \{\ell\}))}(j - \ell))} \bmod q.
+w_\ell = \frac{(\prod_{j \in (U - \{\ell\})}j)}{(\prod_{j \in (U - \{\ell\}))}(j - \ell))} \bmod q.
 $$
 
 !!! important
@@ -96,6 +96,7 @@ The final step is to verify the tallies themselves.
     An election verifier should confirm the following equations for each (non-placeholder) option in each contest in the ballot coding file.
 
     (A) $B = (M (\prod^n_{i=i} M_i)) \bmod p$.
+    
     (B) $M = g^t \bmod p$.
 
     An election verifier should also confirm that the text labels listed in the election record match the corresponding text labels in the ballot coding file.
