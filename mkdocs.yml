@@ -54,6 +54,7 @@ nav:
               - Data Format: develop/Data_Format.md
               - Election Record: develop/Election_Record.md
               - Sample Data: develop/Sample_Data.md
+              - Hashing: develop/Hashing.md
 
   - Specification:
       - Official: spec/index.md
