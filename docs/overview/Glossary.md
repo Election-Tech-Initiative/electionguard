@@ -341,7 +341,7 @@ A zero-knowledge proof is a method by which one party (the prover) can prove to 
 [^2]: [Zero-Knowledge Proof from Wikipedia][zero-knowledge-proof]
 
 <!-- Links -->
-[Specification]: ../../spec/0.95.0/1_Overview
+[Specification]: ../../spec
 [Repositories]: ../../develop/Repositories
 [nist-data-format]: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-100r2.pdf "NIST Election Results Common Data Format Specification"
 [civics-data-format]: https://developers.google.com/elections-data/reference "Civics Common Standard Data Specification"

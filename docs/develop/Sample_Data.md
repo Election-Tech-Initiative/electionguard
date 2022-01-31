@@ -16,7 +16,7 @@ We have provided sample data for four different elections:
 
 ![Data][data-image]
 
-## Data ![Version 0.95.0][shield-green-0.95.0]
+## Data ![Version 0.95][badge-0.95]
 
 ### Election Manifests
 
@@ -40,7 +40,7 @@ The Election Record are the files required at the end of the election to verify 
 [data-image]: ../images/undraw/data.svg "Image of computer"
 
 <!-- Links -->
-[shield-green-0.95.0]: https://img.shields.io/badge/🗳%20ElectionGuard%20Specification-0.95.0-green
+[badge-0.95]: https://img.shields.io/badge/🗳%20ElectionGuard%20Specification-v0.95-green
 [minimal-election-manifest]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/sample/minimal/manifest.json
 [minimal-election-ballot]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/sample/minimal/ballots
 [minimal-election-artifacts]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/sample/minimal/artifacts
