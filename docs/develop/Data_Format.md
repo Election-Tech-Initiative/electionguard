@@ -51,3 +51,5 @@ Currently, JSON is used as the primary serialization format of the artifacts fro
 [submitted_ballot]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/schema/submitted_ballot.schema.json "Guardian Record Json Schema"
 [plaintext_tally]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/schema/plaintext_tally.schema.json "Guardian Record Json Schema"
 [published_ciphertext_tally]: https://github.com/microsoft/electionguard/blob/main/data/0.95.0/schema/published_ciphertext_tally.schema.json "Guardian Record Json Schema"
+
+--8<-- "includes/abbreviations.md"

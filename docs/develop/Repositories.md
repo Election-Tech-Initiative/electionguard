@@ -82,3 +82,5 @@ This UI application features several TypeScript packages as a monorepo, a versio
 [election-guard-specification]: https://github.com/microsoft/electionguard "Election Guard Github"
 [election-guard-cpp-source-code]: https://github.com/microsoft/electionguard-cpp/ "Election Guard C++ source code"
 [election-guard-web-api-source]: https://github.com/microsoft/electionguard-api-python "Election Guard Web API source code"
+
+--8<-- "includes/abbreviations.md"

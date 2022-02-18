@@ -94,6 +94,8 @@ theme:
     - navigation.instant
     - navigation.tabs
 markdown_extensions:
+  - abbr
+  - pymdownx.snippets
   - admonition
   - footnotes
   - meta
