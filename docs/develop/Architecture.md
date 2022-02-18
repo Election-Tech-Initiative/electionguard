@@ -79,3 +79,5 @@ For the C++ path, the included reference implementation of a C++ Core and result
 [election-guard-cpp-source-code]: https://github.com/microsoft/electionguard-cpp/ "Election Guard C++ source code"
 [election-guard-web-api-source]: https://github.com/microsoft/electionguard-api-python "Election Guard Web API source code"
 [election-guard-ui-source]: https://github.com/microsoft/electionguard-ui "Election Guard UI source code"
+
+--8<-- "includes/abbreviations.md"

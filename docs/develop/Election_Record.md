@@ -42,3 +42,5 @@ The Election Record should be expected to be a zip folder containing the followi
 --- 📄 manifest.json
 --- 📄 tally.json
 ```
+
+--8<-- "includes/abbreviations.md"

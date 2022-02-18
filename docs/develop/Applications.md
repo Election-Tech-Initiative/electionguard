@@ -66,5 +66,4 @@ A verifier app verifies an election is true and accurate by using the publicly p
 [encryption nuget package]: https://www.nuget.org/packages/ElectionGuard.Encryption/
 [python package]: https://pypi.org/project/electionguard/
 
-
-
+--8<-- "includes/abbreviations.md"

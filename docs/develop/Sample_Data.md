@@ -57,3 +57,5 @@ The Election Record are the files required at the end of the election to verify 
 [election-manifest-docs]: https://www.electionguard.vote/guide/Election_Manifest/#introducing-hamilton-county-oz
 
 [manifest-building]: ../concepts/Manifest_Building.md
+
+--8<-- "includes/abbreviations.md"

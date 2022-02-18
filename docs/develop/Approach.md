@@ -23,3 +23,5 @@ The goal is to maximize code coverage and testing on the reference implementatio
 ## ✅ Extendable and Interpretable
 
 The reference implementations are intentionally general-purpose to support the different use cases of voting systems. Different projects may wish to use different pieces and parts of each repository. 
+
+--8<-- "includes/abbreviations.md"
