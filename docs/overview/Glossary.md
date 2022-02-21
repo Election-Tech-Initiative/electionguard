@@ -288,6 +288,10 @@ A selection or vote is the selected candidate(s) or option(s) in a contest on a 
 
 The limit of selections that indicates the number of selections that are allowed to be made in that [contest](#contest). Most contests have a selection limit of one, but a larger selection limit (e.g., select up to three) is not uncommon in certain elections. 
 
+### sequence order
+
+The sequence order is a field used to ensure items such as contests, selections, or guardians are in order for functions that require specific ordering. _"In sequence order"_ means ordered by increasing sequence order number.
+
 ### spoiled ballot
 
 **Spoiling** allows a voter to turn in their ballot without their ballot being included in the election tally. A **spoiled ballot** is a ballot the voter has submitted as _spoiled_. The voter must submit a replacement ballot as their official [cast ballot](#cast-ballot).
@@ -337,9 +341,7 @@ A write-in is a [candidate or option](#candidate) which does not appear on the [
 
 A zero-knowledge proof is a method by which one party (the prover) can prove to another party (the verifier) that they know a value `x`, without conveying any information apart from the fact that they know the value `x`. The essence of zero-knowledge proofs is that it is trivial to prove that one possesses knowledge of certain information by simply revealing it; the challenge is to prove such possession without revealing the information itself or any additional information.[^2]
 
-### sequence order
 
-The sequence order is a field used to ensure items such as contests, selections, or guardians are in order for functions that require specific ordering. _"In sequence order"_ means ordered by increasing sequence order number.
 
 [^1]: [End-to-end verifiability][end-to-end-verifiability]
 [^2]: [Zero-Knowledge Proof from Wikipedia][zero-knowledge-proof]
