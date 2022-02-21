@@ -337,6 +337,10 @@ A write-in is a [candidate or option](#candidate) which does not appear on the [
 
 A zero-knowledge proof is a method by which one party (the prover) can prove to another party (the verifier) that they know a value `x`, without conveying any information apart from the fact that they know the value `x`. The essence of zero-knowledge proofs is that it is trivial to prove that one possesses knowledge of certain information by simply revealing it; the challenge is to prove such possession without revealing the information itself or any additional information.[^2]
 
+### sequence order
+
+The sequence order is a field used to ensure items such as contests, selections, or guardians are in order for functions that require specific ordering. _"In sequence order"_ means ordered by increasing sequence order number.
+
 [^1]: [End-to-end verifiability][end-to-end-verifiability]
 [^2]: [Zero-Knowledge Proof from Wikipedia][zero-knowledge-proof]
 
