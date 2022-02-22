@@ -158,6 +158,12 @@ The entire set of repositories associated with ElectionGuard. See [Repositories]
 
 A device loaded with the [election context](#election-context) that performs [ballot encryption](#ballot-encryption).
 
+### encryption seed
+
+The encryption seed is the starting number or point for the encryption. The seed is usually a hash either the starting hash from the [encryption device](#encryption-device) or with a [ballot chain](#ballot-chain) the hash from the previous ballot. 
+
+###### _Other terms:_ seed hash
+
 ### end-to-end-verifiable election
 
 End-to-end verifiable election techniques enable individual voters to check crucial ingredients of election results – without requiring voters to trust election software, hardware, election officials, procedures, or even observers. Voters may check these ingredients themselves, place their trust in others of their choice (e.g. their preferred candidates, news media, and/or interest groups), or accept the outcome produced with the usual administrative safeguards.[^1]
