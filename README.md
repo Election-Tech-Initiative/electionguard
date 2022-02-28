@@ -81,7 +81,7 @@ A huge thank you to those who helped to contribute to this project so far, inclu
 [build-developer-conference]: https://blogs.microsoft.com/on-the-issues/?p=63211 "Protecting democratic elections through secure, verifiable voting"
 [homomoprhic-encryptio]: https://en.wikipedia.org/wiki/Homomorphic_encryption "Homomorphic encryption"
 [election-guard-official-page]: https://microsoft.github.io/electionguard "Official Election Guard site on Github Pages"
-[election-guard-road-map]: https://microsoft.github.io/electionguard/Roadmap "Election Guard road map"
+[election-guard-road-map]: https://www.electionguard.vote/overview/Roadmap/ "Election Guard road map"
 [mkdocs-official-site]: https://www.mkdocs.org/ "MkDocs official website"
 [material-mkdocs]: https://squidfunk.github.io/mkdocs-material/ "Material for MkDocs"
 [election-guard-python-source]: https://github.com/microsoft/electionguard-python "Election Guard Python source code"
