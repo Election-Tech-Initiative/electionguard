@@ -79,7 +79,7 @@ A huge thank you to those who helped to contribute to this project so far, inclu
 [election-guard-banner]: docs/images/electionguard-banner.svg "Election Guard banner SVG"
 [license-image]: https://img.shields.io/github/license/microsoft/electionguard "Election Guard license image"
 [build-developer-conference]: https://blogs.microsoft.com/on-the-issues/?p=63211 "Protecting democratic elections through secure, verifiable voting"
-[homomoprhic-encryptio]: https://en.wikipedia.org/wiki/Homomorphic_encryption "Homomorphic encryption"
+[homomoprhic-encryption]: https://en.wikipedia.org/wiki/Homomorphic_encryption "Homomorphic encryption"
 [election-guard-official-page]: https://microsoft.github.io/electionguard "Official Election Guard site on Github Pages"
 [election-guard-road-map]: https://www.electionguard.vote/overview/Roadmap/ "Election Guard road map"
 [mkdocs-official-site]: https://www.mkdocs.org/ "MkDocs official website"
