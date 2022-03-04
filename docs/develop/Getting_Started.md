@@ -7,7 +7,7 @@ ElectionGuard as an SDK provides a specification and reference implementations w
 
 
 !!! tip
-    If you're having trouble understanding where to start, the **[architecture][architecture]** and **[data format][data-format]** pages dive in a bit deeper. 
+    If you're having trouble understanding where to start, the **[architecture][architecture]** and **[data format][data-format]** pages dive in a bit deeper. Take a look at **[versioning]** to get a good idea of what is still in progress.
 
 
 
@@ -32,3 +32,4 @@ ElectionGuard is an open source platform and depends on an active community and 
 [badges]: ../Badges
 [data-format]: ../Data_Format
 [repositories]: ../Repositories
+[versioning]: ../Versioning

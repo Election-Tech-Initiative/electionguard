@@ -28,6 +28,6 @@ This specification can be used by expert reviewers to evaluate the details of th
 
 <!-- Links -->
 
-[badge-0.95]: https://img.shields.io/badge/🗳%20ElectionGuard%20Specification-v0.95-green
+[badge-0.95]: https://img.shields.io/badge/🗳%20ElectionGuard-v0.95-green
 [spec-0.95]: https://github.com/microsoft/electionguard/releases/download/v0.95.0/EG_spec_v0_95.pdf "Election Guard Specification 0.95"
 [official specifications]: ../../
