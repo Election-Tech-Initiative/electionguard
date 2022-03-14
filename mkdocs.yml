@@ -45,6 +45,7 @@ nav:
           - Audit: use_cases/Audit.md
       - Develop:
           - Getting Started: develop/Getting_Started.md
+          - Versioning: develop/Versioning.md
           - Badges: develop/Badges.md
           - Approach: develop/Approach.md
           - Architecture: develop/Architecture.md
