@@ -55,6 +55,9 @@ nav:
               - Data Format: develop/Data_Format.md
               - Election Record: develop/Election_Record.md
               - Sample Data: develop/Sample_Data.md
+      - Events:
+          - Monthly Office Hours: events/Office_hours.md
+          - May 10-12 Ability Summit and E2E Convening: events/Ability_Summit.md
 
   - Specification:
       - Official: spec/index.md
