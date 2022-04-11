@@ -1,20 +1,14 @@
-# ElectionGuard / E2E at the Microsoft Ability Summit May 10-12, 2022
+# ElectionGuard / E2E at the Microsoft Ability Summit June 22-23, 2022
 
 ## Overview
 
-This convening is a hybrid in-person and virtual conference focused on issues of end-to-end verifiability and accessibility in modern elections. It will take place in conjunction with Microsoft's Ability Summit
+This convening is a hybrid conference (virtual and in-person at the Microsoft campus) focused on issues of end-to-end verifiability and accessibility in modern elections.
 
 For information about attending or otherwise participating, or if you've already registered and need to alert us about any special accommodations, please [email RC Carter](mailto:rocarter@microsoft.com)
 
 ## Agenda
 
-### Tuesday, May 10
-
-#### Ability Summit Virtual Conference 
-
-!!! abstract "Ability Summit Virtual Conference"
-
-### Wednesday, May 11
+### Wednesday, June 22
 
 #### Accessibility and UX Showcase
 
@@ -32,7 +26,7 @@ For information about attending or otherwise participating, or if you've already
 !!! tip ":man_walking_tone4: :woman_walking_tone2:  Microsoft Campus Walking Tour with Josh Benaloh  :person_walking_tone5: :woman_walking_tone1:"   
 !!! tip ":spaghetti:  :wine_glass:  Eggplant Parmesan (or BYO) Dinner in Seattle  :salad:  :pie:"
 
-### Thursday, May 12
+### Thursday, June 23
 
 #### New Directions in ElectionGuard: Use Cases and Development Approach
 
