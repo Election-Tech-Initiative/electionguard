@@ -1,6 +1,6 @@
-# Data Format
+# Data Schema
 
-ElectionGuard expects data to be formatted in a particular way. The expectation is to keep this format versioned alongside the specification. The data format will be defined here to indicate to developers what they should be expecting. 
+ElectionGuard expects data to be formatted in a particular way according to a set of [JSON schemas](https://json-schema.org/). The expectation is to keep these schemas alongside the specification. The schemas will be defined here to indicate to developers what they should be expecting.
 
 Keep in mind that not all serialized files should be public. The [election record][election-record] includes the list of all data formats that should be public. [Sample data][sample-data] for the election is also available for developers. This will include both what is in the Election Record, but also some private data only available for testing. 
 
