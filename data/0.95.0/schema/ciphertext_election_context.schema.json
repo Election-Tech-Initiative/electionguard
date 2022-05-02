@@ -1,31 +1,22 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
   "title": "ParsingModel[CiphertextElectionContext]",
   "$ref": "#/definitions/CiphertextElectionContext",
   "definitions": {
-    "ElementModP": {
-      "title": "ElementModP",
-      "description": "An element of the larger `mod p` space, i.e., in [0, P), where P is a 4096-bit prime.",
+    "Configuration": {
+      "title": "Configuration",
       "type": "object",
       "properties": {
-        "data": {
-          "title": "Data",
-          "type": "string"
+        "allow_overvotes": {
+          "title": "Allow Overvotes",
+          "default": false,
+          "type": "boolean"
+        },
+        "max_votes": {
+          "title": "Max Votes",
+          "default": 1000000,
+          "type": "integer"
         }
-      },
-      "required": ["data"]
-    },
-    "ElementModQ": {
-      "title": "ElementModQ",
-      "description": "An element of the smaller `mod q` space, i.e., in [0, Q), where Q is a 256-bit prime.",
-      "type": "object",
-      "properties": {
-        "data": {
-          "title": "Data",
-          "type": "string"
-        }
-      },
-      "required": ["data"]
+      }
     },
     "CiphertextElectionContext": {
       "title": "CiphertextElectionContext",
@@ -40,19 +31,24 @@
           "type": "integer"
         },
         "elgamal_public_key": {
-          "$ref": "#/definitions/ElementModP"
+          "title": "Elgamal Public Key",
+          "type": "string"
         },
         "commitment_hash": {
-          "$ref": "#/definitions/ElementModQ"
+          "title": "Commitment Hash",
+          "type": "string"
         },
         "manifest_hash": {
-          "$ref": "#/definitions/ElementModQ"
+          "title": "Manifest Hash",
+          "type": "string"
         },
         "crypto_base_hash": {
-          "$ref": "#/definitions/ElementModQ"
+          "title": "Crypto Base Hash",
+          "type": "string"
         },
         "crypto_extended_base_hash": {
-          "$ref": "#/definitions/ElementModQ"
+          "title": "Crypto Extended Base Hash",
+          "type": "string"
         },
         "extended_data": {
           "title": "Extended Data",
@@ -60,6 +56,9 @@
           "additionalProperties": {
             "type": "string"
           }
+        },
+        "configuration": {
+          "$ref": "#/definitions/Configuration"
         }
       },
       "required": [
@@ -70,7 +69,8 @@
         "manifest_hash",
         "crypto_base_hash",
         "crypto_extended_base_hash",
-        "extended_data"
+        "extended_data",
+        "configuration"
       ]
     }
   }
