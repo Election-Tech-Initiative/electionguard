@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "title": "ParsingModel[EncryptionDevice]",
+  "title": "Encryption Device",
+  "description": "Metadata for encryption device",
   "$ref": "#/definitions/EncryptionDevice",
   "definitions": {
     "EncryptionDevice": {
@@ -8,19 +9,19 @@
       "type": "object",
       "properties": {
         "device_id": {
-          "title": "Device Id",
+          "title": "Unique identifier for device",
           "type": "integer"
         },
         "session_id": {
-          "title": "Session Id",
+          "title": "Used to identify session and protect the timestamp",
           "type": "integer"
         },
         "launch_code": {
-          "title": "Launch Code",
+          "title": "Election initialization value",
           "type": "integer"
         },
         "location": {
-          "title": "Location",
+          "title": "Arbitrary string to designate the location of device",
           "type": "string"
         }
       },
