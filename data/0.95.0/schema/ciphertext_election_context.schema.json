@@ -2,6 +2,16 @@
   "title": "ParsingModel[CiphertextElectionContext]",
   "$ref": "#/definitions/CiphertextElectionContext",
   "definitions": {
+    "ElementModP": {
+      "title": "ElementModP",
+      "description": "An element of the larger `mod p` space, i.e., in [0, P), where P is a 4096-bit prime.",
+      "type": "string"
+    },
+    "ElementModQ": {
+      "title": "ElementModQ",
+      "description": "An element of the smaller `mod q` space, i.e., in [0, Q), where Q is a 256-bit prime.",
+      "type": "string"
+    },
     "Configuration": {
       "title": "Configuration",
       "type": "object",
@@ -24,41 +34,45 @@
       "properties": {
         "number_of_guardians": {
           "title": "Number Of Guardians",
-          "type": "integer"
+          "type": "integer",
+          "description": "The number of guardians necessary to generate the public key"
         },
         "quorum": {
           "title": "Quorum",
-          "type": "integer"
+          "type": "integer",
+          "description": "The quorum of guardians necessary to decrypt an election.  Must be less than `number_of_guardians`"
         },
         "elgamal_public_key": {
-          "title": "Elgamal Public Key",
-          "type": "string"
+          "$ref": "#/definitions/ElementModP",
+          "description": "The `joint public key (K)` in the specification"
         },
         "commitment_hash": {
-          "title": "Commitment Hash",
-          "type": "string"
+          "$ref": "#/definitions/ElementModQ",
+          "description": "the `commitment hash H(K 1,0 , K 2,0 ... , K n,0 )` of the public commitments guardians make to each other in the specification"
         },
         "manifest_hash": {
-          "title": "Manifest Hash",
-          "type": "string"
+          "$ref": "#/definitions/ElementModQ",
+          "description": "The hash of the election metadata"
         },
         "crypto_base_hash": {
-          "title": "Crypto Base Hash",
-          "type": "string"
+          "$ref": "#/definitions/ElementModQ",
+          "description": "The `base hash code (𝑄)` in the specification"
         },
         "crypto_extended_base_hash": {
-          "title": "Crypto Extended Base Hash",
-          "type": "string"
+          "$ref": "#/definitions/ElementModQ",
+          "description": "The `extended base hash code (𝑄')` in specification"
         },
         "extended_data": {
           "title": "Extended Data",
-          "type": "object",
+          "type": ["object", "null"],
+          "description": "Data to allow extending the context for special cases",
           "additionalProperties": {
             "type": "string"
           }
         },
         "configuration": {
-          "$ref": "#/definitions/Configuration"
+          "$ref": "#/definitions/Configuration",
+          "description": "Configuration for the election edge cases"
         }
       },
       "required": [
@@ -69,7 +83,6 @@
         "manifest_hash",
         "crypto_base_hash",
         "crypto_extended_base_hash",
-        "extended_data",
         "configuration"
       ]
     }
