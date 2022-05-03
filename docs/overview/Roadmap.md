@@ -66,14 +66,14 @@ Last, and definitely not least, ElectionGuard [developed and published its first
     * Run a post-election election audit with Inyo, California using [VotingWorks Arlo][voting-works] using ElectionGuard as a back end
     * Identify learnings and code refactoring necessary to reflect the different data structures and scalability considerations of audits
 
-??? done "Update the ElectionGuard Specification to 0.95.0"
+??? done "Update the ElectionGuard Specification to 1.0.0-preview-1"
 
 ??? done "Support building ElectionGuard into additional voting systems"
 
     * Enable remote, secret-ballot voting for Democratic Caucus of the US House of Representatives
     * Work with [InfernoRed][infernored] and [Markup][markup] to enable House-distributed iPhones to perform ballot encryption and House Democratic leadership to schedule and tally secret-ballot elections for leadership and committee positions
 
-??? done "Release and iterate on `electionguard-python` as a core implementation that meets specification 0.95.0"
+??? done "Release and iterate on `electionguard-python` as a core implementation that meets specification 1.0.0-preview-1"
 
     * Implement a *canonical* library addressing all ElectionGuard SDK functionality:
       * Key generation
