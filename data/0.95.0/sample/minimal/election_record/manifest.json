@@ -1,0 +1,94 @@
+{
+  "election_scope_id": "franklin-minimal-referendum-manifest",
+  "spec_version": "v0.95",
+  "type": "general",
+  "start_date": "2020-03-01T08:00:00-05:00",
+  "end_date": "2020-03-03T19:00:00-05:00",
+  "geopolitical_units": [
+    {
+      "object_id": "franklin-county",
+      "name": "Franklin County",
+      "type": "municipality",
+      "contact_information": null
+    }
+  ],
+  "parties": [
+    {
+      "object_id": "N/A",
+      "name": {
+        "text": []
+      },
+      "abbreviation": null,
+      "color": null,
+      "logo_uri": null
+    }
+  ],
+  "candidates": [
+    {
+      "object_id": "referendum-pineapple-affirmative",
+      "name": {
+        "text": []
+      },
+      "party_id": null,
+      "image_uri": null,
+      "is_write_in": null
+    },
+    {
+      "object_id": "referendum-pineapple-negative",
+      "name": {
+        "text": []
+      },
+      "party_id": null,
+      "image_uri": null,
+      "is_write_in": null
+    }
+  ],
+  "contests": [
+    {
+      "object_id": "referendum-pineapple",
+      "sequence_order": 0,
+      "electoral_district_id": "franklin-county",
+      "vote_variation": "one_of_m",
+      "number_elected": 1,
+      "votes_allowed": 1,
+      "name": "Referendum for Banning Pineapple on Pizza",
+      "ballot_selections": [
+        {
+          "object_id": "referendum-pineapple-affirmative-selection",
+          "sequence_order": 0,
+          "candidate_id": "referendum-pineapple-affirmative"
+        },
+        {
+          "object_id": "referendum-pineapple-negative-selection",
+          "sequence_order": 1,
+          "candidate_id": "referendum-pineapple-negative"
+        }
+      ],
+      "ballot_title": null,
+      "ballot_subtitle": null
+    }
+  ],
+  "ballot_styles": [
+    {
+      "object_id": "ballot-style-01",
+      "geopolitical_unit_ids": [
+        "franklin-county"
+      ],
+      "party_ids": null,
+      "image_uri": null
+    }
+  ],
+  "name": {
+    "text": [
+      {
+        "value": "Franklin County Minimal General Election March 2020",
+        "language": "en"
+      },
+      {
+        "value": "Elecciones generales m\u00ednimas del condado de Franklin marzo de 2020",
+        "language": "es"
+      }
+    ]
+  },
+  "contact_information": null
+}

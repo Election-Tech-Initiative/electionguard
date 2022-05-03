@@ -1,0 +1,164 @@
+{
+  "object_id": "ballot-ddf585ec-73f3-11ec-aaed-acde48001122",
+  "style_id": "congress-district-7-hamilton-county",
+  "contests": [
+    {
+      "object_id": "president-vice-president-contest",
+      "sequence_order": 0,
+      "ballot_selections": [
+        {
+          "object_id": "barchi-hallaren-selection",
+          "sequence_order": 0,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "cramer-vuocolo-selection",
+          "sequence_order": 1,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "court-blumhardt-selection",
+          "sequence_order": 2,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "write-in-selection-president",
+          "sequence_order": 6,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ]
+    },
+    {
+      "object_id": "ozark-governor",
+      "sequence_order": 1,
+      "ballot_selections": [
+        {
+          "object_id": "harris-selection",
+          "sequence_order": 1,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "bargmann-selection",
+          "sequence_order": 2,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "abcock-selection",
+          "sequence_order": 3,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "sharp-selection",
+          "sequence_order": 5,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "williams-selection",
+          "sequence_order": 7,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "windbeck-selection",
+          "sequence_order": 10,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "greher-selection",
+          "sequence_order": 12,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "kennedy-selection",
+          "sequence_order": 17,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "ward-selection",
+          "sequence_order": 21,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "murphy-selection",
+          "sequence_order": 22,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "newman-selection",
+          "sequence_order": 23,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "chandler-selection",
+          "sequence_order": 26,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "write-in-selection-governor",
+          "sequence_order": 27,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ]
+    },
+    {
+      "object_id": "congress-district-7-contest",
+      "sequence_order": 3,
+      "ballot_selections": [
+        {
+          "object_id": "bainbridge-selection",
+          "sequence_order": 0,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "hennessey-selection",
+          "sequence_order": 1,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "savoy-selection",
+          "sequence_order": 2,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ]
+    }
+  ]
+}

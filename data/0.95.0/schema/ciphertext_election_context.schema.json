@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "ParsingModel[CiphertextElectionContext]",
+  "$ref": "#/definitions/CiphertextElectionContext",
+  "definitions": {
+    "ElementModP": {
+      "title": "ElementModP",
+      "description": "An element of the larger `mod p` space, i.e., in [0, P), where P is a 4096-bit prime.",
+      "type": "object",
+      "properties": {
+        "data": {
+          "title": "Data",
+          "type": "string"
+        }
+      },
+      "required": ["data"]
+    },
+    "ElementModQ": {
+      "title": "ElementModQ",
+      "description": "An element of the smaller `mod q` space, i.e., in [0, Q), where Q is a 256-bit prime.",
+      "type": "object",
+      "properties": {
+        "data": {
+          "title": "Data",
+          "type": "string"
+        }
+      },
+      "required": ["data"]
+    },
+    "CiphertextElectionContext": {
+      "title": "CiphertextElectionContext",
+      "type": "object",
+      "properties": {
+        "number_of_guardians": {
+          "title": "Number Of Guardians",
+          "type": "integer"
+        },
+        "quorum": {
+          "title": "Quorum",
+          "type": "integer"
+        },
+        "elgamal_public_key": {
+          "$ref": "#/definitions/ElementModP"
+        },
+        "commitment_hash": {
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "manifest_hash": {
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "crypto_base_hash": {
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "crypto_extended_base_hash": {
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "extended_data": {
+          "title": "Extended Data",
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "number_of_guardians",
+        "quorum",
+        "elgamal_public_key",
+        "commitment_hash",
+        "manifest_hash",
+        "crypto_base_hash",
+        "crypto_extended_base_hash",
+        "extended_data"
+      ]
+    }
+  }
+}

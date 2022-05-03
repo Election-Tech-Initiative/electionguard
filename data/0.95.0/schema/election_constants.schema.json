@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "ParsingModel[ElectionConstants]",
+  "$ref": "#/definitions/ElectionConstants",
+  "definitions": {
+    "ElectionConstants": {
+      "title": "ElectionConstants",
+      "type": "object",
+      "properties": {
+        "large_prime": {
+          "title": "Large Prime",
+          "type": "integer"
+        },
+        "small_prime": {
+          "title": "Small Prime",
+          "type": "integer"
+        },
+        "cofactor": {
+          "title": "Cofactor",
+          "type": "integer"
+        },
+        "generator": {
+          "title": "Generator",
+          "type": "integer"
+        }
+      },
+      "required": ["large_prime", "small_prime", "cofactor", "generator"]
+    }
+  }
+}

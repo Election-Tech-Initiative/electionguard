@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "ParsingModel[LagrangeCoefficientsRecord]",
+  "$ref": "#/definitions/LagrangeCoefficientsRecord",
+  "definitions": {
+    "ElementModQ": {
+      "title": "ElementModQ",
+      "description": "An element of the smaller `mod q` space, i.e., in [0, Q), where Q is a 256-bit prime.",
+      "type": "object",
+      "properties": {
+        "data": {
+          "title": "Data",
+          "type": "string"
+        }
+      },
+      "required": ["data"]
+    },
+    "LagrangeCoefficientsRecord": {
+      "title": "LagrangeCoefficientsRecord",
+      "type": "object",
+      "properties": {
+        "coefficients": {
+          "title": "Coefficients",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ElementModQ"
+          }
+        }
+      },
+      "required": ["coefficients"]
+    }
+  }
+}
