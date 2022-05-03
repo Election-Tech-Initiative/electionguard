@@ -1,13 +1,9 @@
 {
-  "coefficients": [
-    {
-      "data": "03"
-    },
-    {
-      "data": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF40"
-    },
-    {
-      "data": "01"
-    }
-  ]
+  "coefficients": {
+    "1": "05",
+    "2": "FFE7",
+    "3": "0A",
+    "4": "FFEC",
+    "5": "01"
+  }
 }

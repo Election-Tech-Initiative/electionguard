@@ -1,27 +1,27 @@
 {
-  "object_id": "election-results",
+  "object_id": "03a29d15-667c-4ac8-afd7-549f19b8e4eb",
   "contests": {
     "justice-supreme-court": {
       "object_id": "justice-supreme-court",
       "selections": {
         "john-adams-selection": {
           "object_id": "john-adams-selection",
-          "tally": 2,
-          "value": "A147CA31DE0F48C1",
+          "tally": 1,
+          "value": "D6982759F3D5107E",
           "message": {
-            "pad": "B73252368496B624",
-            "data": "F3A5D9B0CA1369C3"
+            "pad": "6EBC02BE82146B2A",
+            "data": "0BDCB68B757376E2"
           },
           "shares": [
             {
               "object_id": "john-adams-selection",
               "guardian_id": "1",
-              "share": "C70E19B22E7BD92B",
+              "share": "35178EFFFA3FDCCC",
               "proof": {
-                "pad": "950F536F5FA603E2",
-                "data": "22D3A55E4DB74940",
-                "challenge": "3580",
-                "response": "0823",
+                "pad": "AABA142F4CF34E69",
+                "data": "6EE4E2C7DFC5DF3F",
+                "challenge": "7205",
+                "response": "43D0",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -29,12 +29,12 @@
             {
               "object_id": "john-adams-selection",
               "guardian_id": "2",
-              "share": "CFEA5D28A9B6FB5C",
+              "share": "F9FDD70F3E7124A2",
               "proof": {
-                "pad": "42E770AE6DAF9328",
-                "data": "86A55988D1E2E4C6",
-                "challenge": "2ED9",
-                "response": "C2BC",
+                "pad": "663E652162588FDF",
+                "data": "57FE6DE9046B1451",
+                "challenge": "7B80",
+                "response": "8FB7",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -42,12 +42,12 @@
             {
               "object_id": "john-adams-selection",
               "guardian_id": "3",
-              "share": "A83EB5C694CA15E0",
+              "share": "7B2ADFA67B7CB536",
               "proof": {
-                "pad": "F75E28721F1E8364",
-                "data": "5985E87FD63D4CD0",
-                "challenge": "5575",
-                "response": "2B03",
+                "pad": "77F31C26AD9DC24F",
+                "data": "FB9951370E6711B4",
+                "challenge": "B12E",
+                "response": "D41D",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -55,12 +55,12 @@
             {
               "object_id": "john-adams-selection",
               "guardian_id": "4",
-              "share": "2225737747622F94",
+              "share": "BE7114884B0372F6",
               "proof": {
-                "pad": "D52903323E450647",
-                "data": "63A512144FEEBC07",
-                "challenge": "DA0E",
-                "response": "1F2B",
+                "pad": "2A80445AAF45B9FB",
+                "data": "419660269D9A0511",
+                "challenge": "995A",
+                "response": "1470",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -68,12 +68,12 @@
             {
               "object_id": "john-adams-selection",
               "guardian_id": "5",
-              "share": "988217668F7F37AC",
+              "share": "13D318D4176CCF15",
               "proof": {
-                "pad": "A74019F88435BAD1",
-                "data": "8B559AC19E31CA1F",
-                "challenge": "60DD",
-                "response": "71B7",
+                "pad": "2F7B803C984B71EB",
+                "data": "A28C9823CA657AF2",
+                "challenge": "54CA",
+                "response": "3C41",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -85,19 +85,19 @@
           "tally": 0,
           "value": "01",
           "message": {
-            "pad": "EFB817CB0F7C3B40",
-            "data": "A0082A12DE06541E"
+            "pad": "8C2802307D378564",
+            "data": "199FBCD7FA5507FC"
           },
           "shares": [
             {
               "object_id": "benjamin-franklin-selection",
               "guardian_id": "1",
-              "share": "925BC57A58003A0A",
+              "share": "8EA6D7AF7293271B",
               "proof": {
-                "pad": "4BED434484BD1351",
-                "data": "EDD9F981C12AECF2",
-                "challenge": "8AF3",
-                "response": "1997",
+                "pad": "CC437072D047201E",
+                "data": "54C244C6404A2BA4",
+                "challenge": "C5F4",
+                "response": "637C",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -105,12 +105,12 @@
             {
               "object_id": "benjamin-franklin-selection",
               "guardian_id": "2",
-              "share": "40ED9B284B11546A",
+              "share": "AE197569A021D824",
               "proof": {
-                "pad": "8785918A65F5F5C0",
-                "data": "65A68C6CB5BE9614",
-                "challenge": "25E6",
-                "response": "37C9",
+                "pad": "40171FCCF944F2E0",
+                "data": "5705F85A23C9BB31",
+                "challenge": "2494",
+                "response": "3B84",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -118,12 +118,12 @@
             {
               "object_id": "benjamin-franklin-selection",
               "guardian_id": "3",
-              "share": "2DC85E40A4611B7E",
+              "share": "16BD08782EC88CB9",
               "proof": {
-                "pad": "058EFECA6B4E0CFE",
-                "data": "AA4C16C98A00BD9B",
-                "challenge": "F15E",
-                "response": "1FAA",
+                "pad": "0A94C414AB0EB6BF",
+                "data": "D5915AEC180678E8",
+                "challenge": "6A5D",
+                "response": "469B",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -131,12 +131,12 @@
             {
               "object_id": "benjamin-franklin-selection",
               "guardian_id": "4",
-              "share": "06EFBECC617891D5",
+              "share": "8A8C452CF71CA5CD",
               "proof": {
-                "pad": "FF799E47C37A8921",
-                "data": "CEB39F4612CF6DDB",
-                "challenge": "9387",
-                "response": "162A",
+                "pad": "E738BA945804BC59",
+                "data": "C23934DCA0C7B42B",
+                "challenge": "75AC",
+                "response": "402D",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -144,12 +144,12 @@
             {
               "object_id": "benjamin-franklin-selection",
               "guardian_id": "5",
-              "share": "0CB27C85BEA9F7C3",
+              "share": "A8A39A902B634F40",
               "proof": {
-                "pad": "6C60CFE294CF17B7",
-                "data": "BD780F419AD1C930",
-                "challenge": "639F",
-                "response": "62EF",
+                "pad": "F83399D352D8604D",
+                "data": "AC6C153359C4A70C",
+                "challenge": "9B4E",
+                "response": "5743",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -158,22 +158,22 @@
         },
         "john-hancock-selection": {
           "object_id": "john-hancock-selection",
-          "tally": 1,
-          "value": "D6982759F3D5107E",
+          "tally": 0,
+          "value": "01",
           "message": {
-            "pad": "17489D87E00024F2",
-            "data": "76437D26C20355A5"
+            "pad": "C5DEA1F26028D9E0",
+            "data": "AAD1AD668DC5A9C7"
           },
           "shares": [
             {
               "object_id": "john-hancock-selection",
               "guardian_id": "1",
-              "share": "4C28D325ACAD1FBA",
+              "share": "700BC2E64778A1E0",
               "proof": {
-                "pad": "F95411383151328B",
-                "data": "9306C8FD637C08D3",
-                "challenge": "529F",
-                "response": "41D0",
+                "pad": "4CC5372285AC7F0D",
+                "data": "CFD93C694887D548",
+                "challenge": "963E",
+                "response": "B7F4",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -181,12 +181,12 @@
             {
               "object_id": "john-hancock-selection",
               "guardian_id": "2",
-              "share": "A3348F404CDE2F7A",
+              "share": "E3E44FA16864BFA8",
               "proof": {
-                "pad": "A836A00636E8F730",
-                "data": "7C570B92F073EB85",
-                "challenge": "44DD",
-                "response": "85DA",
+                "pad": "7FEA339D6935CD1E",
+                "data": "B970C93492B3F945",
+                "challenge": "EA02",
+                "response": "285A",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -194,12 +194,12 @@
             {
               "object_id": "john-hancock-selection",
               "guardian_id": "3",
-              "share": "FC011BE0BEA6B1A7",
+              "share": "7C8CF728F10DD44C",
               "proof": {
-                "pad": "0EC19BBEAC6F63E4",
-                "data": "665DE0FB4CC7CC8D",
-                "challenge": "2437",
-                "response": "CB16",
+                "pad": "17685CCDDBDBC332",
+                "data": "08F625FFECEB00D1",
+                "challenge": "8D60",
+                "response": "81FA",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -207,12 +207,12 @@
             {
               "object_id": "john-hancock-selection",
               "guardian_id": "4",
-              "share": "6CA83BB56B5A5E75",
+              "share": "7AF21F9A125B76DA",
               "proof": {
-                "pad": "CA4937C56EBE6177",
-                "data": "2831AD23E585660E",
-                "challenge": "82B9",
-                "response": "5D4E",
+                "pad": "074B4751B4DC9CD0",
+                "data": "D362F7C5ED31E8EC",
+                "challenge": "41BC",
+                "response": "D0F8",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -220,12 +220,12 @@
             {
               "object_id": "john-hancock-selection",
               "guardian_id": "5",
-              "share": "F1317B84AEACBA07",
+              "share": "48F85C40955E4878",
               "proof": {
-                "pad": "D7946078394ED330",
-                "data": "49C61618C5D1DF37",
-                "challenge": "D4D9",
-                "response": "E398",
+                "pad": "ECD90E90D27825D2",
+                "data": "35BBF4922BF7D7B4",
+                "challenge": "A48D",
+                "response": "FECF",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -237,19 +237,19 @@
           "tally": 1,
           "value": "D6982759F3D5107E",
           "message": {
-            "pad": "4E4A57CB215B5ECB",
-            "data": "D93D8DEADF659A02"
+            "pad": "B89D074B9802A214",
+            "data": "8D28545CB483D47B"
           },
           "shares": [
             {
               "object_id": "write-in-selection",
               "guardian_id": "1",
-              "share": "497BCD2E625B31FE",
+              "share": "2F69014F92D705E4",
               "proof": {
-                "pad": "64C55CC1153CFBBE",
-                "data": "1AC59F9C4689A50B",
-                "challenge": "DA94",
-                "response": "EFCA",
+                "pad": "01ED0EDC7CC43D23",
+                "data": "593D48A2E3BCD92A",
+                "challenge": "E350",
+                "response": "98E9",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -257,12 +257,12 @@
             {
               "object_id": "write-in-selection",
               "guardian_id": "2",
-              "share": "0FBA942D2EF4E216",
+              "share": "A8190278FA96067F",
               "proof": {
-                "pad": "D753A8D84D7037CF",
-                "data": "7251FEB2BCB33EF4",
-                "challenge": "D97C",
-                "response": "9C36",
+                "pad": "4F6315DF633B3099",
+                "data": "5DB28733EB5A1052",
+                "challenge": "9615",
+                "response": "4F6D",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -270,12 +270,12 @@
             {
               "object_id": "write-in-selection",
               "guardian_id": "3",
-              "share": "80FE339C07D6AFCE",
+              "share": "F095560B91EF45B2",
               "proof": {
-                "pad": "C149B69F51B5D647",
-                "data": "711A6AB647A63019",
-                "challenge": "9906",
-                "response": "C966",
+                "pad": "73444DFDBACFB9DF",
+                "data": "4C5968C57F2B663A",
+                "challenge": "5970",
+                "response": "0AC9",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -283,12 +283,12 @@
             {
               "object_id": "write-in-selection",
               "guardian_id": "4",
-              "share": "1E50D65C22B7168A",
+              "share": "25941B485F4E8FA0",
               "proof": {
-                "pad": "1265526BD6DC0D3A",
-                "data": "34868DE24E192221",
-                "challenge": "457E",
-                "response": "921A",
+                "pad": "CF029F5F942F3B60",
+                "data": "1D2F1948C49AAAA2",
+                "challenge": "777D",
+                "response": "AA5E",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
@@ -296,169 +296,164 @@
             {
               "object_id": "write-in-selection",
               "guardian_id": "5",
-              "share": "CC2E961EC8C289D6",
+              "share": "1C92EED97BA5854F",
               "proof": {
-                "pad": "09E0E14AF5D8B29B",
-                "data": "EC2FA70661C90E8D",
-                "challenge": "D6FC",
-                "response": "7CD3",
-                "usage": "Prove knowledge of secret value"
-              },
-              "recovered_parts": null
-            }
-          ]
-        }
-      }
-    },
-    "referendum-pineapple": {
-      "object_id": "referendum-pineapple",
-      "selections": {
-        "referendum-pineapple-affirmative-selection": {
-          "object_id": "referendum-pineapple-affirmative-selection",
-          "tally": 1,
-          "value": "D6982759F3D5107E",
-          "message": {
-            "pad": "077C08B13DC881A5",
-            "data": "0EFC2802ECD02D2F"
-          },
-          "shares": [
-            {
-              "object_id": "referendum-pineapple-affirmative-selection",
-              "guardian_id": "1",
-              "share": "C1E690EC39650970",
-              "proof": {
-                "pad": "FD4AEB4FC3F0B0A6",
-                "data": "F6AE07D44DD8C7A7",
-                "challenge": "B4B7",
-                "response": "CE54",
-                "usage": "Prove knowledge of secret value"
-              },
-              "recovered_parts": null
-            },
-            {
-              "object_id": "referendum-pineapple-affirmative-selection",
-              "guardian_id": "2",
-              "share": "BB55A876393F5547",
-              "proof": {
-                "pad": "44293350C5EF177D",
-                "data": "89120031E7E2BD00",
-                "challenge": "EDBD",
-                "response": "A9F8",
-                "usage": "Prove knowledge of secret value"
-              },
-              "recovered_parts": null
-            },
-            {
-              "object_id": "referendum-pineapple-affirmative-selection",
-              "guardian_id": "3",
-              "share": "070E5DD0F422C50C",
-              "proof": {
-                "pad": "C50F3358F3911CD5",
-                "data": "30EFA309A3850025",
-                "challenge": "98FC",
-                "response": "5AFC",
-                "usage": "Prove knowledge of secret value"
-              },
-              "recovered_parts": null
-            },
-            {
-              "object_id": "referendum-pineapple-affirmative-selection",
-              "guardian_id": "4",
-              "share": "B089D66A3A230DD8",
-              "proof": {
-                "pad": "3F9330C750C4F5E6",
-                "data": "4ACA5879242A5B50",
-                "challenge": "5055",
-                "response": "B0B4",
-                "usage": "Prove knowledge of secret value"
-              },
-              "recovered_parts": null
-            },
-            {
-              "object_id": "referendum-pineapple-affirmative-selection",
-              "guardian_id": "5",
-              "share": "563A7EF917E642C5",
-              "proof": {
-                "pad": "4C32595CF6F5E95A",
-                "data": "8D1974A5186F261B",
-                "challenge": "E17A",
-                "response": "32C9",
+                "pad": "644FEE9423610690",
+                "data": "4F6C8F4BE892AF68",
+                "challenge": "E08E",
+                "response": "3ABB",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
             }
           ]
         },
-        "referendum-pineapple-negative-selection": {
-          "object_id": "referendum-pineapple-negative-selection",
+        "justice-supreme-court-4-placeholder": {
+          "object_id": "justice-supreme-court-4-placeholder",
           "tally": 0,
           "value": "01",
           "message": {
-            "pad": "16CF7C668B2B0D24",
-            "data": "4198EF51C71F4DCF"
+            "pad": "3EAB29D0C2CEF796",
+            "data": "981491F1B61AFDDA"
           },
           "shares": [
             {
-              "object_id": "referendum-pineapple-negative-selection",
+              "object_id": "justice-supreme-court-4-placeholder",
               "guardian_id": "1",
-              "share": "F18DDA790081DD11",
+              "share": "C99C9AF05ECE3702",
               "proof": {
-                "pad": "62EC4E2451EBC1CA",
-                "data": "5D6E63B2A34D3C35",
-                "challenge": "C758",
-                "response": "84CA",
+                "pad": "56E0B50FB7A787A5",
+                "data": "CCFD967D7B8A4C28",
+                "challenge": "FD42",
+                "response": "137E",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
             },
             {
-              "object_id": "referendum-pineapple-negative-selection",
+              "object_id": "justice-supreme-court-4-placeholder",
               "guardian_id": "2",
-              "share": "E04BB8567FB40D36",
+              "share": "69667284CAB0EE99",
               "proof": {
-                "pad": "A396072C02BAF2AE",
-                "data": "5586ECFE6E30F794",
-                "challenge": "72F9",
-                "response": "D4",
+                "pad": "014FBC1E5A6251C4",
+                "data": "1296BB849C321B86",
+                "challenge": "A9DB",
+                "response": "659E",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
             },
             {
-              "object_id": "referendum-pineapple-negative-selection",
+              "object_id": "justice-supreme-court-4-placeholder",
               "guardian_id": "3",
-              "share": "E16BFC90BF69D132",
+              "share": "5BA15C3A676D90B2",
               "proof": {
-                "pad": "CC272AD080E587DE",
-                "data": "6AFF57F9A0F171B8",
-                "challenge": "3FB1",
-                "response": "FC29",
+                "pad": "36D3D449DC5CE748",
+                "data": "7D1B38B3489F63C3",
+                "challenge": "23DD",
+                "response": "9067",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
             },
             {
-              "object_id": "referendum-pineapple-negative-selection",
+              "object_id": "justice-supreme-court-4-placeholder",
               "guardian_id": "4",
-              "share": "1DD1BB125BE5257C",
+              "share": "C8BB1D1B433A6367",
               "proof": {
-                "pad": "035FA37E63469070",
-                "data": "BBF154C7A036450D",
-                "challenge": "7413",
-                "response": "5D4A",
+                "pad": "F6F3A160EB668AB4",
+                "data": "CC328F42A5BF626E",
+                "challenge": "94E7",
+                "response": "4ACA",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
             },
             {
-              "object_id": "referendum-pineapple-negative-selection",
+              "object_id": "justice-supreme-court-4-placeholder",
               "guardian_id": "5",
-              "share": "E1315C1B34C28097",
+              "share": "23C549D8711E02A5",
               "proof": {
-                "pad": "4BD2F973F186FD1B",
-                "data": "7EB127EB8C886D3D",
-                "challenge": "4B90",
-                "response": "EF22",
+                "pad": "1850E92C0751C331",
+                "data": "C6A65F9C80649559",
+                "challenge": "C012",
+                "response": "5AA7",
+                "usage": "Prove knowledge of secret value"
+              },
+              "recovered_parts": null
+            }
+          ]
+        },
+        "justice-supreme-court-5-placeholder": {
+          "object_id": "justice-supreme-court-5-placeholder",
+          "tally": 0,
+          "value": "01",
+          "message": {
+            "pad": "67318E98373ADC94",
+            "data": "FD7C0441C1636025"
+          },
+          "shares": [
+            {
+              "object_id": "justice-supreme-court-5-placeholder",
+              "guardian_id": "1",
+              "share": "2121B5771481CFE7",
+              "proof": {
+                "pad": "C6BF85B18CB3C16A",
+                "data": "582318C47196C137",
+                "challenge": "85DE",
+                "response": "752F",
+                "usage": "Prove knowledge of secret value"
+              },
+              "recovered_parts": null
+            },
+            {
+              "object_id": "justice-supreme-court-5-placeholder",
+              "guardian_id": "2",
+              "share": "D74244D785D532F9",
+              "proof": {
+                "pad": "F444FAA6A4A82B12",
+                "data": "DEFEDFB5AE7DB875",
+                "challenge": "B35D",
+                "response": "89EF",
+                "usage": "Prove knowledge of secret value"
+              },
+              "recovered_parts": null
+            },
+            {
+              "object_id": "justice-supreme-court-5-placeholder",
+              "guardian_id": "3",
+              "share": "E1BD5BFBABE0B951",
+              "proof": {
+                "pad": "DABC68B4563EE4EC",
+                "data": "260764B2F8EFF371",
+                "challenge": "808E",
+                "response": "D098",
+                "usage": "Prove knowledge of secret value"
+              },
+              "recovered_parts": null
+            },
+            {
+              "object_id": "justice-supreme-court-5-placeholder",
+              "guardian_id": "4",
+              "share": "24A06FE1489CB9E8",
+              "proof": {
+                "pad": "0196D75BB4F76A48",
+                "data": "9398CFD280A5484A",
+                "challenge": "55EE",
+                "response": "DB1E",
+                "usage": "Prove knowledge of secret value"
+              },
+              "recovered_parts": null
+            },
+            {
+              "object_id": "justice-supreme-court-5-placeholder",
+              "guardian_id": "5",
+              "share": "5BCE50F4F73E4889",
+              "proof": {
+                "pad": "4CB5A6D466D4A827",
+                "data": "63C055112173D8F9",
+                "challenge": "F9FF",
+                "response": "AD81",
                 "usage": "Prove knowledge of secret value"
               },
               "recovered_parts": null
