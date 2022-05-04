@@ -30,7 +30,7 @@
       "properties": {
         "allow_overvotes": {
           "title": "Allow Overvotes",
-          "default": false,
+          "default": true,
           "type": "boolean"
         },
         "max_votes": {
