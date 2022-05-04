@@ -6,14 +6,7 @@
     "ElementModQ": {
       "title": "ElementModQ",
       "description": "An element of the smaller `mod q` space, i.e., in [0, Q), where Q is a 256-bit prime.",
-      "type": "object",
-      "properties": {
-        "data": {
-          "title": "Data",
-          "type": "string"
-        }
-      },
-      "required": ["data"]
+      "type": "string"
     },
     "LagrangeCoefficientsRecord": {
       "title": "LagrangeCoefficientsRecord",
