@@ -56,28 +56,28 @@
           "description": "encrypted data or beta",
           "$ref": "#/definitions/ElementModQ"
         }
-      },
-      "HashedElGamalCiphertext": {
-        "title": "Hashed ElGamal Ciphertext",
-        "description": "A hashed version of ElGamal Ciphertext with less size restrictions.",
-        "type": "object",
-        "required": ["pad", "data", "mac"],
-        "properties": {
-          "pad": {
-            "title": "Pad",
-            "description": "pad or alpha",
-            "$ref": "#/definitions/ElementModP"
-          },
-          "data": {
-            "title": "Data",
-            "description": "encrypted data or beta",
-            "type": "string"
-          },
-          "mac": {
-            "title": "MAC",
-            "description": "message authentication code for hmac",
-            "$ref": "#/definitions/ElementModQ"
-          }
+      }
+    },
+    "HashedElGamalCiphertext": {
+      "title": "Hashed ElGamal Ciphertext",
+      "description": "A hashed version of ElGamal Ciphertext with less size restrictions.",
+      "type": "object",
+      "required": ["pad", "data", "mac"],
+      "properties": {
+        "pad": {
+          "title": "Pad",
+          "description": "pad or alpha",
+          "$ref": "#/definitions/ElementModP"
+        },
+        "data": {
+          "title": "Data",
+          "description": "encrypted data or beta",
+          "type": "string"
+        },
+        "mac": {
+          "title": "MAC",
+          "description": "message authentication code for hmac",
+          "$ref": "#/definitions/ElementModQ"
         }
       }
     },
