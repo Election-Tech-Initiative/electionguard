@@ -26,7 +26,7 @@
     "SpecVersion": {
       "title": "Spec Version",
       "description": "Used to define the specification used",
-      "enum": ["1.0"]
+      "enum": ["v0.95", "1.0"]
     }
   },
   "properties": {
