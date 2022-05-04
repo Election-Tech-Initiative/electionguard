@@ -4,13 +4,18 @@
   "title": "Manifest",
   "description": "Initial details to define an election",
   "type": "object",
-  "required": ["name", "start_date", "election_scope_id"],
+  "required": ["name", "start_date", "election_scope_id", "spec_version"],
   "definitions": {
     "SequenceOrder": {
       "title": "Sequence Order",
       "description": "Used for ordering in a ballot to ensure various encryption primitives are deterministic.",
       "type": "integer",
       "minimum": 1
+    },
+    "SpecVersion": {
+      "title": "Spec Version",
+      "description": "Used to define the specification used",
+      "enum": ["1.0"]
     }
   },
   "properties": {
@@ -41,8 +46,7 @@
     },
     "spec_version": {
       "title": "Specification Version",
-      "type": "string",
-      "maxLength": 256
+      "$ref": "#/definitions/SpecVersion"
     },
     "contact_information": {
       "title": "Contact Information",
