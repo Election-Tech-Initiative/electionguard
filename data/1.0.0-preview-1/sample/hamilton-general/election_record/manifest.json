@@ -239,7 +239,7 @@
   "contests": [
     {
       "object_id": "justice-supreme-court",
-      "sequence_order": 0,
+      "sequence_order": 1,
       "electoral_district_id": "jefferson-county",
       "vote_variation": "n_of_m",
       "number_elected": 2,
@@ -248,22 +248,22 @@
       "ballot_selections": [
         {
           "object_id": "john-adams-selection",
-          "sequence_order": 0,
+          "sequence_order": 1,
           "candidate_id": "john-adams"
         },
         {
           "object_id": "benjamin-franklin-selection",
-          "sequence_order": 1,
+          "sequence_order": 2,
           "candidate_id": "benjamin-franklin"
         },
         {
           "object_id": "john-hancock-selection",
-          "sequence_order": 2,
+          "sequence_order": 3,
           "candidate_id": "john-hancock"
         },
         {
           "object_id": "write-in-selection",
-          "sequence_order": 3,
+          "sequence_order": 4,
           "candidate_id": "write-in"
         }
       ],
@@ -294,7 +294,7 @@
     },
     {
       "object_id": "referendum-pineapple",
-      "sequence_order": 1,
+      "sequence_order": 2,
       "electoral_district_id": "harrison-township",
       "vote_variation": "one_of_m",
       "number_elected": 1,
@@ -303,12 +303,12 @@
       "ballot_selections": [
         {
           "object_id": "referendum-pineapple-affirmative-selection",
-          "sequence_order": 0,
+          "sequence_order": 1,
           "candidate_id": "referendum-pineapple-affirmative"
         },
         {
           "object_id": "referendum-pineapple-negative-selection",
-          "sequence_order": 1,
+          "sequence_order": 2,
           "candidate_id": "referendum-pineapple-negative"
         }
       ],
