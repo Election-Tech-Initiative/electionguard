@@ -1,0 +1,30 @@
+{
+  "object_id": "03a29d15-667c-4ac8-afd7-549f19b8e4eb",
+  "style_id": "jefferson-county-ballot-style",
+  "contests": [
+    {
+      "object_id": "justice-supreme-court",
+      "sequence_order": 0,
+      "ballot_selections": [
+        {
+          "object_id": "john-adams-selection",
+          "sequence_order": 0,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "write-in-selection",
+          "sequence_order": 3,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": {
+            "value": "Susan B. Anthony",
+            "length": 16
+          }
+        }
+      ],
+      "extended_data": null
+    }
+  ]
+}

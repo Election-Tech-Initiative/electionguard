@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "Plaintext Ballot",
+  "description": "Represents a voters selections for a given ballot and ballot style",
+  "type": "object",
+  "properties": {
+    "object_id": {
+      "title": "Object Id",
+      "type": "string"
+    },
+    "style_id": {
+      "title": "Style Id",
+      "type": "string",
+      "description": "The `object_id` of the `BallotStyle` in the `Election` Manifest"
+    },
+    "contests": {
+      "title": "Contests",
+      "description": "Represents the selections made by a voter for a specific ContestDescription",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["object_id", "sequence_order", "ballot_selections"],
+        "properties": {
+          "object_id": {
+            "title": "Object Id",
+            "type": "string"
+          },
+          "sequence_order": {
+            "title": "Sequence Order",
+            "description": "Used for ordering in a ballot to ensure various encryption primitives are deterministic",
+            "type": "integer"
+          },
+          "ballot_selections": {
+            "title": "Selections",
+            "description": "Represents an individual selection on a ballot",
+            "type": "array",
+            "items": {
+              "title": "Items",
+              "type": "object",
+              "required": ["object_id", "vote", "sequence_order"],
+              "properties": {
+                "object_id": {
+                  "title": "Object Id",
+                  "type": "string"
+                },
+                "vote": {
+                  "title": "Vote",
+                  "type": "integer"
+                },
+                "sequence_order": {
+                  "title": "Sequence Order",
+                  "type": "integer"
+                },
+                "is_placeholder_selection": {
+                  "title": "Determines if this is a placeholder selection",
+                  "type": "boolean"
+                },
+                "extended_data": {
+                  "title": "Extended Data",
+                  "description": "An optional field of arbitrary data, such as the value of a write-in candidate",
+                  "type": "object",
+                  "required": ["value", "length"],
+                  "properties": {
+                    "value": {
+                      "title": "Value",
+                      "type": "string"
+                    },
+                    "length": {
+                      "title": "Length",
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": ["object_id", "style_id", "contests"]
+}

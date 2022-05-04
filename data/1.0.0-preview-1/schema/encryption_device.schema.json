@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "ParsingModel[EncryptionDevice]",
+  "$ref": "#/definitions/EncryptionDevice",
+  "definitions": {
+    "EncryptionDevice": {
+      "title": "EncryptionDevice",
+      "type": "object",
+      "properties": {
+        "device_id": {
+          "title": "Device Id",
+          "type": "integer"
+        },
+        "session_id": {
+          "title": "Session Id",
+          "type": "integer"
+        },
+        "launch_code": {
+          "title": "Launch Code",
+          "type": "integer"
+        },
+        "location": {
+          "title": "Location",
+          "type": "string"
+        }
+      },
+      "required": ["device_id", "session_id", "launch_code", "location"]
+    }
+  }
+}

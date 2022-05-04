@@ -1,0 +1,33 @@
+{
+  "guardian_id": "2",
+  "sequence_order": 2,
+  "election_public_key": "56BD408F515B50C5",
+  "election_commitments": [
+    "56BD408F515B50C5",
+    "63E6B79822C6B4EC",
+    "E627A5B6ADCD8584"
+  ],
+  "election_proofs": [
+    {
+      "public_key": "56BD408F515B50C5",
+      "commitment": "DE007FD7C578739A",
+      "challenge": "9DA7",
+      "response": "031C",
+      "usage": "Prove knowledge of secret value"
+    },
+    {
+      "public_key": "63E6B79822C6B4EC",
+      "commitment": "545CAD112743E258",
+      "challenge": "3885",
+      "response": "5EAE",
+      "usage": "Prove knowledge of secret value"
+    },
+    {
+      "public_key": "E627A5B6ADCD8584",
+      "commitment": "A8AE63CFD8CDFDC3",
+      "challenge": "DA25",
+      "response": "67CD",
+      "usage": "Prove knowledge of secret value"
+    }
+  ]
+}

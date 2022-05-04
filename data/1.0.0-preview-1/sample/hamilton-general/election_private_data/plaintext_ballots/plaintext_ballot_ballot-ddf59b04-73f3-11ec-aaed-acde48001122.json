@@ -1,0 +1,226 @@
+{
+  "object_id": "ballot-ddf59b04-73f3-11ec-aaed-acde48001122",
+  "style_id": "congress-district-7-arlington",
+  "contests": [
+    {
+      "object_id": "president-vice-president-contest",
+      "sequence_order": 0,
+      "ballot_selections": [
+        {
+          "object_id": "barchi-hallaren-selection",
+          "sequence_order": 0,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "cramer-vuocolo-selection",
+          "sequence_order": 1,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "court-blumhardt-selection",
+          "sequence_order": 2,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "boone-lian-selection",
+          "sequence_order": 3,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "patterson-lariviere-selection",
+          "sequence_order": 5,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "write-in-selection-president",
+          "sequence_order": 6,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ]
+    },
+    {
+      "object_id": "ozark-governor",
+      "sequence_order": 1,
+      "ballot_selections": [
+        {
+          "object_id": "franz-selection",
+          "sequence_order": 0,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "harris-selection",
+          "sequence_order": 1,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "abcock-selection",
+          "sequence_order": 3,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "steel-loy-selection",
+          "sequence_order": 4,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "sharp-selection",
+          "sequence_order": 5,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "alpern-selection",
+          "sequence_order": 9,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "sharp-althea-selection",
+          "sequence_order": 11,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "alexander-selection",
+          "sequence_order": 13,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "lee-selection",
+          "sequence_order": 15,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "ash-selection",
+          "sequence_order": 16,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "kennedy-selection",
+          "sequence_order": 17,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "brown-selection",
+          "sequence_order": 19,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "teller-selection",
+          "sequence_order": 20,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "murphy-selection",
+          "sequence_order": 22,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "newman-selection",
+          "sequence_order": 23,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "york-selection",
+          "sequence_order": 25,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "write-in-selection-governor",
+          "sequence_order": 27,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ]
+    },
+    {
+      "object_id": "congress-district-7-contest",
+      "sequence_order": 3,
+      "ballot_selections": [
+        {
+          "object_id": "bainbridge-selection",
+          "sequence_order": 0,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "hennessey-selection",
+          "sequence_order": 1,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "savoy-selection",
+          "sequence_order": 2,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "tawa-mary-selection",
+          "sequence_order": 4,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ]
+    },
+    {
+      "object_id": "arlington-chief-justice-retain-demergue",
+      "sequence_order": 6,
+      "ballot_selections": [
+        {
+          "object_id": "ozark-chief-justice-retain-demergue-affirmative-selection",
+          "sequence_order": 0,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "object_id": "25a7111b-4334-425a-87c1-f7a49f42b3a2",
+  "style_id": "jefferson-county-ballot-style",
+  "contests": [
+    {
+      "object_id": "justice-supreme-court",
+      "sequence_order": 0,
+      "ballot_selections": [
+        {
+          "object_id": "john-adams-selection",
+          "sequence_order": 0,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "benjamin-franklin-selection",
+          "sequence_order": 2,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ],
+      "extended_data": null
+    }
+  ]
+}
