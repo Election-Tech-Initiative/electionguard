@@ -1,9 +1,28 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://electionguard.vote/schemas/1.0.0-preview-1/submitted-ballot",
+  "$id": "https://electionguard.vote/schemas/1.0.0-preview-2/submitted-ballot",
   "title": "Submitted Ballot",
   "description": "A `SubmittedBallot` represents a ballot that is submitted for inclusion in election results. A submitted ballot is or is about to be either cast or spoiled. The state supports the `BallotBoxState.UNKNOWN` enumeration to indicate that this object is mutable and has not yet been explicitly assigned a specific state. Note, additionally, this ballot includes all proofs but no nonces.",
+  "type": "object",
+  "required": [
+    "object_id",
+    "style_id",
+    "manifest_hash",
+    "code_seed",
+    "contests",
+    "code",
+    "timestamp",
+    "crypto_hash",
+    "nonce",
+    "state"
+  ],
   "definitions": {
+    "SequenceOrder": {
+      "title": "Sequence Order",
+      "description": "Used for ordering in a ballot to ensure various encryption primitives are deterministic.",
+      "type": "integer",
+      "minimum": 1
+    },
     "ElementModP": {
       "title": "ElementModP",
       "description": "An element of the larger `mod p` space, i.e., in [0, P), where P is a 4096-bit prime.",
@@ -36,6 +55,29 @@
           "title": "Data",
           "description": "encrypted data or beta",
           "$ref": "#/definitions/ElementModQ"
+        }
+      },
+      "HashedElGamalCiphertext": {
+        "title": "Hashed ElGamal Ciphertext",
+        "description": "A hashed version of ElGamal Ciphertext with less size restrictions.",
+        "type": "object",
+        "required": ["pad", "data", "mac"],
+        "properties": {
+          "pad": {
+            "title": "Pad",
+            "description": "pad or alpha",
+            "$ref": "#/definitions/ElementModP"
+          },
+          "data": {
+            "title": "Data",
+            "description": "encrypted data or beta",
+            "type": "string"
+          },
+          "mac": {
+            "title": "MAC",
+            "description": "message authentication code for hmac",
+            "$ref": "#/definitions/ElementModQ"
+          }
         }
       }
     },
@@ -172,8 +214,7 @@
         "crypto_hash",
         "is_placeholder_selection",
         "nonce",
-        "proof",
-        "extended_data"
+        "proof"
       ],
       "properties": {
         "object_id": {
@@ -183,7 +224,7 @@
         "sequence_order": {
           "title": "Sequence Order",
           "description": "Used for ordering in a ballot to ensure various encryption primitives are deterministic.",
-          "type": "integer"
+          "$ref": "#/definitions/SequenceOrder"
         },
         "description_hash": {
           "title": "Description_hash",
@@ -223,15 +264,6 @@
             { "$ref": "#/definitions/DisjunctiveChaumPedersenProof" }
           ],
           "default": null
-        },
-        "extended_data": {
-          "title": "Extended Data",
-          "description": "Encrypted representation of the extended_data field",
-          "oneOf": [
-            { "type": "null" },
-            { "$ref": "#/definitions/ElGamalCiphertext" }
-          ],
-          "default": null
         }
       }
     },
@@ -258,7 +290,7 @@
         "sequence_order": {
           "title": "Sequence Order",
           "description": "Used for ordering in a ballot to ensure various encryption primitives are deterministic.",
-          "type": "integer"
+          "$ref": "#/definitions/SequenceOrder"
         },
         "description_hash": {
           "title": "Description Hash",
@@ -307,26 +339,13 @@
           "description": "Encrypted representation of the extended_data field",
           "oneOf": [
             { "type": "null" },
-            { "$ref": "#/definitions/ElGamalCiphertext" }
+            { "$ref": "#/definitions/HashedElGamalCiphertext" }
           ],
           "default": null
         }
       }
     }
   },
-  "type": "object",
-  "required": [
-    "object_id",
-    "style_id",
-    "manifest_hash",
-    "code_seed",
-    "contests",
-    "code",
-    "timestamp",
-    "crypto_hash",
-    "nonce",
-    "state"
-  ],
   "properties": {
     "object_id": {
       "title": "Object Id",

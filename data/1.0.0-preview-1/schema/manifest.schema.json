@@ -1,8 +1,18 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://electionguard.vote/schemas/1.0.0-preview-2/manifest",
   "title": "Manifest",
   "description": "Initial details to define an election",
   "type": "object",
+  "required": ["name", "start_date", "election_scope_id"],
+  "definitions": {
+    "SequenceOrder": {
+      "title": "Sequence Order",
+      "description": "Used for ordering in a ballot to ensure various encryption primitives are deterministic.",
+      "type": "integer",
+      "minimum": 1
+    }
+  },
   "properties": {
     "name": {
       "title": "Election Name",
@@ -354,7 +364,7 @@
           "sequence_order": {
             "title": "Sequence Order",
             "description": "Order to display",
-            "type": "number"
+            "$ref": "#/definitions/SequenceOrder"
           },
           "vote_variation": {
             "title": "Vote Variation",
@@ -407,7 +417,7 @@
                 },
                 "sequence_order": {
                   "title": "Sequence Order",
-                  "type": "number"
+                  "$ref": "#/definitions/SequenceOrder"
                 }
               }
             }
@@ -500,6 +510,5 @@
         }
       }
     }
-  },
-  "required": ["name", "start_date", "election_scope_id"]
+  }
 }
