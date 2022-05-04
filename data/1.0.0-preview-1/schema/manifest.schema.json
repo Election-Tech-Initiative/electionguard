@@ -4,7 +4,7 @@
   "title": "Manifest",
   "description": "Initial details to define an election",
   "type": "object",
-  "required": ["name", "start_date", "election_scope_id", "spec_version"],
+  "required": ["start_date", "election_scope_id", "spec_version"],
   "definitions": {
     "SequenceOrder": {
       "title": "Sequence Order",
