@@ -1,30 +1,25 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "title": "ParsingModel[ElectionConstants]",
-  "$ref": "#/definitions/ElectionConstants",
-  "definitions": {
-    "ElectionConstants": {
-      "title": "ElectionConstants",
-      "type": "object",
-      "properties": {
-        "large_prime": {
-          "title": "Large Prime",
-          "type": "string"
-        },
-        "small_prime": {
-          "title": "Small Prime",
-          "type": "string"
-        },
-        "cofactor": {
-          "title": "Cofactor",
-          "type": "string"
-        },
-        "generator": {
-          "title": "Generator",
-          "type": "string"
-        }
-      },
-      "required": ["large_prime", "small_prime", "cofactor", "generator"]
+  "$id": "https://electionguard.vote/schemas/1.0.0-preview-2/election-constants",
+  "title": "Election Constants",
+  "type": "object",
+  "required": ["large_prime", "small_prime", "cofactor", "generator"],
+  "properties": {
+    "large_prime": {
+      "title": "Large Prime",
+      "type": "string"
+    },
+    "small_prime": {
+      "title": "Small Prime",
+      "type": "string"
+    },
+    "cofactor": {
+      "title": "Cofactor",
+      "type": "string"
+    },
+    "generator": {
+      "title": "Generator",
+      "type": "string"
     }
   }
 }
