@@ -1,0 +1,392 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://electionguard.vote/schemas/1.0.0-preview-2/ciphertext-ballot",
+  "title": "Ciphertext Ballot",
+  "type": "object",
+  "required": [
+    "object_id",
+    "style_id",
+    "manifest_hash",
+    "code_seed",
+    "contests",
+    "code",
+    "timestamp",
+    "crypto_hash",
+    "nonce"
+  ],
+  "definitions": {
+    "SequenceOrder": {
+      "title": "Sequence Order",
+      "description": "Used for ordering in a ballot to ensure various encryption primitives are deterministic.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "ElementModP": {
+      "title": "ElementModP",
+      "description": "An element of the larger `mod p` space, i.e., in [0, P), where P is a 4096-bit prime.",
+      "type": "string"
+    },
+    "ElementModQ": {
+      "title": "ElementModQ",
+      "description": "An element of the smaller `mod q` space, i.e., in [0, Q), where Q is a 256-bit prime.",
+      "type": "string"
+    },
+    "ElGamalCiphertext": {
+      "title": "ElGamal Ciphertext",
+      "description": "An exponential ElGamal ciphertext",
+      "type": "object",
+      "required": ["pad", "data"],
+      "properties": {
+        "pad": {
+          "title": "Pad",
+          "description": "pad or alpha",
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "data": {
+          "title": "Data",
+          "description": "encrypted data or beta",
+          "$ref": "#/definitions/ElementModQ"
+        }
+      }
+    },
+    "HashedElGamalCiphertext": {
+      "title": "Hashed ElGamal Ciphertext",
+      "description": "A hashed version of ElGamal Ciphertext with less size restrictions.",
+      "type": "object",
+      "required": ["pad", "data", "mac"],
+      "properties": {
+        "pad": {
+          "title": "Pad",
+          "description": "pad or alpha",
+          "$ref": "#/definitions/ElementModP"
+        },
+        "data": {
+          "title": "Data",
+          "description": "encrypted data or beta",
+          "type": "string"
+        },
+        "mac": {
+          "title": "MAC",
+          "description": "message authentication code for hmac",
+          "$ref": "#/definitions/ElementModQ"
+        }
+      }
+    },
+    "ProofUsage": {
+      "title": "Proof Usage",
+      "description": "Usage case for proof",
+      "type": "string",
+      "enum": [
+        "Unknown",
+        "Prove knowledge of secret value",
+        "Prove value within selection's limit",
+        "Prove selection's value (0 or 1)"
+      ],
+      "default": "Unknown"
+    },
+    "ConstantChaumPedersenProof": {
+      "title": "Constant Chaum Pedersen Proof",
+      "description": "Usage case for proof",
+      "type": "object",
+      "required": ["pad", "data", "challenge", "response", "constant", "usage"],
+      "properties": {
+        "pad": {
+          "title": "Pad",
+          "description": "a in the spec",
+          "$ref": "#/definitions/ElementModP"
+        },
+        "data": {
+          "title": "Data",
+          "description": "b in the spec",
+          "$ref": "#/definitions/ElementModP"
+        },
+        "challenge": {
+          "title": "Challenge",
+          "description": "c in the spec",
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "response": {
+          "title": "Response",
+          "description": "v in the spec",
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "constant": {
+          "title": "Constant",
+          "description": "constant value",
+          "type": "integer"
+        },
+        "usage": {
+          "title": "Usage",
+          "description": "A description of how to use this proof",
+          "$ref": "#/definitions/ProofUsage",
+          "default": "Prove value within selection's limit"
+        }
+      }
+    },
+    "DisjunctiveChaumPedersenProof": {
+      "title": "Disjunctive Chaum Pedersen Proof",
+      "description": "Representation of disjunctive Chaum Pederson proof",
+      "type": "object",
+      "required": [
+        "proof_zero_pad",
+        "proof_zero_data",
+        "proof_one_pad",
+        "proof_one_data",
+        "proof_zero_challenge",
+        "proof_one_challenge",
+        "challenge",
+        "proof_zero_response",
+        "proof_one_response",
+        "usage"
+      ],
+      "properties": {
+        "proof_zero_pad": {
+          "title": "Proof Zero Pad",
+          "description": "a0 in the spec",
+          "$ref": "#/definitions/ElementModP"
+        },
+        "proof_zero_data": {
+          "title": "Proof Zero Data",
+          "description": "b0 in the spec",
+          "$ref": "#/definitions/ElementModP"
+        },
+        "proof_one_pad": {
+          "title": "Proof One Pad",
+          "description": "a1 in the spec",
+          "$ref": "#/definitions/ElementModP"
+        },
+        "proof_one_data": {
+          "title": "Proof One Data",
+          "description": "b1 in the spec",
+          "$ref": "#/definitions/ElementModP"
+        },
+        "proof_zero_challenge": {
+          "title": "Proof Zero Challenge",
+          "description": "c0 in the spec",
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "proof_one_challenge": {
+          "title": "Proof One Challenge",
+          "description": "c1 in the spec",
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "challenge": {
+          "title": "Challenge",
+          "description": "c in the spec",
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "proof_zero_response": {
+          "title": "Proof Zero Response",
+          "description": "proof_zero_response in the spec",
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "proof_one_response": {
+          "title": "Proof One Response",
+          "description": "proof_one_response in the spec",
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "usage": {
+          "title": "Usage",
+          "description": "A description of how to use this proof",
+          "$ref": "#/definitions/ProofUsage",
+          "default": "Prove selection's value (0 or 1)"
+        }
+      }
+    },
+    "CiphertextBallotSelection": {
+      "title": "Ciphertext Ballot Selection",
+      "description": "A CiphertextBallotSelection represents an individual encrypted selection on a ballot.",
+      "type": "object",
+      "required": [
+        "object_id",
+        "sequence_order",
+        "description_hash",
+        "ciphertext",
+        "crypto_hash",
+        "is_placeholder_selection",
+        "nonce",
+        "proof"
+      ],
+      "properties": {
+        "object_id": {
+          "title": "Object_id",
+          "type": "string"
+        },
+        "sequence_order": {
+          "title": "Sequence Order",
+          "description": "Used for ordering in a ballot to ensure various encryption primitives are deterministic.",
+          "$ref": "#/definitions/SequenceOrder"
+        },
+        "description_hash": {
+          "title": "Description_hash",
+          "description": "The SelectionDescription hash",
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "ciphertext": {
+          "title": "Ciphertext",
+          "description": "The encrypted representation of the vote field",
+          "$ref": "#/definitions/ElGamalCiphertext"
+        },
+        "crypto_hash": {
+          "title": "Crypto Hash",
+          "description": "The hash of the encrypted values",
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "is_placeholder_selection": {
+          "title": "Is Placeholder Selection",
+          "description": "Determines if this is a placeholder selection",
+          "type": "boolean",
+          "default": false
+        },
+        "nonce": {
+          "title": "Nonce",
+          "description": "The nonce used to generate the encryption. Sensitive & should be treated as a secret",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "#/definitions/ElementModQ" }
+          ],
+          "default": null
+        },
+        "proof": {
+          "title": "Proof",
+          "description": "The proof that demonstrates the selection is an encryption of 0 or 1, and was encrypted using the `nonce`",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "#/definitions/DisjunctiveChaumPedersenProof" }
+          ],
+          "default": null
+        }
+      }
+    },
+    "CiphertextBallotContest": {
+      "title": "Ciphertext Ballot Contest",
+      "description": "A CiphertextBallotContest represents the selections made by a voter for a specific ContestDescription.",
+      "type": "object",
+      "required": [
+        "object_id",
+        "sequence_order",
+        "description_hash",
+        "ballot_selections",
+        "ciphertext_accumulation",
+        "crypto_hash",
+        "nonce",
+        "proof",
+        "extended_data"
+      ],
+      "properties": {
+        "object_id": {
+          "title": "Object Id",
+          "type": "string"
+        },
+        "sequence_order": {
+          "title": "Sequence Order",
+          "description": "Used for ordering in a ballot to ensure various encryption primitives are deterministic.",
+          "$ref": "#/definitions/SequenceOrder"
+        },
+        "description_hash": {
+          "title": "Description Hash",
+          "description": "Hash from contestDescription",
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "ballot_selections": {
+          "title": "Ballot_selections",
+          "type": "array",
+          "default": [],
+          "items": {
+            "title": "Items",
+            "$ref": "#/definitions/CiphertextBallotSelection"
+          }
+        },
+        "ciphertext_accumulation": {
+          "title": "Ciphertext Accumulation",
+          "description": "The encrypted representation of all of the vote fields (the contest total)",
+          "$ref": "#/definitions/ElGamalCiphertext"
+        },
+        "crypto_hash": {
+          "title": "Crypto Hash",
+          "description": "Hash of the encrypted values",
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "nonce": {
+          "title": "Nonce",
+          "description": "The nonce used to generate the encryption. Sensitive & should be treated as a secret",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "#/definitions/ElementModQ" }
+          ],
+          "default": null
+        },
+        "proof": {
+          "title": "Proof",
+          "description": "The proof demonstrates the sum of the selections does not exceed the maximum available selections for the contest, and that the proof was generated with the nonce",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "#/definitions/ElGamalCiphertext" }
+          ],
+          "default": null
+        },
+        "extended_data": {
+          "title": "Extended Data",
+          "description": "Encrypted representation of the extended_data field",
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "#/definitions/HashedElGamalCiphertext" }
+          ],
+          "default": null
+        }
+      }
+    }
+  },
+  "properties": {
+    "object_id": {
+      "title": "Object Id",
+      "type": "string"
+    },
+    "style_id": {
+      "title": "Style Id",
+      "description": "The `object_id` of the `BallotStyle` in the `Election` Manifest",
+      "type": "string"
+    },
+    "manifest_hash": {
+      "title": "Manifest Hash",
+      "description": "Hash of the election manifest",
+      "$ref": "#/definitions/ElementModQ"
+    },
+    "code_seed": {
+      "title": "Code_seed",
+      "description": "Seed for ballot code",
+      "$ref": "#/definitions/ElementModQ"
+    },
+    "contests": {
+      "title": "Contests",
+      "description": "List of contests for this ballot",
+      "type": "array",
+      "default": [],
+      "items": {
+        "title": "Items",
+        "$ref": "#/definitions/CiphertextBallotContest"
+      }
+    },
+    "code": {
+      "title": "Code",
+      "description": "Unique ballot code for this ballot",
+      "$ref": "#/definitions/ElementModQ"
+    },
+    "timestamp": {
+      "title": "Timestamp",
+      "description": "Timestamp at which the ballot encryption is generated in tick",
+      "type": "integer"
+    },
+    "crypto_hash": {
+      "title": "Crypto Hash",
+      "description": "The hash of the encrypted ballot representation",
+      "$ref": "#/definitions/ElementModQ"
+    },
+    "nonce": {
+      "title": "Nonce",
+      "description": "The nonce used to encrypt this ballot. Sensitive & should be treated as a secret",
+      "oneOf": [{ "type": "null" }, { "$ref": "#/definitions/ElementModQ" }],
+      "default": null
+    }
+  }
+}

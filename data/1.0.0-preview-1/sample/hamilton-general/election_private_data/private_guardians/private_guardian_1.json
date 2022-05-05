@@ -1,0 +1,274 @@
+{
+  "guardian_id": "1",
+  "election_keys": {
+    "owner_id": "1",
+    "sequence_order": 1,
+    "key_pair": {
+      "secret_key": "B7EA",
+      "public_key": "9D6F28E901DAF980"
+    },
+    "polynomial": {
+      "coefficients": [
+        {
+          "value": "B7EA",
+          "commitment": "9D6F28E901DAF980",
+          "proof": {
+            "public_key": "9D6F28E901DAF980",
+            "commitment": "79F6BE19F159F46E",
+            "challenge": "84FF",
+            "response": "B0C6",
+            "usage": "Prove knowledge of secret value"
+          }
+        },
+        {
+          "value": "0900",
+          "commitment": "664509B68C877600",
+          "proof": {
+            "public_key": "664509B68C877600",
+            "commitment": "6744D47C625B5062",
+            "challenge": "35AB",
+            "response": "8CE1",
+            "usage": "Prove knowledge of secret value"
+          }
+        },
+        {
+          "value": "0FF6",
+          "commitment": "1265526BD6DC0D3A",
+          "proof": {
+            "public_key": "1265526BD6DC0D3A",
+            "commitment": "F01BE1F0EEFC8027",
+            "challenge": "73D6",
+            "response": "283C",
+            "usage": "Prove knowledge of secret value"
+          }
+        }
+      ]
+    }
+  },
+  "backups_to_share": {
+    "1": {
+      "owner_id": "1",
+      "designated_id": "1",
+      "designated_sequence_order": 1,
+      "coordinate": "D0E0"
+    },
+    "2": {
+      "owner_id": "1",
+      "designated_id": "2",
+      "designated_sequence_order": 2,
+      "coordinate": "09D1"
+    },
+    "3": {
+      "owner_id": "1",
+      "designated_id": "3",
+      "designated_sequence_order": 3,
+      "coordinate": "629F"
+    },
+    "4": {
+      "owner_id": "1",
+      "designated_id": "4",
+      "designated_sequence_order": 4,
+      "coordinate": "DB59"
+    },
+    "5": {
+      "owner_id": "1",
+      "designated_id": "5",
+      "designated_sequence_order": 5,
+      "coordinate": "740E"
+    }
+  },
+  "guardian_election_public_keys": {
+    "1": {
+      "owner_id": "1",
+      "sequence_order": 1,
+      "key": "9D6F28E901DAF980",
+      "coefficient_commitments": [
+        "9D6F28E901DAF980",
+        "664509B68C877600",
+        "1265526BD6DC0D3A"
+      ],
+      "coefficient_proofs": [
+        {
+          "public_key": "9D6F28E901DAF980",
+          "commitment": "79F6BE19F159F46E",
+          "challenge": "84FF",
+          "response": "B0C6",
+          "usage": "Prove knowledge of secret value"
+        },
+        {
+          "public_key": "664509B68C877600",
+          "commitment": "6744D47C625B5062",
+          "challenge": "35AB",
+          "response": "8CE1",
+          "usage": "Prove knowledge of secret value"
+        },
+        {
+          "public_key": "1265526BD6DC0D3A",
+          "commitment": "F01BE1F0EEFC8027",
+          "challenge": "73D6",
+          "response": "283C",
+          "usage": "Prove knowledge of secret value"
+        }
+      ]
+    },
+    "2": {
+      "owner_id": "2",
+      "sequence_order": 2,
+      "key": "56BD408F515B50C5",
+      "coefficient_commitments": [
+        "56BD408F515B50C5",
+        "63E6B79822C6B4EC",
+        "E627A5B6ADCD8584"
+      ],
+      "coefficient_proofs": [
+        {
+          "public_key": "56BD408F515B50C5",
+          "commitment": "DE007FD7C578739A",
+          "challenge": "9DA7",
+          "response": "031C",
+          "usage": "Prove knowledge of secret value"
+        },
+        {
+          "public_key": "63E6B79822C6B4EC",
+          "commitment": "545CAD112743E258",
+          "challenge": "3885",
+          "response": "5EAE",
+          "usage": "Prove knowledge of secret value"
+        },
+        {
+          "public_key": "E627A5B6ADCD8584",
+          "commitment": "A8AE63CFD8CDFDC3",
+          "challenge": "DA25",
+          "response": "67CD",
+          "usage": "Prove knowledge of secret value"
+        }
+      ]
+    },
+    "3": {
+      "owner_id": "3",
+      "sequence_order": 3,
+      "key": "096D429CCDD90A05",
+      "coefficient_commitments": [
+        "096D429CCDD90A05",
+        "FBD6DF1FEBCD6647",
+        "2A3FC71290C7473F"
+      ],
+      "coefficient_proofs": [
+        {
+          "public_key": "096D429CCDD90A05",
+          "commitment": "FE13CB49B26D1921",
+          "challenge": "5C11",
+          "response": "351C",
+          "usage": "Prove knowledge of secret value"
+        },
+        {
+          "public_key": "FBD6DF1FEBCD6647",
+          "commitment": "635230A77A43B762",
+          "challenge": "91EE",
+          "response": "DE49",
+          "usage": "Prove knowledge of secret value"
+        },
+        {
+          "public_key": "2A3FC71290C7473F",
+          "commitment": "C29C85A710448199",
+          "challenge": "43FE",
+          "response": "F4FC",
+          "usage": "Prove knowledge of secret value"
+        }
+      ]
+    },
+    "4": {
+      "owner_id": "4",
+      "sequence_order": 4,
+      "key": "1C1F8423521CC820",
+      "coefficient_commitments": [
+        "1C1F8423521CC820",
+        "E1696E7ECABD9A42",
+        "49FE9F9A70729C96"
+      ],
+      "coefficient_proofs": [
+        {
+          "public_key": "1C1F8423521CC820",
+          "commitment": "1DFABA59A23C60FF",
+          "challenge": "A3CF",
+          "response": "92D8",
+          "usage": "Prove knowledge of secret value"
+        },
+        {
+          "public_key": "E1696E7ECABD9A42",
+          "commitment": "5AD641F78F290A05",
+          "challenge": "70D7",
+          "response": "3B2B",
+          "usage": "Prove knowledge of secret value"
+        },
+        {
+          "public_key": "49FE9F9A70729C96",
+          "commitment": "EFA9BEFDC53E65A7",
+          "challenge": "CC91",
+          "response": "213B",
+          "usage": "Prove knowledge of secret value"
+        }
+      ]
+    },
+    "5": {
+      "owner_id": "5",
+      "sequence_order": 5,
+      "key": "1046243FA8A48584",
+      "coefficient_commitments": [
+        "1046243FA8A48584",
+        "3B90486FFF3156F9",
+        "D92B2EEF1167B6F4"
+      ],
+      "coefficient_proofs": [
+        {
+          "public_key": "1046243FA8A48584",
+          "commitment": "A3B09959F5DAFF4D",
+          "challenge": "0DEB",
+          "response": "85A6",
+          "usage": "Prove knowledge of secret value"
+        },
+        {
+          "public_key": "3B90486FFF3156F9",
+          "commitment": "A35C560509A058E8",
+          "challenge": "A1E3",
+          "response": "94AA",
+          "usage": "Prove knowledge of secret value"
+        },
+        {
+          "public_key": "D92B2EEF1167B6F4",
+          "commitment": "0E981DD2A09FFC4A",
+          "challenge": "C766",
+          "response": "9A23",
+          "usage": "Prove knowledge of secret value"
+        }
+      ]
+    }
+  },
+  "guardian_election_partial_key_backups": {
+    "2": {
+      "owner_id": "2",
+      "designated_id": "1",
+      "designated_sequence_order": 1,
+      "coordinate": "62D4"
+    },
+    "3": {
+      "owner_id": "3",
+      "designated_id": "1",
+      "designated_sequence_order": 1,
+      "coordinate": "5CB1"
+    },
+    "4": {
+      "owner_id": "4",
+      "designated_id": "1",
+      "designated_sequence_order": 1,
+      "coordinate": "457A"
+    },
+    "5": {
+      "owner_id": "5",
+      "designated_id": "1",
+      "designated_sequence_order": 1,
+      "coordinate": "6583"
+    }
+  },
+  "guardian_election_partial_key_verifications": {}
+}

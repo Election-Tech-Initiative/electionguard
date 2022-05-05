@@ -1,0 +1,41 @@
+{
+  "object_id": "5a150c74-a2cb-47f6-b575-165ba8a4ce53",
+  "style_id": "harrison-township-ballot-style",
+  "contests": [
+    {
+      "object_id": "justice-supreme-court",
+      "sequence_order": 0,
+      "ballot_selections": [
+        {
+          "object_id": "john-adams-selection",
+          "sequence_order": 0,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "john-hancock-selection",
+          "sequence_order": 2,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ],
+      "extended_data": null
+    },
+    {
+      "object_id": "referendum-pineapple",
+      "sequence_order": 1,
+      "ballot_selections": [
+        {
+          "object_id": "referendum-pineapple-affirmative-selection",
+          "sequence_order": 0,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ],
+      "extended_data": null
+    }
+  ]
+}

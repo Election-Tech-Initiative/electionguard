@@ -1,0 +1,27 @@
+{
+  "object_id": "69aeacb4-64c6-4205-9bb2-5fb6b3b3ea58",
+  "style_id": "harrison-township-ballot-style",
+  "contests": [
+    {
+      "object_id": "justice-supreme-court",
+      "sequence_order": 0,
+      "ballot_selections": [
+        {
+          "object_id": "john-adams-selection",
+          "sequence_order": 0,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "john-hancock-selection",
+          "sequence_order": 2,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ],
+      "extended_data": null
+    }
+  ]
+}
