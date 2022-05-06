@@ -68,7 +68,7 @@
         "mac": {
           "title": "MAC",
           "description": "message authentication code for hmac",
-          "$ref": "#/definitions/ElementModQ"
+          "type": "string"
         }
       }
     },
