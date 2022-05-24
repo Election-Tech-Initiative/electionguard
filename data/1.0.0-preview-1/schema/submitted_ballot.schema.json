@@ -300,7 +300,7 @@
         "ballot_selections": {
           "title": "Ballot_selections",
           "type": "array",
-          "default": [],
+          "minItems": 1,
           "items": {
             "title": "Items",
             "$ref": "#/definitions/CiphertextBallotSelection"
@@ -370,7 +370,7 @@
       "title": "Contests",
       "description": "List of contests for this ballot",
       "type": "array",
-      "default": [],
+      "minItems": 1,
       "items": {
         "title": "Items",
         "$ref": "#/definitions/CiphertextBallotContest"
