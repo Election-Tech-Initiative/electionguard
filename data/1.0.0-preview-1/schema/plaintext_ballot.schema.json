@@ -15,7 +15,7 @@
     "PlaintextBallotSelection": {
       "title": "Plaintext Ballot Selection",
       "type": "object",
-      "required": ["object_id", "vote", "sequence_order"],
+      "required": ["object_id", "vote"],
       "properties": {
         "object_id": {
           "title": "Object Id",
@@ -39,7 +39,7 @@
     "PlaintextBallotContest": {
       "title": "Plaintext Ballot Contest",
       "type": "object",
-      "required": ["object_id", "sequence_order", "ballot_selections"],
+      "required": ["object_id", "ballot_selections"],
       "properties": {
         "object_id": {
           "title": "Object Id",
