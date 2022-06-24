@@ -49,7 +49,7 @@
           "title": "Selections",
           "description": "Represents an individual selection on a ballot",
           "type": "array",
-          "default": [],
+          "minItems": 1,
           "items": {
             "title": "Selections",
             "$ref": "#/definitions/PlaintextBallotSelection"
