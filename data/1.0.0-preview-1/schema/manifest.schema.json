@@ -149,7 +149,7 @@
       "type": "array",
       "items": {
         "title": "Geopolitical Unit",
-        "type": ["object", "null"],
+        "type": "object",
         "properties": {
           "object_id": {
             "title": "Id",
@@ -260,7 +260,7 @@
       "type": "array",
       "items": {
         "title": "Party",
-        "type": ["object", "null"],
+        "type": "object",
         "properties": {
           "object_id": {
             "title": "Id",
@@ -311,7 +311,7 @@
       "type": "array",
       "items": {
         "title": "Candidate",
-        "type": ["object", "null"],
+        "type": "object",
         "properties": {
           "object_id": {
             "title": "Id",
@@ -364,7 +364,7 @@
       "type": "array",
       "items": {
         "title": "Contest",
-        "type": ["object", "null"],
+        "type": "object",
         "properties": {
           "object_id": {
             "title": "Id",
@@ -495,7 +495,7 @@
       "type": "array",
       "items": {
         "title": "Ballot Style",
-        "type": ["object", "null"],
+        "type": "object",
         "properties": {
           "object_id": {
             "title": "Id",
