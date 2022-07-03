@@ -54,7 +54,7 @@ _Updates from previous version_
 [spec-1.0]: https://github.com/microsoft/electionguard/releases/download/v1.0/EG_spec_v1_0.pdf "Election Guard Specification 1.0"
 
 [badge-0.95]: https://img.shields.io/badge/🗳%20ElectionGuard-v0.95-green
-[spec-0.95]: https://github.com/microsoft/electionguard/releases/download/v0.95.0/EG_spec_v0_95.pdf "Election Guard Specification 0.95"
+[spec-0.95]: https://github.com/microsoft/electionguard/releases/download/v1.0.0-preview-1/EG_spec_v0_95.pdf "Election Guard Specification 0.95"
 
 [badge-0.85]: https://img.shields.io/badge/🗳%20ElectionGuard-v0.85-red
 [spec-0.85]: https://github.com/microsoft/electionguard/releases/download/v0.85.0/EG_spec_V0_85.pdf "Election Guard Specification 0.85"

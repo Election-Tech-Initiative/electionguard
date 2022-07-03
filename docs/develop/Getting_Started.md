@@ -30,6 +30,6 @@ ElectionGuard is an open source platform and depends on an active community and 
 [applications]: ../Applications
 [approach]: ../Approach
 [badges]: ../Badges
-[data-format]: ../Data_Format
+[data-schema]: ../Data_Schema
 [repositories]: ../Repositories
 [versioning]: ../Versioning

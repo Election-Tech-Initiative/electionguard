@@ -1,0 +1,73 @@
+{
+  "object_id": "election-results",
+  "contests": {
+    "justice-supreme-court": {
+      "object_id": "justice-supreme-court",
+      "sequence_order": 0,
+      "description_hash": "8902",
+      "selections": {
+        "john-adams-selection": {
+          "object_id": "john-adams-selection",
+          "sequence_order": 0,
+          "description_hash": "98A7",
+          "ciphertext": {
+            "pad": "B73252368496B624",
+            "data": "F3A5D9B0CA1369C3"
+          }
+        },
+        "benjamin-franklin-selection": {
+          "object_id": "benjamin-franklin-selection",
+          "sequence_order": 1,
+          "description_hash": "5FDA",
+          "ciphertext": {
+            "pad": "EFB817CB0F7C3B40",
+            "data": "A0082A12DE06541E"
+          }
+        },
+        "john-hancock-selection": {
+          "object_id": "john-hancock-selection",
+          "sequence_order": 2,
+          "description_hash": "3316",
+          "ciphertext": {
+            "pad": "17489D87E00024F2",
+            "data": "76437D26C20355A5"
+          }
+        },
+        "write-in-selection": {
+          "object_id": "write-in-selection",
+          "sequence_order": 3,
+          "description_hash": "3086",
+          "ciphertext": {
+            "pad": "4E4A57CB215B5ECB",
+            "data": "D93D8DEADF659A02"
+          }
+        }
+      }
+    },
+    "referendum-pineapple": {
+      "object_id": "referendum-pineapple",
+      "sequence_order": 1,
+      "description_hash": "79CC",
+      "selections": {
+        "referendum-pineapple-affirmative-selection": {
+          "object_id": "referendum-pineapple-affirmative-selection",
+          "sequence_order": 0,
+          "description_hash": "2AEF",
+          "ciphertext": {
+            "pad": "077C08B13DC881A5",
+            "data": "0EFC2802ECD02D2F"
+          }
+        },
+        "referendum-pineapple-negative-selection": {
+          "object_id": "referendum-pineapple-negative-selection",
+          "sequence_order": 1,
+          "description_hash": "2465",
+          "ciphertext": {
+            "pad": "16CF7C668B2B0D24",
+            "data": "4198EF51C71F4DCF"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "object_id": "ballot-ddf5a59a-73f3-11ec-aaed-acde48001122",
+  "style_id": "congress-district-5-hamilton-county",
+  "contests": [
+    {
+      "object_id": "president-vice-president-contest",
+      "sequence_order": 0,
+      "ballot_selections": [
+        {
+          "object_id": "barchi-hallaren-selection",
+          "sequence_order": 0,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "court-blumhardt-selection",
+          "sequence_order": 2,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "boone-lian-selection",
+          "sequence_order": 3,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "hildebrand-garritty-selection",
+          "sequence_order": 4,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "patterson-lariviere-selection",
+          "sequence_order": 5,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ]
+    },
+    {
+      "object_id": "ozark-governor",
+      "sequence_order": 1,
+      "ballot_selections": [
+        {
+          "object_id": "harris-selection",
+          "sequence_order": 1,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "abcock-selection",
+          "sequence_order": 3,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "steel-loy-selection",
+          "sequence_order": 4,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "sharp-selection",
+          "sequence_order": 5,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "walace-selection",
+          "sequence_order": 6,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "williams-selection",
+          "sequence_order": 7,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "alpern-selection",
+          "sequence_order": 9,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "windbeck-selection",
+          "sequence_order": 10,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "mitchell-selection",
+          "sequence_order": 14,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "ash-selection",
+          "sequence_order": 16,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "kennedy-selection",
+          "sequence_order": 17,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "brown-selection",
+          "sequence_order": 19,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "ward-selection",
+          "sequence_order": 21,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "murphy-selection",
+          "sequence_order": 22,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "newman-selection",
+          "sequence_order": 23,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "york-selection",
+          "sequence_order": 25,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "chandler-selection",
+          "sequence_order": 26,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "write-in-selection-governor",
+          "sequence_order": 27,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ]
+    },
+    {
+      "object_id": "congress-district-5-contest",
+      "sequence_order": 2,
+      "ballot_selections": [
+        {
+          "object_id": "soliz-selection",
+          "sequence_order": 0,
+          "vote": 1,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "keller-selection",
+          "sequence_order": 1,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "rangel-selection",
+          "sequence_order": 2,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        },
+        {
+          "object_id": "write-in-selection-us-congress-district-5",
+          "sequence_order": 5,
+          "vote": 0,
+          "is_placeholder_selection": false,
+          "extended_data": null
+        }
+      ]
+    }
+  ]
+}

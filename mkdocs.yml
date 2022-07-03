@@ -52,7 +52,7 @@ nav:
           - Repositories: develop/Repositories.md
           - Applications: develop/Applications.md
           - Data:
-              - Data Format: develop/Data_Format.md
+              - Data Schema: develop/Data_Schema.md
               - Election Record: develop/Election_Record.md
               - Sample Data: develop/Sample_Data.md
       - Events:
