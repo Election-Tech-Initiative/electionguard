@@ -1,4 +1,4 @@
-jinja2= "3.0.0"
+jinja2==3.0.0
 mkdocs==1.2.3
 mkdocs-material==7.2.8
 mkdocs-mermaid2-plugin==0.5.2
