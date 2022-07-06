@@ -6,12 +6,6 @@
   "type": "object",
   "required": ["object_id", "style_id", "contests"],
   "definitions": {
-    "SequenceOrder": {
-      "title": "Sequence Order",
-      "description": "Used for ordering in a ballot to ensure various encryption primitives are deterministic.",
-      "type": "integer",
-      "minimum": 1
-    },
     "Vote": {
       "title": "Vote",
       "type": "integer",
@@ -21,7 +15,7 @@
     "PlaintextBallotSelection": {
       "title": "Plaintext Ballot Selection",
       "type": "object",
-      "required": ["object_id", "vote", "sequence_order"],
+      "required": ["object_id", "vote"],
       "properties": {
         "object_id": {
           "title": "Object Id",
@@ -30,10 +24,6 @@
         "vote": {
           "title": "Vote",
           "$ref": "#/definitions/Vote"
-        },
-        "sequence_order": {
-          "title": "Sequence Order",
-          "$ref": "#/definitions/SequenceOrder"
         },
         "is_placeholder_selection": {
           "title": "Determines if this is a placeholder selection",
@@ -49,22 +39,17 @@
     "PlaintextBallotContest": {
       "title": "Plaintext Ballot Contest",
       "type": "object",
-      "required": ["object_id", "sequence_order", "ballot_selections"],
+      "required": ["object_id", "ballot_selections"],
       "properties": {
         "object_id": {
           "title": "Object Id",
           "type": "string"
         },
-        "sequence_order": {
-          "title": "Sequence Order",
-          "description": "Used for ordering in a ballot to ensure various encryption primitives are deterministic",
-          "$ref": "#/definitions/SequenceOrder"
-        },
         "ballot_selections": {
           "title": "Selections",
           "description": "Represents an individual selection on a ballot",
           "type": "array",
-          "default": [],
+          "minItems": 1,
           "items": {
             "title": "Selections",
             "$ref": "#/definitions/PlaintextBallotSelection"
