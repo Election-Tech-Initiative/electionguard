@@ -55,6 +55,10 @@ nav:
               - Data Schema: develop/Data_Schema.md
               - Election Record: develop/Election_Record.md
               - Sample Data: develop/Sample_Data.md
+      - Events:
+          - Monthly Office Hours: events/Office_hours.md
+          - Convenings: events/Convenings.md
+          - August 2022 ElectionGuard Hart Verity Scanner and Accessibility Convening: events/eg_usability_aug_2022.md
 
   - Specification:
       - Official: spec/index.md
