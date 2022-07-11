@@ -2,7 +2,7 @@
 
 ## Overview
 
-This convening is a hybrid event that will be held both virtually on Microsoft Teams and in-person at the Microsoft campus in Redmond, Washington. 
+This convening is a hybrid event that will be held both virtually on Microsoft Teams and in-person at the Microsoft campus in Redmond, Washington. If you would like to join us, please [register via this form](https://form.jotform.com/221867238031151)
 
 ## Agenda
 
@@ -26,12 +26,13 @@ This convening is a hybrid event that will be held both virtually on Microsoft T
 ### Thursday, August 4
 
 #### Usability and Accessibility in US Elections 
-!!! abstract "Ballot Marking Devices: Can vs. Do [Mike Byrne, Rice University]"
+
+!!! abstract "Ballot Marking Device Verification: Can vs. Do [Mike Byrne, Rice University]"
 !!! abstract "Opportunities for Accessibility Innovation with VVSG 2.0 [Whitney Quesenberry, Center for Civic Design]"
 !!! info "Panel Discussion: Usability Considerations that Can Improve Security and Independence [Tyler Schrenk, the Tyler Schrenk Foundation, addl panel tbd]"
 
-
 #### Voting Method, Accessibility, and Security Innovations 
+
 !!! abstract "Secure Accessible Voting with ElectionGuard [Aaron Wilson, Enhanced Voting]"
 
 !!! tip ":pizza: :salad: :ballot_box: Lunch and Enhanced Voting Election System Demonstration :ballot_box:"
@@ -40,4 +41,6 @@ This convening is a hybrid event that will be held both virtually on Microsoft T
 
 For information about attending or otherwise participating, or if you've already registered and need to alert us about any special accommodations, please [email RC Carter](mailto:rocarter@microsoft.com)
 
+### Friday, August 5: Nerd Day
 
+!!! abstract "Final agenda forthcoming, but discussion will focus on 2.0 innovations and implementation options"
