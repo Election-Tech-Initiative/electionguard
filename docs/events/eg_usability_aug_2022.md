@@ -19,8 +19,8 @@ This convening is a hybrid event that will be held both virtually on Microsoft T
 !!! abstract "11:15-12:00 Implementing End-to-End Verifiability in the Verity Voting System: Lessons in ElectionGuard Integration and the Voting Experience [Jim Canter, Eugene Konovalenko, and Drew Tinney, Hart]"
 !!! tip "12:00-1:30 :pizza: :salad: :ballot_box: Lunch and Hart Election System Demonstration :ballot_box:"
 
-!!! abstract "1:30-2:15 Confirmation Code Lookup Site Demonstration [Aaron Wilson, Enhanced Voting]"
-!!! abstract "2:15-3:00 Practical ElectionGuard Verifier Implementation [Moses Liskov and Dr. John Ramsdell, MITRE]"
+!!! abstract "1:30-2:00 Confirmation Code Lookup Site Demonstration [Aaron Wilson, Enhanced Voting]"
+!!! abstract "2:00-2:45 Practical ElectionGuard Verifier Implementation [Moses Liskov and Dr. John Ramsdell, MITRE]"
 
 !!! tip ":spaghetti: :salad: Dinner in Seattle :wine_glass:"
 
@@ -35,7 +35,7 @@ This convening is a hybrid event that will be held both virtually on Microsoft T
 
 #### Voting Method, Accessibility, and Security Innovations
 
-!!! tip "12:30-1:30 :pizza: :salad: :ballot_box: Lunch and Enhanced Voting Election System Demonstration :ballot_box:"
+!!! tip "12:30-1:30 :pizza: :salad:"
 !!! abstract "1:30-2:15 Secure Accessible Voting with ElectionGuard [Aaron Wilson, Enhanced Voting]"
 !!! abstract "2:15-3:00 Implementing End-to-end Verifiability for Vote by Mail [Braden Crimmins, University of Michigan]"
 
