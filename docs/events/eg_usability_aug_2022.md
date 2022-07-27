@@ -16,10 +16,12 @@ This convening is a hybrid event that will be held both virtually on Microsoft T
 !!! abstract "9:45-10:15 What is ElectionGuard and How Does It Work?  [RC Carter, Microsoft]"
 !!! abstract "10:15-11:00 An Overview of the ElectionGuard Ecosystem [Josh Benaloh, Microsoft]"
 !!! info "Break"
-!!! abstract "11:15-12:00 Implementing End-to-End Verifiability in the Verity Voting System: Lessons in ElectionGuard Integration and the Voting Experience [Jim Canter, Eugene Konovalenko, and Drew Tinney, Hart]"
-!!! tip "12:00-1:30 :pizza: :salad: :ballot_box: Lunch and Hart Election System Demonstration :ballot_box:"
-
-!!! abstract "1:30-2:00 Confirmation Code Lookup Site Demonstration [Aaron Wilson, Enhanced Voting]"
+!!! abstract "11:15-11:30 ElectionGuard Election Setup Demo [Lee Richardson and  Steve Maier, InfernoRed; RC Carter, Microsoft]"
+!!! abstract "11:30-12:15 Implementing End-to-End Verifiability in the Verity Voting System: Lessons in ElectionGuard Integration and the Voting Experience [Jim Canter, Eugene Konovalenko, and Drew Tinney, Hart]"
+!!! tip "12:15-12:30 :ballot_box: Voting Demonstration :ballot_box:"
+!!! tip "12:30-1:30  :salad:  Lunch  :pizza:"
+!!! abstract "1:30-1:45 ElectionGuard Tally and Election Record Creation Demo [Lee Richardson and  Steve Maier, InfernoRed; RC Carter, Microsoft]"
+!!! abstract "1:45-2:00 Confirmation Code Lookup Site Demonstration [Aaron Wilson, Enhanced Voting]"
 !!! abstract "2:00-2:45 Practical ElectionGuard Verifier Implementation [Moses Liskov and Dr. John Ramsdell, MITRE]"
 
 !!! tip ":spaghetti: :salad: Dinner in Seattle :wine_glass:"
@@ -38,7 +40,7 @@ This convening is a hybrid event that will be held both virtually on Microsoft T
 !!! tip "12:30-1:30 :pizza: :salad:"
 !!! abstract "1:30-2:15 Secure Accessible Voting with ElectionGuard [Aaron Wilson, Enhanced Voting]"
 !!! abstract "2:15-3:00 Implementing End-to-end Verifiability for Vote by Mail [Braden Crimmins, University of Michigan]"
-
+!!! 
 ### Friday, August 5: Nerd Day
 
 !!! abstract "10:00-2:00 Technical discussion focusing on ElectionGuard 2.0 innovations, implementation options, roadmap, and opensource community"
