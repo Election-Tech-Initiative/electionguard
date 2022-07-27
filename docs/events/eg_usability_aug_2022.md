@@ -16,6 +16,7 @@ This convening is a hybrid event that will be held both virtually on Microsoft T
 !!! abstract "9:45-10:15 What is ElectionGuard and How Does It Work?  [RC Carter, Microsoft]"
 !!! abstract "10:15-11:00 An Overview of the ElectionGuard Ecosystem [Josh Benaloh, Microsoft]"
 !!! info "Break"
+
 !!! abstract "11:15-11:30 ElectionGuard Election Setup Demo [Lee Richardson and  Steve Maier, InfernoRed; RC Carter, Microsoft]"
 !!! abstract "11:30-12:15 Implementing End-to-End Verifiability in the Verity Voting System: Lessons in ElectionGuard Integration and the Voting Experience [Jim Canter, Eugene Konovalenko, and Drew Tinney, Hart]"
 !!! tip "12:15-12:30 :ballot_box: Voting Demonstration :ballot_box:"
