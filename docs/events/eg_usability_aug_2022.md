@@ -48,4 +48,4 @@ This convening is a hybrid event that will be held both virtually on Microsoft T
 
 ### Friday, August 5: Nerd Day
 
-!!! abstract "10:00-2:00 Technical discussion focusing on ElectionGuard 2.0 innovations, implementation options, roadmap, and opensource community"
+!!! abstract "10:00-2:00 [Technical discussions](https://docs.google.com/document/d/1GC7A4j2dkkOzX-yhDg_IzJ64cOZQZjR9FPWF5COJq54/edit#heading=h.kxvinmghkvur) focusing on ElectionGuard 2.0 innovations, implementation options, roadmap, and opensource community"
