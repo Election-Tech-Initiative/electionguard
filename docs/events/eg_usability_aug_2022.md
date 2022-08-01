@@ -27,26 +27,27 @@ This convening is a hybrid event that will be held both virtually on Microsoft T
 
 ### Thursday, August 4
 
-!!! info "9:00-9:30  :coffee:  Coffee and breakfast nosh :doughnut: "
+!!! tip "9:00-9:30  :coffee:  Coffee and breakfast nosh :doughnut: "
 
 #### Usability and Accessibility in US Elections
 
 ???+ abstract "9:30-10:15 Ballot Marking Device Verification: Can vs. Do [Mike Byrne, Rice University]"
     Related publication: ["Can Voters Detect Errors on Their Printed Ballots? Absolutely" ](https://arxiv.org/abs/2204.09780) Philip Kortum, Michael D. Byrne, Chidera O. Azubike, Laura E. Roty
-
 !!! abstract "10:15-11:00 Opportunities for Accessibility Innovation with VVSG 2.0 [Whitney Quesenberry, Center for Civic Design]"
 !!! tip "11:00-11:10 :doughnut: Break :coffee:"
 !!! abstract "11:10-12:00 EAC Perspectives on Accessibility, End-to-End Verifiability, and VVSG 2.0 [Thomas Hicks, Election Assistance Commission]"
 !!! tip "12:00-12:15 :pizza: Grab lunch and prepare for panel :salad:"
 ???+ abstract "12:15-1:30 Panel Discussion: Usability Considerations that Can Improve Security and Independence [Tyler Schrenk, the Tyler Schrenk Foundation; Clark Rachfal, American Council of the Blind; Michelle Bishop, MSW, National Disability Rights Network; Diana Mairose, Self Advocates Becoming Empowered; moderated by Rylin Rodgers, Microsoft]"
     View the [SABE GoVoter Project Report](https://www.sabeusa.org/wp-content/uploads/2021/10/SABE-GoVoter-2020-Survey-Report.pdf)
-
 !!! info "1:30-1:45 :doughnut: Break :coffee:"
+!!! abstract "12:15-1:30 Panel Discussion: Usability Considerations that Can Improve Security and Independence [Tyler Schrenk, the Tyler Schrenk Foundation; Clark Rachfal, American Council of the Blind; Michelle Bishop, MSW, National Disability Rights Network; moderated by Rylin Rodgers, Microsoft]"
+!!! tip "1:30-1:45 :doughnut: Break :coffee:"
 
 #### Voting Method, Accessibility, and Security Innovations
 
 !!! abstract "1:30-2:15 Secure Accessible Voting with ElectionGuard [Aaron Wilson, Enhanced Voting]"
 !!! abstract "2:15-3:00 Implementing End-to-end Verifiability for Vote by Mail [Braden Crimmins, University of Michigan]"
+!!! abstract "3:00-3:45 What's Next? ElectionGuard 2.0 [Michael Naehrig, Microsoft]"
 
 ### Friday, August 5: Nerd Day
 
