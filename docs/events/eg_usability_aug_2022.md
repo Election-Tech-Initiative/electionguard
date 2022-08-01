@@ -31,12 +31,14 @@ This convening is a hybrid event that will be held both virtually on Microsoft T
 
 #### Usability and Accessibility in US Elections
 
-!!! abstract "9:30-10:15 Ballot Marking Device Verification: Can vs. Do [Mike Byrne, Rice University]"
+???+ abstract "9:30-10:15 Ballot Marking Device Verification: Can vs. Do [Mike Byrne, Rice University]"
+    Related publication: ["Can Voters Detect Errors on Their Printed Ballots? Absolutely" ](https://arxiv.org/abs/2204.09780) Philip Kortum, Michael D. Byrne, Chidera O. Azubike, Laura E. Roty
+
 !!! abstract "10:15-11:00 Opportunities for Accessibility Innovation with VVSG 2.0 [Whitney Quesenberry, Center for Civic Design]"
-!!! info "11:00-11:10 :doughnut: Break :coffee:"
-!!! abstract "11:10-12:00 EAC Perspectives on Accessibility and VVSG 2.0 [Tom Hicks, Election Assistance Commission]"
-!!! info "12:00-12:15 :pizza: Grab lunch and prepare for panel :salad:"
-!!! info "12:15-1:30 Panel Discussion: Usability Considerations that Can Improve Security and Independence [Tyler Schrenk, the Tyler Schrenk Foundation; Clark Rachfal, American Council of the Blind; Michelle Bishop, MSW, National Disability Rights Network; moderated by Rylin Rodgers, Microsoft]"
+!!! tip "11:00-11:10 :doughnut: Break :coffee:"
+!!! abstract "11:10-12:00 EAC Perspectives on Accessibility, End-to-End Verifiability, and VVSG 2.0 [Thomas Hicks, Election Assistance Commission]"
+!!! tip "12:00-12:15 :pizza: Grab lunch and prepare for panel :salad:"
+!!! abstract "12:15-1:30 Panel Discussion: Usability Considerations that Can Improve Security and Independence [Tyler Schrenk, the Tyler Schrenk Foundation; Clark Rachfal, American Council of the Blind; Michelle Bishop, MSW, National Disability Rights Network; moderated by Rylin Rodgers, Microsoft]"
 
 !!! info "1:30-1:45 :doughnut: Break :coffee:"
 
@@ -47,4 +49,4 @@ This convening is a hybrid event that will be held both virtually on Microsoft T
 
 ### Friday, August 5: Nerd Day
 
-!!! abstract "10:00-2:00 Technical discussion focusing on ElectionGuard 2.0 innovations, implementation options, roadmap, and opensource community"
+!!! abstract "10:00-2:00 [Technical discussions](https://docs.google.com/document/d/1GC7A4j2dkkOzX-yhDg_IzJ64cOZQZjR9FPWF5COJq54/edit#heading=h.kxvinmghkvur) focusing on ElectionGuard 2.0 innovations, implementation options, roadmap, and opensource community"
