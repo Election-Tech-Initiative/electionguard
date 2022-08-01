@@ -38,7 +38,7 @@ This convening is a hybrid event that will be held both virtually on Microsoft T
 !!! tip "11:00-11:10 :doughnut: Break :coffee:"
 !!! abstract "11:10-12:00 EAC Perspectives on Accessibility, End-to-End Verifiability, and VVSG 2.0 [Thomas Hicks, Election Assistance Commission]"
 !!! tip "12:00-12:15 :pizza: Grab lunch and prepare for panel :salad:"
-???+ abstract "12:15-1:30 Panel Discussion: Usability Considerations that Can Improve Security and Independence [Tyler Schrenk, the Tyler Schrenk Foundation; Clark Rachfal, American Council of the Blind; Michelle Bishop, MSW, National Disability Rights Network; Diana Mairose,  GoVoter Self Advocates Becoming Empowered; moderated by Rylin Rodgers, Microsoft]"
+???+ abstract "12:15-1:30 Panel Discussion: Usability Considerations that Can Improve Security and Independence [Tyler Schrenk, the Tyler Schrenk Foundation; Clark Rachfal, American Council of the Blind; Michelle Bishop, MSW, National Disability Rights Network; Diana Mairose, Self Advocates Becoming Empowered; moderated by Rylin Rodgers, Microsoft]"
     View the [SABE GoVoter Project Report](https://www.sabeusa.org/wp-content/uploads/2021/10/SABE-GoVoter-2020-Survey-Report.pdf)
 
 !!! info "1:30-1:45 :doughnut: Break :coffee:"
