@@ -16,12 +16,12 @@ This convening is a hybrid event that will be held both virtually on Microsoft T
 !!! abstract "9:45-10:15 What is ElectionGuard and How Does It Work?  [RC Carter, Microsoft]"
 !!! abstract "10:15-11:00 An Overview of the ElectionGuard Ecosystem [Josh Benaloh, Microsoft]"
 !!! info "11:00-11:10 :doughnut: Break :coffee:"
-!!! abstract "11:10-11:30 ElectionGuard Integrated Election Setup (Demonstration) [Lee Richardson and  Steve Maier, InfernoRed; RC Carter, Microsoft]"
+!!! abstract "11:10-11:30 ElectionGuard Integrated Election Setup (demonstration) [Lee Richardson and  Steve Maier, InfernoRed; RC Carter, Microsoft]"
 !!! abstract "11:30-12:30 Implementing End-to-End Verifiability in the Verity Voting System: Lessons in ElectionGuard Integration and the Voting Experience (includes demonstration) [Jim Canter, Eugene Konovalenko, and Drew Tinney, Hart]"
 !!! tip "12:30-1:30 :salad:  Lunch  :pizza: and :ballot_box: Voting :ballot_box:"
-!!! abstract "1:30-1:45 Generating the Election Record (Demonstration) [Lee Richardson and  Steve Maier, InfernoRed; RC Carter, Microsoft]"
-!!! abstract "1:45-2:00 Confirmation Code Lookup Site (Demonstration) [Aaron Wilson, Enhanced Voting]"
-!!! abstract "2:00-2:45 Practical ElectionGuard Verifier Implementation (includes Demonstration)[Moses Liskov and Dr. John Ramsdell, MITRE]"
+!!! abstract "1:30-1:45 Generating the Election Record (demonstration) [Lee Richardson and  Steve Maier, InfernoRed; RC Carter, Microsoft]"
+!!! abstract "1:45-2:00 Confirmation Code Lookup Site (demonstration) [Aaron Wilson, Enhanced Voting]"
+!!! abstract "2:00-2:45 Practical ElectionGuard Verifier Implementation (includes demonstration)[Moses Liskov and Dr. John Ramsdell, MITRE]"
 
 !!! tip ":spaghetti: :salad: Dinner in Seattle :wine_glass:"
 
