@@ -2,7 +2,7 @@
 
 ## Overview
 
-This convening is a hybrid event that will be held both virtually on Microsoft Teams and in-person at the Microsoft campus in Redmond, Washington. If you would like to join us, please [register via this form](https://form.jotform.com/221867238031151). All times Pacific Daylight Time (PDT).
+This convening is a hybrid event that will be held both virtually on Microsoft Teams and in-person at the Microsoft campus in Redmond, Washington. All times Pacific Daylight Time (PDT).
 
 ## Agenda
 
