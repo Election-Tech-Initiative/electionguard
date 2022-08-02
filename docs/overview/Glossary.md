@@ -330,6 +330,12 @@ Decrypting an encrypted [ciphertext tally](#ciphertext-tally) to a readable [pla
     graph LR
     a1(ciphertext tally) -->|decrypt| a2(plaintext tally)
 ```
+### STAR Voting Method
+STAR (an acronym for Score Then Automatic Runoff) voting is an electoral system in which voters rate the candidates for a given office on a scale of zero to five, with zero indicating no support and five indicating maximum support. 
+
+The scores for all candidates are then tabulated and the top two finishers advance to an automatic runoff, at which time a voter's full vote is assigned to whichever of the two finishers he or she scored highest. The candidate whom a greater number of voters gave a higher score in the runoff is declared the winner. 
+
+STAR Voting is Presinct Summable and allows homomorphic encryption (simple addition).
 
 ### undervote
 
