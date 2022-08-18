@@ -1,0 +1,179 @@
+{
+    "object_id": "25a7111b-4334-425a-87c1-f7a49f42b3a2",
+    "style_id": "jefferson-county-ballot-style",
+    "manifest_hash": "6A75",
+    "code_seed": "5418",
+    "contests": [
+        {
+            "object_id": "justice-supreme-court",
+            "sequence_order": 1,
+            "description_hash": "5E36",
+            "ballot_selections": [
+                {
+                    "object_id": "john-adams-selection",
+                    "sequence_order": 1,
+                    "description_hash": "04C8",
+                    "ciphertext": {
+                        "pad": "1A9500462A8D7F79",
+                        "data": "1DF98132B7F4E9D6"
+                    },
+                    "crypto_hash": "C855",
+                    "nonce": null,
+                    "proof": {
+                        "commitments": [
+                            "5197CE57B12CAFAB",
+                            "4C613EB4DA7AABC8",
+                            "9EBED2534EBC19E4",
+                            "5C73B8A33090DA72"
+                        ],
+                        "challenges": [
+                            "A346",
+                            "A15C",
+                            "44B1"
+                        ],
+                        "responses": [
+                            "1904",
+                            "28FF"
+                        ],
+                        "limit": 1,
+                        "usage": "Prove value is within a given range (0, 1, ..., or limit)"
+                    },
+                    "selection_limit": 1
+                },
+                {
+                    "object_id": "benjamin-franklin-selection",
+                    "sequence_order": 2,
+                    "description_hash": "84DC",
+                    "ciphertext": {
+                        "pad": "D69A737168017939",
+                        "data": "F0D68DAF372D6BAB"
+                    },
+                    "crypto_hash": "AA19",
+                    "nonce": null,
+                    "proof": {
+                        "commitments": [
+                            "4DB6926EB5BEC47C",
+                            "43EB066BDCB960C1",
+                            "9BC073C186380543",
+                            "2A690352CAB96B75"
+                        ],
+                        "challenges": [
+                            "D83A",
+                            "BCC1",
+                            "950A"
+                        ],
+                        "responses": [
+                            "710B",
+                            "15EB"
+                        ],
+                        "limit": 1,
+                        "usage": "Prove value is within a given range (0, 1, ..., or limit)"
+                    },
+                    "selection_limit": 1
+                },
+                {
+                    "object_id": "john-hancock-selection",
+                    "sequence_order": 3,
+                    "description_hash": "663D",
+                    "ciphertext": {
+                        "pad": "471717E5E5D00D01",
+                        "data": "2FB0ACD6FD9C9579"
+                    },
+                    "crypto_hash": "C8B4",
+                    "nonce": null,
+                    "proof": {
+                        "commitments": [
+                            "4ACB700A11B65DAE",
+                            "28D3A86130E6C22F",
+                            "CE885A2F13FCADC3",
+                            "CFD2791BF4B97109"
+                        ],
+                        "challenges": [
+                            "A830",
+                            "6292",
+                            "0AD1"
+                        ],
+                        "responses": [
+                            "75CD",
+                            "4016"
+                        ],
+                        "limit": 1,
+                        "usage": "Prove value is within a given range (0, 1, ..., or limit)"
+                    },
+                    "selection_limit": 1
+                },
+                {
+                    "object_id": "write-in-selection",
+                    "sequence_order": 4,
+                    "description_hash": "4B6E",
+                    "ciphertext": {
+                        "pad": "2654D83F7A2C276D",
+                        "data": "962E88A421C1B6EC"
+                    },
+                    "crypto_hash": "191A",
+                    "nonce": null,
+                    "proof": {
+                        "commitments": [
+                            "35410DF01B5A88CB",
+                            "63C7C0CD57AB728A",
+                            "89CE188AA4FC13F2",
+                            "CAE3DDE8800AB865"
+                        ],
+                        "challenges": [
+                            "AC86",
+                            "4206",
+                            "EE8C"
+                        ],
+                        "responses": [
+                            "3A81",
+                            "35A2"
+                        ],
+                        "limit": 1,
+                        "usage": "Prove value is within a given range (0, 1, ..., or limit)"
+                    },
+                    "selection_limit": 1
+                }
+            ],
+            "ciphertext_accumulation": {
+                "pad": "E05A155828E85231",
+                "data": "1FEC79D42B4EBB09"
+            },
+            "crypto_hash": "0D80",
+            "contest_limit": 2,
+            "nonce": null,
+            "proof": {
+                "commitments": [
+                    "9DF1E45B081EFAEF",
+                    "CF39E4287409030C",
+                    "7F15520182FA7B6C",
+                    "DEF370702E0EE550",
+                    "EAE8F1358CCB1CF8",
+                    "9BC43BF67C2006BA"
+                ],
+                "challenges": [
+                    "8A63",
+                    "D4D9",
+                    "A3ED",
+                    "0347"
+                ],
+                "responses": [
+                    "65F3",
+                    "B0A7",
+                    "5476"
+                ],
+                "limit": 2,
+                "usage": "Prove value is within a given range (0, 1, ..., or limit)"
+            },
+            "extended_data": {
+                "pad": "79088301C2059AC4",
+                "data": "BFE383D964F93AE18C6E2E8F22B5F3EF9D9E4B46E140DB23A0E531B7CC8FCFB9494B729A39122CB3DF829DE29227BA25BE11570D0D2EAE10270E931CA8150E70DC49617605289DEBB82693F102AFBE66BEE84E8E0C2B0BEFD401F9FB37633ECEBFB7A7410C61F94136E9FCE2885C89DF06FCBBB3076F64E792BC4B53FFCA0744423BFCE17954FBE3720FFBF0C61F1E290F5448458364E05E60C8D6C073489B2E9CFC337C7CC7EE400E86E3A33B22F2FB0F432A17E09DC28EF7309767BCC7F3760190EF4D23E02BA9F55398494C73E5A4FC6600D62C78547F87E95C8279316B2717664FAD9284E031E9C69A36DD8A742A3782D4C91551812BF128C00DD9300336176D825062D28BA06FEC49E5C8E78A8E2B0927FDC81121A799F61C8E5E4B22E0567F343872980EA0951E0245FB8F658D973B4A1C42ACAFED130A79FD9CA9A8245F7EB530CDC8C5214E866BE86E0CF7993AE6D12E7279CCD8949085153A3585D292CD1DD658518EFA5DD5D906771AA329E882022C5A3EE6A355CBF8B07E1125EA8F1460A362498741BF051F93D3CBB0249E1BF16B808318E70A67CFFC0A338EA30F4A0AE0A82A6EF920451D4F4E3697B73083A0436D173EFC5D35D69FAAE1FBF6E4389E0FBBB097F31ABC6A11F4AA5654915E638751E221929D44E18342D9EB05BAA9198062FFACDF80F050C4AFA995CDCC2A7CFC94C67CE08C73D0DF333894A1",
+                "mac": "1D897121FEDF678F098D9F9C92AA1A1EE1119DC36EE1E663C5F03DB8FC03950C"
+            }
+        }
+    ],
+    "code": "3F87",
+    "timestamp": 1660841182,
+    "crypto_hash": "0302",
+    "nonce": null,
+    "state": 1
+}

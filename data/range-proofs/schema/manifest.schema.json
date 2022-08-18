@@ -1,0 +1,531 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://electionguard.vote/schemas/range-proofs/manifest",
+  "title": "Manifest",
+  "description": "Initial details to define an election",
+  "type": "object",
+  "required": [
+    "election_scope_id",
+    "spec_version",
+    "type",
+    "start_date",
+    "end_date",
+    "geopolitical_units",
+    "parties",
+    "candidates",
+    "contests",
+    "ballot_styles"
+  ],
+  "definitions": {
+    "SequenceOrder": {
+      "title": "Sequence Order",
+      "description": "Used for ordering in a ballot to ensure various encryption primitives are deterministic.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "SpecVersion": {
+      "title": "Spec Version",
+      "description": "Used to define the specification used",
+      "enum": ["v0.95", "1.0"]
+    }
+  },
+  "properties": {
+    "name": {
+      "title": "Election Name",
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "Value",
+                "type": "string",
+                "maxLength": 256
+              },
+              "language": {
+                "title": "Language",
+                "type": "string",
+                "maxLength": 256
+              }
+            }
+          }
+        }
+      }
+    },
+    "spec_version": {
+      "title": "Specification Version",
+      "$ref": "#/definitions/SpecVersion"
+    },
+    "contact_information": {
+      "title": "Contact Information",
+      "type": ["object", "null"],
+      "properties": {
+        "address_line": {
+          "title": "Full Address",
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "maxLength": 256
+          }
+        },
+        "name": {
+          "title": "Contact Name",
+          "type": ["string", "null"]
+        },
+        "email": {
+          "title": "Email(s)",
+          "type": ["array", "null"],
+          "items": {
+            "type": "object",
+            "properties": {
+              "annotation": {
+                "title": "Annotation",
+                "type": "string",
+                "maxLength": 256
+              },
+              "value": {
+                "title": "Email",
+                "type": "string",
+                "maxLength": 256
+              }
+            }
+          }
+        },
+        "phone": {
+          "title": "Phone Number(s)",
+          "type": ["array", "null"],
+          "items": {
+            "type": "object",
+            "properties": {
+              "annotation": {
+                "title": "Annotation",
+                "type": "string",
+                "maxLength": 256
+              },
+              "value": {
+                "title": "Phone Number",
+                "type": "string",
+                "maxLength": 256
+              }
+            }
+          }
+        }
+      }
+    },
+    "start_date": {
+      "title": "Start Date",
+      "type": "string",
+      "maxLength": 256
+    },
+    "end_date": {
+      "title": "End Date",
+      "type": "string",
+      "maxLength": 256
+    },
+    "election_scope_id": {
+      "title": "Election Scope Id",
+      "type": "string",
+      "maxLength": 256
+    },
+    "type": {
+      "title": "Election Type",
+      "type": "string",
+      "enum": [
+        "unknown",
+        "general",
+        "partisan_primary_closed",
+        "partisan_primary_open",
+        "primary",
+        "runoff",
+        "special",
+        "other"
+      ]
+    },
+    "geopolitical_units": {
+      "title": "Geopolitical Units",
+      "type": "array",
+      "items": {
+        "title": "Geopolitical Unit",
+        "type": "object",
+        "properties": {
+          "object_id": {
+            "title": "Id",
+            "type": "string",
+            "maxLength": 256
+          },
+          "name": {
+            "title": "Name",
+            "type": "string",
+            "maxLength": 256
+          },
+          "type": {
+            "title": "Type",
+            "type": "string",
+            "enum": [
+              "unknown",
+              "ballot_batch",
+              "ballot_style_area",
+              "borough",
+              "city",
+              "city_council",
+              "combined_precinct",
+              "congressional",
+              "country",
+              "county",
+              "county_council",
+              "drop_box",
+              "judicial",
+              "municipality",
+              "polling_place",
+              "precinct",
+              "school",
+              "special",
+              "split_precinct",
+              "state",
+              "state_house",
+              "state_senate",
+              "township",
+              "utility",
+              "village",
+              "vote_center",
+              "ward",
+              "water",
+              "other"
+            ]
+          },
+          "contact_information": {
+            "title": "Contact Information",
+            "type": ["object", "null"],
+            "properties": {
+              "address_line": {
+                "title": "Full Address",
+                "type": ["array", "null"],
+                "items": {
+                  "type": "string",
+                  "maxLength": 256
+                }
+              },
+              "name": {
+                "title": "Contact Name",
+                "type": ["string", "null"]
+              },
+              "email": {
+                "title": "Email(s)",
+                "type": ["array", "null"],
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "annotation": {
+                      "title": "Annotation",
+                      "type": "string",
+                      "maxLength": 256
+                    },
+                    "value": {
+                      "title": "Email",
+                      "type": "string",
+                      "maxLength": 256
+                    }
+                  }
+                }
+              },
+              "phone": {
+                "title": "Phone Number(s)",
+                "type": ["array", "null"],
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "annotation": {
+                      "title": "Annotation",
+                      "type": "string",
+                      "maxLength": 256
+                    },
+                    "value": {
+                      "title": "Phone Number",
+                      "type": "string",
+                      "maxLength": 256
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "parties": {
+      "title": "Parties",
+      "type": "array",
+      "items": {
+        "title": "Party",
+        "type": "object",
+        "properties": {
+          "object_id": {
+            "title": "Id",
+            "type": "string",
+            "maxLength": 256
+          },
+          "ballot_name": {
+            "title": "Party Name",
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "title": "Value",
+                      "type": "string",
+                      "maxLength": 256
+                    },
+                    "language": {
+                      "title": "Language",
+                      "type": "string",
+                      "maxLength": 256
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "abbreviation": {
+            "title": "Abbreviation",
+            "type": ["string", "null"]
+          },
+          "color": {
+            "title": "Color",
+            "type": ["string", "null"]
+          },
+          "logo_uri": {
+            "title": "Logo Uri",
+            "type": ["string", "null"]
+          }
+        }
+      }
+    },
+    "candidates": {
+      "title": "Candidates",
+      "type": "array",
+      "items": {
+        "title": "Candidate",
+        "type": "object",
+        "properties": {
+          "object_id": {
+            "title": "Id",
+            "type": "string",
+            "maxLength": 256
+          },
+          "ballot_name": {
+            "title": "Candidate Name",
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "title": "Value",
+                      "type": "string",
+                      "maxLength": 256
+                    },
+                    "language": {
+                      "title": "Language",
+                      "type": "string",
+                      "maxLength": 256
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "party_id": {
+            "title": "Party Id",
+            "type": ["string", "null"]
+          },
+          "image_uri": {
+            "title": "Image Uri",
+            "type": ["string", "null"]
+          },
+          "is_write_in": {
+            "title": "Is Write In",
+            "type": ["boolean", "null"]
+          }
+        }
+      }
+    },
+    "contests": {
+      "title": "Contests",
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "title": "Contest",
+        "type": "object",
+        "properties": {
+          "object_id": {
+            "title": "Id",
+            "type": "string",
+            "maxLength": 256
+          },
+          "electoral_district_id": {
+            "title": "Electoral District Id",
+            "type": "string",
+            "maxLength": 256
+          },
+          "sequence_order": {
+            "title": "Sequence Order",
+            "description": "Order to display",
+            "$ref": "#/definitions/SequenceOrder"
+          },
+          "vote_variation": {
+            "title": "Vote Variation",
+            "type": "string",
+            "enum": [
+              "unknown",
+              "one_of_m",
+              "approval",
+              "borda",
+              "cumulative",
+              "majority",
+              "n_of_m",
+              "plurality",
+              "proportional",
+              "range",
+              "rcv",
+              "super_majority",
+              "other"
+            ]
+          },
+          "votes_allowed": {
+            "title": "Votes Allowed",
+            "description": "Maximum total number of votes allowed across selections in the contest",
+            "type": "integer"
+          },
+          "votes_allowed_per_selection": {
+            "title": "Votes Allowed Per Selection",
+            "description": "Maximum number of votes allowed for each selection in the contest",
+            "type": "integer"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string",
+            "maxLength": 256
+          },
+          "ballot_selections": {
+            "title": "Ballot Selections",
+            "type": "array",
+            "items": {
+              "title": "Ballot Selection",
+              "type": "object",
+              "properties": {
+                "object_id": {
+                  "title": "Id",
+                  "type": "string",
+                  "maxLength": 256
+                },
+                "candidate_id": {
+                  "title": "Candidate Id",
+                  "type": "string",
+                  "maxLength": 256
+                },
+                "sequence_order": {
+                  "title": "Sequence Order",
+                  "$ref": "#/definitions/SequenceOrder"
+                }
+              }
+            }
+          },
+          "ballot_title": {
+            "title": "Ballot Title",
+            "type": ["object", "null"],
+            "properties": {
+              "text": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "title": "Value",
+                      "type": "string",
+                      "maxLength": 256
+                    },
+                    "language": {
+                      "title": "Language",
+                      "type": "string",
+                      "maxLength": 256
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "ballot_subtitle": {
+            "title": "Ballot Subtitle",
+            "type": ["object", "null"],
+            "properties": {
+              "text": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "title": "Value",
+                      "type": "string",
+                      "maxLength": 256
+                    },
+                    "language": {
+                      "title": "Language",
+                      "type": "string",
+                      "maxLength": 256
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ballot_styles": {
+      "title": "Ballot Styles",
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "title": "Ballot Style",
+        "type": "object",
+        "properties": {
+          "object_id": {
+            "title": "Id",
+            "type": "string",
+            "maxLength": 256
+          },
+          "geopolitical_unit_ids": {
+            "title": "Geopolitical Unit Ids",
+            "type": ["array", "null"],
+            "items": {
+              "type": "string",
+              "maxLength": 256
+            }
+          },
+          "party_ids": {
+            "title": "Party Ids",
+            "type": ["array", "null"],
+            "items": {
+              "type": "string",
+              "maxLength": 256
+            }
+          },
+          "image_uri": {
+            "title": "Image Uri",
+            "type": ["string", "null"]
+          }
+        }
+      }
+    }
+  }
+}

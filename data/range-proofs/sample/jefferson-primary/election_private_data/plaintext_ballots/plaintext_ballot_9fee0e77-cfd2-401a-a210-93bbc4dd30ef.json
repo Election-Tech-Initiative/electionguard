@@ -1,0 +1,46 @@
+{
+    "object_id": "9fee0e77-cfd2-401a-a210-93bbc4dd30ef",
+    "style_id": "harrison-township-ballot-style",
+    "contests": [
+        {
+            "object_id": "justice-supreme-court",
+            "ballot_selections": [
+                {
+                    "object_id": "john-adams-selection",
+                    "vote": 1,
+                    "write_in": null
+                },
+                {
+                    "object_id": "write-in-selection",
+                    "vote": 1,
+                    "write_in": null
+                }
+            ]
+        },
+        {
+            "object_id": "referendum-pineapple",
+            "ballot_selections": [
+                {
+                    "object_id": "referendum-pineapple-negative-selection",
+                    "vote": 1,
+                    "write_in": null
+                }
+            ]
+        },
+        {
+            "object_id": "official-bagel-style",
+            "ballot_selections": [
+                {
+                    "object_id": "new-york-style-selection",
+                    "vote": 1,
+                    "write_in": null
+                },
+                {
+                    "object_id": "montreal-style-selection",
+                    "vote": 0,
+                    "write_in": null
+                }
+            ]
+        }
+    ]
+}

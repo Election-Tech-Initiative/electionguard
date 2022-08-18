@@ -1,0 +1,116 @@
+{
+    "object_id": "election-results",
+    "contests": {
+        "justice-supreme-court": {
+            "object_id": "justice-supreme-court",
+            "sequence_order": 1,
+            "description_hash": "5E36",
+            "selections": {
+                "john-adams-selection": {
+                    "object_id": "john-adams-selection",
+                    "sequence_order": 1,
+                    "description_hash": "04C8",
+                    "ciphertext": {
+                        "pad": "3465224BB1D0CBCA",
+                        "data": "5F4F2B5C053514A3"
+                    }
+                },
+                "benjamin-franklin-selection": {
+                    "object_id": "benjamin-franklin-selection",
+                    "sequence_order": 2,
+                    "description_hash": "84DC",
+                    "ciphertext": {
+                        "pad": "4CA376F85BD31CEC",
+                        "data": "E17A2AD774413AFC"
+                    }
+                },
+                "john-hancock-selection": {
+                    "object_id": "john-hancock-selection",
+                    "sequence_order": 3,
+                    "description_hash": "663D",
+                    "ciphertext": {
+                        "pad": "639DC02360FC0CED",
+                        "data": "02DDF49D4C09E98F"
+                    }
+                },
+                "write-in-selection": {
+                    "object_id": "write-in-selection",
+                    "sequence_order": 4,
+                    "description_hash": "4B6E",
+                    "ciphertext": {
+                        "pad": "A729992A607D353F",
+                        "data": "FB2D37CD98BDA85B"
+                    }
+                }
+            }
+        },
+        "referendum-pineapple": {
+            "object_id": "referendum-pineapple",
+            "sequence_order": 2,
+            "description_hash": "FC79",
+            "selections": {
+                "referendum-pineapple-affirmative-selection": {
+                    "object_id": "referendum-pineapple-affirmative-selection",
+                    "sequence_order": 1,
+                    "description_hash": "B676",
+                    "ciphertext": {
+                        "pad": "948B5934E5D86F5B",
+                        "data": "BA5C85D8546D79E8"
+                    }
+                },
+                "referendum-pineapple-negative-selection": {
+                    "object_id": "referendum-pineapple-negative-selection",
+                    "sequence_order": 2,
+                    "description_hash": "ADE5",
+                    "ciphertext": {
+                        "pad": "96F587657DB15203",
+                        "data": "E24D92C22889FF09"
+                    }
+                }
+            }
+        },
+        "official-bagel-style": {
+            "object_id": "official-bagel-style",
+            "sequence_order": 3,
+            "description_hash": "DE8C",
+            "selections": {
+                "new-york-style-selection": {
+                    "object_id": "new-york-style-selection",
+                    "sequence_order": 1,
+                    "description_hash": "F382",
+                    "ciphertext": {
+                        "pad": "BE675E3C46202596",
+                        "data": "4719BAF22792C8FA"
+                    }
+                },
+                "montreal-style-selection": {
+                    "object_id": "montreal-style-selection",
+                    "sequence_order": 2,
+                    "description_hash": "5D9A",
+                    "ciphertext": {
+                        "pad": "B6BF141B3DC634D8",
+                        "data": "188965F0A3D27523"
+                    }
+                },
+                "st-louis-style-selection": {
+                    "object_id": "st-louis-style-selection",
+                    "sequence_order": 3,
+                    "description_hash": "05ED",
+                    "ciphertext": {
+                        "pad": "432679540266623B",
+                        "data": "12B623ED7839BFCC"
+                    }
+                },
+                "write-in-style-selection": {
+                    "object_id": "write-in-style-selection",
+                    "sequence_order": 4,
+                    "description_hash": "E9BF",
+                    "ciphertext": {
+                        "pad": "2A8E08F17726AE77",
+                        "data": "8DD6076433970553"
+                    }
+                }
+            }
+        }
+    }
+}

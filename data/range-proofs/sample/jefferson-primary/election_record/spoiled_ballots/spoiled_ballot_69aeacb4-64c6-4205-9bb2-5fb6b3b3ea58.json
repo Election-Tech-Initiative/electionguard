@@ -1,0 +1,780 @@
+{
+    "object_id": "69aeacb4-64c6-4205-9bb2-5fb6b3b3ea58",
+    "contests": {
+        "justice-supreme-court": {
+            "object_id": "justice-supreme-court",
+            "selections": {
+                "john-adams-selection": {
+                    "object_id": "john-adams-selection",
+                    "tally": 1,
+                    "value": "D6982759F3D5107E",
+                    "message": {
+                        "pad": "7A54021027A6C306",
+                        "data": "362FF8E5C2ECBD17"
+                    },
+                    "shares": [
+                        {
+                            "object_id": "john-adams-selection",
+                            "guardian_id": "1",
+                            "share": "C51C94DEFC1B53CC",
+                            "proof": {
+                                "pad": "42A404011C618DAF",
+                                "data": "37D948FB021C74CE",
+                                "challenge": "345A",
+                                "response": "9BFA",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "john-adams-selection",
+                            "guardian_id": "2",
+                            "share": "74F3F8BB8FF258AE",
+                            "proof": {
+                                "pad": "28376AC13E9512BC",
+                                "data": "9EDFFEAAC95E4DCE",
+                                "challenge": "8C19",
+                                "response": "8571",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "john-adams-selection",
+                            "guardian_id": "3",
+                            "share": "1A2FFC4EB440F417",
+                            "proof": {
+                                "pad": "F32F4807B079FAF0",
+                                "data": "DB1C0DF3370EC231",
+                                "challenge": "C204",
+                                "response": "1AC6",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "john-adams-selection",
+                            "guardian_id": "4",
+                            "share": "193661A0662EC3B9",
+                            "proof": {
+                                "pad": "44C1AF52305DF911",
+                                "data": "F89205035D5CDE94",
+                                "challenge": "213E",
+                                "response": "9C74",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "john-adams-selection",
+                            "guardian_id": "5",
+                            "share": "4096A872F72A3994",
+                            "proof": {
+                                "pad": "515B23A47C63162C",
+                                "data": "1C83CF557A1FCBD4",
+                                "challenge": "150D",
+                                "response": "E8DC",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        }
+                    ]
+                },
+                "benjamin-franklin-selection": {
+                    "object_id": "benjamin-franklin-selection",
+                    "tally": 0,
+                    "value": "01",
+                    "message": {
+                        "pad": "10870EACE0C15267",
+                        "data": "8E64BE4E4A5E2C2E"
+                    },
+                    "shares": [
+                        {
+                            "object_id": "benjamin-franklin-selection",
+                            "guardian_id": "1",
+                            "share": "DD59E93EDDDA4313",
+                            "proof": {
+                                "pad": "DF9D16F5B47A9F3F",
+                                "data": "90CC0D52BA89A548",
+                                "challenge": "69DF",
+                                "response": "26F3",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "benjamin-franklin-selection",
+                            "guardian_id": "2",
+                            "share": "2B769DD47F5E587D",
+                            "proof": {
+                                "pad": "7B6C25BE54932A79",
+                                "data": "E95192C4517412EF",
+                                "challenge": "C5E2",
+                                "response": "7EE3",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "benjamin-franklin-selection",
+                            "guardian_id": "3",
+                            "share": "3C1FF5247CE2A3C6",
+                            "proof": {
+                                "pad": "AAFC712D201F8E57",
+                                "data": "257A7B7EC2939100",
+                                "challenge": "AB09",
+                                "response": "AF4D",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "benjamin-franklin-selection",
+                            "guardian_id": "4",
+                            "share": "459902C5F0EAC6DD",
+                            "proof": {
+                                "pad": "FEAB6CD5B35A2F22",
+                                "data": "2DEC7597A66321F8",
+                                "challenge": "338B",
+                                "response": "0F18",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "benjamin-franklin-selection",
+                            "guardian_id": "5",
+                            "share": "42E501BF2C01D9B9",
+                            "proof": {
+                                "pad": "A4DA1C0709F05368",
+                                "data": "39EE1D87DD87EF1B",
+                                "challenge": "41A6",
+                                "response": "5115",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        }
+                    ]
+                },
+                "john-hancock-selection": {
+                    "object_id": "john-hancock-selection",
+                    "tally": 1,
+                    "value": "D6982759F3D5107E",
+                    "message": {
+                        "pad": "0C3E1125A28595E7",
+                        "data": "68EE54426D887CEF"
+                    },
+                    "shares": [
+                        {
+                            "object_id": "john-hancock-selection",
+                            "guardian_id": "1",
+                            "share": "0C0E6E4BF6A61B4F",
+                            "proof": {
+                                "pad": "1D7FB6202CAEF1A1",
+                                "data": "0BFCB1CC7C6E5F15",
+                                "challenge": "2ACF",
+                                "response": "0F88",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "john-hancock-selection",
+                            "guardian_id": "2",
+                            "share": "D1288CF943F0F2",
+                            "proof": {
+                                "pad": "8DE70CE77D6FEA46",
+                                "data": "CC259A5D9FCB7020",
+                                "challenge": "CDCD",
+                                "response": "A0EC",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "john-hancock-selection",
+                            "guardian_id": "3",
+                            "share": "7A99275514FC8B44",
+                            "proof": {
+                                "pad": "6B39548EBF420B4F",
+                                "data": "42216DEDCA7D7746",
+                                "challenge": "4780",
+                                "response": "98BC",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "john-hancock-selection",
+                            "guardian_id": "4",
+                            "share": "025931879FE81EBA",
+                            "proof": {
+                                "pad": "CA84E6680AC9BB20",
+                                "data": "4DD20D2427277B61",
+                                "challenge": "E3D5",
+                                "response": "F462",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "john-hancock-selection",
+                            "guardian_id": "5",
+                            "share": "B5F590C927A8EDD5",
+                            "proof": {
+                                "pad": "20A840487D73947A",
+                                "data": "0628241E2E5E9DFE",
+                                "challenge": "896D",
+                                "response": "1193",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        }
+                    ]
+                },
+                "write-in-selection": {
+                    "object_id": "write-in-selection",
+                    "tally": 0,
+                    "value": "01",
+                    "message": {
+                        "pad": "74FBC1E3F2818B64",
+                        "data": "B6C6A5F08300195C"
+                    },
+                    "shares": [
+                        {
+                            "object_id": "write-in-selection",
+                            "guardian_id": "1",
+                            "share": "7FE55696D40A4781",
+                            "proof": {
+                                "pad": "F2284766014AF736",
+                                "data": "CB3E55EFBD12AAF3",
+                                "challenge": "BFB2",
+                                "response": "1BB9",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "write-in-selection",
+                            "guardian_id": "2",
+                            "share": "5A39EC66D29F8C2F",
+                            "proof": {
+                                "pad": "B97F0CD5D338AF74",
+                                "data": "B52C70ADC5EEBD67",
+                                "challenge": "DFFB",
+                                "response": "E75E",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "write-in-selection",
+                            "guardian_id": "3",
+                            "share": "2D72C6BA65DBF739",
+                            "proof": {
+                                "pad": "9C24868D12EAF32C",
+                                "data": "6C5D1783865CC48F",
+                                "challenge": "3579",
+                                "response": "7D1E",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "write-in-selection",
+                            "guardian_id": "4",
+                            "share": "17B4498EA6E6B52C",
+                            "proof": {
+                                "pad": "B0AC15EEFC225126",
+                                "data": "62F4B990169371BE",
+                                "challenge": "D71F",
+                                "response": "CEA0",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "write-in-selection",
+                            "guardian_id": "5",
+                            "share": "A2314642DB8EFFC2",
+                            "proof": {
+                                "pad": "E8B211403A012552",
+                                "data": "95B6E3AC305A6A71",
+                                "challenge": "9759",
+                                "response": "CE6E",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        }
+                    ]
+                }
+            }
+        },
+        "referendum-pineapple": {
+            "object_id": "referendum-pineapple",
+            "selections": {
+                "referendum-pineapple-affirmative-selection": {
+                    "object_id": "referendum-pineapple-affirmative-selection",
+                    "tally": 0,
+                    "value": "01",
+                    "message": {
+                        "pad": "6E513FDB8A47FE3B",
+                        "data": "80224911FCFBB6CF"
+                    },
+                    "shares": [
+                        {
+                            "object_id": "referendum-pineapple-affirmative-selection",
+                            "guardian_id": "1",
+                            "share": "D8199BD35B30CE39",
+                            "proof": {
+                                "pad": "EE0CC538761BBFFF",
+                                "data": "DA816C75D2E49412",
+                                "challenge": "D676",
+                                "response": "7899",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "referendum-pineapple-affirmative-selection",
+                            "guardian_id": "2",
+                            "share": "541A1BB65627CF0B",
+                            "proof": {
+                                "pad": "692BF1C246017DF8",
+                                "data": "2EB01F9A4D07462F",
+                                "challenge": "78CC",
+                                "response": "0952",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "referendum-pineapple-affirmative-selection",
+                            "guardian_id": "3",
+                            "share": "EA6AF56EEC372FC8",
+                            "proof": {
+                                "pad": "F4296C6110AF5375",
+                                "data": "EF048FB28CCBE0EE",
+                                "challenge": "98B5",
+                                "response": "61D3",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "referendum-pineapple-affirmative-selection",
+                            "guardian_id": "4",
+                            "share": "E68A21AAA289B39E",
+                            "proof": {
+                                "pad": "C05F49953D10FB9D",
+                                "data": "2EB111EA0BDCF77C",
+                                "challenge": "7A50",
+                                "response": "B9C0",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "referendum-pineapple-affirmative-selection",
+                            "guardian_id": "5",
+                            "share": "130F118DF40830D0",
+                            "proof": {
+                                "pad": "65CDF4DF6DC0F0CD",
+                                "data": "64128156F0B96145",
+                                "challenge": "3D40",
+                                "response": "0BBC",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        }
+                    ]
+                },
+                "referendum-pineapple-negative-selection": {
+                    "object_id": "referendum-pineapple-negative-selection",
+                    "tally": 0,
+                    "value": "01",
+                    "message": {
+                        "pad": "3AC209CBAB1C6C4D",
+                        "data": "5223A78DA86CF74B"
+                    },
+                    "shares": [
+                        {
+                            "object_id": "referendum-pineapple-negative-selection",
+                            "guardian_id": "1",
+                            "share": "CF5B28F8742F6F0F",
+                            "proof": {
+                                "pad": "A1BF38DC17C8C768",
+                                "data": "F095E90CCB531D0B",
+                                "challenge": "E739",
+                                "response": "39CC",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "referendum-pineapple-negative-selection",
+                            "guardian_id": "2",
+                            "share": "B0DED2CD77554050",
+                            "proof": {
+                                "pad": "DBDEA1693ACC0AD6",
+                                "data": "E3A691ADC2BACA71",
+                                "challenge": "C028",
+                                "response": "4434",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "referendum-pineapple-negative-selection",
+                            "guardian_id": "3",
+                            "share": "969E1614F872D23A",
+                            "proof": {
+                                "pad": "CEA33DCC91E4153A",
+                                "data": "44DF5B552605DB86",
+                                "challenge": "C169",
+                                "response": "0C94",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "referendum-pineapple-negative-selection",
+                            "guardian_id": "4",
+                            "share": "258565EBDC02AF73",
+                            "proof": {
+                                "pad": "C1FD305E96527B3A",
+                                "data": "37BAF4F0C853B255",
+                                "challenge": "856E",
+                                "response": "A944",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "referendum-pineapple-negative-selection",
+                            "guardian_id": "5",
+                            "share": "3125B5A5592697D7",
+                            "proof": {
+                                "pad": "D329039AA3DF7331",
+                                "data": "AC6C153359C4A70C",
+                                "challenge": "FA61",
+                                "response": "A67B",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        }
+                    ]
+                }
+            }
+        },
+        "official-bagel-style": {
+            "object_id": "official-bagel-style",
+            "selections": {
+                "new-york-style-selection": {
+                    "object_id": "new-york-style-selection",
+                    "tally": 0,
+                    "value": "01",
+                    "message": {
+                        "pad": "3F1B69E4DD0E3D09",
+                        "data": "23797E5CD6AC4A2C"
+                    },
+                    "shares": [
+                        {
+                            "object_id": "new-york-style-selection",
+                            "guardian_id": "1",
+                            "share": "79CBA22429C723B1",
+                            "proof": {
+                                "pad": "05B07448110DAB29",
+                                "data": "5C797A79A06A26A8",
+                                "challenge": "B331",
+                                "response": "3712",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "new-york-style-selection",
+                            "guardian_id": "2",
+                            "share": "5FA77718109CCA95",
+                            "proof": {
+                                "pad": "3AF640D21DEE400E",
+                                "data": "E01E2300641C5D2C",
+                                "challenge": "6299",
+                                "response": "DE45",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "new-york-style-selection",
+                            "guardian_id": "3",
+                            "share": "5CFF65D1B8DA0173",
+                            "proof": {
+                                "pad": "D34A6259D49AABEE",
+                                "data": "29A0A41F5CDC7ACC",
+                                "challenge": "4217",
+                                "response": "CA18",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "new-york-style-selection",
+                            "guardian_id": "4",
+                            "share": "B1BC85072A6DBF4D",
+                            "proof": {
+                                "pad": "7F2E538C5A5E70C2",
+                                "data": "EA74FDDE8607C728",
+                                "challenge": "60B5",
+                                "response": "BEAD",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "new-york-style-selection",
+                            "guardian_id": "5",
+                            "share": "E73CC11A7BCB36CD",
+                            "proof": {
+                                "pad": "3A5F75FCB0EAE34E",
+                                "data": "203975F9299056B9",
+                                "challenge": "EAB0",
+                                "response": "FDB5",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        }
+                    ]
+                },
+                "montreal-style-selection": {
+                    "object_id": "montreal-style-selection",
+                    "tally": 0,
+                    "value": "01",
+                    "message": {
+                        "pad": "036FBB2D02F8416E",
+                        "data": "468BE9643CD9C09B"
+                    },
+                    "shares": [
+                        {
+                            "object_id": "montreal-style-selection",
+                            "guardian_id": "1",
+                            "share": "FE4E97463BBABD10",
+                            "proof": {
+                                "pad": "E906CBA0E358B5E1",
+                                "data": "75BB7199AFE1E460",
+                                "challenge": "5A38",
+                                "response": "D058",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "montreal-style-selection",
+                            "guardian_id": "2",
+                            "share": "F62EEADB45C5CE7E",
+                            "proof": {
+                                "pad": "4517A5928343ADC2",
+                                "data": "F782F68D0F332A3A",
+                                "challenge": "C48C",
+                                "response": "06ED",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "montreal-style-selection",
+                            "guardian_id": "3",
+                            "share": "2155100B94FAE895",
+                            "proof": {
+                                "pad": "CB48C7B29085B272",
+                                "data": "BCB7F7006EF1EAAB",
+                                "challenge": "A136",
+                                "response": "B35D",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "montreal-style-selection",
+                            "guardian_id": "4",
+                            "share": "34C525A4D4CE3651",
+                            "proof": {
+                                "pad": "9A2C450BB46735F2",
+                                "data": "986A79C6E0003519",
+                                "challenge": "AC4B",
+                                "response": "61E6",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "montreal-style-selection",
+                            "guardian_id": "5",
+                            "share": "54B7B068D8872F0B",
+                            "proof": {
+                                "pad": "97752220A864F4EA",
+                                "data": "020D707F62E4BE7B",
+                                "challenge": "0AC5",
+                                "response": "5A29",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        }
+                    ]
+                },
+                "st-louis-style-selection": {
+                    "object_id": "st-louis-style-selection",
+                    "tally": 0,
+                    "value": "01",
+                    "message": {
+                        "pad": "78413E93E323515A",
+                        "data": "75EE9839E08B9EE0"
+                    },
+                    "shares": [
+                        {
+                            "object_id": "st-louis-style-selection",
+                            "guardian_id": "1",
+                            "share": "B0410C1677C10E38",
+                            "proof": {
+                                "pad": "DD9172F201372D3F",
+                                "data": "E7C2A61F1DF356E1",
+                                "challenge": "8207",
+                                "response": "E196",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "st-louis-style-selection",
+                            "guardian_id": "2",
+                            "share": "33F4756F7946C91B",
+                            "proof": {
+                                "pad": "BF7E2E2C6FB7D382",
+                                "data": "2CE900354FD35238",
+                                "challenge": "08C8",
+                                "response": "6186",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "st-louis-style-selection",
+                            "guardian_id": "3",
+                            "share": "330114CFA6C775E8",
+                            "proof": {
+                                "pad": "055B67A8C11C1C42",
+                                "data": "9BAAFE5A6AA565E8",
+                                "challenge": "CA34",
+                                "response": "54C1",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "st-louis-style-selection",
+                            "guardian_id": "4",
+                            "share": "1868A5112F6B7B0D",
+                            "proof": {
+                                "pad": "3822D9C3F9CA4C82",
+                                "data": "409D75B98CB102F0",
+                                "challenge": "71E4",
+                                "response": "D203",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "st-louis-style-selection",
+                            "guardian_id": "5",
+                            "share": "AE26165B5EE72A97",
+                            "proof": {
+                                "pad": "B5D4A9BEE11B458F",
+                                "data": "7FB43FAA14ABD608",
+                                "challenge": "47CC",
+                                "response": "7FC5",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        }
+                    ]
+                },
+                "write-in-style-selection": {
+                    "object_id": "write-in-style-selection",
+                    "tally": 0,
+                    "value": "01",
+                    "message": {
+                        "pad": "BE03167878A6251C",
+                        "data": "889F22658C881B3B"
+                    },
+                    "shares": [
+                        {
+                            "object_id": "write-in-style-selection",
+                            "guardian_id": "1",
+                            "share": "BD3F9867E40A2645",
+                            "proof": {
+                                "pad": "E5ECEE4533360EE2",
+                                "data": "90B36730379096F1",
+                                "challenge": "7083",
+                                "response": "A6A6",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "write-in-style-selection",
+                            "guardian_id": "2",
+                            "share": "67A3FDE62C60ECC2",
+                            "proof": {
+                                "pad": "BAF83FED6ACFBF95",
+                                "data": "2430CA34F69878A9",
+                                "challenge": "8577",
+                                "response": "DA93",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "write-in-style-selection",
+                            "guardian_id": "3",
+                            "share": "EB3B99AB7520471B",
+                            "proof": {
+                                "pad": "1F82E6EAC58B851A",
+                                "data": "A32327A635E04F2F",
+                                "challenge": "48D9",
+                                "response": "381C",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "write-in-style-selection",
+                            "guardian_id": "4",
+                            "share": "F0B11FCE2C0421C3",
+                            "proof": {
+                                "pad": "EF4CD02AA47E4588",
+                                "data": "D75520AF08A28EC8",
+                                "challenge": "D88A",
+                                "response": "84B6",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        },
+                        {
+                            "object_id": "write-in-style-selection",
+                            "guardian_id": "5",
+                            "share": "C2BAA526CAF924CD",
+                            "proof": {
+                                "pad": "B0BBF7855C3DB50D",
+                                "data": "7D69B0CEC13D0137",
+                                "challenge": "131D",
+                                "response": "A6B4",
+                                "usage": "Prove knowledge of secret value"
+                            },
+                            "recovered_parts": null
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

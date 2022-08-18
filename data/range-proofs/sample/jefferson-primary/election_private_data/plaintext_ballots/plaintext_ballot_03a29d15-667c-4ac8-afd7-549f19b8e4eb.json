@@ -1,0 +1,21 @@
+{
+    "object_id": "03a29d15-667c-4ac8-afd7-549f19b8e4eb",
+    "style_id": "jefferson-county-ballot-style",
+    "contests": [
+        {
+            "object_id": "justice-supreme-court",
+            "ballot_selections": [
+                {
+                    "object_id": "john-adams-selection",
+                    "vote": 1,
+                    "write_in": null
+                },
+                {
+                    "object_id": "write-in-selection",
+                    "vote": 1,
+                    "write_in": null
+                }
+            ]
+        }
+    ]
+}

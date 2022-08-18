@@ -1,0 +1,21 @@
+{
+    "object_id": "69aeacb4-64c6-4205-9bb2-5fb6b3b3ea58",
+    "style_id": "harrison-township-ballot-style",
+    "contests": [
+        {
+            "object_id": "justice-supreme-court",
+            "ballot_selections": [
+                {
+                    "object_id": "john-adams-selection",
+                    "vote": 1,
+                    "write_in": null
+                },
+                {
+                    "object_id": "john-hancock-selection",
+                    "vote": 1,
+                    "write_in": null
+                }
+            ]
+        }
+    ]
+}

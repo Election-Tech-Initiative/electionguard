@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://electionguard.vote/schemas/range-proofs/election-constants",
+  "title": "Election Constants",
+  "type": "object",
+  "required": ["large_prime", "small_prime", "cofactor", "generator"],
+  "properties": {
+    "large_prime": {
+      "title": "Large Prime",
+      "type": "string"
+    },
+    "small_prime": {
+      "title": "Small Prime",
+      "type": "string"
+    },
+    "cofactor": {
+      "title": "Cofactor",
+      "type": "string"
+    },
+    "generator": {
+      "title": "Generator",
+      "type": "string"
+    }
+  }
+}
