@@ -2,6 +2,9 @@
 
 ![Microsoft Defending Democracy Program: ElectionGuard][election-guard-banner]
 
+!!! warning "Idaho Pilot Information"
+    If you are looking for information on the Idaho General Election, please visit the [ElectionGuard Pilot Site](www.egvote.us)
+
 ## What is ElectionGuard?
 
 ElectionGuard is an **open source** software development kit (SDK) that makes voting more secure, transparent and accessible. It is designed for election system vendors to incorporate [end-to-end verifiability][glossary-end-to-end-verifiable] into their systems and any interested organization to perform and publish [post-election audits][glossary-post-election-audit].
