@@ -402,11 +402,13 @@
           },
           "number_elected": {
             "title": "Number Elected",
-            "type": "number"
+            "type": "integer",
+            "minimum": 1
           },
           "votes_allowed": {
             "title": "Votes Allowed",
-            "type": ["number", "null"]
+            "type": "integer",
+            "minimum": 1
           },
           "name": {
             "title": "Name",
