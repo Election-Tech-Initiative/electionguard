@@ -24,6 +24,9 @@ nav:
               - Decryption: basics/steps/4_Decryption.md
               - Publish Record: basics/steps/5_Publish_Record.md
               - Verification: basics/steps/6_Verification.md
+              - Jessica: basics/steps/12_Jessica.md
+              - Jessica2: basics/steps/13_Jessica2.md
+              - FAQ's: basics/steps/14_FAQs.md
       - Concepts:
           - Structures and Processes: concepts/Structure_and_Processes.md
           - Election Manifest:
@@ -58,6 +61,7 @@ nav:
       - Events:
           - Monthly Office Hours: events/Office_hours.md
           - August 2022 ElectionGuard Hart Verity Scanner and Accessibility Convening: events/eg_usability_aug_2022.md
+          - Idaho Pilot 2022: events/Idaho_Pilot_2022.md
 
   - Specification:
       - Official: spec/index.md
