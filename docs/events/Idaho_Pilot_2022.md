@@ -46,5 +46,5 @@ MITRE wrote an independent verifier for this election to ensure that ElectionGua
 
 <!-- Links -->
 [Idaho-Banner]: /images/ElectionGuard-Idaho-2022.svg "Idaho Banner"
-[encrypt-image-1]: ../../images/undraw/voting.svg 
-[encrypt-image-2]: ../../images/electionguard-logo.png 
+[encrypt-image-1]: ../images/undraw/voting.svg 
+[encrypt-image-2]: ../images/electionguard-logo.png 

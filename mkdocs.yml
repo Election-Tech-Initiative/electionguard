@@ -24,9 +24,6 @@ nav:
               - Decryption: basics/steps/4_Decryption.md
               - Publish Record: basics/steps/5_Publish_Record.md
               - Verification: basics/steps/6_Verification.md
-              - Jessica: basics/steps/12_Jessica.md
-              - Jessica2: basics/steps/13_Jessica2.md
-              - FAQ's: basics/steps/14_FAQs.md
       - Concepts:
           - Structures and Processes: concepts/Structure_and_Processes.md
           - Election Manifest:
