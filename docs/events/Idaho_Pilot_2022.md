@@ -10,7 +10,7 @@ Other vendors contributed services and capabilities to showcase how independent 
 
 Voters were able to confirm that their vote was counted by scanning their confirmation code on Enhanced Voting's [Ballot Lookup website](https://www.egvote.us/cc/id/22). They could also review the information in their BallotCheck ballots.   
 
-![Encrypt1][encrypt-image-1]
+![Hart Scanner][hart-scanner]
 
 # Independent Verification
 
@@ -43,4 +43,4 @@ MITRE wrote an independent verifier for this election to ensure that ElectionGua
 
 <!-- Links -->
 [Idaho-Banner]: /images/ElectionGuard-Idaho-2022.svg "Idaho Banner"
-[encrypt-image-1]: ../images/undraw/voting.svg 
+[hart-scanner]:/images/scanner.jpg
