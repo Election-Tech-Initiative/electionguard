@@ -1,3 +1,0 @@
-# ElectionGuard Monthly Office Hours
-
-The ElectionGuard project leadership hosts monthly [videoconference meetings using Microsoft Teams](https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZDc2MmVkOGEtN2E5YS00NGFkLWI2MzgtNmQ0MTdlZmYzOTFj%40thread.v2/0?context=%7b%22Tid%22%3a%2272f988bf-86f1-41af-91ab-2d7cd011db47%22%2c%22Oid%22%3a%22ec3bd50a-8bc6-4662-9553-cf2d3df9f3f4%22%7d). They take place the [first Wednesday of every month from 12:00-1:00 PM Pacific Time](https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZDc2MmVkOGEtN2E5YS00NGFkLWI2MzgtNmQ0MTdlZmYzOTFj%40thread.v2/0?context=%7b%22Tid%22%3a%2272f988bf-86f1-41af-91ab-2d7cd011db47%22%2c%22Oid%22%3a%22ec3bd50a-8bc6-4662-9553-cf2d3df9f3f4%22%7d).
