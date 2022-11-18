@@ -3,7 +3,7 @@
 ![Microsoft Defending Democracy Program: ElectionGuard][election-guard-banner]
 
 !!! warning "Idaho Pilot Information"
-    If you are looking for information on the Idaho General Election, please visit the [ElectionGuard Pilot Site][PilotSite]
+    If you are looking for information on the ElectionGuard Pilot in Preston, Idaho, click [here][IdahoPage]
 
 ## What is ElectionGuard?
 
@@ -46,7 +46,7 @@ A huge thank you to those who have helped us along the way:
 
 <!-- Links -->
 [election-guard-banner]: images/electionguard-banner.svg "ElectionGuard banner"
-[PilotSite]: https://www.egvote.us "Pilot Site"
+[IdahoPage]: events/Idaho_Pilot_2022.md "Pilot Site"
 [casting-ballot]: images/undraw/voting.svg "Image of people casting ballots"
 
 [election-guard-discussions]: https://github.com/microsoft/electionguard/discussions "ElectionGuard Discussions page"
