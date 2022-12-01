@@ -2,7 +2,7 @@
 
 # ElectionGuard in the November 2022 General Election
 
-In the Preston, Idaho District #4 General Election, voters experienced ElectionGuard for the first time. Specifically, they were able to use a confirmation code to see for themselves that their ballot was counted. In total, 40% of voters opted to use the new software (as opposed to the traditional option of dropping hand-marked paper ballots into a ballot box).
+In the Preston, Idaho District #4 General Election, Idaho voters experienced ElectionGuard for the first time. Specifically, they were able to use a confirmation code to see for themselves that their ballot was counted. In total, 40% of voters opted to use the new software (as opposed to the traditional option of dropping hand-marked paper ballots into a ballot box).
 
 Other vendors contributed services and capabilities to showcase how independent verification of elections work: Hart InterCivic integrated ElectionGuard into its Verity precinct scanners; MITRE wrote an independent verifier; and Enhanced Voting provided the confirmation code lookup service.
 
