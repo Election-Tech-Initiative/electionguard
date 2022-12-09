@@ -2,7 +2,20 @@
 
 ![Microsoft Defending Democracy Program: ElectionGuard][election-guard-banner]
 
-!!! warning "Idaho Pilot Information"
+???+ abstract "ElectionGuard Pilot Partners"
+     * [Hart InterCivic](https://www.hartintercivic.com/hart-and-microsoft-announce-partnership-to-make-elections-more-secure-verifiable/) integrated ElectionGuard software into their Verity® scanner for this election. Hart is the first major voting system manufacturer in the United States to provide independent verifiability. This pilot is part of their continued commitment to voting technology innovation that results in higher levels of voter confidence in the election process. 
+     
+     * The [Microsoft Democracy Forward](https://www.microsoft.com/en-us/corporate-responsibility/democracy-forward) program works to protect democratic processes through open and secure technologies. Microsoft sponsored the creation of the open-source software tools for ElectionGuard.   
+     
+     * [InfernoRed](https://www.infernored.com/work/microsoft-electionguard) is a premier independent software company that developed the open-source ElectionGuard SDK. 
+     
+     * The [MITRE](https://electionintegrity.mitre.org/verifier/) National Election Security Lab conducts cybersecurity assessments and testing to assist with securing election infrastructure. MITRE built a publicly available, independent verifier for ElectionGuard and verified the election results. 
+     
+     * [Enhanced Voting](https://www.enhancedvoting.com/projects/) creates voting solutions that are secure, easy-to-use, and accessible to all. They built the public website where voters checked their confirmation codes and hosted the ElectionGuard data package for the pilot.  
+     
+     * [Center for Civic Design](https://www.civicdesign.org) brought their design, research, and communication skills to collecting feedback from voters during the pilot election. 
+
+!!! info "Idaho Pilot Information"
     If you are looking for information on the ElectionGuard Pilot in Preston, Idaho, click [here][IdahoPage]
 
 ## What is ElectionGuard?
@@ -39,6 +52,9 @@ A huge thank you to those who have helped us along the way:
 - Josh Benaloh (whose [PhD thesis][verifiable-search-ballot-elections-paper] was the genesis of much of this work)
 - Our [**contributors**][contribute-index] and community
 - [InfernoRed Technology][infernored]
+- [Hart](https://www.hartintercivic.com/)
+- [MITRE](https://www.mitre.org/)
+- [Enhanced Voting](https://www.enhancedvoting.com/)
 - [VotingWorks][voting-works]
 - [Center for Civic Design][center-for-civic-design]
 - [Oxide Design][oxide-design]
