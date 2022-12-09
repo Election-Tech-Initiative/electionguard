@@ -52,7 +52,7 @@ A huge thank you to those who have helped us along the way:
 - Josh Benaloh (whose [PhD thesis][verifiable-search-ballot-elections-paper] was the genesis of much of this work)
 - Our [**contributors**][contribute-index] and community
 - [InfernoRed Technology][infernored]
-- [Hart](https://www.hartintercivic.com/)
+- [Hart InterCivic](https://www.hartintercivic.com/)
 - [MITRE](https://www.mitre.org/)
 - [Enhanced Voting](https://www.enhancedvoting.com/)
 - [VotingWorks][voting-works]
