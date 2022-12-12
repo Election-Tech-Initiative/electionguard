@@ -3,6 +3,8 @@
 ![Microsoft Defending Democracy Program: ElectionGuard][election-guard-banner]
 
 ???+ abstract "ElectionGuard Pilot Partners"
+     In the Franklin County 2022 General Election, voters participated in a pilot of ElectionGuard technology. The ElectionGuard partners included:
+
      * [Hart InterCivic](https://www.hartintercivic.com/hart-and-microsoft-announce-partnership-to-make-elections-more-secure-verifiable/) integrated ElectionGuard software into their Verity® scanner for this election. Hart is the first major voting system manufacturer in the United States to provide independent verifiability. This pilot is part of their continued commitment to voting technology innovation that results in higher levels of voter confidence in the election process. 
      
      * The [Microsoft Democracy Forward](https://www.microsoft.com/en-us/corporate-responsibility/democracy-forward) program works to protect democratic processes through open and secure technologies. Microsoft sponsored the creation of the open-source software tools for ElectionGuard.   
