@@ -6,8 +6,9 @@ The official versions of the ElectionGuard Specifications are listed below and s
 Version | Specification                                  | Recommended      | Badge       
 :------ |:-----------------------------------------------|:----------------:| :-----------
 2.0     | _Unreleased_                                   |                  | ![Version 2.0][badge-2.0]
-1.0     | [:material-download: Download][spec-1.0]       | :material-check: | ![Version 1.0][badge-1.0]
-0.95    | [:material-download: Download][spec-0.95]      | :material-check: | ![Version 0.95][badge-0.95]
+1.1     | [:material-download: Download][spec-1.1]       | :material-check: | ![Version 1.1][badge-1.1]
+1.0     | [:material-download: Download][spec-1.0]       |        | ![Version 1.0][badge-1.0]
+0.95    | [:material-download: Download][spec-0.95]      |        | ![Version 0.95][badge-0.95]
 0.85    | [:material-download: Download][spec-0.85]      |                  | ![Version 0.85][badge-0.85]
 
 
@@ -50,10 +51,13 @@ _Updates from previous version_
 
 [badge-2.0]: https://img.shields.io/badge/🗳%20ElectionGuard-v2.0-yellow
 
+[badge-1.1]: https://img.shields.io/badge/🗳%20ElectionGuard-v1.1-green
+[spec-1.1]: https://github.com/microsoft/electionguard/releases/download/v1.1/EG_spec_v1_1.pdf "Election Guard Specification 1.1"
+
 [badge-1.0]: https://img.shields.io/badge/🗳%20ElectionGuard-v1.0-green
 [spec-1.0]: https://github.com/microsoft/electionguard/releases/download/v1.0/EG_spec_v1_0.pdf "Election Guard Specification 1.0"
 
-[badge-0.95]: https://img.shields.io/badge/🗳%20ElectionGuard-v0.95-green
+[badge-0.95]: https://img.shields.io/badge/🗳%20ElectionGuard-v0.95-yellow
 [spec-0.95]: https://github.com/microsoft/electionguard/releases/download/v1.0.0-preview-1/EG_spec_v0_95.pdf "Election Guard Specification 0.95"
 
 [badge-0.85]: https://img.shields.io/badge/🗳%20ElectionGuard-v0.85-red
