@@ -6,9 +6,9 @@ Versioning for ElectionGuard as the Software Development Kit (SDK) may seem comp
 
 - **SDK** version will line up with a specification post 1.0. This is to allow contributors to develop following the ElectionGuard Specification of the SDK and utilize the badge system to indicate what their code supports.
 
-- **Major** versions will indicate this top level version consistently across the repositories starting in 1.0. The goal is to keep the Election Record and other serialized files consistent outside of major versions changes. 
+- **Major** versions will indicate this top level version consistently across the repositories starting in 1.0. The goal is to keep the Election Record and other serialized files consistent outside of major versions changes.
 
-- **Minor** and smaller versions can differ to allow freedom within the code repositories. For example, the latest version python core could be v2.1.1 while the c++ core is at v2.48.0. 
+- **Minor** and smaller versions can differ to allow freedom within the code repositories. For example, the latest version python core could be v2.1.1 while the c++ core is at v2.48.0.
 
 ## Current
 
@@ -16,7 +16,7 @@ Versioning for ElectionGuard as the Software Development Kit (SDK) may seem comp
 
 | Part           | Link          |    Release  |
 |:---------------|:--------------| ------------|
-| Specification  |[PDF][specs]   |    1.0      |
+| Specification  |[PDF][specs]   |    1.1      |
 | Sample Data    | _Unreleased_  |    1.0      |
 | Python Core    | _Unreleased_  |    1.4      |
 | C++ Core       | _Unreleased_  |    1.0      |
