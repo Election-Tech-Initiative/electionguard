@@ -3,7 +3,7 @@
 # ElectionGuard in the November 2022 General Election
 
 !!! info "New Report to the Election Assistance Commission (EAC)"
-    Check out our newly released report to the EAC on the Idaho Pilot [here.][EAC-Report]
+     Check out our [newly released report to the EAC on the Idaho election.][EAC-Report]
 
 In the Preston, Idaho District #4 General Election, Idaho voters experienced ElectionGuard for the first time. Specifically, they were able to use a confirmation code to see for themselves that their ballot was counted. In total, 40% of voters opted to use the new software (as opposed to the traditional option of dropping hand-marked paper ballots into a ballot box).
 
