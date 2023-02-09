@@ -32,9 +32,12 @@ nav:
               - Data Schema: develop/Data_Schema.md
               - Election Record: develop/Election_Record.md
               - Sample Data: develop/Sample_Data.md
-      - Events:
+      - Pilots and Events:
           - August 2022 ElectionGuard Hart Verity Scanner and Accessibility Convening: events/eg_usability_aug_2022.md
           - Idaho Pilot 2022: events/Idaho_Pilot_2022.md
+      - Reports:
+          - End-to-End Verifiability in Real-World Elections: Reports/E2EVerifiability.md
+
 
   - Specification:
       - Official: spec/index.md
