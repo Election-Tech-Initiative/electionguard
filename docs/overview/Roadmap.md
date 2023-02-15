@@ -1,14 +1,38 @@
 # ElectionGuard Roadmap
 
-![Roadmap][roadmap-image]
-
 ## 2023 Roadmap
 
-Coming soon
+2023 targets a fully updated version of the core ElectionGuard specification as well as a new approach to the core software deliverables. Instead of a "reference implementation" approach in Python, we are pursuing a C++ core that can deliver production-level performance for encryption. Other programming languages will be supported via templates.
+
+The specification itself will accommodate a lot of efficiency improvements and some longstanding feature requests focused on supporting commercial implementations for vendors integrating ElectionGuard into their systems.
+
+??? todo "2.0 Specification"
+
+    * improved encryption speed and more efficient storage
+    * reduced verifier complexity
+    * range proofs
+    * ability to support recounts and additional methods of voting such as vote by mail
+
+??? todo "Single, simplified fully C++-based SDK"
+
+    * eliminate problems of serialization and rationalization of challenges working across different languages
+
+??? todo "Upgraded Key and Tally Ceremony user experience"
+
+    * production-ready user experience
+    * clearer, stepper-based process
+    * implements thresholding
+    * improved visibility into manifest selection and review
+
+??? todo "Full Guardian Thresholding support"
+
+    * ability to specify maximum and quorum number of guardians
+    * ability for admins to initiate tally ceremony once quorum has been reached
+    * updated thresholding code that simplifies verifier
 
 ## 2022 Roadmap
 
-Coming soon
+2022 focused on a full 1.0 release of functionality across the Python and C++ repos. We needed to [support a pilot election in Franklin County, Idaho](events\Idaho_Pilot_2022) in partnership with Hart InterCivic on their Verity Precinct Scanner. MITRE worked with us to release the first truly full-featured verifier that was used to verify the election results, and Enhanced Voting hosted the confirmation-code-lookup website.
 
 ## 2021 Roadmap
 
@@ -16,7 +40,7 @@ The 2021 roadmap takes lessons learned from the deployment of applications durin
 
 A big step toward this new vision occurred with the release of the `electionguard-cpp` ballot-encryption repo. The `electionguard-python` repo implements the full suite of ElectionGuard SDK functionality and the base `electionguard` specification and documentation repo provides the foundation for future development. The goal for the first half of 2021 is to have a full suite of code, tests, workflows, and package deployments more directly associated with the conventions and requirements indicated by the specification. The goal is also to publish and generate more comprehensive and also more granular examples and use cases to enable easier and more focused contributions by the community.
 
-??? todo "1.0 Specification"
+??? done "1.0 Specification"
 
     * a final, fully-developed specification integrated directly into the SDK;
     * updates to election manifest and election artifact descriptions and specifications
@@ -35,7 +59,7 @@ A big step toward this new vision occurred with the release of the `electionguar
     * Establish publishing pattern
     * First target will be [Windows 10 / UWP][windows-universal-application-guide]
 
-??? todo  "A consistent, efficient set of data interfaces across the ElectionGuard, C++, and Python repos"
+??? done  "A consistent, efficient set of data interfaces across the ElectionGuard, C++, and Python repos"
 
     * Data serialization using [Protobuf][protobuf-source] for input/output/data consistency across `electionguard-cpp` and `electionguard-python`
     * Restructuring ballot and device aggregation to better support audits and scalability in general
@@ -43,7 +67,7 @@ A big step toward this new vision occurred with the release of the `electionguar
 
 ??? done "Compose community changes into `electionguard-python` release v1.1.16"
 
-??? todo "Optimization changes for service implementations of `electionguard-python` release v1.4.0 "
+??? done "Optimization changes for service implementations of `electionguard-python` release v1.4.0 "
 
 ??? done "Introduce service docker containers in `electionguard-api`"
 
@@ -102,7 +126,6 @@ Last, and definitely not least, ElectionGuard [developed and published its first
 <!-- Links -->
 [ElectionTools]: https://blogs.microsoft.com/on-the-issues/2020/12/04/electionguard-2020-elections-security-pilot/
 [Fulton]: https://news.microsoft.com/on-the-issues/2020/05/13/microsoft-electionguard-pilot-wisconsin/
-[roadmap-image]: ../images/undraw/roadmap.svg "Image of a car on a road with mountains"
 [evercrypt]: https://github.com/project-everest/hacl-star#evercrypt "Evercrypt"
 [windows-universal-application-guide]: https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide "Windows Universal APplication platform guide"
 [election-guard-python-source]: https://github.com/microsoft/electionguard-python "Election Guard Python source code"
