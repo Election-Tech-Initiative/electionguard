@@ -1,11 +1,12 @@
 
 # Contribute
 
-Whenever possible and as a guiding principle, the evolution of the ElectionGuard SDK will be driven by the use cases and priorities of the community and in service of best-practice implementations of real-world, secret-ballot public elections. Community contributions are highly valued. Help defend democracy and contribute to ElectionGuard. 
+Whenever possible and as a guiding principle, the evolution of the ElectionGuard SDK will be driven by the use cases and priorities of the community and in service of best-practice implementations of real-world, secret-ballot public elections. Community contributions are highly valued. Help defend democracy and contribute to ElectionGuard.
 
 ![Contribute](../images/undraw/contribute.svg)
 
 ## Where to Start?
+
 There are many locations to contribute to ElectionGuard. ElectionGuard is an open source platform and depends on an active community and ecosystem.
 
 The SDK is comprised of five repositories:
@@ -30,6 +31,8 @@ ElectionGuard relies on its community for its success. For example, for end-to-e
 
 ### Verifiers
 
+- [:fontawesome-brands-github: Julia Verifier][julia-verifier] by MITRE
+
 - [:fontawesome-brands-github: Python Verifier][python-verifier] by Rainbow Huang
 - [:fontawesome-brands-github: C# Verifier][dot-net-verifier] by Brandon Alexander
 - [:fontawesome-brands-github: Java Verifier][java-verifier] by John Caron
@@ -48,6 +51,7 @@ ElectionGuard relies on its community for its success. For example, for end-to-e
 [election-guard-discussions]: https://github.com/microsoft/electionguard/discussions "Election Guard Discussions page"
 [election-guard-weekly-office-hours]: https://github.com/microsoft/electionguard/discussions/78 "Election Guard weekly office hours"
 [undraw-illustrations]: https://undraw.co/illustrations "Undraw.co Illustration"
+[julia-verifier]: https://github.com/mitre/ElectionGuardVerifier.jl "Julia Verifier by MITRE"
 [python-verifier]: https://github.com/rainbowhuanguw/ElectionGuard-verifier-python "Python Verifier by Rainbow Huang"
 [dot-net-verifier]: https://github.com/brandon-irl/electionguard-dotnet "C# Verifier by Brandon Alexander"
 [java-verifier]: https://github.com/JohnLCaron/electionguard-java "Java Verifier by John Caron"

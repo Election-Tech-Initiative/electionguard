@@ -25,7 +25,7 @@
 ElectionGuard is an **open source** software development kit (SDK) that makes voting more secure, transparent and accessible. It is designed for election system vendors to incorporate [end-to-end verifiability][glossary-end-to-end-verifiable] into their systems and any interested organization to perform and publish [post-election audits][glossary-post-election-audit].
 
 !!! info "New to ElectionGuard?"
-    Welcome! Thanks for your interest. Trying to figure out how to help and learn? If you're a developer, head over to the [**developer getting started**][develop-getting-started]. If you're an election administrator or want to learn more about ElectionGuard and its underpinnings, start with [**the guide**][configure-an-election]. If you want to help and aren't a developer, all kinds of help with documentation, outreach, and advocacy is welcomed. Follow [**discussions**][election-guard-discussions], join the [**office hours**][weekly-office-hours], and check out the [**roadmap**][roadmap] to see where it's intended to go.
+    Welcome! Thanks for your interest. Trying to figure out how to help and learn? If you're a developer, head over to the [**developer getting started**][develop-getting-started]. If you want to help and aren't a developer, all kinds of help with documentation, outreach, and advocacy is welcomed. Follow [**discussions**][election-guard-discussions], join the [**office hours**][weekly-office-hours], and check out the [**roadmap**][roadmap] to see where it's intended to go.
 
 ![Voting][casting-ballot]
 
@@ -80,5 +80,4 @@ A huge thank you to those who have helped us along the way:
 [glossary-end-to-end-verifiable]: overview/Glossary/#end-to-end-verifiable-elections "End-to-End Verifiable Elections"
 [glossary-post-election-audit]: overview/Glossary/#post-election-audit "Post-election audit"
 [develop-getting-started]: develop/Getting_Started.md "Developer - Getting Started"
-[configure-an-election]: basics/steps/0_Configure_Election.md "Configure an Election"
 [roadmap]: overview/Roadmap.md "ElectionGuard - Roadmap"

@@ -11,38 +11,15 @@ nav:
   - Documentation:
       - Overview:
           - What is ElectionGuard?: index.md
-          - Features: overview/Features.md
           - Roadmap: overview/Roadmap.md
           - Glossary: overview/Glossary.md
-      - Basics:
-          - Introduction: basics/Introduction.md
-          - Steps:
-              - Configure Election: basics/steps/0_Configure_Election.md
-              - Key Ceremony: basics/steps/1_Key_Ceremony.md
-              - Encryption: basics/steps/2_Encryption.md
-              - Cast and Challenge: basics/steps/3_Cast_and_Challenge.md
-              - Decryption: basics/steps/4_Decryption.md
-              - Publish Record: basics/steps/5_Publish_Record.md
-              - Verification: basics/steps/6_Verification.md
       - Concepts:
+          - Creating an Election Manifest:  concepts/Manifest_Building.md
+          - Creating a Verifiable Election: concepts/Verifiability.md
           - Structures and Processes: concepts/Structure_and_Processes.md
-          - Election Manifest:
-              - Building: concepts/Manifest_Building.md
-              - Example: concepts/Manifest_Example.md
-          - Homomorphic:
-              - Aggregation: concepts/Homomorphic_Aggregation.md
-              - Encryption: concepts/Homomorphic_Encryption.md
-          - Verifiability:
-              - Introduction: concepts/Verifiability.md
-              - Voter: concepts/Voter_Verification.md
-              - Verifier: concepts/Verifier.md
       - Use Cases:
           - Precinct Scan: use_cases/Precinct_Scan.md
           - Rescans and Recounts: use_cases/Rescans_and_Recounts.md
-          - Remote Voting:
-              - Mail In: use_cases/Mail_In.md
-              - Electronic Delivery: use_cases/Electronic_Delivery.md
-          - Audit: use_cases/Audit.md
       - Develop:
           - Getting Started: develop/Getting_Started.md
           - Versioning: develop/Versioning.md
@@ -55,23 +32,15 @@ nav:
               - Data Schema: develop/Data_Schema.md
               - Election Record: develop/Election_Record.md
               - Sample Data: develop/Sample_Data.md
-      - Events:
+      - Pilots and Events:
           - August 2022 ElectionGuard Hart Verity Scanner and Accessibility Convening: events/eg_usability_aug_2022.md
           - Idaho Pilot 2022: events/Idaho_Pilot_2022.md
+      - Reports:
+          - End-to-End Verifiability in Real-World Elections: Reports/E2EVerifiability.md
+
 
   - Specification:
       - Official: spec/index.md
-      - Web:
-          - Overview: spec/web/1_Overview.md
-          - Structure: spec/web/2_ElectionGuard_Structure.md
-          - Components: spec/web/3_ElectionGuard_Components.md
-          - Baseline Parameters: spec/web/4_Baseline_Parameters.md
-          - Ballot Encryption: spec/web/6_Ballot_Encryption.md
-          - Ballot Aggregation: spec/web/7_Ballot_Aggregation.md
-          - Verifiable Decryption: spec/web/8_Verifiable_Decryption.md
-          - Election Record: spec/web/9_Election_Record.md
-          - Applications: spec/web/11_Applications.md
-          - Acknowledgements: spec/web/12_Acknowledgements.md
 
   - Contribute: contribute/index.md
 plugins:
