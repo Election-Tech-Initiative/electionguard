@@ -28,12 +28,28 @@ The Election Record should be expected to be a zip folder containing the followi
 ------- 📄 guardian_id_2.json
 ------- ...
 --- 📁 spoiled_ballots
-------- 📄 spoiled_ballot_id_3.json
-------- 📄 spoiled_ballot_id_4.json
+------- 📁 device_id_1
+------------ 📄 spoiled_ballot_id_1.json
+------------ 📄 spoiled_ballot_id_2.json
+------- 📁 device_id_2
+------------ 📄 spoiled_ballot_id_3.json
+------------ 📄 spoiled_ballot_id_4.json
 ------- ...
 --- 📁 submitted_ballots
-------- 📄 submitted_ballot_id_1.json
-------- 📄 submitted_ballot_id_2.json
+------- 📁 device_id_1
+------------ 📁 folder divider
+---------------- 📄 submitted_ballot_id_1.json
+---------------- 📄 submitted_ballot_id_2.json
+------------ 📁 folder divider
+---------------- 📄 submitted_ballot_id_3.json
+---------------- 📄 submitted_ballot_id_4.json
+------- 📁 device_id_2
+------------ 📁 folder divider
+---------------- 📄 submitted_ballot_id_5.json
+---------------- 📄 submitted_ballot_id_6.json
+------------ 📁 folder divider
+---------------- 📄 submitted_ballot_id_7.json
+---------------- 📄 submitted_ballot_id_8.json
 ------- ...
 --- 📄 coefficients.json
 --- 📄 constants.json
