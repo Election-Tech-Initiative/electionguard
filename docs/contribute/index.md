@@ -31,8 +31,8 @@ ElectionGuard relies on its community for its success. For example, for end-to-e
 
 ### Verifiers
 
+- [:fontawesome-brands-github: Go Verifier][go-verifier] by Andreas Nielsen, Niklas Bille, and Hans-Christian Kjeldsen
 - [:fontawesome-brands-github: Julia Verifier][julia-verifier] by MITRE
-
 - [:fontawesome-brands-github: Python Verifier][python-verifier] by Rainbow Huang
 - [:fontawesome-brands-github: C# Verifier][dot-net-verifier] by Brandon Alexander
 - [:fontawesome-brands-github: Java Verifier][java-verifier] by John Caron
@@ -51,6 +51,7 @@ ElectionGuard relies on its community for its success. For example, for end-to-e
 [election-guard-discussions]: https://github.com/microsoft/electionguard/discussions "Election Guard Discussions page"
 [election-guard-weekly-office-hours]: https://github.com/microsoft/electionguard/discussions/78 "Election Guard weekly office hours"
 [undraw-illustrations]: https://undraw.co/illustrations "Undraw.co Illustration"
+[go-verifier]: https://github.com/AU-HC/electionguard-verifier-go "Go Verifier by Niklas, Andreas, and Hans-Christian"
 [julia-verifier]: https://github.com/mitre/ElectionGuardVerifier.jl "Julia Verifier by MITRE"
 [python-verifier]: https://github.com/rainbowhuanguw/ElectionGuard-verifier-python "Python Verifier by Rainbow Huang"
 [dot-net-verifier]: https://github.com/brandon-irl/electionguard-dotnet "C# Verifier by Brandon Alexander"
