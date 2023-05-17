@@ -267,7 +267,7 @@
             "type": "string",
             "maxLength": 256
           },
-          "ballot_name": {
+          "name": {
             "title": "Party Name",
             "type": "object",
             "properties": {
@@ -318,7 +318,7 @@
             "type": "string",
             "maxLength": 256
           },
-          "ballot_name": {
+          "name": {
             "title": "Candidate Name",
             "type": "object",
             "properties": {
