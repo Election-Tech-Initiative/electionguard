@@ -117,11 +117,13 @@
     },
     "start_date": {
       "title": "Start Date",
+      "description": "Date / time field in ISO 8601 format (e.g. 2020-03-01T18:03:06Z)",
       "type": "string",
       "maxLength": 256
     },
     "end_date": {
       "title": "End Date",
+      "description": "Date / time field in ISO 8601 format (e.g. 2020-03-01T18:03:06Z)",
       "type": "string",
       "maxLength": 256
     },
@@ -267,7 +269,7 @@
             "type": "string",
             "maxLength": 256
           },
-          "ballot_name": {
+          "name": {
             "title": "Party Name",
             "type": "object",
             "properties": {
@@ -318,7 +320,7 @@
             "type": "string",
             "maxLength": 256
           },
-          "ballot_name": {
+          "name": {
             "title": "Candidate Name",
             "type": "object",
             "properties": {
