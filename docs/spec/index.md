@@ -54,7 +54,7 @@ _Updates from previous version_
 [versioning]: ../develop/Versioning.md
 
 [badge-2.0]: https://img.shields.io/badge/🗳%20ElectionGuard-v2.0-green
-[spec-2.0]: https://github.com/microsoft/electionguard/releases/download/v2.0/EG_spec_v2_0.pdf "Election Guard Specification 2.0"
+[spec-2.0]: https://github.com/microsoft/electionguard/releases/download/v2.0/EG_Spec_2_0.pdf "Election Guard Specification 2.0"
 
 [badge-1.1]: https://img.shields.io/badge/🗳%20ElectionGuard-v1.1-green
 [spec-1.1]: https://github.com/microsoft/electionguard/releases/download/v1.1/EG_spec_v1_1.pdf "Election Guard Specification 1.1"
