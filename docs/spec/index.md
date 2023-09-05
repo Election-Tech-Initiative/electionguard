@@ -4,14 +4,27 @@ The official versions of the ElectionGuard Specifications are listed below and s
 
 Version | Specification                                  | Recommended      | Badge
 :------ |:-----------------------------------------------|:----------------:| :-----------
-2.0     | _Unreleased_                                   |                  | ![Version 2.0][badge-2.0]
-1.1     | [:material-download: Download][spec-1.1]       | :material-check: | ![Version 1.1][badge-1.1]
+2.0     |  [:material-download: Download][spec-2.0]                               |        :material-check:          | ![Version 2.0][badge-2.0]
+1.1     | [:material-download: Download][spec-1.1]       |  | ![Version 1.1][badge-1.1]
 1.0     | [:material-download: Download][spec-1.0]       |        | ![Version 1.0][badge-1.0]
 0.95    | [:material-download: Download][spec-0.95]      |        | ![Version 0.95][badge-0.95]
 0.85    | [:material-download: Download][spec-0.85]      |                  | ![Version 0.85][badge-0.85]
 
 ### Release Notes
 
+#### v2.0
+
+2.0 is a major refactor of the ElectionGuard specification. It includes the following capabilities
+
+- The size of the proofs in the election record has been reduced by more than 90% – reducing the size of the full election record by about a factor of 3.
+- Computing the proofs takes about 20% less time.
+- Placeholder selections have been eliminated entirely.
+- Guardians are no longer part of the election record as their partial decryptions and proofs have been administratively combined into single full decryptions and proofs.
+- Range proofs are now included to support voting systems like cumulative voting, range voting, STAR-voting, Borda count, and others.
+- A new pre-encrypted ballot format is included to support vote-by-mail, central count, and paper-only poll sites.
+- Support is now available for instant verification allowing voters to confirm the accuracy of challenge ballots without waiting for the election record to be published.
+- New default parameters are used with ln(2) replacing the Euler-Mascheroni constant as the basis for generation of the large prime.
+- The data format of hashes has been clearly described to eliminate ambiguities.
 #### v1.0
 
 _Updates from previous version_
@@ -40,12 +53,13 @@ _Updates from previous version_
 [badge]: ../develop/Badges/
 [versioning]: ../develop/Versioning.md
 
-[badge-2.0]: https://img.shields.io/badge/🗳%20ElectionGuard-v2.0-yellow
+[badge-2.0]: https://img.shields.io/badge/🗳%20ElectionGuard-v2.0-green
+[spec-2.0]: https://github.com/microsoft/electionguard/releases/download/v2.0/EG_Spec_2_0.pdf "Election Guard Specification 2.0"
 
 [badge-1.1]: https://img.shields.io/badge/🗳%20ElectionGuard-v1.1-green
 [spec-1.1]: https://github.com/microsoft/electionguard/releases/download/v1.1/EG_spec_v1_1.pdf "Election Guard Specification 1.1"
 
-[badge-1.0]: https://img.shields.io/badge/🗳%20ElectionGuard-v1.0-green
+[badge-1.0]: https://img.shields.io/badge/🗳%20ElectionGuard-v1.0-yellow
 [spec-1.0]: https://github.com/microsoft/electionguard/releases/download/v1.0/EG_spec_v1_0.pdf "Election Guard Specification 1.0"
 
 [badge-0.95]: https://img.shields.io/badge/🗳%20ElectionGuard-v0.95-yellow
