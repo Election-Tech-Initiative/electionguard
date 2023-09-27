@@ -1,0 +1,172 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://electionguard.vote/schemas/1.91/published-ciphertext-tally",
+    "title": "Published Ciphertext Tally",
+    "description": "",
+    "type": "object",
+    "required": [
+        "context",
+        "manifest",
+        "tally_id",
+        "name",
+        "cast_ballot_ids",
+        "challenged_ballot_ids",
+        "spoiled_ballot_ids",
+        "contests"
+    ],
+    "definitions": {
+        "Tally": {
+            "title": "Vote",
+            "type": "integer",
+            "minimum": 0
+        },
+        "CipherText": {
+            "type": "object",
+            "required": [
+                "pad",
+                "data"
+            ],
+            "properties": {
+                "pad": {
+                    "title": "Pad",
+                    "description": "The pad value also referred to as A, a, 𝑎, or alpha in the spec.",
+                    "$ref": "#/definitions/ElementModP"
+                },
+                "data": {
+                    "title": "Data",
+                    "description": "The data value also referred to as B, b, 𝛽, or beta in the spec.",
+                    "$ref": "#/definitions/ElementModP"
+                }
+            }
+        },
+        "SequenceOrder": {
+            "title": "Sequence Order",
+            "description": "Used for ordering in a ballot to ensure various encryption primitives are deterministic.",
+            "type": "integer",
+            "minimum": 1
+        },
+        "ElementModP": {
+            "title": "ElementModP",
+            "description": "An element of the larger `mod p` space, i.e., in [0, P), where P is a 4096-bit prime.",
+            "type": "string"
+        },
+        "ElementModQ": {
+            "title": "ElementModQ",
+            "description": "An element of the smaller `mod q` space, i.e., in [0, Q), where Q is a 256-bit prime.",
+            "type": "string"
+        },
+        "EncryptedTallySelection": {
+            "title": "Encrypted Tally Selection",
+            "type": "object",
+            "required": [
+                "object_id",
+                "sequence_order",
+                "description_hash",
+                "ciphertext"
+            ],
+            "properties": {
+                "object_id": {
+                    "title": "Object Id",
+                    "type": "string"
+                },
+                "sequence_order": {
+                    "title": "Sequence Order",
+                    "description": "The sequence order of the selection",
+                    "$ref": "#/definitions/SequenceOrder"
+                },
+                "description_hash": {
+                    "title": "Description Hash",
+                    "description": "The hash of the SelectionDescription",
+                    "$ref": "#/definitions/ElementModQ"
+                },
+                "ciphertext": {
+                    "title": "Ciphertext",
+                    "description": "The encrypted representation of the sum of all ballots for the selection",
+                    "$ref": "#/definitions/CipherText"
+                }
+            }
+        },
+        "EncryptedTallyContest": {
+            "title": "Encrypted Tally Contest",
+            "type": "object",
+            "required": [
+                "object_id",
+                "sequence_order",
+                "description_hash",
+                "selections"
+            ],
+            "properties": {
+                "object_id": {
+                    "title": "Object Id",
+                    "type": "string"
+                },
+                "sequence_order": {
+                    "title": "Sequence Order",
+                    "$ref": "#/definitions/SequenceOrder"
+                },
+                "description_hash": {
+                    "title": "Description Hash",
+                    "$ref": "#/definitions/ElementModQ"
+                },
+                "selections": {
+                    "title": "Selections",
+                    "description": "Represents an individual selection on a ballot",
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "title": "Selections",
+                        "$ref": "#/definitions/EncryptedTallySelection"
+                    }
+                }
+            }
+        }
+    },
+    "properties": {
+        "tally_id": {
+            "title": "Tally Id",
+            "type": "string"
+        },
+        "name": {
+            "title": "Name",
+            "type": "string",
+            "description": "The name of the tally"
+        },
+        "cast_ballot_ids": {
+            "title": "Cast Ballot Ids",
+            "description": "Array of the ballot object_ids that were cast",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "maxLength": 256
+            }
+        },
+        "challenged_ballot_ids": {
+            "title": "Challenged Ballot Ids",
+            "description": "Array of the ballot object_ids that were challenged",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "maxLength": 256
+            }
+        },
+        "spoiled_ballot_ids": {
+            "title": "Spoiled Ballot Ids",
+            "description": "Array of the ballot object_ids that were spoiled",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "maxLength": 256
+            }
+        },
+        "contests": {
+            "title": "Contests",
+            "description": "Represents the summation of the votes for a specific ContestDescription",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "title": "Contests",
+                "$ref": "#/definitions/EncryptedTallyContest"
+            }
+        }
+    }
+}

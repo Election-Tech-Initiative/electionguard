@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://electionguard.vote/schemas/1.91/guardian-record",
+  "title": "Guardian Record"
+  "type": "object",
+  "required": [
+    "object_id", 
+    "guardian_id", 
+    "sequence_order", 
+    "election_public_key", 
+    "election_commitments", 
+    "election_proofs"],
+  "definitions": {
+    "ElementModP": {
+      "title": "ElementModP",
+      "description": "An element of the larger `mod p` space, i.e., in [0, P), where P is a 4096-bit prime.",
+      "type": "string"
+    },
+    "SequenceOrder": {
+      "title": "Sequence Order",
+      "description": "Used for ordering in a ballot to ensure various encryption primitives are deterministic.",
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "properties": {
+    "guardian_id": {
+    "title": "Id",
+    "type": "string",
+    "maxLength": 256
+  },
+    "guardian_id": {
+    "title": "Id",
+    "type": "string",
+    "maxLength": 256
+  },
+  "sequence_order": {
+    "title": "Sequence Order",
+    "$ref": "#/definitions/SequenceOrder"
+  },
+  "key": {
+      "$ref": "#/definitions/ElementModP",
+      "title": "Public key for the election",
+    },
+  "coefficient_commitments": {
+      "title": "Election Commitments",
+      "minItems": 0,
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ElementModP"
+      }
+    },
+  "election_proofs": {
+      "title": "Election Proofs",
+      "minItems": 0,
+      "type": "array",
+      "items": {
+        "usage": {
+          "title": "Usage",
+          "type": "integer"
+        },
+        "public_key": {
+          "$ref": "#/definitions/ElementModP",
+          "title": "k in the spec"
+        },
+        "commitment": {
+          "$ref": "#/definitions/ElementModP",
+          "title": "h in the spec"
+        },
+        "challenge": {
+          "$ref": "#/definitions/ElementModQ",
+          "title": "c in the spec"
+        },
+        "response": {
+          "$ref": "#/definitions/ElementModQ",
+          "title": "u in the spec"
+        }
+
+      }
+    }
+  }
+}

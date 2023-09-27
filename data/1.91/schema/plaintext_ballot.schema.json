@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://electionguard.vote/schemas/1.91/plaintext-ballot",
+  "title": "Plaintext Ballot",
+  "description": "Represents a voters selections for a given ballot and ballot style",
+  "type": "object",
+  "required": ["object_id", "style_id", "contests"],
+  "definitions": {
+    "Vote": {
+      "title": "Vote",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "PlaintextBallotSelection": {
+      "title": "Plaintext Ballot Selection",
+      "type": "object",
+      "required": ["object_id", "vote"],
+      "properties": {
+        "object_id": {
+          "title": "Object Id",
+          "type": "string"
+        },
+        "vote": {
+          "title": "Vote",
+          "$ref": "#/definitions/Vote"
+        },
+        "is_placeholder_selection": {
+          "title": "Determines if this is a placeholder selection",
+          "type": "boolean"
+        },
+        "write_in": {
+          "title": "Write In",
+          "description": "An optional field for the value of a write-in candidate",
+          "oneOf": [{ "type": "string" }, { "type": "null" }]
+        }
+      }
+    },
+    "PlaintextBallotContest": {
+      "title": "Plaintext Ballot Contest",
+      "type": "object",
+      "required": ["object_id", "ballot_selections"],
+      "properties": {
+        "object_id": {
+          "title": "Object Id",
+          "type": "string"
+        },
+        "ballot_selections": {
+          "title": "Selections",
+          "description": "Represents an individual selection on a ballot",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "title": "Selections",
+            "$ref": "#/definitions/PlaintextBallotSelection"
+          }
+        }
+      }
+    }
+  },
+  "properties": {
+    "object_id": {
+      "title": "Object Id",
+      "type": "string"
+    },
+    "style_id": {
+      "title": "Style Id",
+      "type": "string",
+      "description": "The `object_id` of the `BallotStyle` in the `Election` Manifest"
+    },
+    "contests": {
+      "title": "Contests",
+      "description": "Represents the selections made by a voter for a specific ContestDescription",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "title": "Contests",
+        "$ref": "#/definitions/PlaintextBallotContest"
+      }
+    }
+  }
+}

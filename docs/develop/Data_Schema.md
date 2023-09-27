@@ -4,7 +4,7 @@ ElectionGuard expects data to be formatted in a particular way according to a se
 
 Keep in mind that not all serialized files should be public. The [election record][election-record] includes the list of all data formats that should be public. [Sample data][sample-data] for the election is also available for developers. This will include both what is in the Election Record, but also some private data only available for testing. 
 
-## Schema ![Version 0.95][shield-green-0.95]
+## Schema ![Version 1.91][shield-green-1.91]
 
 Currently, JSON is used as the primary serialization format of the artifacts from an election. These are [JSON schema][json-schema] files that can be used to verify the schema of the setup files like the manifest pre-election and the election record files post-election. This represents the full list of items that can be serialized / deserialized, but not all elections will use every file type. 
 
@@ -27,7 +27,7 @@ Currently, JSON is used as the primary serialization format of the artifacts fro
 - [Ballot][plaintext_ballot] / `PlaintextBallot` - Plaintext ballot
 - [Compact Ballot][compact_ballot] / `CompactBallot` - Compact ballot
 - [Encrypted Ballot][ciphertext_ballot] / `CiphertextBallot` - Encrypted ballot
-- [Submitted Ballot][submitted_ballot] / `SubmittedBallot` -  Submitted cast or spoiled ballot
+- [Spoiled Ballot][spoiled_ballot] / `SpoiledBallot` -  Submitted spoiled ballot
 
 ### Tally
 - [Tally][plaintext_tally] / `PlaintextTally` - Plaintext tally
@@ -40,16 +40,16 @@ Currently, JSON is used as the primary serialization format of the artifacts fro
 
 [election-record]: ../Election_Record
 [sample-data]: ../Sample_Data
-[manifest]: https://github.com/microsoft/electionguard/blob/main/data/1.0.0-preview-1/schema/manifest.schema.json "Manifest Json Schema"
-[ciphertext_election_context]: https://github.com/microsoft/electionguard/blob/main/data/1.0.0-preview-1/schema/ciphertext_election_context.schema.json "Ciphertext Election Context Json Schema"
-[election_constants]: https://github.com/microsoft/electionguard/blob/main/data/1.0.0-preview-1/schema/election_constants.schema.json "Election Constants Json Schema"
-[encryption_device]: https://github.com/microsoft/electionguard/blob/main/data/1.0.0-preview-1/schema/encryption_device.schema.json "Encryption Device Json Schema"
-[guardian_record]: https://github.com/microsoft/electionguard/blob/main/data/1.0.0-preview-1/schema/guardian_record.schema.json "Guardian Record Json Schema"
-[lagrange_coefficients_record]: https://github.com/microsoft/electionguard/blob/main/data/1.0.0-preview-1/schema/lagrange_coefficients_record.schema.json "Guardian Record Json Schema"
-[plaintext_ballot]: https://github.com/microsoft/electionguard/blob/main/data/1.0.0-preview-1/schema/plaintext_ballot.schema.json "Guardian Record Json Schema"
-[ciphertext_ballot]: https://github.com/microsoft/electionguard/blob/main/data/1.0.0-preview-1/schema/ciphertext_ballot.schema.json "Guardian Record Json Schema"
-[submitted_ballot]: https://github.com/microsoft/electionguard/blob/main/data/1.0.0-preview-1/schema/submitted_ballot.schema.json "Guardian Record Json Schema"
-[plaintext_tally]: https://github.com/microsoft/electionguard/blob/main/data/1.0.0-preview-1/schema/plaintext_tally.schema.json "Guardian Record Json Schema"
-[published_ciphertext_tally]: https://github.com/microsoft/electionguard/blob/main/data/1.0.0-preview-1/schema/published_ciphertext_tally.schema.json "Guardian Record Json Schema"
+[manifest]: https://github.com/microsoft/electionguard/blob/main/data/1.91/schema/manifest.schema.json "Manifest Json Schema"
+[ciphertext_election_context]: https://github.com/microsoft/electionguard/blob/main/data/1.91/schema/ciphertext_election_context.schema.json "Ciphertext Election Context Json Schema"
+[election_constants]: https://github.com/microsoft/electionguard/blob/main/data/1.91/schema/election_constants.schema.json "Election Constants Json Schema"
+[encryption_device]: https://github.com/microsoft/electionguard/blob/main/data/1.91/schema/encryption_device.schema.json "Encryption Device Json Schema"
+[guardian_record]: https://github.com/microsoft/electionguard/blob/main/data/1.91/schema/guardian_record.schema.json "Guardian Record Json Schema"
+[lagrange_coefficients_record]: https://github.com/microsoft/electionguard/blob/main/data/1.91/schema/lagrange_coefficients_record.schema.json "Lagrange Coefficients Record Json Schema"
+[plaintext_ballot]: https://github.com/microsoft/electionguard/blob/main/data/1.91/schema/plaintext_ballot.schema.json "Plaintext Ballot Json Schema"
+[ciphertext_ballot]: https://github.com/microsoft/electionguard/blob/main/data/1.91/schema/ciphertext_ballot.schema.json "Ciphertext Ballot Json Schema"
+[spoiled_ballot]: https://github.com/microsoft/electionguard/blob/main/data/1.91/schema/spoiled_ballot.schema.json "Spoiled Ballot Json Schema"
+[plaintext_tally]: https://github.com/microsoft/electionguard/blob/main/data/1.91/schema/plaintext_tally.schema.json "Plaintext Tally Json Schema"
+[published_ciphertext_tally]: https://github.com/microsoft/electionguard/blob/main/data/1.91/schema/published_ciphertext_tally.schema.json "Published Ciphertext Tally Json Schema"
 
 --8<-- "includes/abbreviations.md"
