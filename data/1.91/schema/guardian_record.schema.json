@@ -1,15 +1,15 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
   "$id": "https://electionguard.vote/schemas/1.91/guardian-record",
-  "title": "Guardian Record"
+  "title": "Guardian Record",
   "type": "object",
   "required": [
     "object_id", 
     "guardian_id", 
     "sequence_order", 
-    "election_public_key", 
-    "election_commitments", 
-    "election_proofs"],
+    "key", 
+    "coefficient_commitments", 
+    "coefficient_proofs"],
   "definitions": {
     "ElementModP": {
       "title": "ElementModP",
@@ -24,7 +24,7 @@
     }
   },
   "properties": {
-    "guardian_id": {
+    "object_id": {
     "title": "Id",
     "type": "string",
     "maxLength": 256
@@ -40,7 +40,7 @@
   },
   "key": {
       "$ref": "#/definitions/ElementModP",
-      "title": "Public key for the election",
+      "title": "Public key for the election"
     },
   "coefficient_commitments": {
       "title": "Election Commitments",
@@ -50,7 +50,7 @@
         "$ref": "#/definitions/ElementModP"
       }
     },
-  "election_proofs": {
+  "coefficient_proofs": {
       "title": "Election Proofs",
       "minItems": 0,
       "type": "array",

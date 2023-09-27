@@ -19,19 +19,19 @@
   "properties": {
     "large_prime": {
       "$ref": "#/definitions/ElementModP",
-      "title": "Large Prime",
+      "title": "Large Prime"
     },
     "small_prime": {
       "$ref": "#/definitions/ElementModQ",
-      "title": "Small Prime",
+      "title": "Small Prime"
     },
     "cofactor": {
       "$ref": "#/definitions/ElementModP",
-      "title": "Cofactor",
+      "title": "Cofactor"
     },
     "generator": {
       "$ref": "#/definitions/ElementModP",
-      "title": "Generator",
+      "title": "Generator"
     }
   }
 }

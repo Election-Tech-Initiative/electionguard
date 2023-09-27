@@ -3,7 +3,9 @@
   "$id": "https://electionguard.vote/schemas/1.91/lagrange-coefficients-record",
   "title": "Lagrange Coefficients Record",
   "type": "object",
-  "required": ["coefficients"],
+  "additionalProperties": {
+    "$ref": "#/definitions/ElementModQ"
+  },
   "definitions": {
     "ElementModQ": {
       "title": "ElementModQ",
@@ -11,13 +13,11 @@
       "type": "string"
     }
   },
-  "properties": {
-    "coefficients": {
-      "title": "Coefficients",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ElementModQ"
-      }
+  "examples": [
+    {
+      "g1": "03",
+      "g2": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF40",
+      "g3": "01"    
     }
-  }
+  ]
 }

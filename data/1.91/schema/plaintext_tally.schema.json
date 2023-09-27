@@ -126,10 +126,8 @@
         "selections": {
           "title": "Selections",
           "description": "Represents an individual selection on a ballot",
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "title": "Selections",
+          "type": "object",
+          "additionalProperties": {
             "$ref": "#/definitions/PlaintextTallySelection"
           }
         }
@@ -149,10 +147,8 @@
     "contests": {
       "title": "Contests",
       "description": "Represents the summation of the votes for a specific ContestDescription",
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "title": "Contests",
+      "type": "object",
+      "additionalProperties": {
         "$ref": "#/definitions/PlaintextTallyContest"
       }
     }
