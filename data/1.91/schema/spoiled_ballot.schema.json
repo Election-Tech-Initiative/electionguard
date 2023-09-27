@@ -1,0 +1,157 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://electionguard.vote/schemas/1.91/spoiled-ballot",
+  "title": "Submitted Ballot",
+  "description": "A `SpoiledBallot` represents a ballot that is submitted for inclusion in election results. A submitted ballot is or is about to be either cast or spoiled. The state supports the `BallotBoxState.UNKNOWN` enumeration to indicate that this object is mutable and has not yet been explicitly assigned a specific state. Note, additionally, this ballot includes all proofs but no nonces.",
+  "type": "object",
+  "required": [
+    "ballot_id",
+    "tally_id",
+    "name",
+    "contests"
+  ],
+  "definitions": {
+    "SequenceOrder": {
+      "title": "Sequence Order",
+      "description": "Used for ordering in a ballot to ensure various encryption primitives are deterministic.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "ElementModP": {
+      "title": "ElementModP",
+      "description": "An element of the larger `mod p` space, i.e., in [0, P), where P is a 4096-bit prime.",
+      "type": "string"
+    },
+    "ElementModQ": {
+      "title": "ElementModQ",
+      "description": "An element of the smaller `mod q` space, i.e., in [0, Q), where Q is a 256-bit prime.",
+      "type": "string"
+    },
+    "CiphertextBallotSelection": {
+      "title": "Plaintext Ballot Selection",
+      "type": "object",
+      "required": [
+        "object_id",
+        "sequence_order",
+        "description_hash",
+        "tally",
+        "value",
+        "proof"
+      ],
+      "properties": {
+        "object_id": {
+          "title": "Object Id",
+          "type": "string"
+        },
+        "sequence_order": {
+          "title": "Sequence Order",
+          "description": "The sequence order of the selection",
+          "$ref": "#/definitions/SequenceOrder"
+        },
+        "description_hash": {
+          "title": "Description Hash",
+          "description": "The hash of the SelectionDescription",
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "tally": {
+          "title": "Tally",
+          "description": "The decrypted representation of the sum of all ballots for the selection t in the spec",
+          "type": "integer"
+        },
+        "value": {
+          "description": "The decrypted representation of the sum of all ballots for the selection K^tally or T in the spec",
+          "$ref": "#/definitions/ElementModP"
+        },
+        "proof": {
+          "title": "Proofs",
+          "description": "The proof that the decrypted representation of the sum of all ballots for the selection is correct",
+          "type": "object",
+          "required": [
+            "pad",
+            "data",
+            "challenge",
+            "response"
+          ],
+          "properties": {
+            "pad": {
+              "title": "Pad",
+              "description": "a in the spec",
+              "$ref": "#/definitions/ElementModP"
+            },
+            "data": {
+              "title": "Data",
+              "description": "b in the spec",
+              "$ref": "#/definitions/ElementModP"
+            },
+            "challenge": {
+              "title": "Challenge",
+              "description": "c in the spec",
+              "$ref": "#/definitions/ElementModQ"
+            },
+            "response": {
+              "title": "Response",
+              "description": "v in the spec",
+              "$ref": "#/definitions/ElementModQ"
+            }
+          }
+        }
+      }
+    },
+    "CiphertextBallotContest": {
+      "title": "Ciphertext Ballot Contest",
+      "description": "A CiphertextBallotContest represents the selections made by a voter for a specific ContestDescription.",
+      "type": "object",
+      "required": [
+        "object_id",
+        "sequence_order",
+        "description_hash",
+        "selections"
+      ],
+      "properties": {
+        "object_id": {
+          "title": "Object Id",
+          "type": "string"
+        },
+        "sequence_order": {
+          "title": "Sequence Order",
+          "description": "Used for ordering in a ballot to ensure various encryption primitives are deterministic.",
+          "$ref": "#/definitions/SequenceOrder"
+        },
+        "description_hash": {
+          "title": "Description Hash",
+          "description": "Hash from contestDescription",
+          "$ref": "#/definitions/ElementModQ"
+        },
+        "selections": {
+          "title": "Selections",
+          "type": "object",
+      	  "additionalProperties": {
+            "$ref": "#/definitions/CiphertextBallotSelection"
+          }
+        }
+      }
+    }
+  },
+  "properties": {
+    "ballot_id": {
+      "title": "Object Id",
+      "type": "string"
+    },
+    "tally_id": {
+      "title": "Tally Id",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "contests": {
+      "title": "Contests",
+      "description": "List of contests for this ballot",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/CiphertextBallotContest"
+      }
+    }
+  }
+}
