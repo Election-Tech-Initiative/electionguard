@@ -16,6 +16,11 @@
       "description": "An element of the larger `mod p` space, i.e., in [0, P), where P is a 4096-bit prime.",
       "type": "string"
     },
+    "ElementModQ": {
+      "title": "ElementModQ",
+      "description": "An element of the smaller `mod q` space, i.e., in [0, Q), where Q is a 256-bit prime.",
+      "type": "string"
+    },
     "SequenceOrder": {
       "title": "Sequence Order",
       "description": "Used for ordering in a ballot to ensure various encryption primitives are deterministic.",

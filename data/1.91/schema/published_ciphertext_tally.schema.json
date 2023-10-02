@@ -15,11 +15,6 @@
         "contests"
     ],
     "definitions": {
-        "Tally": {
-            "title": "Vote",
-            "type": "integer",
-            "minimum": 0
-        },
         "CipherText": {
             "type": "object",
             "required": [

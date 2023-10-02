@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://electionguard.vote/schemas/1.0.0-preview-2/ciphertext-ballot",
+  "$id": "https://electionguard.vote/schemas/1.91/ciphertext-ballot",
   "title": "Ciphertext Ballot",
   "type": "object",
   "required": [
@@ -76,64 +76,6 @@
           "title": "MAC",
           "description": "message authentication code for hmac",
           "type": "string"
-        }
-      }
-    },
-    "ProofUsage": {
-      "title": "Proof Usage",
-      "description": "Usage case for proof",
-      "type": "string",
-      "enum": [
-        "Unknown",
-        "Prove knowledge of secret value",
-        "Prove value within selection's limit",
-        "Prove selection's value (0 or 1)"
-      ],
-      "default": "Unknown"
-    },
-    "ConstantChaumPedersenProof": {
-      "title": "Constant Chaum Pedersen Proof",
-      "description": "Usage case for proof",
-      "type": "object",
-      "required": [
-        "pad",
-        "data",
-        "challenge",
-        "response",
-        "constant",
-        "usage"
-      ],
-      "properties": {
-        "pad": {
-          "title": "Pad",
-          "description": "a in the spec",
-          "$ref": "#/definitions/ElementModP"
-        },
-        "data": {
-          "title": "Data",
-          "description": "b in the spec",
-          "$ref": "#/definitions/ElementModP"
-        },
-        "challenge": {
-          "title": "Challenge",
-          "description": "c in the spec",
-          "$ref": "#/definitions/ElementModQ"
-        },
-        "response": {
-          "title": "Response",
-          "description": "v in the spec",
-          "$ref": "#/definitions/ElementModQ"
-        },
-        "constant": {
-          "title": "Constant",
-          "description": "constant value",
-          "type": "integer"
-        },
-        "usage": {
-          "title": "Usage",
-          "description": "A description of how to use this proof",
-          "$ref": "#/definitions/ProofUsage",
-          "default": "Prove value within selection's limit"
         }
       }
     },
