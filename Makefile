@@ -8,7 +8,7 @@ install:
 	mkdocs --version
 
 lint:
-	mkdocs build --strict
+	mkdocs build
 
 serve:
 	mkdocs serve

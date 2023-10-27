@@ -16,36 +16,13 @@ ElectionGuard is always improving. To keep up with the latest, check our **[offi
 
 This repository is a living document to help everyone interact with ElectionGuard. The [official ElectionGuard site][election-guard-official-page] is built using the `/docs` folder and [mkdocs][mkdocs-official-site] with [mkdocs-material][material-mkdocs]. Ensure you have the Python 3.8 or newer installed and run `make` to install the dependencies and start the site.
 
-### Python
-
-An ElectionGuard Core implemented in Python which includes ballot encryption, decryption, key generation, and tallying.
-
-[📁 Source][election-guard-python-source] |
-[📦 Package][election-guard-python-package] |
-[📝 Documentation][election-guard-python-documentation]
-
 ### C ++
 
-An ElectionGuard Core implemented in C++ to support ballot encryption.
+An ElectionGuard Core implemented in C++ to support ballot encryption and all phases of the Guardian key and tally ceremonies, including creation of the election package and production of the election record.
 
-[📁 Source][election-guard-cpp-source-code] |
-[📦 Package][election-guard-cpp-package] |
-[📝 Documentation][election-guard-cpp-documentation]
-
-### Web API
-
-A Web API that wraps the Python package to perform ballot encryption, casting, spoiling, and tallying.
-
-[📁 Source][election-guard-web-api-source] | 
-[🐳 Docker][election-guard-web-api-docker] | 
-[📄 Documentation][election-guard-web-api-documentation]
-
-### User Interface
-
-Monorepo in React & Typescript consisting of an api client, components, and apps to demonstrate examples of user interface.
-
-[📁 Source][election-guard-ui-source] |
-[📄 Documentation][election-guard-ui-documentation]
+[📁 Source][election-guard-core2] |
+[📦 Package][election-guard-core2-package] |
+[📝 Documentation][election-guard-core2-documentation]
 
 ## 🛡 Security Issues Reporting
 
@@ -62,18 +39,11 @@ We welcome discussions on our [discussions page][election-guard-discussions], fe
 
 ## ❓ Questions
 
-ElectionGuard would love for you to ask questions out in the open using Github Issues. If you really want to email the ElectionGuard team, reach out at electionguard@microsoft.com.
+ElectionGuard would love for you to ask questions out in the open using Github Issues. If you really want to email the ElectionGuard team, reach out via the discussions page.
 
 ## 🎉 Thanks!
 
-A huge thank you to those who helped to contribute to this project so far, including:
-
-- Josh Benaloh (whose [PhD thesis][verifiable-search-ballot-elections-paper] was the genesis of much of this work)
-- [InfernoRed Technology][infernored]
-- [VotingWorks][voting-works]
-- [Center for Civic Design][center-for-civic-design]
-- [Oxide Design][oxide-design]
-- Many teams within Microsoft
+A huge thank you to those who helped to contribute to this project so far.
 
 <!-- Links -->
 [election-guard-banner]: docs/images/electionguard-banner.svg "Election Guard banner SVG"
@@ -85,9 +55,8 @@ A huge thank you to those who helped to contribute to this project so far, inclu
 [mkdocs-official-site]: https://www.mkdocs.org/ "MkDocs official website"
 [material-mkdocs]: https://squidfunk.github.io/mkdocs-material/ "Material for MkDocs"
 [election-guard-python-source]: https://github.com/microsoft/electionguard-python "Election Guard Python source code"
-[election-guard-python-package]: https://pypi.org/project/electionguard/ "Election Guard Python package"
 [election-guard-python-documentation]: https://microsoft.github.io/electionguard-python/ "Election Guard Python documentation"
-[election-guard-cpp-source-code]: https://github.com/microsoft/electionguard-cpp/ "Election Guard C++ source code"
+[election-guard-core2-source-code]: https://github.com/microsoft/electionguard-core2/ "Election Guard C++ source code"
 [election-guard-cpp-package]: https://www.nuget.org/packages/ElectionGuard.Encryption/ "Election Guard C++ package"
 [election-guard-cpp-documentation]: https://github.com/microsoft/electionguard-cpp#readme "Election Guard C++ documentation"
 [election-guard-web-api-source]: https://github.com/microsoft/electionguard-api-python "Election Guard Web API source code"
