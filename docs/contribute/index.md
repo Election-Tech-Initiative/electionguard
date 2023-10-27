@@ -9,21 +9,17 @@ Whenever possible and as a guiding principle, the evolution of the ElectionGuard
 
 There are many locations to contribute to ElectionGuard. ElectionGuard is an open source platform and depends on an active community and ecosystem.
 
-The SDK is comprised of five repositories:
+The SDK is comprised of two repositories:
 
 - [ElectionGuard Specification][election-guard-specification]
-- [ElectionGuard Python][election-guard-python-source]
 - [ElectionGuard C++][election-guard-cpp-source-code]
-- [ElectionGuard Python API][election-guard-web-api-source]
-- [ElectionGuard React UI][election-guard-ui-source]
 
 ### Ways to get involved
 
 1. Learn about ElectionGuard and share the information
 2. Post questions or ideas in our [**discussion board**][election-guard-discussions]
-3. Join our [**weekly video office hours**][election-guard-weekly-office-hours]
-4. Develop on issues in the repos with tags of **[good first issue][github-good-first-issue]** or **[help wanted][github-help-wanted]**
-5. Add to and improve documentation. Keep it Plain English and include [helpful images][undraw-illustrations].
+3. Develop on issues in the repos with tags of **[good first issue][github-good-first-issue]** or **[help wanted][github-help-wanted]**
+4. Add to and improve documentation. Keep it Plain English and include [helpful images][undraw-illustrations].
 
 ## Contributions
 

@@ -1,33 +1,13 @@
 #
 
-![Microsoft Defending Democracy Program: ElectionGuard][election-guard-banner]
-
-???+ abstract "ElectionGuard Pilot Partners"
-     In the Franklin County 2022 General Election, voters participated in a pilot of ElectionGuard technology. The ElectionGuard partners included:
-
-     * [Hart InterCivic](https://www.hartintercivic.com/hart-and-microsoft-announce-partnership-to-make-elections-more-secure-verifiable/) integrated ElectionGuard software into their Verity® scanner for this election. Hart is the first major voting system manufacturer in the United States to provide independent verifiability. This pilot is part of their continued commitment to voting technology innovation that results in higher levels of voter confidence in the election process. 
-     
-     * The [Microsoft Democracy Forward](https://www.microsoft.com/en-us/corporate-responsibility/democracy-forward) program works to protect democratic processes through open and secure technologies. Microsoft sponsored the creation of the open-source software tools for ElectionGuard.   
-     
-     * [InfernoRed](https://www.infernored.com/work/microsoft-electionguard) is a premier independent software company that developed the open-source ElectionGuard SDK. 
-     
-     * The [MITRE](https://electionintegrity.mitre.org/verifier/) National Election Security Lab conducts cybersecurity assessments and testing to assist with securing election infrastructure. MITRE built a publicly available, independent verifier for ElectionGuard and verified the election results. 
-     
-     * [Enhanced Voting](https://www.enhancedvoting.com/projects/) creates voting solutions that are secure, easy-to-use, and accessible to all. They built the public website where voters checked their confirmation codes and hosted the ElectionGuard data package for the pilot.  
-     
-     * [Center for Civic Design](https://www.civicdesign.org) brought their design, research, and communication skills to collecting feedback from voters during the pilot election. 
-
-!!! info "Idaho Pilot Information"
-    If you are looking for information on the ElectionGuard Pilot in Preston, Idaho, click [here][IdahoPage]
+![Election Tech Initiative: ElectionGuard][election-guard-banner]
 
 ## What is ElectionGuard?
 
-ElectionGuard is an **open source** software development kit (SDK) that makes voting more secure, transparent and accessible. It is designed for election system vendors to incorporate [end-to-end verifiability][glossary-end-to-end-verifiable] into their systems and any interested organization to perform and publish [post-election audits][glossary-post-election-audit].
+ElectionGuard is an **open source** software development kit (SDK) that improves confidence and participation in elections. It is designed for election system vendors to incorporate [end-to-end verifiability][glossary-end-to-end-verifiable] into their systems and any interested organization to perform and publish [post-election audits][glossary-post-election-audit].
 
 !!! info "New to ElectionGuard?"
     Welcome! Thanks for your interest. Trying to figure out how to help and learn? If you're a developer, head over to the [**developer getting started**][develop-getting-started]. If you want to help and aren't a developer, all kinds of help with documentation, outreach, and advocacy is welcomed. Follow [**discussions**][election-guard-discussions], join the [**office hours**][weekly-office-hours], and check out the [**roadmap**][roadmap] to see where it's intended to go.
-
-![Voting][casting-ballot]
 
 ## Open-Source
 

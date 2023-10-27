@@ -3,17 +3,17 @@
 # ElectionGuard in the November 2022 General Election
 
 !!! info "New Report to the Election Assistance Commission (EAC)"
-     Check out our [newly released report to the EAC on the Idaho election.][EAC-Report]
+     Check out our [report to the EAC on the Idaho election.][EAC-Report]
 
-In the Preston, Idaho District #4 General Election, Idaho voters experienced ElectionGuard for the first time. Specifically, they were able to use a confirmation code to see for themselves that their ballot was counted. In total, 40% of voters opted to use the new software (as opposed to the traditional option of dropping hand-marked paper ballots into a ballot box).
+In the Preston, Idaho District #4 General Election, Idaho voters experienced ElectionGuard for the first time. Specifically, they were able to use a confirmation code to see for themselves that their ballot was counted. In total, 40% of voters opted to use the ElectionGuard / Hart option (as opposed to the traditional option of dropping hand-marked paper ballots into a ballot box).
+
+![Hart Scanner][hart-scanner]
 
 Other vendors contributed services and capabilities to showcase how independent verification of elections work: Hart InterCivic integrated ElectionGuard into its Verity precinct scanners; MITRE wrote an independent verifier; and Enhanced Voting provided the confirmation code lookup service.
 
-# Ballot Confirmation
+# Confirmation Code Lookup
 
-Voters were able to confirm that their vote was counted by scanning their confirmation code on Enhanced Voting's [Ballot Lookup website](https://www.egvote.us/cc/id/22). They could also review the information in their BallotCheck ballots.   
-
-![Hart Scanner][hart-scanner]
+Voters were able to confirm that their vote was counted by scanning their confirmation code (or entering the code manually). The election record itself is also available on Enhanced Voting's [Confirmation Code Lookup website](https://app.enhancedvoting.com/results/public/cc/id/22).
 
 # Independent Verification
 

@@ -13,6 +13,14 @@ nav:
           - What is ElectionGuard?: index.md
           - Roadmap: overview/Roadmap.md
           - Glossary: overview/Glossary.md
+      - Elections:
+          - College Park, Maryland 2023: elections/College_Park_Maryland_2023.md
+          - Preston, Idaho 2022: elections/Preston_Idaho_2022.md
+          - Fulton, Wisconsin 2020: elections/Fulton_Wisconsin_2020.md    
+      - Events:
+          - August 2022 ElectionGuard Hart Verity Scanner and Accessibility Convening: events/eg_usability_aug_2022.md
+      - Reports:
+          - End-to-End Verifiability in Real-World Elections: Reports/E2EVerifiability.md
       - Concepts:
           - Creating an Election Manifest:  concepts/Manifest_Building.md
           - Creating a Verifiable Election: concepts/Verifiability.md
@@ -24,24 +32,14 @@ nav:
           - Getting Started: develop/Getting_Started.md
           - Versioning: develop/Versioning.md
           - Badges: develop/Badges.md
-          - Approach: develop/Approach.md
-          - Architecture: develop/Architecture.md
           - Repositories: develop/Repositories.md
           - Applications: develop/Applications.md
           - Data:
               - Data Schema: develop/Data_Schema.md
               - Election Record: develop/Election_Record.md
               - Sample Data: develop/Sample_Data.md
-      - Pilots and Events:
-          - August 2022 ElectionGuard Hart Verity Scanner and Accessibility Convening: events/eg_usability_aug_2022.md
-          - Idaho Pilot 2022: events/Idaho_Pilot_2022.md
-      - Reports:
-          - End-to-End Verifiability in Real-World Elections: Reports/E2EVerifiability.md
-
-
   - Specification:
       - Official: spec/index.md
-
   - Contribute: contribute/index.md
 plugins:
   - search
