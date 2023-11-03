@@ -34,7 +34,7 @@ In addition, there are features that are outlined in the [2.0 spec](/spec/#v20) 
 * Any voting method other than precinct scan
 * Encrypted contest data (write-ins, overvotes/undervotes, extended data)
 
-!!! abstract "The [MITRE Requirements document] outlines in detail the 2.0 encryption and election record capabilities adopted by their verifier for College Park and will be linked to as soon as it is published."
+!!! abstract "The [MITRE Requirements document](/images/college-park-verifier-requirements.pdf) outlines in detail the 2.0 encryption and election record capabilities adopted by their verifier for College Park and will be linked to as soon as it is published."
 
 ## Survey and Feedback from Voters
 
