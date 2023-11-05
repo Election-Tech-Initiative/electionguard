@@ -26,7 +26,7 @@ As a result,there are known aspects of the full 2.0 specification that will not 
 
 There are fixes already in place that will be published after College Park, but to meet deployment and QA timelines were not released as part of 1.91.18. While it is not best practice by any means to intentionally omit support of components of independent verifier validations, some validations are more important than others, and the implementation risk of missing our deadlines for College Park outweighed the incremental benefit of delivery of the missing elements.
 
-In addition, there are features that are outlined in the [2.0 spec](/spec/#v20) that are not used in the College Park election, and independent verifier support is thus not necessary nor expected for 1.91.18:
+In addition, there are features that are [outlined in the 2.0 spec](/spec/#v20) that are not used in the College Park election, and independent verifier support is thus not necessary nor expected for 1.91.18:
 
 * Ballot chaining
 * Pre-encrypted ballots
@@ -35,6 +35,9 @@ In addition, there are features that are outlined in the [2.0 spec](/spec/#v20) 
 * Encrypted contest data (write-ins, overvotes/undervotes, extended data)
 
 !!! abstract "The [MITRE Requirements document](/images/college-park-verifier-requirements.pdf) outlines in detail the 2.0 encryption and election record capabilities adopted by their verifier for College Park and will be linked to as soon as it is published."
+
+!!! tip "Run the verifier yourself!"
+    If you want to run the MITRE verifier yourself, [follow the instructions here](https://mitre.github.io/ElectionGuardVerifier1X.jl/index.html). When the election results are published, [the election record will be available at the confirmation code lookup website](https://app.enhancedvoting.com/results/public/cc/CollegePark/nov23).
 
 ## Survey and Feedback from Voters
 
