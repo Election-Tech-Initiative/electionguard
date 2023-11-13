@@ -41,6 +41,9 @@ Finally, when the verifier was run initially immediately after the tally ceremon
 !!! tip "Run the verifier yourself!"
     If you want to run the MITRE verifier yourself, [follow the instructions here](https://mitre.github.io/ElectionGuardVerifier1X.jl/index.html). When the election results are published, [the election record is available at the confirmation code lookup website](https://app.enhancedvoting.com/results/public/cc/CollegePark/nov23).
 
+!!! tip "Run the verifier yourself!"
+    If you want to run the MITRE verifier yourself, [follow the instructions here](https://mitre.github.io/ElectionGuardVerifier1X.jl/index.html). When the election results are published, [the election record will be available at the confirmation code lookup website](https://app.enhancedvoting.com/results/public/cc/CollegePark/nov23).
+
 ## Survey and Feedback from Voters
 
 In-person voters will be asked to participate in an exit survey, and all College Park residents are welcome to participate in an election survey collecting general election feedback in addition to perspectives on ElectionGuard. Upon survey completion, the Center for Civic Design will publish a report on voter sentiment.
