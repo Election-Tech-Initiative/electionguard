@@ -34,14 +34,16 @@ In addition, there are features that are [outlined in the 2.0 spec](/spec/#v20) 
 * Any voting method other than precinct scan
 * Encrypted contest data (write-ins, overvotes/undervotes, extended data)
 
-!!! abstract "The [MITRE Requirements document](/images/college-park-verifier-requirements.pdf) outlines in detail the 2.0 encryption and election record capabilities adopted by their verifier for College Park and will be linked to as soon as it is published."
+Finally, when the verifier was run initially immediately after the tally ceremony, a data error was discovered around the extended base hash, causing the 1.I verification (1.H in the 2.0 Specification) to fail. The error was due to an already-addressed issue regarding equation formulation, yet the desired approach was implemented differently in the verifier versus the production code. Since the core ElectionGuard code could not be updated (due to the code freeze cited above), the verifier was modified to interpret the extended base hash correctly and the election was fully verified according to the precepts agreed to above.
+
+!!! abstract "The [MITRE Requirements document](/images/MITRE-EG-CP-requirements.pdf) outlines in detail the encryption and election record capabilities adopted by their verifier for College Park."
 
 !!! tip "Run the verifier yourself!"
-    If you want to run the MITRE verifier yourself, [follow the instructions here](https://mitre.github.io/ElectionGuardVerifier1X.jl/index.html). When the election results are published, [the election record will be available at the confirmation code lookup website](https://app.enhancedvoting.com/results/public/cc/CollegePark/nov23).
+    If you want to run the MITRE verifier yourself, [follow the instructions here](https://mitre.github.io/ElectionGuardVerifier1X.jl/index.html). When the election results are published, [the election record is available at the confirmation code lookup website](https://app.enhancedvoting.com/results/public/cc/CollegePark/nov23).
 
 ## Survey and Feedback from Voters
 
-In-person voters will be asked to participate in an exit survey, and all College Park residents are welcome to participate in an election survey collecting general election feedback in addition to perspectives on ElectionGuard. Upon survey completion, the Center for Civic Design will publish a report on voter sentiment. 
+In-person voters will be asked to participate in an exit survey, and all College Park residents are welcome to participate in an election survey collecting general election feedback in addition to perspectives on ElectionGuard. Upon survey completion, the Center for Civic Design will publish a report on voter sentiment.
 
 <!-- Links -->
 [College-Park-Banner]: /images/ElectionGuard_College_Park_2023.svg "College Park Banner"
