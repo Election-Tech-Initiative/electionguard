@@ -1,0 +1,629 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../images/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.2.3, mkdocs-material-7.2.8" name="generator"/>
+<title>Rescans and Recounts - ElectionGuard</title>
+<link href="../../assets/stylesheets/main.92558b1b.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Segoe+UI:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Segoe UI";--md-code-font-family:""}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<meta content="website" property="og:type">
+<meta content="ElectionGuard - Rescans and Recounts" property="og:title">
+<meta content="None" property="og:description">
+<meta content="None" property="og:url"/>
+<meta content="https://microsoft.github.io/electionguard/assets/images/electionguard-preview.png" property="og:image"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@microsoft" name="twitter:site"/>
+<meta content="ElectionGuard - Rescans and Recounts" name="twitter:title"/>
+<meta content="None" name="twitter:description"/>
+<meta content="https://microsoft.github.io/electionguard/assets/images/electionguard-preview.png" name="twitter:image"/>
+</meta></meta></meta></head>
+<body data-md-color-accent="indigo" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#rescans-and-recounts">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ElectionGuard" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ElectionGuard">
+<img alt="logo" src="../../images/electionguard-logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ElectionGuard
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Rescans and Recounts
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/microsoft/electionguard/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../..">
+        Documentation
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../spec/">
+        Specification
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../contribute/">
+      Contribute
+    </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ElectionGuard" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ElectionGuard">
+<img alt="logo" src="../../images/electionguard-logo.png"/>
+</a>
+    ElectionGuard
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/microsoft/electionguard/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1">
+        Documentation
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Documentation" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" id="__nav_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1">
+        Overview
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Overview" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_1">
+<span class="md-nav__icon md-icon"></span>
+          Overview
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        What is ElectionGuard?
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../overview/Roadmap/">
+        Roadmap
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../overview/Glossary/">
+        Glossary
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2">
+        Elections
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Elections" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_2">
+<span class="md-nav__icon md-icon"></span>
+          Elections
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../elections/College_Park_Maryland_2023/">
+        College Park, Maryland 2023
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../elections/Preston_Idaho_2022/">
+        Preston, Idaho 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../elections/Fulton_Wisconsin_2020/">
+        Fulton, Wisconsin 2020
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3">
+        Events
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Events" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+          Events
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../events/eg_usability_aug_2022/">
+        August 2022 ElectionGuard Hart Verity Scanner and Accessibility Convening
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4" id="__nav_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4">
+        Reports
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Reports" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_4">
+<span class="md-nav__icon md-icon"></span>
+          Reports
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Reports/E2EVerifiability/">
+        End-to-End Verifiability in Real-World Elections
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" id="__nav_1_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_5">
+        Concepts
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Concepts" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_5">
+<span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../concepts/Manifest_Building/">
+        Creating an Election Manifest
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../concepts/Verifiability/">
+        Creating a Verifiable Election
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../concepts/Structure_and_Processes/">
+        Structures and Processes
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_6" id="__nav_1_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_6">
+        Use Cases
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Use Cases" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_6">
+<span class="md-nav__icon md-icon"></span>
+          Use Cases
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Precinct_Scan/">
+        Precinct Scan
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Rescans and Recounts
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Rescans and Recounts
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+    Overview
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#proposed-approach">
+    Proposed Approach
+  </a>
+<nav aria-label="Proposed Approach" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encrypting-a-unique-ballot-id">
+    Encrypting a Unique Ballot ID
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#diffing-an-election">
+    Diffing an Election
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#invoking-a-rescan-or-recount">
+    Invoking a Rescan or Recount
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#optimizing-the-compute">
+    Optimizing the Compute
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_7" id="__nav_1_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_7">
+        Develop
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Develop" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_7">
+<span class="md-nav__icon md-icon"></span>
+          Develop
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../develop/Getting_Started/">
+        Getting Started
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../develop/Versioning/">
+        Versioning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../develop/Badges/">
+        Badges
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../develop/Repositories/">
+        Repositories
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../develop/Applications/">
+        Applications
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_7_6" id="__nav_1_7_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_7_6">
+        Data
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Data" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_7_6">
+<span class="md-nav__icon md-icon"></span>
+          Data
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../develop/Data_Schema/">
+        Data Schema
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../develop/Election_Record/">
+        Election Record
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../develop/Sample_Data/">
+        Sample Data
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Specification
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Specification" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Specification
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spec/">
+        Official
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../contribute/">
+        Contribute
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+    Overview
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#proposed-approach">
+    Proposed Approach
+  </a>
+<nav aria-label="Proposed Approach" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#encrypting-a-unique-ballot-id">
+    Encrypting a Unique Ballot ID
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#diffing-an-election">
+    Diffing an Election
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#invoking-a-rescan-or-recount">
+    Invoking a Rescan or Recount
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#optimizing-the-compute">
+    Optimizing the Compute
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/microsoft/electionguard/edit/master/docs/use_cases/Rescans_and_Recounts.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
+</a>
+<h1 id="rescans-and-recounts">Rescans and Recounts</h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is a documented but not currently implemented capability. See the <a href="../../overview/Roadmap/">Roadmap</a> for implementation details and status.</p>
+</div>
+<h2 id="overview">Overview</h2>
+<p>In the course of an election with paper ballots, occasions may arise when all or some of the ballots in an election may need to be rescanned without being in the presence of the voter.</p>
+<p>For example, if a precinct scanner fails on election day, some municipalities may require a new scanner to be activated and the ballots scanned through the failed scanner to be re-scanned in the new scanner; those rescans would likely not be conducted in the presence of the affected voters, and the verification codes generated from the subsequent scans would not be available to them.</p>
+<p>Similarly, some elections require multiple recounts, including hand tallies, to resolve challenges or recounts triggered by narrow margins of victory. Ballots may be included or excluded from subsequent recounts dependent on the interpretation of the scans or their inclusion or exclusion in the the subsequent tallies.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Depending on how the ballot is encrypted (such as whether <a href="../../overview/Glossary/#ballot-chain">ballot-chaining</a> is being used), the verification codes generated in the rescan would not be the same. The "default" implementation of ElectionGuard, which uses the unique ID of the device performing the encryption as part of the encryption itself, would generate a different verification code if the same ballot is scanned on a different device. If ballot-chaining or any time-based component were included in the encryption, even subsequent scans of the same ballot on the same scanner would generate a different verification code.</p>
+</div>
+<p>When a voter checks whether their ballot was included in the ElectionGuard published artifacts, the information should reflect whether the ballot was included (and even more importantly not included) in any subsequent tallies published by the election administration. This must be accomplished without undermining the core integrity and privacy concerns of the verification processes.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The proposed process mandates a unique ballot identifier be generated by the host voting system (not ElectionGuard), printed on the ballot, and captured as part of the ElectionGuard metadata.</p>
+</div>
+<h2 id="proposed-approach">Proposed Approach</h2>
+<p>To maintain the security and integrity of the original election record, rescans and recounts are guardian-based processes. This requirement presents potentially significant additional compute both for the local guardian device / <a href="../../overview/Glossary/#hardware-security-module-hsm">hardware security module</a> and any cloud-based approach to scale the cross-tally mapping.</p>
+<h3 id="encrypting-a-unique-ballot-id">Encrypting a Unique Ballot ID</h3>
+<p>Since a rescan or recount can occur on any independent device, the information for mapping must be present on and derived from the paper ballot itself. Specifically, in addition to all the contests and candidates, there must be an ID unique to the election printed on the ballot. When scanned by the scanner, that ID is included in the <a href="../../overview/Glossary/#encrypted-ballot-metadata">encrypted ballot metadata</a> encrypted by the <a href="../../overview/Glossary/#auxiliary-guardian-key"><em>auxiliary</em> guardian RSA key</a> <strong>separate</strong> from the El Gamal encryption<sup id="fnref:rs1"><a class="footnote-ref" href="#fn:rs1">1</a></sup> used for the ballot contents.</p>
+<div class="admonition alert">
+<p class="admonition-title">Alert</p>
+<p>Municipalities that do not allow the printing of unique identifiers on their paper ballots cannot use ElectionGuard for the rescan scenario, since there is no way to perform any mapping across independent tallies</p>
+</div>
+<h3 id="diffing-an-election">Diffing an Election</h3>
+<h3 id="invoking-a-rescan-or-recount">Invoking a Rescan or Recount</h3>
+<p>After the base ElectionGuard verifiable tally has been generated (and, optionally, published) a rescan or recount can be performed.</p>
+<h3 id="optimizing-the-compute">Optimizing the Compute</h3>
+<!-- Links -->
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:rs1">
+<p>Because the primary joint public key is an ElGamal key, it is optimized for the ones and zeroes that constitute the contents of a ballot, not the generic string values necessary to support arbitrary IDs. <a class="footnote-backref" href="#fnref:rs1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../Precinct_Scan/" rel="prev" title="Precinct Scan">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Precinct Scan
+              </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../../develop/Getting_Started/" rel="next" title="Getting Started">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Getting Started
+              </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a> and <a href="https://icons8.com/" rel="noopener" target="_blank">
+          Icons8
+        </a>
+</div>
+<div class="md-footer-copyright" style="display: flex; align-items:center;">
+<ul style="list-style: none;">
+<li><a href="https://privacy.microsoft.com">Privacy</a></li>
+<li><a href="">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.94ec81fe.min.js", "version": null}</script>
+<script src="../../assets/javascripts/bundle.48dfec6c.min.js"></script>
+<script src="../../javascripts/analytics.js"></script>
+<script src="../../javascripts/config.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

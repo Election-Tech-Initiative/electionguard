@@ -1,0 +1,25 @@
+:root {
+  --md-primary-fg-color:        #0e7d7d;
+  --md-primary-fg-color--light: #0e7d7d;
+  --md-primary-fg-color--dark:  #008080;
+  --md-text-link-color: indigo;
+  --md-accent-fg-color: #0e7d7d;
+  --md-accent-fg-color--transparent: indigo;
+  --md-admonition-icon--specification: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0V0z" fill="none"/><circle cx="12" cy="19" r="2"/><path d="M10 3h4v12h-4z"/></svg>')
+}
+.md-typeset .admonition.specification,
+.md-typeset details.specification {
+  border-color: #00bfa5;
+  background-color: rgb(0,191,165, 0.1);
+}
+.md-typeset .specification > .admonition-title,
+.md-typeset .specification > summary {
+  background-color: rgba(49, 116, 107, 0.1);
+  border-color: rgb(0,191,165, 0.1);
+}
+.md-typeset .specification > .admonition-title::before,
+.md-typeset .specification > summary::before {
+  background-color: #00bfa5;
+  -webkit-mask-image: var(--md-admonition-icon--specification);
+          mask-image: var(--md-admonition-icon--specification);
+}

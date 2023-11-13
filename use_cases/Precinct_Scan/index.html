@@ -1,0 +1,953 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../images/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.2.3, mkdocs-material-7.2.8" name="generator"/>
+<title>Precinct Scan - ElectionGuard</title>
+<link href="../../assets/stylesheets/main.92558b1b.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Segoe+UI:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Segoe UI";--md-code-font-family:""}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<meta content="website" property="og:type">
+<meta content="ElectionGuard - Precinct Scan" property="og:title">
+<meta content="None" property="og:description">
+<meta content="None" property="og:url"/>
+<meta content="https://microsoft.github.io/electionguard/assets/images/electionguard-preview.png" property="og:image"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@microsoft" name="twitter:site"/>
+<meta content="ElectionGuard - Precinct Scan" name="twitter:title"/>
+<meta content="None" name="twitter:description"/>
+<meta content="https://microsoft.github.io/electionguard/assets/images/electionguard-preview.png" name="twitter:image"/>
+</meta></meta></meta></head>
+<body data-md-color-accent="indigo" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#precinct-scan">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ElectionGuard" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ElectionGuard">
+<img alt="logo" src="../../images/electionguard-logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ElectionGuard
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Precinct Scan
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/microsoft/electionguard/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../..">
+        Documentation
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../spec/">
+        Specification
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../contribute/">
+      Contribute
+    </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ElectionGuard" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ElectionGuard">
+<img alt="logo" src="../../images/electionguard-logo.png"/>
+</a>
+    ElectionGuard
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/microsoft/electionguard/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1">
+        Documentation
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Documentation" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" id="__nav_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1">
+        Overview
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Overview" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_1">
+<span class="md-nav__icon md-icon"></span>
+          Overview
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        What is ElectionGuard?
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../overview/Roadmap/">
+        Roadmap
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../overview/Glossary/">
+        Glossary
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2">
+        Elections
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Elections" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_2">
+<span class="md-nav__icon md-icon"></span>
+          Elections
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../elections/College_Park_Maryland_2023/">
+        College Park, Maryland 2023
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../elections/Preston_Idaho_2022/">
+        Preston, Idaho 2022
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../elections/Fulton_Wisconsin_2020/">
+        Fulton, Wisconsin 2020
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3">
+        Events
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Events" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+          Events
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../events/eg_usability_aug_2022/">
+        August 2022 ElectionGuard Hart Verity Scanner and Accessibility Convening
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4" id="__nav_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4">
+        Reports
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Reports" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_4">
+<span class="md-nav__icon md-icon"></span>
+          Reports
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Reports/E2EVerifiability/">
+        End-to-End Verifiability in Real-World Elections
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" id="__nav_1_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_5">
+        Concepts
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Concepts" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_5">
+<span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../concepts/Manifest_Building/">
+        Creating an Election Manifest
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../concepts/Verifiability/">
+        Creating a Verifiable Election
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../concepts/Structure_and_Processes/">
+        Structures and Processes
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_6" id="__nav_1_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_6">
+        Use Cases
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Use Cases" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_6">
+<span class="md-nav__icon md-icon"></span>
+          Use Cases
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Precinct Scan
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Precinct Scan
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+    Overview
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#current-precinct-scan-voter-experience">
+    Current Precinct Scan Voter Experience
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adapting-precinct-scan-for-end-to-end-verifiability-e2e-v">
+    Adapting Precinct Scan for End-to-end Verifiability (E2E-V)
+  </a>
+<nav aria-label="Adapting Precinct Scan for End-to-end Verifiability (E2E-V)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#voter-experience">
+    Voter Experience
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-requirements">
+    Technical Requirements
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-implementation">
+    Technical Implementation
+  </a>
+<nav aria-label="Technical Implementation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview-and-operational-assumptions">
+    Overview and Operational Assumptions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#general-election-setup">
+    General Election Setup
+  </a>
+<nav aria-label="General Election Setup" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ballot-manifest">
+    Ballot manifest
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#public-encryption-key">
+    Public encryption key
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#logic-and-accuracy-testing">
+    Logic and Accuracy Testing
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scanner-final-production-setup">
+    Scanner Final Production Setup
+  </a>
+<nav aria-label="Scanner Final Production Setup" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#launch-code">
+    Launch Code
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scanner-election-operation">
+    Scanner Election Operation
+  </a>
+<nav aria-label="Scanner Election Operation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ballot-encryption">
+    Ballot Encryption
+  </a>
+<nav aria-label="Ballot Encryption" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generation-of-verification-code">
+    Generation of Verification Code
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ballot-chaining">
+    Ballot Chaining
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ballot-dehydration">
+    Ballot Dehydration
+  </a>
+<nav aria-label="Ballot Dehydration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dehydrated-ballot-structure">
+    Dehydrated ballot structure
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ballot-finalization">
+    Ballot Finalization
+  </a>
+<nav aria-label="Ballot Finalization" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cast-ballots">
+    Cast ballots
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#challenge-ballots">
+    Challenge ballots
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Rescans_and_Recounts/">
+        Rescans and Recounts
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_7" id="__nav_1_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_7">
+        Develop
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Develop" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_7">
+<span class="md-nav__icon md-icon"></span>
+          Develop
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../develop/Getting_Started/">
+        Getting Started
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../develop/Versioning/">
+        Versioning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../develop/Badges/">
+        Badges
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../develop/Repositories/">
+        Repositories
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../develop/Applications/">
+        Applications
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_7_6" id="__nav_1_7_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_7_6">
+        Data
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Data" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_7_6">
+<span class="md-nav__icon md-icon"></span>
+          Data
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../develop/Data_Schema/">
+        Data Schema
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../develop/Election_Record/">
+        Election Record
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../develop/Sample_Data/">
+        Sample Data
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Specification
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Specification" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Specification
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spec/">
+        Official
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../contribute/">
+        Contribute
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+    Overview
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#current-precinct-scan-voter-experience">
+    Current Precinct Scan Voter Experience
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adapting-precinct-scan-for-end-to-end-verifiability-e2e-v">
+    Adapting Precinct Scan for End-to-end Verifiability (E2E-V)
+  </a>
+<nav aria-label="Adapting Precinct Scan for End-to-end Verifiability (E2E-V)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#voter-experience">
+    Voter Experience
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-requirements">
+    Technical Requirements
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-implementation">
+    Technical Implementation
+  </a>
+<nav aria-label="Technical Implementation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview-and-operational-assumptions">
+    Overview and Operational Assumptions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#general-election-setup">
+    General Election Setup
+  </a>
+<nav aria-label="General Election Setup" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ballot-manifest">
+    Ballot manifest
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#public-encryption-key">
+    Public encryption key
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#logic-and-accuracy-testing">
+    Logic and Accuracy Testing
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scanner-final-production-setup">
+    Scanner Final Production Setup
+  </a>
+<nav aria-label="Scanner Final Production Setup" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#launch-code">
+    Launch Code
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scanner-election-operation">
+    Scanner Election Operation
+  </a>
+<nav aria-label="Scanner Election Operation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ballot-encryption">
+    Ballot Encryption
+  </a>
+<nav aria-label="Ballot Encryption" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generation-of-verification-code">
+    Generation of Verification Code
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ballot-chaining">
+    Ballot Chaining
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ballot-dehydration">
+    Ballot Dehydration
+  </a>
+<nav aria-label="Ballot Dehydration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dehydrated-ballot-structure">
+    Dehydrated ballot structure
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ballot-finalization">
+    Ballot Finalization
+  </a>
+<nav aria-label="Ballot Finalization" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cast-ballots">
+    Cast ballots
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#challenge-ballots">
+    Challenge ballots
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/microsoft/electionguard/edit/master/docs/use_cases/Precinct_Scan.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
+</a>
+<h1 id="precinct-scan">Precinct Scan</h1>
+<div class="admonition warning">
+<p class="admonition-title">Work in Progress</p>
+<p>This is a work in progress. Feel free to contribute.</p>
+</div>
+<h2 id="overview">Overview</h2>
+<p>By design, the ElectionGuard SDK can be used to enable end-to-end verifiability (e2e-v) in a variety of use cases. This article discusses the "default" use case of ElectionGuard: an end-to-end verifiable election that uses precinct scanners where ballots are inserted (and approved) by voters directly <sup id="fnref:precinct-scan"><a class="footnote-ref" href="#fn:precinct-scan">1</a></sup>.</p>
+<p>This document aims to provide a "<a href="https://agileforall.com/vertical-slices-and-scale/">vertical slice</a>" of the considerations and practices necessary to add end-to-end verifiability to an existing precinct scanner. We necessarily make assumptions about the compute and storage capabilities of the scanner itself, and the modifications necessary to implement <a href="https://www.electionguard.vote/guide/Verifiable_Election/">end-to-end verifiability</a>. In so doing, it illustrates the interlocking system of security and encryption that comprises an e2e-v <em>system</em>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>ElectionGuard relies on slight adaptations of existing voting processes to accommodate different aspects of <a href="https://www.electionguard.vote/guide/Verifiable_Election/">end-to-end verifiability</a>.</p>
+</div>
+<p>For example, many voting jurisdictions already have a procedure called <em>ballot spoiling</em> to handle mistakes voters make when they fill out ballots. A voter may inadvertently fill out a contest incorrectly by selecting more candidates than allowed. When the voter then proceeds to scan the ballot, the scanner stops the ballot and alerts the voter of the <em>overvote</em>; the voter then has the opportunity, as allowed within the voting regulations and practices of the voting district, to start over with a new ballot; the ballot with the mistake is then <em>spoiled</em> and stored separately to ensure it is not included in the tabulation.</p>
+<p>ElectionGuard uses this spoil process to enable a voter to test the integrity of the system capturing their vote. Effectively, the voter acts as if they are going to vote, submitting their ballot into the scanner and enabling it to process and interpret the ballot. After the encryption of the ballot has occurred, and the verification code has been generated, the voter can decide NOT to cast this ballot via some kind of option on the summary screen presented by the scanner.</p>
+<p>End-to-end verifiability mandates that these <em>challenged ballots</em>, unlike <em>cast ballots</em>, be published separately from the tally, and in addition that they be decrypted and published in their decrypted state. When voters use their verification code to look up the provenance of these challenged ballots after the election record have been published, they will be able to see both that the ballot they challenged was NOT included in the tally, and also what its contents would have been if it were.</p>
+<p>When the contents of a challenged ballot are revealed to the voter and the selections match, their confidence about the provenance of their cast ballot is ideally bolstered. If the contents do not match their expectation, they should be given the means to flag this situation to election administrators to investigate.</p>
+<p>Thus, challenge ballots serve the dual role of affording voters the opportunity to more meaningfully evaluate the disposition of their voting preferences while also providing a security check on the voting system itself. Because the system has to be prepared for ANY voter to challenge a ballot, and because that challenge occurs AFTER the ElectionGuard encryption has occurred, the scanner has already committed its choice to ElectionGuard. And since the scanner can only encrypt ballots (only the tally process overseen by a quorum of election guardians has the "power" to decrypt <em>anything</em>), the system is forced to act in good faith (if a small and random minority of voters can be relied upon to exercise challenges).</p>
+<p>This document illustrates these e2e-v concepts in the context of setting up and running an election. It begins with a general discussion of the precinct scan user experience and technical assumptions of scanner capabilities, and then runs an election, outlining where ElectionGuard needs to be integrated and ideally providing any wider security and integrity context for any process alterations that may obtain relative to current general election practice.</p>
+<h2 id="current-precinct-scan-voter-experience">Current Precinct Scan Voter Experience</h2>
+<p>A typical voter flow for a precinct scan system is illustrated below.</p>
+<p>After a voter has acquired their ballot, they fill it out by hand or using a ballot marking device. When they finish they proceed to the scanner and insert the completed ballot. The scanner scans and interprets the ballot and generates a <a href="../../overview/Glossary/#cast-vote-record">cast vote record</a>, an electronic representation of the voter's selections.</p>
+<p>If all contests in a ballot are filled out properly and interpreted as such by the scanner, the ballot is accepted and the voter is free to leave the voting booth.</p>
+<p>If the scanner interprets the voter has voted for more options than the ballot contests allow (called an <em>overvote</em>), the scanner stops the ballot from being deposited into the ballot box and prompts the voter whether they would like to have the ballot returned to fix the discrepancy. If the voter agrees, a poll worker is alerted and the ballot remediated by whatever process obtains, which could involve issuance of a new ballot and "spoiling" of the overvoted ballot.</p>
+<p>The scanner can also determine whether the voter didn't fill out all the contests available (called an <em>undervote</em>). The scanner can be programmed to follow the same process as an overvote (returning the ballot for remediation), but election administrators often assume the undervote is intentional by the voter.</p>
+<h2 id="adapting-precinct-scan-for-end-to-end-verifiability-e2e-v">Adapting Precinct Scan for End-to-end Verifiability (E2E-V)</h2>
+<h3 id="voter-experience">Voter Experience</h3>
+<p>As outlined in the Verifiable Election page of the ElectionGuard SDK <sup id="fnref:e2e-v"><a class="footnote-ref" href="#fn:e2e-v">2</a></sup>, for end-to-end verifiability to apply, the precinct scanner itself must provide the following capabilities for each voter:</p>
+<ul>
+<li>immediately upon scanning the ballot, create an encrypted version of the ballot using the public key generated by the election guardians (see Key Ceremony)</li>
+<li>present the verification code generated by the encryption to the voter (ideally in paper format)</li>
+<li>present the means for the voter to cast or challenge (spoil) the ballot</li>
+</ul>
+<h3 id="technical-requirements">Technical Requirements</h3>
+<p>For end-to-end verifiability, the scanner has to implement the user experience described above as well as generate and <em>finalize</em> an encrypted ballot reflecting the voter's selections. ElectionGuard assumes all other e2e-v functions such as key and tally ceremonies are performed independently of the scanner on modern laptop or desktop computers or secure cloud environments.</p>
+<h2 id="technical-implementation">Technical Implementation</h2>
+<h3 id="overview-and-operational-assumptions">Overview and Operational Assumptions</h3>
+<p>Precinct scanners, unlike other components of voting systems, are assumed to follow the economics and performance characteristics of embedded devices rather than consumer off-the-shelf (COTS) devices such as laptops. ElectionGuard assumes these devices operate in storage-limited environments more akin to operating systems such as Raspberry Pi than Windows 10. Information transfer (if not base storage) is assumed to occur via USB drives with capacities designed for space-efficient data constructs, not 4096-bit encryptions.</p>
+<p>To support operation in these environments, ElectionGuard enables an encryption-only library built in C++ from which it can target different standalone package deployments that generate encrypted ballots using a separately-provided public election key.</p>
+<p>Because encrypted ballots in modern elections can each occupy up to 1MB or more of device storage, ElectionGuard also specifies a <em>dehydration</em> "process" that allows a more space-efficient format for local storage and transmission post-election. Prior to initiating the tally and publishing process, these ballots are transferred to an external system and reconsitituted (and validated) by re-executing the encryption process using the dehydrated data as inputs. (See the discussions around ballot construction, chaining, etc., below to understand how dehydration should not affect system integrity or end-to-end verifiability.)</p>
+<h3 id="general-election-setup">General Election Setup</h3>
+<p>Elections can be considered to have three core "states": the election itself, where voters cast their ballots, but also election setup and post-election data collection and tally publishing. ElectionGuard necessarily manifests in each state.</p>
+<p>Election setup generally consists of preparing the voting machines for the current election contests, running any pre-production testing, and final configuration for election readiness.</p>
+<p>For ElectionGuard, the <a href="">public election key</a> generated by the election guardians is deployed to the scanner at this time and, if necessary, the ElectionGuard executable (the scanner is assumed to be entirely offline and code and election-related data is transferred via USB storage devices). Poll workers should also be prompted to manually enter an election launch code (see below) generated uniquely for the current election at election instantiation.</p>
+<p>In modern US elections, voters often vote multiple contests, determined by the type of election they're voting in and where they live. Because of the diversity of contests that different voters are eligible to vote in [even within a single county or precinct (imagine school districts, utility districts, city councillors, etc.)], a single precinct scanner may need to recognize and interpret tens or even hundreds of different <em>ballot styles</em> in a single election.</p>
+<h4 id="ballot-manifest">Ballot manifest</h4>
+<p>Consider a <a href="https://www.electionguard.vote/guide/Election_Manifest/">ballot manifest</a> the master list of all the contests voters could face in a single election. <a href="https://www.electionguard.vote/guide/Election_Manifest/#data-validation">ElectionGuard assumes and validates the ballot manifest for a variety of criteria</a>. ElectionGuard uses manifests to properly interpret ballots generally, but for records created by precinct scanners the manifest provides the means to <em>reconstitute</em> the encrypted ballots from the dehydrated records created.</p>
+<p>Strictly speaking, the ballot manifest isn't necessary for ElectionGuard until the tally process evaluates the encrypted ballots generated during the election, but the precinct scanner needs to encode ballots and votes properly for their downstream construction, and that is dependent on the unique ballot styles presented to voters, which themselves need to follow proper convention as well.</p>
+<h4 id="public-encryption-key">Public encryption key</h4>
+<p>One of the core innovations of ElectionGuard is the use of multiple election guardians to administer the creation of the election record. Guardians are intended to be independent, trustworthy individuals. They don't need to have technical skills, but they do need to physically perform tasks collectively with the other guardians at the beginning and end of elections.</p>
+<p>As part of the election setup process, or any time prior, the guardians meet to create the public key that will be used by the precinct scanner to encrypt voter ballots. The</p>
+<h4 id="logic-and-accuracy-testing">Logic and Accuracy Testing</h4>
+<h4 id="scanner-final-production-setup">Scanner Final Production Setup</h4>
+<h5 id="launch-code">Launch Code</h5>
+<h3 id="scanner-election-operation">Scanner Election Operation</h3>
+<h4 id="ballot-encryption">Ballot Encryption</h4>
+<h5 id="generation-of-verification-code">Generation of Verification Code</h5>
+<h5 id="ballot-chaining">Ballot Chaining</h5>
+<h5 id="ballot-dehydration">Ballot <strong><em>Dehydration</em></strong></h5>
+<h6 id="dehydrated-ballot-structure">Dehydrated ballot structure</h6>
+<p>A dehydrated ballot <strong><em>must</em></strong> provide the following data to be properly <em>rehydrated</em> and preserve end-to-end verifiability.</p>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ballot_object_id</td>
+<td>string</td>
+<td>Unique ID to identify each ballot in an election</td>
+<td></td>
+</tr>
+<tr>
+<td>session_id</td>
+<td>string</td>
+<td>Unique ID to enable the correct sorting of the election ballot chain when rehydrated</td>
+<td>needs to be resilient across device restarts and other service interruptions</td>
+</tr>
+<tr>
+<td>launch_code</td>
+<td>integer</td>
+<td>10-digit ID generated at election initiation by rolling of 10-sided dice</td>
+<td>used to protect against attacks to insert votes outside of election context. See <a href="link to reference">insert reference here</a></td>
+</tr>
+<tr>
+<td>ballot_style_id</td>
+<td>string</td>
+<td>Uniquely identifies the set of contests and responses a voter encounters with their ballot</td>
+<td>Used as part of the rehydration and tally processes to ensure the ballot is correctly interpreted and reconstituted</td>
+</tr>
+<tr>
+<td>ballot_finalization_indicator</td>
+<td>flag</td>
+<td>Indicates whether ballot is CAST or CHALLENGED</td>
+<td>applied by scanner based on determination by voter</td>
+</tr>
+<tr>
+<td>ballot_selections</td>
+<td>array</td>
+<td>Set of responses (and, as applicable, non-responses) of voter to ballot style</td>
+<td>reflective of non-selections; critical for rehydration and re-establishment of ballot encryption artifacts</td>
+</tr>
+<tr>
+<td>ballot_extra_data</td>
+<td>array</td>
+<td>Additional data applied at contest level to capture non-selection data</td>
+<td>Principally envisioned for capturing ballot selection metadata for write-ins; each entry needs to identify contest and selection as well as extra data string</td>
+</tr>
+<tr>
+<td>ballot_nonce</td>
+<td>?</td>
+<td>The <a href="https://csrc.nist.gov/glossary/term/nonce">nonce</a> used as input to the encryption of the ballot selections</td>
+<td>See spec on <a href="../../spec/web/6_Ballot_Encryption/">Ballot Encryption</a></td>
+</tr>
+<tr>
+<td>previous_tracker_hash</td>
+<td>?</td>
+<td>As discussed in <a href="#ballot-chaining">ballot chaining</a> the previous_tracker_hash is an input to the current ballot encryption</td>
+<td>See spec on <a href="../../spec/web/6_Ballot_Encryption/">Ballot Encryption</a></td>
+</tr>
+<tr>
+<td>verification_code_hash</td>
+<td>?</td>
+<td>Hashed version of verification code generated by ballot encryption process</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="ballot-finalization">Ballot <em>Finalization</em></h3>
+<h4 id="cast-ballots">Cast ballots</h4>
+<h4 id="challenge-ballots">Challenge ballots</h4>
+<!-- Links -->
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:precinct-scan">
+<p>As distinct from scanners used solely for central tabulation, which occurs with mail-in voting or any tabulation / aggregation scenario <em>where voters are not present when the cast vote record is created</em> <a class="footnote-backref" href="#fnref:precinct-scan" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:e2e-v">
+<p><a href="https://www.electionguard.vote/guide/Verifiable_Election/">ElectionGuard Verifiable Election</a> [https://www.electionguard.vote/guide/Verifiable_Election/] <a class="footnote-backref" href="#fnref:e2e-v" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../../concepts/Structure_and_Processes/" rel="prev" title="Structures and Processes">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Structures and Processes
+              </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../Rescans_and_Recounts/" rel="next" title="Rescans and Recounts">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Rescans and Recounts
+              </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a> and <a href="https://icons8.com/" rel="noopener" target="_blank">
+          Icons8
+        </a>
+</div>
+<div class="md-footer-copyright" style="display: flex; align-items:center;">
+<ul style="list-style: none;">
+<li><a href="https://privacy.microsoft.com">Privacy</a></li>
+<li><a href="">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.94ec81fe.min.js", "version": null}</script>
+<script src="../../assets/javascripts/bundle.48dfec6c.min.js"></script>
+<script src="../../javascripts/analytics.js"></script>
+<script src="../../javascripts/config.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
