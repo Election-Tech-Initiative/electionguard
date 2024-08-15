@@ -22,7 +22,5 @@ jobs:
         run: cd ${{ github.workspace }}
       - name: Install packages
         run: pipenv install
-      - name: Install MkDocs
-        run: pipenv run make install
       - name: Lint
         run: pipenv run make lint
