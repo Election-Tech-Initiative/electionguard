@@ -38,8 +38,8 @@ Currently, JSON is used as the primary serialization format of the artifacts fro
 [shield-green-0.95]: https://img.shields.io/badge/🗳%20ElectionGuard-v0.95-green
 [json-schema]: https://json-schema.org/specification.html "Json Schema Specification"
 
-[election-record]: ../Election_Record
-[sample-data]: ../Sample_Data
+[election-record]: Election_Record.md
+[sample-data]: Sample_Data.md
 [manifest]: https://github.com/microsoft/electionguard/blob/main/data/1.91/schema/manifest.schema.json "Manifest Json Schema"
 [ciphertext_election_context]: https://github.com/microsoft/electionguard/blob/main/data/1.91/schema/ciphertext_election_context.schema.json "Ciphertext Election Context Json Schema"
 [election_constants]: https://github.com/microsoft/electionguard/blob/main/data/1.91/schema/election_constants.schema.json "Election Constants Json Schema"

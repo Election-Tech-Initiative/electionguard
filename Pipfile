@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+jinja2 = "*"
+mkdocs = "*"
+mkdocs-material = "*"
+mkdocs-mermaid2-plugin = "*"
+mkdocs-redirects = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
+python_full_version = "3.10.2"

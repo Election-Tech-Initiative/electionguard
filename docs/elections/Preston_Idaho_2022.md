@@ -45,6 +45,6 @@ MITRE wrote an independent verifier for this election to ensure that ElectionGua
      * Increased their confidence in the accuracy and security of elections. 
 
 <!-- Links -->
-[Idaho-Banner]: /images/ElectionGuard-Idaho-2022.svg "Idaho Banner"
-[hart-scanner]: /images/votingmachine.jpeg
-[EAC-Report]: /images/EAC%20Report%20Final.pdf
+[Idaho-Banner]: ../images/ElectionGuard-Idaho-2022.svg "Idaho Banner"
+[hart-scanner]: ../images/votingmachine.jpeg
+[EAC-Report]: ../images/EAC%20Report%20Final.pdf

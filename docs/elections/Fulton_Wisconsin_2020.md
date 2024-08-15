@@ -14,4 +14,4 @@ Three election guardians oversaw the ElectionGuard tally process. No independent
 ### ["Microsoft’s voting software is getting its first test in a small Wisconsin town" CNBC, February 18, 2020](https://www.cnbc.com/2020/02/18/microsoft-electionguard-software-gets-first-test-in-fulton-wisconsin.html)
 
 <!-- Links -->
-[Fulton-Banner]: /images/ElectionGuard_Fulton_2020.svg "Fulton Banner"
+[Fulton-Banner]: ../images/ElectionGuard_Fulton_2020.svg "Fulton Banner"

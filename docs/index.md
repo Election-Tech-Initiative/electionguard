@@ -57,7 +57,7 @@ A huge thank you to those who have helped us along the way:
 [oxide-design]: https://oxidedesign.com/ "Oxide Design"
 
 [contribute-index]: contribute/index.md "Contributors"
-[glossary-end-to-end-verifiable]: overview/Glossary/#end-to-end-verifiable-elections "End-to-End Verifiable Elections"
-[glossary-post-election-audit]: overview/Glossary/#post-election-audit "Post-election audit"
+[glossary-end-to-end-verifiable]: overview/Glossary.md#end-to-end-verifiable-election "End-to-End Verifiable Elections"
+[glossary-post-election-audit]: overview/Glossary.md#post-election-audit "Post-election audit"
 [develop-getting-started]: develop/Getting_Started.md "Developer - Getting Started"
 [roadmap]: overview/Roadmap.md "ElectionGuard - Roadmap"

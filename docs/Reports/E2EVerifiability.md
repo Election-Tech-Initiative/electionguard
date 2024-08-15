@@ -6,5 +6,5 @@ The report provides an overview of the ElectionGuard Pilot in the 2022 Franklin 
 
 ![Cover Photo2][Cover-Photo-2]
 
-[EAC-Report]: /images/EAC%20Report%20Final.pdf
-[Cover-Photo-2]: /images/coverphoto.png "Cover Photo 2"
+[EAC-Report]: ../images/EAC%20Report%20Final.pdf
+[Cover-Photo-2]: ../images/coverphoto.png "Cover Photo 2"

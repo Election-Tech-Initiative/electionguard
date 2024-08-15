@@ -16,6 +16,28 @@ ElectionGuard is always improving. To keep up with the latest, check our **[offi
 
 This repository is a living document to help everyone interact with ElectionGuard. The [official ElectionGuard site][election-guard-official-page] is built using the `/docs` folder and [mkdocs][mkdocs-official-site] with [mkdocs-material][material-mkdocs]. Ensure you have the Python 3.8 or newer installed and run `make` to install the dependencies and start the site.
 
+#### Setup
+
+This repo uses [pipenv](https://pipenv.pypa.io/en/latest/) for package and environment management. Disregard the `requirements.txt` file as it will be removed in a subsequent release.
+
+1. Install packages
+
+```sh
+pipenv install
+```
+
+1. Run `make build` command from within the virtualenv
+
+```sh
+pipenv run make build
+```
+
+1. Serve the site
+
+```sh
+pipenv run make serve
+```
+
 ### C ++
 
 An ElectionGuard Core implemented in C++ to support ballot encryption and all phases of the Guardian key and tally ceremonies, including creation of the election package and production of the election record.
