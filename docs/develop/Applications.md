@@ -8,7 +8,7 @@ If you develop an app for ElectionGuard, we suggest you [utilize our badges][bad
 
 ### ElectionGuard Core
 
-An ElectionGuard Core is an application that implements the base level [features] such as Ballot Encryption by implementing them according to the specification. The internal examples of this are the Python and C++ reference implementations. There is a community example of this with the Java port done by the community. 
+An ElectionGuard Core is an application that implements the base level features such as Ballot Encryption by implementing them according to the specification. The internal examples of this are the Python and C++ reference implementations. There is a community example of this with the Java port done by the community. 
 
 ### Ballot Marking
 
@@ -50,13 +50,12 @@ The results of election can be displayed after an election is closed. An example
 A verifier app verifies an election is true and accurate by using the publicly published information about a completed election. At the close of an election using ElectionGuard, an election record should be created and made public. ElectionGuard encourages third parties to create their own verifiers and help verify election records. A basic example of a verifier can be found within the [electionguard-python repository][verifier], but  verifiers should aim to be as thorough as possible. After consuming the files in an election record, verifiers can validate everything from the key ceremony to the decryption since the election is end to end verifiable. 
 
 <!--Links-->
-[selections]: ../../overview/Glossary/#selection
-[plaintext-ballot]: ../../overview/Glossary/#plaintext-ballot
-[ciphertext-ballot]: ../../overview/Glossary/#ciphertext-ballot
-[cast-ballot]: ../../overview/Glossary/#cast-ballot
-[spoiled-ballot]: ../../overview/Glossary/#spoiled-ballot
-[badges]: ../Badges
-[features]: ../../overview/Features
+[selections]: ../overview/Glossary.md#selection
+[plaintext-ballot]: ../overview/Glossary.md#plaintext-ballot
+[ciphertext-ballot]: ../overview/Glossary.md#ciphertext-ballot
+[cast-ballot]: ../overview/Glossary.md#cast-ballot
+[spoiled-ballot]: ../overview/Glossary.md#spoiled-ballot
+[badges]: Badges.md
 [admin app]: https://github.com/microsoft/electionguard-ui/tree/main/packages/admin-app
 [result app ]: https://github.com/microsoft/electionguard-ui/tree/main/packages/result-app
 [api client]: https://github.com/microsoft/electionguard-ui/tree/main/packages/api-client

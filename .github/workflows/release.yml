@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  PYTHON_VERSION: 3.8
+  PYTHON_VERSION: 3.10.14
 
 jobs:
   publish: 
@@ -19,10 +19,12 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: ${{ env.PYTHON_VERSION }}
+      - name: Install pipenv
+        run: pip install pipenv
       - name: Change Directory
         run: cd ${{ github.workspace }}
-      - name: Install MkDocs
-        run: make install
+      - name: Install packages
+        run: pipenv install
       - name: Deploy
         run: make deploy
       - name: Zip Sample Data

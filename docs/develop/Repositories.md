@@ -72,9 +72,9 @@ This UI application features several TypeScript packages as a monorepo, a versio
 [election-guard-python-documentation]: https://microsoft.github.io/electionguard-python/ "Election Guard Python documentation"
 [election-guard-cpp-source]: https://github.com/microsoft/electionguard-cpp "Election Guard C++ source code"
 
-[election-guard-spec-overview]: ../../spec "ElectionGuard Specification"
+[election-guard-spec-overview]: ../spec/index.md "ElectionGuard Specification"
 [election-guard-verifiability]: ../concepts/Verifiability.md "Election Guard Verifiability"
-[election-guard-post-election-audit]: ../Glossary/#post-election-audit "Election Guard Post-Election Audit"
+[election-guard-post-election-audit]: ../overview/Glossary.md#post-election-audit "Election Guard Post-Election Audit"
 
 [election-guard-api-source]: https://github.com/microsoft/electionguard-api-python "Election Guard Web API source code"
 [election-guard-ui-source]: https://github.com/microsoft/electionguard-ui "Election Guard UI source code"

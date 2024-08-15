@@ -32,7 +32,7 @@ The specification itself will accommodate a lot of efficiency improvements and s
 
 ## 2022 Roadmap
 
-2022 focused on a full 1.0 release of functionality across the Python and C++ repos. We needed to [support a pilot election in Franklin County, Idaho](events\Idaho_Pilot_2022) in partnership with Hart InterCivic on their Verity Precinct Scanner. MITRE worked with us to release the first truly full-featured verifier that was used to verify the election results, and Enhanced Voting hosted the confirmation-code-lookup website.
+2022 focused on a full 1.0 release of functionality across the Python and C++ repos. We needed to [support a pilot election in Franklin County, Idaho][preston-idaho-pilot] in partnership with Hart InterCivic on their Verity Precinct Scanner. MITRE worked with us to release the first truly full-featured verifier that was used to verify the election results, and Enhanced Voting hosted the confirmation-code-lookup website.
 
 ## 2021 Roadmap
 
@@ -75,7 +75,7 @@ A big step toward this new vision occurred with the release of the `electionguar
 
 2020 provided many lessons.
 
-During the first half of the year ElectionGuard was used successfully as a [Pilot in Fulton, WI][fulton-wi-election-pilot] with the help of [VotingWorks][voting-works] and [InfernoRed][infernored]. Subsequent to the pilot ElectionGuard released the [Python][election-guard-python-source] repo as a new reference implementation.
+During the first half of the year ElectionGuard was used successfully as a [Pilot in Fulton, WI][cnn-news-fulton-wi] with the help of [VotingWorks][voting-works] and [InfernoRed][infernored]. Subsequent to the pilot ElectionGuard released the [Python][election-guard-python-source] repo as a new reference implementation.
 
 In the [second half of the year][election-guard-security-pilot], responding to COVID, led to the development of a remote voting app with [InfernoRed][infernored], [Markup][markup], and the US House Democratic Caucus to enable representatives to [vote by secret ballot safely, securely, and remotely for Caucus leadership positions][dems-virtual-leadership-election]. 
 
@@ -87,7 +87,7 @@ Last, and definitely not least, ElectionGuard [developed and published its first
 
 ??? done "Use ElectionGuard in a real-world end-to-end verifiable election"
 
-    * Run a verifiable election [Fulton, Wisconsin][Fulton] with [VotingWorks][voting-works] using smart cards, a ballot box, an admin device, and a ballot tracking site.
+    * Run a verifiable election [Fulton, Wisconsin][msft-news-fulton-wi] with [VotingWorks][voting-works] using smart cards, a ballot box, an admin device, and a ballot tracking site.
     * Integrate ElectionGuard with the VotingWorks print station and user flow
     * Build ballot box functionality to capture and seal ballots
     * Build admin device to enable tallies and key ceremonies
@@ -125,13 +125,13 @@ Last, and definitely not least, ElectionGuard [developed and published its first
 
 <!-- Links -->
 [ElectionTools]: https://blogs.microsoft.com/on-the-issues/2020/12/04/electionguard-2020-elections-security-pilot/
-[Fulton]: https://news.microsoft.com/on-the-issues/2020/05/13/microsoft-electionguard-pilot-wisconsin/
+[msft-news-fulton-wi]: https://news.microsoft.com/on-the-issues/2020/05/13/microsoft-electionguard-pilot-wisconsin/
 [evercrypt]: https://github.com/project-everest/hacl-star#evercrypt "Evercrypt"
 [windows-universal-application-guide]: https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide "Windows Universal APplication platform guide"
 [election-guard-python-source]: https://github.com/microsoft/electionguard-python "Election Guard Python source code"
 [election-guard-security-pilot]: https://blogs.microsoft.com/on-the-issues/2020/12/04/electionguard-2020-elections-security-pilot/ "Election Guard security pilot 2020"
 [protobuf-source]: https://github.com/protocolbuffers/protobuf "Protobuf source code"
-[fulton-wi-election-pilot]: https://www.cnn.com/2020/02/22/tech/microsoft-election-guard-voting-test/index.html "Fulton, Wisconsin election pilot"
+[cnn-news-fulton-wi]: https://www.cnn.com/2020/02/22/tech/microsoft-election-guard-voting-test/index.html "Fulton, Wisconsin election pilot"
 [voting-works]: https://voting.works "Voting works"
 [arlo]: https://voting.works/risk-limiting-audits/ "Voting Works risk limiting audits"
 [inyo-risk-limiting-audit]: https://elections.inyocounty.us/post-election-audits/ "Inyo's risk limiting post-election audit"
@@ -140,3 +140,4 @@ Last, and definitely not least, ElectionGuard [developed and published its first
 [dems-virtual-leadership-election]: https://www.dems.gov/newsroom/press-releases/house-democrats-successfully-conclude-first-ever-virtual-leadership-elections "house democrats successfully conclude first-ever virtual leadership elections"
 
 [election-guard-contribute]: ../contribute/index.md "Election Guard Contribute"
+[preston-idaho-pilot]: ../elections/Preston_Idaho_2022.md

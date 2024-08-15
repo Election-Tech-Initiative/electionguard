@@ -3,7 +3,7 @@ name: Validate Pull Request
 on: pull_request
 
 env:
-  PYTHON_VERSION: 3.8
+  PYTHON_VERSION: 3.10.14
 
 jobs:
   validate: 
@@ -16,9 +16,11 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: ${{ env.PYTHON_VERSION }}
+      - name: Install pipenv
+        run: pip install pipenv
       - name: Change Directory
         run: cd ${{ github.workspace }}
-      - name: Install MkDocs
-        run: make install
+      - name: Install packages
+        run: pipenv install
       - name: Lint
-        run: make lint
+        run: pipenv run make lint
