@@ -14,11 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v5
       - name: Set up Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v6
         with:
           python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pipenv'
       - name: Install pipenv
         run: pip install pipenv
       - name: Change Directory
@@ -30,10 +31,11 @@ jobs:
       - name: Zip Sample Data
         run: make release-zip-sample-data
       - name: Publish Sample Data
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: sample-data
           path: sample-data.zip
+          overwrite: true
       - name: Sync Labels
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.LABEL_TOKEN }}
