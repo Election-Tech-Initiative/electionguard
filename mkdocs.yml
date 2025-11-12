@@ -22,7 +22,7 @@ nav:
       - Reports:
           - End-to-End Verifiability in Real-World Elections: Reports/E2EVerifiability.md
       - Concepts:
-          - Creating an Election Manifest:  concepts/Manifest_Building.md
+          - Creating an Election Manifest: concepts/Manifest_Building.md
           - Creating a Verifiable Election: concepts/Verifiability.md
           - Structures and Processes: concepts/Structure_and_Processes.md
       - Use Cases:

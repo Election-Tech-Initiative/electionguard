@@ -7,7 +7,11 @@
 ElectionGuard is an **open source** software development kit (SDK) that improves confidence and participation in elections. It is designed for election system vendors to incorporate [end-to-end verifiability][glossary-end-to-end-verifiable] into their systems and any interested organization to perform and publish [post-election audits][glossary-post-election-audit].
 
 !!! info "New to ElectionGuard?"
-    Welcome! Thanks for your interest. Trying to figure out how to help and learn? If you're a developer, head over to the [**developer getting started**][develop-getting-started]. If you want to help and aren't a developer, all kinds of help with documentation, outreach, and advocacy is welcomed. Follow [**discussions**][election-guard-discussions], join the [**office hours**][weekly-office-hours], and check out the [**roadmap**][roadmap] to see where it's intended to go.
+    Welcome! Thanks for your interest. Trying to figure out how to help and learn?
+    
+    - If you're a developer, head over to the [**developer getting started**][develop-getting-started].
+    - If you want to help and aren't a developer, all kinds of help with documentation, outreach, and advocacy is welcomed. Follow [**discussions**][election-guard-discussions], join the [**office hours**][weekly-office-hours], and check out the [**roadmap**][roadmap] to see where it's intended to go.
+    - If you're interested in the research behind ElectionGuard, read more about it here: [**ElectionGuard: a Cryptographic Toolkit to Enable Verifiable Elections | USENIX**](https://www.usenix.org/conference/usenixsecurity24/presentation/benaloh)
 
 ## Open-Source
 
@@ -25,7 +29,7 @@ We welcome discussions on our [discussions page][election-guard-discussions], fe
 
 ## Questions
 
-ElectionGuard would love for you to ask questions out in the open using Github Issues. If you really want to email the ElectionGuard team, reach out at [electionguard@microsoft.com][election-guard-email].
+ElectionGuard would love for you to ask questions out in the open using Github Issues. If you really want to email the ElectionGuard team, reach out to the [Election Technology Initiative](https://electiontechnology.org/).
 
 ## Thank you
 
@@ -48,7 +52,6 @@ A huge thank you to those who have helped us along the way:
 [casting-ballot]: images/undraw/voting.svg "Image of people casting ballots"
 
 [election-guard-discussions]: https://github.com/microsoft/electionguard/discussions "ElectionGuard Discussions page"
-[election-guard-email]: mailto:electionguard@microsoft.com "electionguard@microsoft.com"
 [weekly-office-hours]: https://github.com/microsoft/electionguard/discussions/78
 [verifiable-search-ballot-elections-paper]: https://www.microsoft.com/en-us/research/publication/verifiable-secret-ballot-elections/ "Verifiable Secret-Ballot Elections - Microsoft Research, Josh Benaloh"
 [infernored]: https://infernored.com/ "InfernoRed"
