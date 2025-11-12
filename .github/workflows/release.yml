@@ -27,9 +27,9 @@ jobs:
       - name: Install packages
         run: pipenv install
       - name: Deploy
-        run: make deploy
+        run: pipenv run make deploy
       - name: Zip Sample Data
-        run: make release-zip-sample-data
+        run: pipenv run make release-zip-sample-data
       - name: Publish Sample Data
         uses: actions/upload-artifact@v4
         with:
@@ -39,4 +39,4 @@ jobs:
       - name: Sync Labels
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.LABEL_TOKEN }}
-        run: make labels
+        run: pipenv run make labels
