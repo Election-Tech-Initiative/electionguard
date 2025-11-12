@@ -104,7 +104,7 @@ A partial decryption share value computed by an available guardian to compensate
 
 ### contest
 
-A contest in an [manifest](#manifest) consists of a set of [candidates or options](#candidate) together with a [selection limit](#selection-limit). Contests can be customized to suit the voting experience with options like [approval voting](#approval-voting), [ranked-choice voting](#ranked-choice-voting) and [write-ins](#write-in). Contests can have special rules around selection limits to handle [undervotes](#undervote), [overvotes](#overvote), and [null votes](#null-vote).
+A contest in an [manifest](#manifest) consists of a set of [candidates or options](#candidate) together with a [selection limit](#selection-limit). Contests can be customized to suit the voting experience with options like [approval voting](#approval-voting), [ranked-choice voting](#ranked-choice-voting-rcv) and [write-ins](#write-in). Contests can have special rules around selection limits to handle [undervotes](#undervote), [overvotes](#overvote), and [null votes](#null-vote).
 
 ### decryption share
 
@@ -198,7 +198,7 @@ _Creating a joint public key as part of the key ceremony_
     b1(private key) -.- b2(public key)
     end
     subgraph eg3[guardian n]
-    c1(private key)  -.- c2(public key)
+    c1(private key) -.- c2(public key)
     end
 ```
 

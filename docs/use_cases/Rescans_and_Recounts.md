@@ -46,4 +46,4 @@ After the base ElectionGuard verifiable tally has been generated (and, optionall
 [ballot-chaining]: ../overview/Glossary.md#ballot-chain
 [hardware-security-module]: ../overview/Glossary.md#hardware-security-module-hsm
 [encrypted-ballot-metadata]: ../overview/Glossary.md#encrypted-ballot-metadata
-[auxiliary-guardian-key]: ../overview/Glossary.md#auxiliary-guardian-key
+[auxiliary-guardian-key]: ../overview/Glossary.md#auxiliary-key-pair
