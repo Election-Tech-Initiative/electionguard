@@ -1,0 +1,237 @@
+{
+  "election_scope_id": "franklin-county-general-march2020",
+  "spec_version": "v0.95",
+  "type": "general",
+  "start_date": "2020-03-01T08:00:00-05:00",
+  "end_date": "2020-03-03T19:00:00-05:00",
+  "geopolitical_units": [
+    {
+      "object_id": "franklin-county",
+      "name": "Franklin County",
+      "type": "county",
+      "contact_information": null
+    },
+    {
+      "object_id": "ozark-school-district",
+      "name": "Ozark School District in Franklin County",
+      "type": "school",
+      "contact_information": null
+    }
+  ],
+  "parties": [
+    {
+      "object_id": "party-whig",
+      "name": {
+        "text": []
+      },
+      "abbreviation": "WHI",
+      "color": null,
+      "logo_uri": null
+    },
+    {
+      "object_id": "party-federalist",
+      "name": {
+        "text": []
+      },
+      "abbreviation": "FED",
+      "color": null,
+      "logo_uri": null
+    },
+    {
+      "object_id": "party-democratic-republican",
+      "name": {
+        "text": []
+      },
+      "abbreviation": "DR",
+      "color": null,
+      "logo_uri": null
+    }
+  ],
+  "candidates": [
+    {
+      "object_id": "benjamin-franklin",
+      "name": {
+        "text": []
+      },
+      "party_id": "party-whig",
+      "image_uri": null,
+      "is_write_in": null
+    },
+    {
+      "object_id": "john-adams",
+      "name": {
+        "text": []
+      },
+      "party_id": "party-federalist",
+      "image_uri": null,
+      "is_write_in": null
+    },
+    {
+      "object_id": "john-hancock",
+      "name": {
+        "text": []
+      },
+      "party_id": "party-democratic-republican",
+      "image_uri": null,
+      "is_write_in": null
+    },
+    {
+      "object_id": "samuel-adams",
+      "name": {
+        "text": []
+      },
+      "party_id": "party-democratic-republican",
+      "image_uri": null,
+      "is_write_in": null
+    },
+    {
+      "object_id": "thomas-jefferson",
+      "name": {
+        "text": []
+      },
+      "party_id": "party-democratic-republican",
+      "image_uri": null,
+      "is_write_in": null
+    },
+    {
+      "object_id": "write-in",
+      "name": {
+        "text": []
+      },
+      "party_id": null,
+      "image_uri": null,
+      "is_write_in": true
+    },
+    {
+      "object_id": "referendum-pineapple-affirmative",
+      "name": {
+        "text": []
+      },
+      "party_id": null,
+      "image_uri": null,
+      "is_write_in": null
+    },
+    {
+      "object_id": "referendum-pineapple-negative",
+      "name": {
+        "text": []
+      },
+      "party_id": null,
+      "image_uri": null,
+      "is_write_in": null
+    }
+  ],
+  "contests": [
+    {
+      "object_id": "congressional-race-01",
+      "sequence_order": 0,
+      "electoral_district_id": "franklin-county",
+      "vote_variation": "one_of_m",
+      "number_elected": 1,
+      "votes_allowed": 1,
+      "name": "Representative to US Congress",
+      "ballot_selections": [
+        {
+          "object_id": "john-hancock-selection",
+          "sequence_order": 0,
+          "candidate_id": "john-hancock"
+        },
+        {
+          "object_id": "benjamin-franklin-selection",
+          "sequence_order": 1,
+          "candidate_id": "benjamin-franklin"
+        },
+        {
+          "object_id": "write-in-selection",
+          "sequence_order": 2,
+          "candidate_id": "write-in"
+        }
+      ],
+      "ballot_title": null,
+      "ballot_subtitle": null
+    },
+    {
+      "object_id": "referendum-pineapple",
+      "sequence_order": 1,
+      "electoral_district_id": "franklin-county",
+      "vote_variation": "one_of_m",
+      "number_elected": 1,
+      "votes_allowed": 1,
+      "name": "The Pineapple Question",
+      "ballot_selections": [
+        {
+          "object_id": "referendum-pineapple-affirmative-selection",
+          "sequence_order": 0,
+          "candidate_id": "referendum-pineapple-affirmative"
+        },
+        {
+          "object_id": "referendum-pineapple-negative-selection",
+          "sequence_order": 1,
+          "candidate_id": "referendum-pineapple-negative"
+        }
+      ],
+      "ballot_title": null,
+      "ballot_subtitle": null
+    },
+    {
+      "object_id": "ozark-school-board-race",
+      "sequence_order": 2,
+      "electoral_district_id": "ozark-school-district",
+      "vote_variation": "n_of_m",
+      "number_elected": 2,
+      "votes_allowed": 2,
+      "name": "Ozark School Board",
+      "ballot_selections": [
+        {
+          "object_id": "john-adams-selection",
+          "sequence_order": 0,
+          "candidate_id": "john-adams"
+        },
+        {
+          "object_id": "samuel-adams-selection",
+          "sequence_order": 1,
+          "candidate_id": "samuel-adams"
+        },
+        {
+          "object_id": "thomas-jefferson-selection",
+          "sequence_order": 2,
+          "candidate_id": "thomas-jefferson"
+        }
+      ],
+      "ballot_title": null,
+      "ballot_subtitle": null
+    }
+  ],
+  "ballot_styles": [
+    {
+      "object_id": "franklin-county-no-schooldistrict",
+      "geopolitical_unit_ids": [
+        "franklin-county"
+      ],
+      "party_ids": null,
+      "image_uri": null
+    },
+    {
+      "object_id": "franklin-county-ozark-schools",
+      "geopolitical_unit_ids": [
+        "franklin-county",
+        "ozark-school-district"
+      ],
+      "party_ids": null,
+      "image_uri": null
+    }
+  ],
+  "name": {
+    "text": [
+      {
+        "value": "Franklin County Small General Election March 2020",
+        "language": "en"
+      },
+      {
+        "value": "Peque\u00f1as elecciones generales del condado de Franklin marzo de 2020",
+        "language": "es"
+      }
+    ]
+  },
+  "contact_information": null
+}

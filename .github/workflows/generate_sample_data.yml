@@ -1,35 +1,25 @@
-name: Release Build
+name: Generate Sample Data
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/generate_sample_data.yml"
+      - "Makefile"
+      - "scripts/generate_sample_data.py"
+      - "data/sample/manifests/**"
 
 env:
-  PYTHON_VERSION: 3.14.0
   SAMPLE_DATA_PYTHON_VERSION: 3.9
 
 jobs:
-  publish: 
-    name: Publish Documentation
+  generate:
+    name: Generate Sample Data
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Checkout Code
         uses: actions/checkout@v5
-      - name: Set up Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v6
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-          cache: 'pipenv'
-      - name: Install pipenv
-        run: pip install pipenv
-      - name: Change Directory
-        run: cd ${{ github.workspace }}
-      - name: Install packages
-        run: pipenv install
-      - name: Deploy
-        run: pipenv run make deploy
-      - name: Set up Python ${{ env.SAMPLE_DATA_PYTHON_VERSION }} for sample data
+      - name: Set up Python ${{ env.SAMPLE_DATA_PYTHON_VERSION }}
         uses: actions/setup-python@v6
         with:
           python-version: ${{ env.SAMPLE_DATA_PYTHON_VERSION }}
