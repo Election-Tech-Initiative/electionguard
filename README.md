@@ -10,7 +10,7 @@ This library and all linked ElectionGuard projects, are licensed under the MIT l
 
 ## 🚀 Getting Started
 
-ElectionGuard is always improving. To keep up with the latest, check our **[official site on GitHub Pages][election-guard-official-page]** and our [roadmap][election-guard-road-map]. For those looking to get started, we recommend the following repositories.
+ElectionGuard is always improving. To keep up with the latest, check our **[official site][election-guard-official-page]** and our [roadmap][election-guard-road-map]. For those looking to get started, we recommend the following repositories.
 
 ### Documentation
 
@@ -72,7 +72,7 @@ A huge thank you to those who helped to contribute to this project so far.
 [license-image]: https://img.shields.io/github/license/microsoft/electionguard "Election Guard license image"
 [build-developer-conference]: https://blogs.microsoft.com/on-the-issues/?p=63211 "Protecting democratic elections through secure, verifiable voting"
 [homomoprhic-encryption]: https://en.wikipedia.org/wiki/Homomorphic_encryption "Homomorphic encryption"
-[election-guard-official-page]: https://microsoft.github.io/electionguard "Official Election Guard site on Github Pages"
+[election-guard-official-page]: https://electionguard.vote/ "Official Election Guard site"
 [election-guard-road-map]: https://www.electionguard.vote/overview/Roadmap/ "Election Guard road map"
 [mkdocs-official-site]: https://www.mkdocs.org/ "MkDocs official website"
 [material-mkdocs]: https://squidfunk.github.io/mkdocs-material/ "Material for MkDocs"
